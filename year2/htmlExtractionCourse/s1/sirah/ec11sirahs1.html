@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الحادي عشر</title>
+<style>
+  body {
+    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: justify;
+    margin: auto;
+    max-width: 900px;
+    padding: 2rem;
+    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+    color: #111;
+  }
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #145a00;
+    text-shadow: 0 0 8px #a8ff8a;
+  }
+  p { margin: 1rem 0; text-align: justify; }
+  .container { text-align: center; margin-bottom: 1.5rem; }
+  .button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: #145a00;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
+  }
+  .share-buttons {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
+  }
+  .share-buttons button {
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
+</style>
+</head>
+<body>
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://vrsovtrsmqrpwzbetbuu.supabase.co/storage/v1/object/public/pdf/year2/htmlExtractionCourse/s1/sirah/ec11sirahs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
+  
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent3">الدرس الحادي عشر</h1>
+<p id="sent4">بسم الله الرحمان الرحيم. الحمد لله وكفى والصلاة والسلام على النبي الكريم المصطفى أحبتي. فلا أينما كنتم. السلام عليكم ورحمة الله تعالى وبركاته. أنا دراسة سيرة النبي صلى الله عليه وسلم، والوقوف مع غزواته وأحداثها أمر من الأهمية بمكان. ولقد كان السلف يقدرون للسيرة النبوية قدرها و يتواصون بتعلمها وتعليمها لأبنائهم. فكان علي بن الحسين رضي الله عنه يقول كنا نعلم المغازي النبي صلى الله عليه وسلم، كما نعلم السورة من القرآن. وكان إسماعيل بن محمد بن سعد بن أبي وقاص رضي الله عنه يقول كان أبي يعلمنا المغازي، ويعدها علينا. ويقول يا بني، هذه مأثر آبائكم، فلا تضيعوها. ومن ثم تمر السنون والأعوام، وتظل سيرة غزوات النبي صلى الله عليه وسلم نبراسا يضيء لنا الطريق في التربية والإصلاح والعزة والتمكين. و درسنا اليوم حول غزوة من أهم الغزوات التي حدثت في السنة الثامنة للهجرة. وقت بغاتها عدة سرايا أرسلها النبي صلى الله عليه وسلم كعادته لإبعاد الأخطار و التأديب، كل من تسول له نفسه المساس بهيبة الدولة. والسرية، كما تعلمون، تكون بسيطة في عددها، وعدتها ليست مثل الغزوة، فتكون فيها تهيئة العسكرية والعددية على أوجها، وهو ما كان في غزوة مؤتة التي وقعت في جمادي الأولى من السنة الثامنة للهجرة النبوية. وكانت المواجهة فيها بين 3000 من المسلمين، مقابلة 200,000 مقاتل كافر من نصارى العرب والعجم، في أول مواجهة بينهم. وقد سميت غزوة مؤتة بهذا الإسم، لأنها كانت إلى موضع بالشام، يقال له مؤثر، وهو الذي وقعت فيه المعركة، ولذلك سميت هذه الغزوة باسم موضعها، كما هو الحال في كثير من الغزوات. أبت الروم، ومن ولا ها من العرب على أداء المسلمين واستفزازهم بكل الطرق. وكان من أضرارها المحاولات المتكررة للتعرض لتجارة المسلمين القادمة من الشام، والقيام بالسلب والنهب لقوافل المسلمين التي تمر بطريقهم. فضلا عن ما مارسوه من ضغوطات ومضايقات طالت كل مسلم، وقع تحت أيديهم. وبلغ الأدب ذروته حين بعث رسول الله صلى الله عليه وسلم الحارث بن عمير الأزدي رسولا إلى ملك بصرة من أرض الشام. يدعوه إلى الإسلام. فكما كفما كان من ملك بصرة شرحبيل بن عمر الغساني، وكان عاملا على ال بلقاء من أرض الشام من قبل قيصر، أو ثقه رباطا ثم قدمه فضرب عنقه. وكان قتل السفراء والرسل من أشنع الجرائم، وهو بمثابة إعلان حرب، فاشتد ذلك على رسول الله صلى الله عليه وسلم، وعلى المسلمين. ومن ثم جهز رسول الله صلى الله عليه وسلم جيشا قوامه 3000 مقاتل، وعقد الراية ثلاثة منهم، وجعل أمرتهم بالتناوب فيما بينهم. عن عبد الله بن جعفر رضي الله عنه، قال. بعث رسول الله صلى الله عليه وسلم جيشا، استعمل عليهم زيد بن حارثة، وقال فإن قتل زيد أو استشهد، ف أميركم جعفر. فين قتل واستشهد؟ ف أميركم؟ عبد الله بن رواحة؟فلا قو العدو، فأخذ الراية زيد فقاتل حتى قتل، ثم أخد الراية جعفر فقاتل حتى قتل، ثم أخذها عبد الله بن رواحة فقاتل حتى قتل. ثم أخد الراية خالد بن الوليد فتح الله عليه. وأنت أخبرهم النبي صلى الله عليه وسلم، فخرج إلى الناس، فحمد الله وأثنى عليه، وقال إن إخوانكم لقوا العدو، وإن زيدا أخد الراية، فقاتل حتى قتل أو استشهد، ثم أخذ الراية بعد جعفر من إبن أبي طالب، فقاتل حتى قتل أو استشهد، ثم أخذ الراية عبد الله بن رواحة. فقاتل حتى قتل أو استشهد. ثم أخضر آية سيف من سيوف الله خالد بن الوليد فتح الله عليه، وقد أظهرت معركة مؤتة معجزة للنبي صلى الله عليه وسلم، رغم أنه صلى الله عليه وسلم لم يشارك فيها، إلا أنه نع استشهاد قادتها الثلاث. قبل أن يصل الخبر من أرض المعركة. بل و أخبر عن عن أحداث ها وما آلت إليه، وفي ذلك معجزة نبوية ظاهرة، فما جاء على لسان صلى الله عليه وسلم بالإخبار عن أمر غيبي وقع كما أخبر به، فبوحي من الله تعالى للدلالة على صدق هو نبوته. وتخبرنا الأحداث موقفه صلى الله عليه وسلم مع أبناء جعفر رضي الله عنه الذي استشهد، فالمعركة، وهو بيان لمعالم المنهج النبوي الكريم في الرعاية والاهتمام ماديا ونفسيا. ب زوجاتي وأبناء المجاهدين والشهداء في سبيل الله عز وجل. فقد قال صلى الله عليه وسلم لأسماء بنت عمي س رضي الله عنها زوجة جعفر رضي الله عنه. العيلة، أي الفقر والحاجة، تخافين عليهم، و أنا و ليهم في الدنيا والآخرة. ف خلافة المجاهدين والشهداء في أهلهم وأبنائهم برعاية والنفقة والاهتمام، تعد بابا من أبواب الجهاد في سبيل الله تعالى. في ع ف إعانة الغاز، تكون على وجهين. الأول أن يعينه في رحله ومتاعه وسلاحه. وثانيا، يعينه في كونه خالفا عنه في أهله، لأن هذا من أكبر العون، وهو واجب على الأمة هذه الأيام، مد العون لإخواننا المجاهدين في غزة. ومساندة الأبناء اليتامى والعائلات في غذائهم وشرابهم وملبسهم وأمنهم، نسأل الله النصر والتمكين على أعداء الأمة. كذلك أعطتنا معركة وغزوة مؤتة، درسا هاما في أثر الإيمان بالله عز وجل على سير المعارك ونتائجها. فما يثير الدهشة في هذه المعركة، ذلك الفرق الكبير بين عدد المسلمين وعدد أعدائهم. فقد كان عدد الرومومن معهم ما يقرب من 100,000 مقاتل، على حين أن عدد المسلمين لم يتجاوز 3000. وقال إبن كثير في البداية والنهاية في كلامه على أحداث غزوة ومعركة مؤتة. هذا عظيم جدا، أن يتقاتل جيشان متعادي أن في الدين أحدهما، وهو الفئة التي تقاتل في سبيل الله، عدتها 3000. وأخرى كافرة وعدتها 200,000 مقاتل. من الروم 100,000، ومن نصارى العرب 100,000. يتبارز ونويت. صا ولون. ثم، مع هذا كله. لا يقتل من المسلمين إلا 12 رجلا. فقد قتل من المشركين خلق كثير. هذا خالد وحدة يقول لقد إن دقت أي أنكسرت في يدي يوم مؤتة، تسعة أسياف، فما بقي في يدي la صفيحة يمانية، أي سيفي مني، فماذا ترى؟ قد قتل بهذه الأسياف كلها؟دعا غيره من الأبطال الشجعان من حملة القرآن. غزة مؤتمن أعظم المعارك التي خاضها المسلمون في حياة النبي صلى الله عليه وسلم، وأظهر المسلمون فيها قوة وشجاعة، رغم قلة عددهم، مقابل أعداد عدوهم الهائلة والكبيرة. وقدر قادة الجيش الثلاثة زيد وجعفر و عبد الله بن رواحة رضي الله عنهم شجاعة عظيمة حتى استشهدو جميعا رضي الله عنهم، كما أسهمت في إبراز خالد بن الوليد سيف الله رضي الله عنه كشخصية عسكرية فذة، وقيادة حكيمة، كان لها دورها في الفتوحات الإسلامية بعد ذلك. وقد رأينا كذلك رحمة النبي صلى الله عليه وسلم بأصحابه، ويؤخذ ذلك من حزنه وبكائه عند مانع الأمراء الثلاثة الذين استشهد، فالمعركة، وعيناه تدري، فان أي تدمعان. وفي هذا دلالة على مشروعية البكاء والحزن على الميت من غير نياحة، ولا رفع صوت. كذلك حب الصحابة رضوان الله عليهم للشهادة والموت في سبيل الله، وصبرهم وثباتهم وبذلهم وتضحياتهم. وقد ظهر ذلك في الأمراء الثلاث. وسائر الجند، الذين كانت غايتهم الحرص على ثواب المجاهدين، والرغبة في نيل الشهادة لكي يكرمهم الله برفقة النبيين والصدقين والشهداء والصالحين في جنات النعيم. ولذا قال صلى الله عليه وسلم عن شهداء متى وما يسرنا أنهم عندنا، أو قال وما يسرهم أنهم عندنا. روى البخاري أي إنهم لم أر، أو من الكرامة بالشهادة، فلا يعجبهم أن يعودوا إلى الدنيا كما كانوا، من غير أني ستشهدوا مرة أخرى. قال إبن حجر أي لمار أو من فضل الشهادة رضي الله عنه عن الصحابة الكرام لما تحملوه من آه من جهات، حتى يصل لنا هذا الدين كما حملوه. إلى هنا، نكون قد أنهينا. درسنا. دمتم في رعاية الله، السلام عليكم ورحمة الله تعالى وبركاته.</p>
+
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
+
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
+
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>

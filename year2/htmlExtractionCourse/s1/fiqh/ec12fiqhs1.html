@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الثاني عشر</title>
+<style>
+  body {
+    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: justify;
+    margin: auto;
+    max-width: 900px;
+    padding: 2rem;
+    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+    color: #111;
+  }
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #145a00;
+    text-shadow: 0 0 8px #a8ff8a;
+  }
+  p { margin: 1rem 0; text-align: justify; }
+  .container { text-align: center; margin-bottom: 1.5rem; }
+  .button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: #145a00;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
+  }
+  .share-buttons {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
+  }
+  .share-buttons button {
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
+</style>
+</head>
+<body>
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://vrsovtrsmqrpwzbetbuu.supabase.co/storage/v1/object/public/pdf/year2/htmlExtractionCourse/s1/fiqh/ec12fiqhs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
+  
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent5">الدرس الثاني عشر</h1>
+<p id="sent6">الحمد لله وكفى، والصلاة والسلام على عباده الذين اصطفى لهم، يا رب، لا علم لنا إلا ما علمتنا، و لا فهم لنا إلا ما فهمتنا، ف نسألك اللهم علما وإخلاص، ن فالدين ووفقنا، اللهم توفيق الصالحين، وعد علينا بعوائد que الحسنى، يا كريم أمين. مرحبا بكم في حصة جديدة. كنا قد تكلمنا في الحصة الماضية عن. في آخرها، عن كراهة تذوق الطعام، وكثرة الكلام. نعم. وقلنا أن غالبا لقاء وغالب، ألذ بار، مغتفر، وغبار صانعي، وطرق وسواك يابس، و الإصباح بالجنابة، كذاك مغتفر. نعم، ونفصل الحديث في ذاك بإذن الله تبارك وتعالى في حصتنا، يقول يقولو ابن المؤقت رحمه الله يكره للصائم ذوق القدر من الملح، خوف أن يسبقه شيئا من ذلك غلبة، وكذا ذوق العسل، أي وكذا يكره ذوق العسر، ومضغ العلك، وهو كل مايعلق من تمر، وحلوى لصبي مثلا، وغيرهما. ولم يتحلل من الجميع شيء، ومزجه. والمده والطرح قال وفعله مرة واحدة، وإلا فهو مفطر. نعم، ألا يبالغ في ذلك؟ فإن بالغ وتسرب شيء إلى جو فه فه مفطر، قالو يكره أيضا للصائم الهدر، وهو كثرة الكلام، إذا كان مباحا. وأما الكلام بالغيبة ونحوها فحرام في غير رمضان، فكيف به فيه، وفي غير رمضان؟ الغيبة محرمة، فكيف بها؟ وإن كانت في رمضان. حتى قيل إن الغيبة من المفطرات، ويشهد لذلك أحاديث كثيرة. فعن أبي هريرة رضي الله عنه عن النبي صلى الله عليه وسلم أنه قال من لم يدع قول الزور والعمل به، فليس لله عز وجل حاجة في أن يضع في أن يدع طعامه وشرابه، وعنه أيضا أنه صلى الله عليه وسلم. قال الصيام جنة، فإذا كان أحدكم صائما فلا يرفث ولا يجهل، فإن امرؤ قاتله أو شاتمه فليقل إني صائم، إني صائم. وعن أنس بن مالك رضي الله عنه. قال قال رسول الله صلى الله عليه وسلم من لم يدع الخنا والكذب فلا حاجة في، فلا حاجة لله في أن يدع طعامه وشرابه. قال ولا خصوصية للسان بذلك، بل كل الجوارح تنزه عن ما في فعله إثم، وينقص أجر الصوم. كل ما من شأنه أن يخل بالصوم. فحري، ويجب على الصائم أن يتركه. إذا ما يعفى عنه مسألة أخرى، ما يعفى عنه في الصوم، إذا أشياء مغفرة لا توجب قضاء ولا كفارة في الصوم. وهي قال وأما القيئ الخارج من فم الصائم غلبة. و الزبا بالداخل فيه. كل منهما مغتفر، لا يوجب عليه قضاء ولا كفارة. وكذلك غبار الصنعة. كغبار الدقيق ل طحانه يطحنه، وكذلك صانع الجبس. ومن يحمل القمح ويكي له؟ وطعن. الدباغ لصانعه طعم الدباغ عندما يقوم ب دباغ الأشياء. ااا، فإنها لها رائحة قوية، ربما يحس بشيء في ذلك، في حلقه، لا إثم عليه، قال وكذا حادث قمح ه عند طحنه خوفا من سرقته. وكذا غبار الطريق للمار به، هذه كلها أمور مغفرة. مسألة أخرى وهي جواز آه l'est واك للصائم. قال وكذلك الاستياك بالعود اليابس الذي لا يتحلل، هناك عيدان مستقبها تكون يابسة، ليست فيها مادة تتحلل، قال وكذلك الاستياك بالعود اليابس الذي لا يتحلل، و الإصباح بالجنابة إذا أصبح م جنبا. نعم، فلا شيء عليه، قال أي المكتبها، أي بالجنابة، إلى طلوع الفجر، كل ذلك مغتفر. وليس. وليس بمحرم. مسألة أخرى، هل تكفي نية واحدة لكل صوم؟ متتابع يقول أبن عاشر رحمه الله ونية تكفي لما تتابعه، يجب إلا إن فاهمان عه، ونية تكفي لما تتابعه يجب إلا في. إلا إن فاه مانع. ه. قال أي ونية واحدة؟ تكفي، لما من الصوم تتابعه. يجب لما من الصوم تتابعه، يجب. ك. صوم رمضان. وذاك بالنسبة للحاضر الصحيح. نعم، وهو مقيد بقوله إلا إن، فهو. مانع ه إلا إن أ بطله أي أ بطلا. إن. إلا إنا بطل. هذا التتابع، نية التتابع شيئا طارئ، مثلا كمرض أو سفر، أو حيض، فهنا يجب عليه أن يجدد النية، إذا قلنا تكفي نية واحدة لكل صوم متتابع، إلا إذا طرأ طارئ على هذا الصوم، وهاته النية. وهذا طار إما أن يكون مرض، وإما أن يكونصو آه سفر، وإما أن يكون حيض، ففي هاته الحالة. يجب عليه عندما يستأنف الصوم أن يجدد له نية أخرانية جديدة، نعم. قانونية تكفي. والنية. قيل والأفضل والأحسن أن تبيت النية لكل ليلة عندنا، نحن السادة المالكية، تكفيرية واحدة، لكل صوم متتابع، اذا لم ي طرأ على هذا الصوم طارئ من الطوارئ، كمرض أو سفر، أو حيض. نعم، لكن من الأفضل و الأحسن أن، آه أن تبيت النية كل ليلة. اذا قال ما يجب تتابعه من الصيام كرمضان بالنسبة للحاضر الصحيح، و شهري كفارة تعمد فطر رمضان ونحوهما، تكفي فيه نية واحدة في أوله لجميع ه. نعم. من عنده من يصوم رمضان بدون ما يصومه كامل بدون، ولم يطرأ عليه عذرتك فيه نية واحدة، كذلك من علك ثارت يوم فإنه. يصوم شهرين. فالشهرين هذين شهرين تكفيهم نية واحدة، قالت كفي فيه نية واحدة في أوله، من أوله إلى آخره، قال إلا إذا نافة مانع من مرض أو سفر، أو حيض، وجوب التتابع، أي إذا حال بين الصوم. وبين تتابعه أ حائل كسفر، أو مرض، أو حيض، لا بد من تجديد النية، قالنا إلا إذا نفى مانع من مرض أو سفر، أو حيض، وجوب التتابع، فإذا عرض مانع من هذه الموانع المذكورة، فلا بد من تجديد النية. قال وأما الصيام الذي لا يجب تتابعه كمن يسرد الصوم أم كفارة اليمين؟كفارة اليمين. هل صوم كفارة اليمين؟ يجب تتابعه؟ لا يجب، وأما الصيام الذي لا يجب تتابعه كمن يسرد الصوم، ها يسر الصوم، او من نذر صيام أيام ولم ينو تتابعها. نذر صيام أيام، ولكن لم ينوي أنه سي. صومها متتابعا. فلا بد، قال فلا بد من تجديد النية كل ليلة. لماذا؟ لأن النية الأولى لا تكفي، ولو استمر صائما. هونوا. ونظر أن يصوم أيام، ولكنه عند نذره لم ينوي أن يصوم هاته الأيام متتابعة. هذا، آه، صوم النذر، هل تكفي فيه نية واحدة في أوله؟ لا، لابد أن يجدد النية لكل يوم من أيامه، لماذا؟ لأنه لم ينوي التتابع، تتابع ال. الأيام في الصوم. قال أو من نذر صيام أيام، ولم ينوي تتابعها تتابعها، فلا بد من تجديد النية كل ليلة، لماذا؟ لأن النية الأولى لا تكفي، ولو استمر صائما، بل لا بد من تبيتها في كل ليلة، هنا نكون قد وصلنا إلى ختام حصتنا. شكر الله لكم حسن إصغاء كم و استماعكم، و السلام عليكم و رحمة الله تعالى و بركاته على لقائكم في حصة قادمة بإذن الله عز وجل.</p>
+
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
+
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
+
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>

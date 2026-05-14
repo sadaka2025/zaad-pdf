@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>مادة النحو الدرس الاول</title>
+<style>
+  body {
+    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: justify;
+    margin: auto;
+    max-width: 900px;
+    padding: 2rem;
+    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+    color: #111;
+  }
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #145a00;
+    text-shadow: 0 0 8px #a8ff8a;
+  }
+  p { margin: 1rem 0; text-align: justify; }
+  .container { text-align: center; margin-bottom: 1.5rem; }
+  .button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: #145a00;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
+  }
+  .share-buttons {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
+  }
+  .share-buttons button {
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
+</style>
+</head>
+<body>
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://vrsovtrsmqrpwzbetbuu.supabase.co/storage/v1/object/public/pdf/year2/htmlExtractionCourse/s1/nahw/ec1nahws1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
+  
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent17">مادة النحو الدرس الاول</h1>
+<p id="sent18">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، والصلاة والسلام على سيدنا ونبينا محمد وعلى آله وصحبه وسلم. الإخوة والأخوات، طلبة مشيخة، جامع الزيتونة المعمور، نظام التعليم عن بعد، طلبة السنة الثانية. نجدد الترحيب بكم ونقول لكم مرحبا بوصية رسول الله صل الله عليه وسلم، مرحبا بكم في السنة الثانية، بعد أن وفقتم الله سبحانه وتعالى في السنة الأولى. وكنتم من الناجحين المتفوقين. نسال الله لنا ولكم الثبات والدوام. سنلتقي مع بعض بإذن الله تعالى هذه السنة من خلال مادة النحو، ومن خلال كتاب جديد هو. أقوى وأعلى درجة من كتاب السنة الأولى، لنرتقي من خلاله في علم النحو هذا، هذه السنة، كتابنا هو التحفة السنية في شرح الأجرومية، التحفة السنية هو تأليف العالم المصري الجليل الشيخ محمد محي الدين عبد الحميد صاحب التحقيقات. المفيدة والرائعة، سواء لقطر الندى أو لابن عقيل. شرح ابن عقيل، أو لأوضح المسالك على ألفية بن مالك بن هشام، فهذا العالم الجدي الجليل قد قام بتأليف كتاب هو شرح. للاجراميه. كتاب الاجرميه مقدمه الاجرميه هو للعالم الجليل محمد. ابن محمد ابن داوود الصنهاجي المعروف بن اجروم المتوفى سنة 23 و700 للهجرة جاء شيخنا محمد محي الدين عبد الحميد وألف التحفة الثانية لشرح مقدمة الأجرمية بإذن الله تعالى. هذه السنة سنقرأ هذا الكتاب، ونسأل الله سبحانه وتعالى لنا. ولكم التوفيق والسداد. درسنا الأول. يتحدث عن كلمة النحو وعلم النحو. سنتناول. هذه الكلمة من جانبها اللغوي، ثم أيضا من جانبها الاصططلاحي، فكلمة النحو في اللغة تعني الجهة، فتقول سرت نحو زيد، أي جهة زيد. وتعني أيضا المثل، عندما تقول. محمد نحو زيد، أي مثله أو شبهه، هذا هو تعريف كلمة النحو في اللغة. أما كلمة النحو في اصطلاح أهل النحو، أي في اصطلاح النحويين، فهي تطلق على القواعد التي تعرف بها أحكام أواخر الكلمات. من حيث البناء أو الإعراب. ومن حيث ظهور أثر الوظائف على أواخر الكلمات، كما سنقرأ إن شاء الله تعالى خلال هذه السنة، فهذه القواعد تسمى علم النحو. طيب هذا العلم الذي هو علم النحو. موضوعه الأساسي، كما. نعرف هو اللغة العربية. لأنه علم وضعه أهل اللغة العربية لفهم لغتهم والاستنباط القواعد من اللغة الفصيحة، نعم. طيب. إذا درسنا علما نحوي واستوعبناه، ما هي الثمرة؟ ما هي النتيجة التي نتوصل أو نصل إليها؟أهم نتيجة هي أننا نصون لساننا من الوقوع في الخطأ من الوقوع في الخطأ، في استعمال اللغة العربية. وأيضا في فهم القرآن الكريم أو الأحاديث النبوية الشريفة، التي هي. محل التشريع بالنسبة لي المسلمين، فإذا أردنا أن نفهم القرآن الكريم فهما صحيحا، إذا أردنا أن نفهم الحديث النبوي الشريف بكل ما فيه فهما صحيحا علينا أن نحسن قراءته، أن نفهم طريقة قراءته، أن نفهم لغته ولا يكون ذلك إلا من خلال. قواعد علم النحو. طبعا، فعلم النحو هذا، كما تعرفون، هو من علوم اللغة العربية. من وضع علم النحو؟ تعرضنا لهذه الفائدة والمعلومة السنة الماضية، ونزيل نزيد ونعيد تذكير بعضنا بعض بها، فنقول إن واضع علم النحو هو على الأصح، سيدنا أبو الأسود الدؤلي بعد أن كلفه بذلك إمامنا وسيدنا الخليفة علي بن أبي طالب، كرم الله وجهه، فواضع علم النحو، أي واضع القواعد الأولى لعلم النحو هو ذلك. العالم الجليل أبو الأسود الدؤلي، علم النحو، هذا ما حكم الشرع في تعلمه؟ علم النحو تعلمه فرض كفايه، بمعنى أنه إذا قام به البعض سقط عن البقية، وبمعنى أيضا. أنه يمتنع على الأمة الإسلامية كلها أن تترك. تعلم علم النحو. صحيح، فرض كفاية، ولكنه ماذا؟ ليس؟ متروتا هكذا. بمعنى أنه يجوز أن لا يتعلمه أحد فرض كفاية، يعني يجب على البعض إذا قام به البعض سقط عن ماذا؟ عن البقية؟ لماذا؟ لأن علاقة علم النحو كما أوضحنا قبل قليل علاقة مباشرة بالقرآن الكريم وبالحديث النبوي الشريف، فلو لم يقم علماؤنا جزاهم الله عنا كل خير من عند أبي الأسود. الدؤلي إلى يومنا هذا، بي. وضع قواعد النحو وصيانتها وتدريسها وتفهيمها لأصبحت لغة القرآن غريبة عنا، ولأصبح القرآن غريبا عنا، والحمد لله سبحانه وتعالى أن سخر لنا هؤلاء السادة الكرام في عل. في النحو، في اللغة، في البلاغة، في الصرف، في غيرها من العلوم التي بها وصل إلينا القرآن الكريم. وفهمناه فهما جيدا والحمد لله، ونسأل الله سبحانه وتعالى أن يوفقنا دائما في فهم قرآننا الكريم، بعد أن تعرفنا على مصطلح النحو عند أهل اللغة، وعند أهل النحو، سننظر إلى مصطلح الكلام من الجانب اللغوي، ومن الجانب النحوي الكلام عند أهل اللغة ما تحصل به فائدة. سواء كان الذي تحصل به الفائدة. لفظا. او كتابه او اشاره، او غير ذلك، فاهل اللغه عندما ينظرون الى كلمه الكلام يعتبرون ان هناك علاقه بين مرسل ومتلق. هذه العلاقة بين المرسل والمتلقي، الهدف منها. الأساسي، أي الهدف الأساسي، الوظيفة الأساسية في اللغة هي أن تحصل فائدة من المرسل إلى المتلقي، ما هي القناة الناقلة لهذه الفائدة؟ القناة الناقلة لهذه الفائدة قد تكون لفظا. أيمن أتلفظ به ونقوله قد تكون كتابة. قد تكون إشارة، قد تكون غير ذلك، فكل ما يؤدي إلى إيصال المعلومة إلى المتلقي يسمى عند أهل اللغة كلاما، أما الكلام عند أهل النحو. فإنه. يتمثل فيما اجتمعت فيه أربعة أشياء، أن يكون لفظا أن يكون مركبا، أن يكون مفيدا، وأن يكون بالوضع العربي، طيب سنشرح هذه الأربعة. الأول أن يكون لفظا. واللفظ هو ما يخرجه الهواء. عند إخراج الهواء ما نخرجه من هواء عند إنشاء الصوت، فلو وضعنا اليد عند الفم وتكلمنا فإنا نشعر بالهواء، وسمي اللفظ لفظا لأننا نلفظه، أي نخرجه من داخلنا يخرج ع على شكل أصوات تترجم إلى ماذا؟ الأذن، فتصبح أصواتا. اصطلح الناس على فهمها، وهي المت المكونة، ماذا للغة؟ فإذن الشرط الأول أن يكون لفظا. فعند أهل النحو. في الأساس يعني في الأول تعبيرات الوجه والعينين ليست لغة. الكتابة ليست لغة. وليست كلاما. الإشارة ليست كلاما. الكلام عندهم هو اللفظ، ولهذا ابن جن يقول أصل الكلام، أصوات يعبر بها كل قوم عن أغراضهم. طيب. قلنا اولا ان يكون لفظا، ثانيا ان يكون مركبا. طيب ما المقصود بالمركب؟ يعني اهل النحو لا يبحثون في الكلمات المفردة؟ البحث في الكلمات المفردة له ناسه وله أهله، فعندما تأتي بكلمة مفردة تستطيع أن تبحث فيها عند علماء الصرف صرفيا تستطيع أن تبحث فيها عند علماء اللغة، أي أصحاب المعاجم من حيث دلالتها ومن حيث المقصود منها، تستطيع أن تبحث فيها. عند علماء الأصوات. عندما يدرسون اللفظه والكلمه المفرده من الناحيه الصوتيه. يعني مخارج الحروف في كل كلمه. صفات هذه الحروف وظائف هذه الحروف. وظائف الحركات. في هذه الكلمات هذه يبحث فيها علماء ماذا؟ الاصوات؟طيب اما علماء النحو فلا يبحثون في الكلمه المفرده لانها عندهم لا تفيد فائده. اذا لا بد من ان نركب كلمه مع كلمه اخرى. وهي التي اصطلح النحوون على تسميتها بالجملة. فعندنا الكلمه تركب مع اختها. اي مع كلمه اخرى. سواء كانت الكلمه الاخرى فعل ا. او كانت الكلمه الاخرى اسما. اي نركب اسم ا مع اسم حتى نحقق بهما إما جملة اسميه. عندما نقول زيد قائم، فحققنا من خلال قولنا زيد قائم جملة اسمية، أو نقول يقوم زيد، فجمعنا فعلا مع اسم وتونا بهما ما يسمى بالجملة الفعلية، إذا لا بد في الكلام حتى يسميه أهل النحو كلاما أن يكون مركبا. الكلمة المفردة عندهم لا تسمى ماذا؟ كلاما أن يكون مفيدا؟ لا يكفي أن نركب كلمة مع كلمة. إن لم تحقق الغاية والوظيفة، وهي الإفادة لا تسمى عند أهل النحو كلاما. طيب لو جئت قلت لكم. إن جاء زيد. فلاحظ جمعت بين حرف وفعل واسم ان حرف شرط جازم جاء فعل الماط وزيد فاعل. ولكن هل حقق هذا الجمع فائده؟ لم يحقق فائده؟ لماذا؟ لانني لم اوصل اليك المعلومه كامله ان قلت لك ان جاء زيد ستقول لماذا افعل ان جاء زيد؟بينما لو قلت لك زيد؟ قائم. يجلس زيد اذا جمعنا كلمتين اسما مع اسم او فعلا مع اسم، وافاد فائدة، لو ان لو قلت لك زيد قائم، اذا وصلتك المعلومة عن زيد يجلس زيد وصلتك المعلومة، فبالتالي لا تبقى منتظرا لشيء آخر، المعلومة وصلتك، الفائدة وصلت، إذا قلنا أولا أن يكون لفظا. ثانيا أن يكون مركبا، وهذا التركيب كما اتفقنا إما أن يكون ظاهرا، فركبت كلمة مع كلمة، فعندما أقول لك زيد قائم، ركبت زيد مع قائم، يجلس زيد، رتبت يجلس مع زيت طبعا، وهذا الترتيب ظاهر، وقد يكون التركيب مقدرا، بمعنى لو قلت لك من جاء؟ يكون جوابك زيد، فأعلم أن أنك تقصد زيد. جاء. طيب. فبالتالي. الترتيب، اما ان يكون ظاهرا، او ان يكون مقدرا ان يكون مفيدا، اي مفيدا فائده يحسن السقوط عليها. اي يسكت المت المستمع. ولا يتساءل سؤال من لم تصله المعلومة كاملة إذا أن يكون لفظا أن يكون مركبا، أن يكون مفيدا بالوضع، أي بالوضع العربي. ف عندنا الكلام غير العربي لا يسمى عند علماء النحو كلاما. يسمى كلاما عندهم، فاللغة الفرنسية لا تسمى عند علماء النحو ال في اللغة العربية كلاما. اللغة الفارسية كل اللغات غير اللغة العربية، لا يتولى دراستها أهل النحو في اللغة العربية. إذا فهم يبحثون ما كان عربي، ا، أي ما كان لغة عربية بالوضع العربي، لكن هنا ننتبه إلى شيء لا يقصدون بالوضع العربي أصالة. يعني لا بد أن يبحثوا في كل الكلمات ولا يدرسون إلا الكلمات المركبة التي هي منبتها، عربي، لأ، ليس هذا المقصود. صحيح، المقصود مكان منبتها عربي ولكن ينضم اليها ويضاف اليها. ما كان ليس عربي الأصلي، ولكنه أصبح عربي الاستعمال. ولهذا عندما سئل أحدهم هل في القرآن الكريم؟ الفاظ غير عربيه؟ فقال نعم. جوابه صحيح؟وسئل آخر هل في اللغة العربية ألفاظ غير عربية؟ الأصل؟ عفوا، ألفاظ غير عربية؟ قال لأ، كلامه صحيح، طيب كيف نقول عن هذا؟ كلامه صحيح؟ وهذا كلامه صحيح؟ انتبهوا عندما سئل هل في اللغة العربية؟هل في القرآن الكريم ألفاظ غير عربية؟ فقال نعم، هو يقصد أنها ألفاظ غير عربية المنبت والأصل. لا يسمى بالاعشمية. إبراهيم. كلمة إبراهيم. ليست عربية الأصل. ولكنها دخلت إلى اللغة العربية من خلال التجاور الجغرافي والتجاور اللغوي، فبالتالي عندما يقول نعم يوجد في القرآن الكريم ألفاظ غير عربية باعتبار أنه يقصد باعتبار أنها غير عربية المنبه والأصل، والآخر الذي يقول لا يوجد في القرآن الكريم ألفاظ غير عربية، هو كلامه صحيح أيضا، لأنه يعتبر أن. الى اللغة العربية. مما هو ليس عربي، الأصل، قد أصبح عربيا بالاستعمال، فعندما نزل القرآن الكريم كل ما في ال القرآن الكريم من ألفاظ يستعملها العرب في ذلك الوقت، فإذا هي عربية الاستعمال، فقوله تعالى بلسان عربي مبين كلام صحيح. وقوله أعجمي أم عربي؟ كلامه صحيح، لأنه عربي الاستعمال، ولو كان أعجمي الأصل. طيب إذا يا جماعة الخير يصبح عندنا في درسنا لهذا اليوم، تعرفنا على مصطلح نحو لغة واصطلاحا، ثم تعرفنا على الكلام. و الكلام عند أهل النحو سنعيدها هو ما اجتمع فيه أربعة أشياء أن يكون لفظا أن يكون مركبا، أن يكون مفيدا، فائدة، يحسن السكوت عليها، وأن يكون بالوضع العربي. وحتى نلتقي في حصة أخرى، أسأل الله لنا ولكم التوفيق والسداد، والسلام عليكم ورحمة الله تعالى وبركاته.</p>
+
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
+
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
+
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الثالث عشر</title>
+<style>
+  body {
+    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: justify;
+    margin: auto;
+    max-width: 900px;
+    padding: 2rem;
+    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+    color: #111;
+  }
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #145a00;
+    text-shadow: 0 0 8px #a8ff8a;
+  }
+  p { margin: 1rem 0; text-align: justify; }
+  .container { text-align: center; margin-bottom: 1.5rem; }
+  .button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: #145a00;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
+  }
+  .share-buttons {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
+  }
+  .share-buttons button {
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
+</style>
+</head>
+<body>
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://vrsovtrsmqrpwzbetbuu.supabase.co/storage/v1/object/public/pdf/year2/htmlExtractionCourse/s1/fiqh/ec13fiqhs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
+  
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent7">الدرس الثالث عشر</h1>
+<p id="sent8">الحمد لله الذي خلق الإنسان معلمه، ورفع قدر العلم وعظمه، ووفق التفقه في دينه، من اختاره وفهمه، أحمده حمدا، يعصم من نقمه، ويتكفل بدوام نعمه، والصلاة والسلام على سيدنا محمد خير الأنام، وعلى آله وأصحابه الكرام، اللهم رب لا علم لنا إلا ما علمتنا. ولا فهم لنا إلا ما فهمتنا. ف نسألك اللهم علما وإخلاصا في الدين، ووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد ك الحسنة يا كريم أمين. مرحبا بكم في حصة جديدة نتكلم فيها بإذن الله تبارك وتعالى على مندوبات الصلاة، ويندب ااا تعجيل الفطر وتأخير السحور، نعم يقول بن عاشور رحمه الله نجب تعجيل لفطر رفعه. كذاك تأخير سحور، تبعه نجيب تعجيل لفطر. رفع كذاك، تأخير، سحور، تبعه. إذا قال نجب تعجيل لفطر رفعه. نعم، رفع هذه صفة لفطر تعجيل لفطر، فرفع قوله رفع هي صفة لفطر، أي يستحب للصائم، تعجيل فطر. وهذا الفطر مو صوف بكونه. رفع الصوم. وهذا كله إذا تحقق الغروب، قال نجب تعجيل لفطر رفعه كذاك تأخير سحور، تبعه، أي كما يستحب تعجيل الفطر، يستحب أيضا تأخير السحور. إذا قال من السنة تعجيل الفطر، وتأخير السحور، والسحور هنا بضم الصين اسم للفعل، فأما بالفتح فاسم لما يتسحر به، إذا عندنا السحور والسحور. نعم. أما السحور بضم السين هو اسم للفعل فعل الصحور، أما السحور هو ما يتسحر به ما يأكله المرء في السحور، هوالمراد به السحور بفتح السين. قال وإنما يستحب تعجيل الفطر، وتأخير السحور إذا تحقق الغروب، وعدم طلوع الفجر، وأما التعجيل والتأخير الموقع أن في الشك فيهما، فلا. نعم، فإن من شك، فإن من شك في طلوع الفجر، أو في الغروب لا يأكلون. في السحور مثلا، إذا شك أن الفجر قد طلع، لا يأكل في الغروب، إذا شك هل غربت الشمس؟ أو لم تغرب؟ لا يأكل. لنفترض أنه أكل، قال فإن. فإن أكل وبان أك له قبل الفجر أو بعده فإنه يقضي. لماذا؟ لأن الصوم في الذمة بيقين، لا بد أن يدخل، أي أن الصوم متعلق في ذمته بيقين، لا بد أن يدخل فيه بنية جازمة. لأن الصوم في الذمة بيقين، ولا يزول عن ذمته إلا بيقين. ولا كفارة عليه؟ لماذا؟ لأنه غير قاصد لانتهاك حرمة الشهر؟نعم. إذا، قال. لا بد أن يتأكد هل غربت الشمس حتى يفطر؟ وهلم يدخل الفجر بعد حتى يتسحر، فإن شك فيهما فلا يأكل، فإن أكلا، وبأن أكله قبل الفجر أو بعده فيقضي، لماذا؟ لأنه لم يدخل في الصوم بنية جازمة، مع أنه أكل قبل الفجر. لماذا؟ لأننا قلنا مم لأنه آه أكل وهو chaque، هل دخل الفجر؟ أو لم يدخل؟ وقلنا أن الصوم لابد أن يدخل فيه بنية جازمة، قال لماذا؟ لأن الصوم في الذمة بقين متعلق بذمته ويدخل فيه بنية جازمة. ولا يزور عن ذمته إلا اليقين، أنه. أداه على أجهل. أكمل وجه، قالو لا. كفارة عليه، أي عليه القضاء دون الكفارة، لماذا؟ لأنه غير غير قاصد؟ لانتهاك حرمة الشهرين. قال وإن شك في الغروب، فإنه يحرم عليه الأكل اتفاقا. فإن أكل ولم يتبين، فالقضاء. وإن تبين أنه أكل بعد الغروب. فلا قضاء عليه، وقد غروس لما إذا نشك في الغروب؟ هنا؟هو يتحر الغروب، ولكنه شك. هل غربت الشمس؟ أبل؟ متغرب. هنا يحرم عليه الأكل اتفاقا عندجمهور السادة المالكية، فإن أكل ولم يتبين هو شك غربت أو لم تهرب، ولكنه أكل. هنا عليه القضاء، وإن تبين أنه أكل بعد الغروب، فلا قضاء عليه. فإن تبين له بعد ذلك بعد أكله، أنه وقلنا شك. ولكنه حال شكه أكلا. قال فإن أكل ولم يتبين يتبين له شيء. هل هو أكل قبل الغروب أو بعد الغروب؟ هل يقدر هنا عليه القضاء؟ أما إن تبين له أنه أكل بعد الغروب، ف للقضاء عليه. نعم. قال ثم أعلم أن وقت السحور من 12:00 إلى ترو إلى طلوع الفجر، وكان رسول الله صلى الله عليه وسلم يؤخر السحور، بحيث يكون بين فراغه من السحور والفجر مقدار ما يقرأ القارئ 50 آية. كما في صحيح الإمام البخاري، نعم. عن أنس بن مالك رضي الله عنه أن النبي صلى الله عليه وسلم و زيد بن ثابت رضي الله عنه تسحر، فلما فرغ من سحور هما قام نبي الله صلى الله عليه وسلم إلى الصلاة، فصلى، فقلنا لأن سكم كان بين فراغ هما من سحورهم، أو دخولهما في الصلاة؟ قال كقدر ما يقرأ الرجل 50 آية. نعم. قال القسطلاني القصص لأني والقصص، لأني هو أبو العباس شهاب الدين أحمد إبن محمد إبن أبي بكر بن عبد الملك الخطيب القسطلاني، ألقت يبي المصري و القسطلاني. نسبة إلى قسطينة بضم القاف بلدة بتونس. وكان هذا العالم بارعا. آه، فالحديث علم الحديث له إرشاد الساري لشرح صحيح الإمام البخاري، و المواهب اللدنية في المنح المحمدية في السيرة النبوية، ولطائف الإشارات في علم القراءات، توفي رحمه الله بالقاهرة سنة 23. و900 للهجرة النبوية المشرفة. إذا قال القسطلاني وهذا التقدير لا يجوز لعموم الناس الأخذ به، وإن أخذ به صلى الله عليه وسلم للإطلاع الله إياه على حقائق الأمور، و عصمته صلى الله عليه وسلم عن الخطأ في أمر الدين. وقدر المتأخرون الجزء من الليل الذي لا يأكل فيه احتياطا ب1/3 ساعة. نعم، وقيل أن هذا الاحتياط مبالغ فيه. نعم، لماذا؟ لأن الأمر. صار في زماننا متيسرا، لأنه من ذي قبل، ربما لا توجد. ااا ساعات، ولا توجد، ولا يمكن ضبط الأوقات كما هي مضبوطة اليوم، إذا صار الأمر في زماننا متيسرا، لأن الأوقات أصبحت مضبوطة بشكل دقيق و وسائل معرفة الوقت كالساعات والهواتف النقالة وغيرها صارت متاحة لكل الناس. ولهذا، فإن تقدير وقت الاحتياط ب1/3 ساعة نراه مبالغة مبالغا فيه، و الأحسن تقديره بما ورد في الحديث، وهو قدر ما يقرأ القارئ 50 آية، وتقديره. ب10 دقائق، ااا كاف في ذلك، والله أعلم. إذن، نقف هنا؟ عند حصتنا هاته في هذا الموضع، على أن نستكمل الحديث فيما تبقى في الحصة القادمة بإذن الله تبارك وتعالى، شكر الله لكم حسن إصغاء كم و استماعكم، والسلام عليكم ورحمة الله تعالى وبركاته.</p>
+
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
+
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
+
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>

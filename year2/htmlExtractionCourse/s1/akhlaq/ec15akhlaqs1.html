@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الخامس عشر</title>
+<style>
+  body {
+    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: justify;
+    margin: auto;
+    max-width: 900px;
+    padding: 2rem;
+    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+    color: #111;
+  }
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #145a00;
+    text-shadow: 0 0 8px #a8ff8a;
+  }
+  p { margin: 1rem 0; text-align: justify; }
+  .container { text-align: center; margin-bottom: 1.5rem; }
+  .button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: #145a00;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
+  }
+  .share-buttons {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
+  }
+  .share-buttons button {
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
+</style>
+</head>
+<body>
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://vrsovtrsmqrpwzbetbuu.supabase.co/storage/v1/object/public/pdf/year2/htmlExtractionCourse/s1/akhlaq/ec15akhlaqs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
+  
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent11">الدرس الخامس عشر</h1>
+<p id="sent12">بسم الله الرحمان الرحيم. الحمد لله رب العالمين. وأفضل الصلاة وأتم التسليم على سيدنا وحبيبنا ومولانا وقرة اعيننا سيدنا محمد. أ صادق الوعد الأمين، وحبيبي رب العالمين، وعلى آله وأصحابه أجمعين، سبحانك لا علم لنا إلا ما علمتنا، فعلمنا مولانا ما ينفعنا. وانفعنا بما علمتنا وزدنا علما وعملا، وصدقا وإخلاصا في الدين. افتح علينا فتح العارفين، وفقنا توفيق الصالحين، عد علينا بعوائل que الحسنة ياكريم امين. وخليلهم على سيدنا محمد وعلى آله وأصحابه أجمعين. وبعد ou. معشر السادة والسيدات الطلبة والطالبات. مرحبا بكم. في هذا اللقاء الإيماني المتجدد. مع مادة الأخلاق؟ نتناول خلالها شرح. المختارات من حكم الإمام أبن عطاء الله السكندري رضي الله تعالى عنه وأرضاه، ونحن مع الحكمة الثالثة وال60، وهو الدرس الرابعة عشر، نعم من السداس الأول من هذا العام الدراسي. نسأل الله سبحانه وتعالى فيه التوفيق والنجاح، يقول الإمام إبن عطاء الله رضي الله تعالى عنه من لم يقبل على الله؟بمل أطفأت الإحسان. قيد إليه. بسلاسل. الإمتحان؟من لم يقبل على الله. بمول، أطفأت الإحسان. قيد إليه بسلاسل سلاسل إمتحان، يعني إبن عطاء الله رضي الله تعالى عنه، يريد أن يشير. أن الله سبحانه وتعالى يتعرف إلى عبده. وأن الله سبحانه وتعالى يسدي إلى عباده النعم كلها. ويريد منهم أن يتعرفوا عليه من خلال نعمه. من خلال ما أعطاهم من العطايا من النعم التي لا تحصى. نعم، السمع. والبصر والعقل، ونعمة الصحة والعافية. ونعمة الإيمان. ونعمة الأموال، و نعمة الأمن، ونعمة الطمأنينة، والراحة والسكينة، نعمة العقل والفهم عن الله سبحانه وتعالى. إذا الإنسان كله، نعم. والله سبحانه وتعالى بهذه النعم فيد من كانت تعرف عليه. من خلال نعمه، فلذلك أرسل إليك هذه النعم لتقول الحمد لله رب العالمين. الشكر لله رب العالمين، يا رب. لك الحمد على ما أنعمت. ياربي ف زدني من فضلك، ومن شكر فإنما يشكر لنفسه، ومن كفر فإن ربي غني كريم، إذا يريد أن يقول أبن عطاء الله أن هذه النعم التي أعطانا الحق سبحانه وتعالى إياها. لم يعطنا إياها هكذا. وإنما تقربا يتقرب إلينا سبحانه وتعالى، ويتودد وإلينا بها. حتى نقبل عليه اختيارا. بمحض إرادتنا. يحضي رغباتنا. وأن نحمده. وأنا نشكره. إن الله لا يرضى عن عبده. ياكل الأكلة في حمده عليه. ويشرب الشربة في حمده عليه. ورد أن الله حين خلق آدم عليه السلام. قالت الملائكة يا رب، خلقت آدم بيدك، ونفخت فيه من روحك وأ سجدت له الملائكة، وعلمته الأسماء الحسنى، أسماء كلها. بماذا؟ أجابك؟ وبماذا كانت مكافئته؟ فقال الحق سبحانه وتعالى يكفيني أنه قال الحمد لله رب العالمين. إذا، أيها السادة، من لم يقبل على الله بملء طفات الإحسان؟يعني نحن هذه الملأ طفات، وهذه النعم وهذه الأحساء وهذا الإحسان من الله عز وجل، إن ما جاءنا من أجل أن يدلنا على الله. من أجل أن يعرفنا بالله. يعني مثلنا مثل واحد له صديق ذو شأن في المجتمع. و أرسل إليه هدية. عن طريق السائق. أرسل إليه هدية. فمقتضى الأدب، وحسن المعاملة. أن يأخذ الهدية، وهذه في علبة، وأن يتعامل معها بحسب مقام المهد. بقى يقول هذه فازة جاءتني من فلان، وهذه صورة. ح صورتها أنا وفلان. ربما وضعها في ااا نعم، في صالونه. ربما وضعها في مكان بارز من بيته؟ وهكذا يتعامل مع الهدية بحسب مقام المهر لديه. ثم. ل لا ينسى أن يكرم ذلك السائق. أو ذلك البريد الذي أوصل إليه هذه الهدية؟نعم، ولم يغفر عن ذلك أبدا أن يقوله جزاك الله خيرا. بارك الله فيك. أحسن الله إليك. طيب وهل يقف عند هنا عند هذا الحد؟ لا. لا أبدا. وإنما عليه. Hein بعد هذا كله؟أن يرفع السماعة. وأن يكلم المرسل. صاحب الهدية. وهي قوله جزاك الله خيرا. ما هذه الهدية الجميلة؟ حتى و لو لم تكن في ذاك المستوى، وإنما عليه أن يكلمه، وأن يشكره، وأن يثني عليه، وأن يبارك له، يدعو له بالبركة فيما أبقى من ماله، أو المهم أن يشكره فرا يتم له أن إنسان قصر في واحدة من هذه الثلاث. إذن، هو لا يبلغ الكمال، ف المهدي إلينا أن نعم، والمرسل حقيقة هو الله، والذي أوصلها إلينا هو سيدنا رسول الله. أي والهدية هي الشريعة؟ الكتاب والسنة، والأحكام الشرعية، هذا الدين الذي أأ كرمنا الله به، فإذا نحن النعمة هذه ينبغي علينا أن نشكر المهدي فيما أهدى، ولا أن نقف عند الشكر المرسل والرسول، وأن نقف عنده فقط. لا، لا، أبدا، كذلك، هنا الشيخ يريد أن يقول من لم يقبل على الله؟ بمن أطفأت الإحسان؟ إذا هناك إقبال لا محالة. إذا هناك إقبال مطلوب منك؟ أن تقبل على سيدك؟وأنت قبل على الله سبحانه وتعالى، وأن تقول الحمد لله رب العالمين، وأن تقول ياربي لك الحمد، ولك الشكر على ما أنعمت عليه وعلى ما. أو ليتني من النعم، وعلى ما تفضلت عليه، وها أنت حمد الله سبحانه وتعالى وأنت تعتقد ou. كمال الاعتقاد أن ما أنت فيه من النعم ومحض فضل. من الله سبحانه وتعالى، لكن خلي بالك و إحذر. إذا، أنت لن. تقبل على الله ولم تتعرف على الله. وأنت تتمتع؟ وأنت تعيش دفي را غد نعمه وفضله وكرمه. الله سبحانه وتعالى. في هذه الحالة، سوف يمتحن. بامتحان، يقضك من خلاله. ويعرفك من خلاله ما أنت فيه من النعمة. أسأل الله أن يعرفنا النعم بدوامها، وأن لايعرفنا بزوالها. هكذا قالوا. الله معرفنا. نعم بدوامها ولات عرفناها بزوالها، الحكمة التي بعدها مباشرة الرابعة وال60 يقول فيها وهي في نفس هذا المعنى من لم يشكر النعم فقد تعرض لزوالها. ومن شكرها فقد قيدها بعقالها، يعني هنا هو يحذر من عدم التعرض لشكر من عدم الاهتمام بشكر نعمة من عدم الاهتمام، شكر نعمة من شكر المنعم، وشكر الرسول، والتعامل مع النعمة على حسب ما خلقت من أجله. هذه النعمة التي بين يديك نعمة السمع، عليك أن تستعملها في. في النظر إلى كتاب الله، في النظر في ملكوت الله، في النظر فيما يرضي الله، السمع نعمة، فعليك أن تسمعه أنت، أن تستعمله في ما خلق من أجله، أن تسمع القرآن، وأن تسمع الذكر، وأن تسمع المديح. وأن تسمح كلما يقربك لله سبحانه وتعالى، وأن تبتعد بضد ما يقربك إلى الله سبحانه وتعالى، وكذلك نعمة العقل، وكذا نعمة القوة، ونعمة المال، و نعمة العلم، إذا من لم يشكر النعم فقد تعرض لزوالها، لأن الله يا غار. الله تعالى يا غار، أحدنا، لا يرضى لنفسه أن يعامل بهذه المعاملة. إذا أنت أحسنت إلى فلان من الناس؟ وكل يوم وأنت ترسل إليه طبق؟ أواه صينية، أو مبلغا أو شيئا ما، و كل شهر، و مع ذلك لا يقابل ذلك لا بالشكر ولا ب الثناء، ولا بالمدح، ولا بحسن المعاملة، وهو لا يزداد يزدري ك، ولا يهتم بك. طيب، فأنت لا شك أنك سوف تغضب. لا شك أنك سوف تحزن. لا. سوف تتألم. تقول ماذا له؟ فلان؟ أنا أرسل إليه الهدايا، التل والهدايا، هو لا يرفع السماعة ولا يكلمني، حتى إذا رآني لا يبالي وكأنه لا يعرفني، وكأنه لم يصل يصله من قبل شيء ما. فإذا كان هذا المخلوق في مقابلة المخلوق، فكي في معاناة المخلوق، فكيف ب المخلوق حين يتعامل مع الخالق الذي أوجد من العدم، والذي أم دك بال مدد مدد الوجود، بأنه لو لم يمدك بمدد الوجود، ل أصبحت عدما محضا. دورا هو الذي خلقك نعم، و وفقك، ونسب إليك وقالك. صليت يا عبدي؟ صمت يا عبدي؟ زكيت يا عبدي، إذا الشيخ هنا يوجهنا إلى حكمة حقيقة هي مع أن الشارح،الشيخ الشرنوبي شرحها ب آه أربعة أسطر لكنه وأكل شرحها أيضا إلى الحكمة التي بعدها لأنهما تتكامل أن فقال رضي الله تعالى عنه أبن عطاء الله من لم يقبل على الله بملء طفات الإحسان. إذا كان الإحسان الإلهي. الوحدة تلو أخرى، والله يتلطف إليك، والله يتعرف إليك إحسانا مع إحسانا، مع إحسان، مع إحسان، والعبد لا يزاد من الله إلا بعدا وإنكارا، و جحودا، و معصية ومخالفة. إذا والله تعالى يحبه. قيد إليه بسلاسل الإمتحان أ. في هذه الحالة، سلط الله عز وجل عليه لإمتحانات تلو الإمتحان. نعم، نسأل الله العفو والعافية، ولذلك قالوا سبحانه وتعالى إذا أعطى أدهش وإذا أخذ فتش كم من إنسان كان غافلا عن الله عز وجل، ف أصيب في ولده. في أحد أولاده؟ب حادث سير بغرق بحرق ب آه، أي أمر من الأمور، سبحان الله، فتغيرت نفسه تغيرا كليا. وأصبح لا يكاد يعرف هذا فلان. هد فلان. أصبح من بيته إلى المسجد والسبحة لا تفارقه، وأصبح الحضور مع الله لا يفارقه، وهو يحمد الله وهو يتوب إليه، وهو. وهو. طيب. هذا أمر جيد، لكن أما لو كان ذلك قبل أن تنزل المحنة، وقبل أن ينزل البلاء، أليس يكون ذلك كذلك؟تفضل؟نعم، وكذلك على التنبيه أيها السادة، تنبيه لنا معشر الإخوة والأخوات و السادة والسيدات. تنبيه لنا أن نحذر. ياريت هذه الحكم تكتب بماء الذهب. و توضع في مكاتبنا. و توضع في صالونات نا صالونات صالونات n'a و توضع في مساجدنا، هكذا نجعلها هذه الحكم، نعم بخط جميل أو بخطوط جميلة، ونزين بها صالونات نا مجالسنا مكاتبنا مدارسنا. آه، صفوفنا في جامعاتنا، حتى كلما آه. نعم، جاء نظر أحد نا إلى الحائط. نظر إلى حكمة توقظه، لربما من غفلته. من لم يقبل على الله بملء طفات الإحسان. قيد إليه بسلاسة الإمتحان. وما أدراك ما. الامتحان، نحن نقول أيها الإخوة، أيها السادة، نسأل الله أن لا يمتحننا. نسأل الله أن لا يختبر. نه. نعم، الله سبحانه وتعالى يعني عقوبته شديدة وقدرته لا حدود له، ونحن عبيد إحسان، ولسنا أننا لا نقوى على الإمتحان، حاشا لله نحن عبيد إحسان وعودتنا كل فضل ع سى يدوم الذي منك عودتنا. نحن حين شرب الماء العكر أو الماء السخن لأن تلذذه، لكن حين شربه باردا حين شربه نعم ااا مبردا، وتخرج كلمة الحمد لله من أعماق قلوبنا، حين نركب سياراتنا نعم، و تكون مبردة. وتكون نعم، ااا كاملة الكماليات إلى ما هنالك، فتجد أحد نا يجلس هو في طمأنينة، وفي راحة، وفي سكينة، فدائما لا نقول إلا ما قاله القرآن ربنا آتنا في الدنيا حسنة، وفي الآخرة حسنة، وقنا عذاب النار. أي من لم يقبل على الله تعالى بسبب ملاطفا، تهي الإحسان. قيد بالبناء للمجهول، أي قاده الله إليه، بالإمتحانات الشبيهة بالسلاسل، فالنفوس الكريمة تقبل على الله ل إحسانه، والنفوس اللئيمة لا ترجع إليه إلا ببلائه و امتحانه، ومراد الرب من العبد رجوعه إليه طوعا أو كرها. نقف هنا. و الحمد لله رب العالمين، و أسأل الله العلي القدير أن يجعلنا من الذين يستمعون القول فيتبعون أحسنه، إلى لقاء آخر إن شاء الله تعالى. و السلام عليكم و رحمة الله تعالى و بركاته.</p>
+
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
+
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
+
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>

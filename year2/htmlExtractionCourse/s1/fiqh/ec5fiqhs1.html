@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الخامس</title>
+<style>
+  body {
+    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: justify;
+    margin: auto;
+    max-width: 900px;
+    padding: 2rem;
+    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+    color: #111;
+  }
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #145a00;
+    text-shadow: 0 0 8px #a8ff8a;
+  }
+  p { margin: 1rem 0; text-align: justify; }
+  .container { text-align: center; margin-bottom: 1.5rem; }
+  .button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: #145a00;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
+  }
+  .share-buttons {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
+  }
+  .share-buttons button {
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
+</style>
+</head>
+<body>
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://vrsovtrsmqrpwzbetbuu.supabase.co/storage/v1/object/public/pdf/year2/htmlExtractionCourse/s1/fiqh/ec5fiqhs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
+  
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent23">الدرس الخامس</h1>
+<p id="sent24">الحمد لله رب العالمين، والصلاة والسلام على أشرف المرسلين سيدنا وملء ومولانا محمد، وعلى اله وصحابته الطيبين الطاهرين، و عليهم وعلينا بإحسان إلى يوم الدين، اللهم يا رب لا علم لنا إلا ما علمتنا، و لا فهم لنا إلا ما فهمتنا، نسألك اللهم علما وإخلاصا في الدين. ووفقنا اللهم توفيق الصالحين. وعد علينا بعوائد كل حسنة، يا كريم أمين. مرحبا بكم في حصة جديدة. آه، سنأخذ فيها بإذن الله تبارك وتعالى. سنتحدث أنه لا زكاة في الوقت، ولا زكاة في ما دون النصاب، ولا في العسل و الخضر و الخضر، و. مسألة أخرى هي مسألة الجمع بين الأصناف المتشابهة في حساب النصاب. إذا، قال. ولا يزكى وقف من النعم كذاك ما دون النصاب، والي عم. وعسل فاكهة مع الخضر، إذ هي في الم قتاة، مما يدخر، ولا يزكرو. قص من النعم كذاك ما دون النصاب، والي عم، وعسل فاكهة مع الخضر، إذ هي في المقت اتنما يدخر. إذا قال ولا يزكى، وقف من النعم. نعم. وهذا الوقت هو ما بين ال فريضتي، ن الوقت هو ما بين ال فريضتي ن إذا قلنا نصاب زكاة الماشية الغنم،قلنا إذا ااا من 40 إلى 120 فيها شاة واحدة. إذا، إذا عنده 40 ي خرجات عنده 60 شات، عنده 70 شات إلى 120 شات، إذن مابين ال فريضتي ن قداش ات إذا ما وصل إلى 121 يصبح شات أن إذا فالمراد بالوقت ص هو ما بين ال فريضتي ن ما بين الفريضةmais لا زكاة فيه، إذا قال ولا يزكى، وقص من النعم، وهذا في النعم، فقد قلنا. أما العين زكاة العين، و زكاة الحبوب، والثمار في زكى س، فيزكال، زائد فيها على النصاب، اذا قالو لا يزكى وقت من النعم كذاك مادون مادون النصاب، والي عم. نعم. قالو لي عم أي عموما أي عموما مطلقا، هذا الحكم في كل. ما يملك مما يزكى. قال وعسل فاكهة مع الخضر أي وعسل لا يزكى، ولا تزكى فاكهة مطلقا مع الخضر. لماذا؟ قال إنه يتألم؟ قتاة مما يدخر؟ ايه؟ قال أي إنما تجب الزكاة فيما. فيما. فيما يقتات، ويدخر مما يكون قوتا. أي يستطيع الناس أن يعيشوا عليه. ويمكن ادخاره هذا الشرط في في زكاة الحبوب والثمار. قال إذن هي في ال مقتا. تم ما يدخر، أي أن الزكاة إنما تجب في المق تات، و المدخرين. فيما يقتاتو، ويدخر غالبا نعم للعيش من الحبوب و الث والثمار، أما قوله ااا وعسل فاكهة هذا ليس مما يقتات ويدخر. هل يستطيع إنسان أن يعيش على العسل؟ لا. إذا قال لا تجب الزكاة في الوقت. نعم. وهو ما بين الفرضين من زكاة، نعم، فمن كان عنده ست أو سبع أو ثمان أو تسع من الإبل، فعليه شات عن الخمسة، ولا زكاة عليه في الزائد عن الخمس. إذا، قلنا. من عنده من خمسة؟ إلى إلى تسعة. يخرج، يخرج، شات، نعم، وما بين الفريضة كين، لا زكاة فيه ستة شات، واحدة وسبعة شات واحدة وثماني شات، واحدة وتسعة شات واحدة، إذا بلغت عشر تصبح شتان، عندنا من عشرة إلى 14. هذه شتان. قال كذلك 11 إلى 14 لا زكاة في الزائد على العشرة، وهكذا، وكذلك في البقر، فلا زكاة في الزائد على 40 إلى 59. وهكذا، نعم. إذن، ما بين 40 و59، هذا يعتبر وقص لا زكاة فيه، فيخرج على 40 بقرة. بقرة مسنة سواء 40 أو 45 أو 50 إلى حد 59 بقرة واحدة مسنة، وكذلك في الغنم، وعندما نقول الغنم، هي تشمل الشياه والماعز، قال، وكذلك في الغنم، لا زكاة في الزائد على 40. نعم، مثلا إلى 120 إذا ما بين 40 و120 كما قلنا لا زكاة فيه، فهو وقص، فيخرج على 40 شات، نعم على 40 شات شات واحدة. قال والو قص خاص من زكاة، نعم، أما العين والحرث في زكي الزائد على النصاب، وإن قل مسألة أخرى، لا زكاة في ما دون النصاب، ولا في العسل و الخضر، و، أما ما دون النصاب من جميع ما يزكى من عين، أو حرث أو ماشية، فلا زكاة فيه، كما أنهلا زكاة في العسل والفواكه، والخضر المدخرة لل اقتياد، نعم، هذا عند السادة المالكية. مسألة أخرى، مسألة الجمع بين الأصناف المتشابهة في حساب النصاب، يقول أبن عاشر، ويحصل النصاب من صنفين ك ذهب وفضة من عيني، والضأن لل معزي، وبخت لل عراب، وبقر إلى اللجوء إلى الجواميس. اصطحاب القمح للشعير. القمح للشعير لس لي صار كذا، القطان والزبيب والثمار، ويحصل النصاب من صنفي ن. ك ذهب وفضة من عيني، والضأن للمعز، وبخت لل عراب، وبقر إلى الجواميس. اصطحاب القمح للشعير ل سلتي. صار كذا القطان والزبيب. والثمار. إذا قال ويحصل النصاب من صنفا من صنفين، سواء كان صنفين أو أكثر، نعم، إذ لا يشترط كون المزكى من صنف واحد. قالك ذهب وفضة من عينه. مثلا إذا حصل النصاب منهما معا الذهب والفضة؟ولكن يكون بالجزء لا بالقيمة هنا. بالجزء، لا بالقيمة مثلا، كع عشر دنانير ذهبية و100 درهم، بمعنى أن كل دينار يساوي يقابله عشرة 10 دراهم، و يجوز إخراج الذهب عن الفضة على المشهور. قالو ضان للمعزين تضم النعاج إلى المعزي، وتعطى الزكاة من الأكثر. مثلا، إذا ملك. 30 رأس من الغنم، وعشرة رؤوس من الماعز، فإنه يخرج الزكاة من الأكثر التي هي من من الضمان. وإن تساوي في خير السعي بين الضأن وبين الماعز، و ما هو أنفع للفقير، قال وبخت لل عرابي، أي وتضم الإبل البخت إلى الإبل، العراب، وإبل البخت هي إبل ضخمة مائلة إلى ال القصر. له أصنام، أن أحدهما خلفا الآخر، و الإبن العراب، هي هي الإبل، الإبل، العرب، العرب المعهودة، نعم. قال وبقر إلى الجو انيس، أي وكذا كت ضمة البقر إلى الجو؟ انيس نعم. قال قمح للشعير لسلك يصار نعم. وسل قلنا هو نوع من من الشعير. بدون قشر. كما يسمى بشعير النبي عند المغاربة. يصار أن يضم القمح للشعير لسلك يسارا يضم كذا القطاني والزبيب والثمار، أي وكذا الزبيب. تضم أنواعه تضم أنواع الزبيب إلى بعضها البعض و تزكى والثمار كذا كذا. ك. تضم أنواع أنواع التمر إلى بعضها البعض. وتذكر. لاكن لا يضم الزبيب إلى. إلى. إلى التمر. الزبيب تزكى أنواعه وتضم إلى بعضها البعض. وأما التمر تزكى تضم أنواعها إلى تضم أنواعه إلى بعضها البعض، ثم تزكى. قال لا فرق، لا فرق في زكاة العين بين كون النصاب كله ذهبا، أو كله فضة، وبين كونه ملفقا منهما، لكن بالتجزئة والمقابلة بأن يجعل كل دينار في مقابلة 10 دراهم شرعية، وافق ذلك صرف الوقت أم لا؟ فمن له؟ 130. درهم، أو دينار، يتابع 20 درهم لا زكاة عليه، وكذلك في زكاة الماشية، لا فرق بين كون نصاب الغنم كله أنا أو كلهم عزا، أو ملفقا منهما ب20 من كل منهما، أو نصاب البقر كله بقرأ، أو كله جوا miss، أو ملفقا منهما. أو نصاب الإبن كله إبلا أي عرابا، أو كله بخ تا، أو ملفقا منهما. نعم، إذن تضم الأصناف المتقاربة إلى بعضها البعض، نعم. وبهذا نكون قد وصلنا إلى ختام آه. حصتنا هاته. شكر الله لكم حسن إصغاء كم و استماعكم. سبحانك اللهم وبحمدك، نشهد أن لا إله إلا أن نستغفرك، ونتوب إليك، السلام عليكم و رحمة الله تعالى و بركاته.</p>
+
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
+
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
+
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>

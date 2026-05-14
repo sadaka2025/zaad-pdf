@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الثامن</title>
+<style>
+  body {
+    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: justify;
+    margin: auto;
+    max-width: 900px;
+    padding: 2rem;
+    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+    color: #111;
+  }
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #145a00;
+    text-shadow: 0 0 8px #a8ff8a;
+  }
+  p { margin: 1rem 0; text-align: justify; }
+  .container { text-align: center; margin-bottom: 1.5rem; }
+  .button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: #145a00;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
+  }
+  .share-buttons {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
+  }
+  .share-buttons button {
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
+</style>
+</head>
+<body>
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://vrsovtrsmqrpwzbetbuu.supabase.co/storage/v1/object/public/pdf/year2/htmlExtractionCourse/s1/fiqh/ec8fiqhs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
+  
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent29">الدرس الثامن</h1>
+<p id="sent30">الحمد لله وكفى، والصلاة والسلام على عباده الذين اصطفى، اللهم رب لا علم لنا إلا ما علمتنا، و لا فهم لنا إلا ما فهمتنا، ف نسألك اللهم علما وإخلاصا في الدين، ووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد que الحسنة، يا كريم أمين. مرحبا بكم في حصة جديدة نستكمل فيها الحديث بإذن الله تبارك وتعالى على زكاة الفطر. وزكاة الفطر وجبة بالسنة، ففي ال موطئ للإمام مالك رضي الله عنهم على بن عمر. فرض رسول الله صلى الله عليه وسلم صدقة الفطر من رمضان على المسلمين. فرض أي، أوجب، نعم. ولفظه في الموقع عن ابن عمر رضي الله عنه أن رسول الله صلى الله عليه وسلم فرض زكاة الفطر من رمضان على الناس صاعا من تمر أو صاعا من شعير على كل حر، أو عبد ذكر أو أنثى من المسلمين. وفي لفظ البخاري فرض رسول الله صلى الله عليه وسلم زكاة الفطر صاعا من تمر، أو صاعا من شعير، على العبد والحر، والذكر، والأنثى، والصغير والكبير من المسلمين، وأمر بها أن تؤدى قبل خروج الناس إلى الصلاة، واختلفا. Même المذاهب في تفسير قوله صلى الله عليه و سلم فرض على رأي إثنين، أحدهما بمعنى الزما، وحتما وأوجب أ، وهو رأي مالك، وشاف غي وأحمد. والقول الثاني بمعنى قدر، وهو رأي أبي حنيفة، ومما يقوي رأي الجمهور قوله في الحديث على الناس إذ لو كان بمعنى قدر لقا للناس. و قدرها، كما ذكرنا في الحصة الماضية، صاع. وهو أربعة أمداد لمده صلى الله عليه وسلم. و تجب بغروب شمس آخر رمضان. تجب زكاة الفطر بغروب شمس آخر رمضان بقوله في الحديث فرض زكاة الفطر من رمضان، أي أن سببها انقضاء شهر الصوم وبداية الفطر، ويكون ذلك على الصحيح. بغروب شمس آخر يوم من رمضان، فمناطق قبل الغروب، فلا يجب إخراج زكاة الفطر عنه، ومن عاش حتى غربت الشمس وجبت الزكاة عنه، وكذلك من ولد قبل الغروب وجب إخراجها عنه، ومن ولد بعد الغروب فلا تجب. فلا تجب عنه، إذن، يقول ابن مؤقت و تجب بغروب شمس آخر رمضان، أو بطلوع فجر شوال على القادر عليها، أو على بعضها وقت الوجوب، وإن ب تسلف إذا رجال القضاء. وإن ب تسلف معناه، إن كان بإمكانه أن يتسلف أ. ما يسدد به زكاة الفطر. ويمكنه بعد ذلك قضاء هذا الما المال الذي ت سلفه، فل يتسلف، ويؤدي زكاة الفطر، ثم بعد ذلك يؤديها لأصحابها. قال وإن عجز عن أدائها سقطت عنه. نعم، وتجب على المسلمين، ولا فرق بين كونه حرا أو عبدا، ذكرا، أو أنثى، صغيرا أو كبيرا. تجيب في حقي. نعم، المسلم سواء كان حرا أو عبدا، ذكرا أو أنثى، صغيرا وكبيرا، وتجب عن نفسه، وعن من تلزمه، نفقته من زوجة له أو لأبيه. أو أبوين أو أولاد أو رقيق له أول أبيه، إذا كانوا مسلمين، إذا. شرط أن تعتري المسلمين زكاة الفطر. قالو تخرج زكاة الفطر من لعيش القوم في رمضان؟ قيل. تخرج من جل عيش القوم في رمضان، أكثر ما يأكله الناس في رمضان، اتقول نعم، وقيل في العام، وقيل من غالب قوت أهل البلد في العام كله. نعم. نعم، وقيل في يوم الوجوب، وقيل الغالب ما يأكله الناس في يوم وجوب زكاة الفطر، فتخرج منهم. وتكون من قمح أو شعير أو سلطة أو ذرة أو دخن أو أرز، أو تمر، أو زبيب، أو غير ذلك. فعدد لنا هنا أبن المؤقت. ثمانية أصناف من الأشياء التي تعطى منها الزكاة، و النوع التاسع الذي ااا يذكر في غالب كتب السادة المالكية هو الأقط نعم، والأقط هو آه هو الجبن المجفف الجبن. نعم، المجففوهو جبن يخرج ااا زبده، نعم. قال ولا ينظر لعيش المخرج ب. للعيش جل الناس. فا دائما ننظر في إخراج زكاة الفطر غالب ما يأكله الناس و ما يعيشون به لا ماء. يأكله المخرج، وإنما نخرج غالب قوت أهل البلد. لا، ما يقتات عليه المخرج، ولا ينظر لعيش المخرج ب للعيش جل الناس. ويستحب إخراجها بعد الفجر وقبل الغدو إلى المصلى، ويجوز إخراجها قبل العيد بيومين، لما رواه الإمام البخاري وابن أبي شيبة، وابن خزيمة، وابن حبان، عن نافع، قال كان بن عمر رضي الله عنهما يبعث صدقة رمضان حين يجلس الذين يقبضون ها. وذلك قبل الفطر بيوم أو يومين. كان. بن عمر عبد الله بن عمر رضي الله عنهما. يخرج زكاة الفطر قبل العيد بيوم أو يومين، لأن الناس يجلسون وينتظرون زكاة الفطر. قال وتدفع لحر مسلم، ويجوز دفع أص وعل مسكين، وصاع للمسكين، معناه يمكن أن ندفع ندفع. ا وعن متعددة لمسكين واحد، أو أن ندفع صاع واحد لمسكين واحد عام. أ يجوز دفعها لمسكين واحد؟ أو تفريقها على مجموعة من أم مجموعة من من المساكين. ولا تسقط بمضي زمنها عنه، ولا عن من تلزمه نفقته، ولو مضى لها سنون. إذن، لا تسقط زكاة الفطر؟ولو مازالها سنون، ومن زال فقره أو رقه. يومها استحب له الإخراج. أي منعتق يومها يوم وجبت فيه زكاة الفطر، يستحب له أن يخرج زكاة الفطر، لماذا؟ لأن العبدااا يخرج عنه سيده. قال وحكمة جوبها كفاية أخذها عن سؤال ذاك اليوم. الحكمة من إخراجها هو أن نغني الفقراء من أن يتعفف، وأن يطلب الناس حاجة في يوم العيد، وذلك لما رواه أبوداود وابن ماجه والحاكم بسند حسن، عن ابن عباس رضي الله عنهما قال فرض رسول الله صلى الله عليه وسلم. Meme زكاة الفطر طهرة للصائم من اللغو، والرفث. ف. وطعمة للمساكين، من أداها قبل الصلاة فهي زكاة مقبولة، ومن أداها بعد الصلاة فهي صدقة من الصدقات. ويمكن اليوم أن تصرف أو أن تخرج زكاة الفطر قيمة على ما ذهب إليه أبو حنيفة. وهذا الذي نراه اليوم، لأن الناس اليوم في أمس الحاجة إلى مال يسد ااا حتى يسد بهذا المال حاجتهم، مثلا هذا الفقير. الذي إن أردت أن تعطيه من غالب قوت أهل البلد. تعطيه مثلا قمحا أو شعيرا. تعطيه مثلا 2 كيلو غرام من السميد او من ال المقرونة. ماذا يفعل بها؟ربما يلقيها أو يبيعها بأقل من ثمنها؟ ف نعطيه الأولى، نفتي بما ذهب إليه أبو حنيفة، وهو الأسلم للفقير اليوم،لأننا في زمن المادة للأسف الشديد اذن وحكمة جوبها هي كفاية أخذها عن سؤال ذاك اليوم. وهنا نكون قد وصلنا إلى ختام باب الزكاة. وفي الحصة القادمة بإذن الله تبارك وتعالى نبدا في باب جديد ألا وهو باب الصيام، شكر الله لكم حسن الإصغاء، كما استماعكم، و جزاكم الله خيرا، سبحانك اللهم وبحمدك، نشهد أن لا إله إلا أنت، نستغفرك، ونتوب إليك، و السلام عليكم و رحمة الله تعالى و بركاته.</p>
+
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
+
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
+
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>

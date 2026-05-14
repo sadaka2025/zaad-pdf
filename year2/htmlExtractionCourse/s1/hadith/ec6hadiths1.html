@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس السادس مادة الحديث</title>
+<style>
+  body {
+    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+    font-size: 22px;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: justify;
+    margin: auto;
+    max-width: 900px;
+    padding: 2rem;
+    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+    color: #111;
+  }
+  h1 {
+    text-align: center;
+    font-size: 30px;
+    color: #145a00;
+    text-shadow: 0 0 8px #a8ff8a;
+  }
+  p { margin: 1rem 0; text-align: justify; }
+  .container { text-align: center; margin-bottom: 1.5rem; }
+  .button {
+    border: none;
+    cursor: pointer;
+    color: white;
+    background: #145a00;
+    padding: 10px 30px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 16px;
+    margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
+  }
+  .share-buttons {
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
+  }
+  .share-buttons button {
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
+  }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
+</style>
+</head>
+<body>
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://vrsovtrsmqrpwzbetbuu.supabase.co/storage/v1/object/public/pdf/year2/htmlExtractionCourse/s1/hadith/ec6hadiths1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
+  
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent25">الدرس السادس مادة الحديث</h1>
+<p id="sent26">بسم الله الرحمان الرحيم. و الحمد لله رب العالمين، وأفضل الصلاة وأتم التسليم على حبيبنا محمد سيد الأولين والآخرين، وعلى آله وأصحابه أجمعين. اللهم علمنا ما ينفعنا وينفعنا بما علمتنا إنك أنت العليم الحكيم. نقول وبالله نستعين، هذا هو الدرس الخامس من سلسلة الدروس. رياض الصالحين، حيث اخترنا لكم بعض الأحاديث من أبواب متفرقة، من هاذ الكتاب الذي عم نفعه، وهو كتاب مبارك، يقول المؤلف النووي رحمه الله تعالى باب المراقبة المراقبة من را قبة، يرقب أي الطلعة. وراء، فالمراقبة من المفاعلة، و أفعال مفاعلة تكون من باب المشاركة، أي أن الله عز وجل يرق بك في جميع أحوالك، وأنت أيضا. تراقب الله عز وجل، وتعلم أنهم الطلع عليك في جميع أحوالك، إذا، إذا المراقبة هي عملية مشاركة بين الله عز وجل وعبده، فلا بد لي أعلى مقام هو مقام المراقبة في باب التزكية في باب. الإحسان في باب علم السلوك، في باب التربية، سميه ما شئت من الأسماء، لا مشاحة في الإصلاحات، لكن لا نستطيع أبدا أن ننكر أن هناك ركنا ثالثا من أركان الإسلام، إذا عنا إسلام، حديث جبريل معروف وإيمان، أعمال الجوارح. و أعمال القلوب بالإذعان والمشاركة بينهم. تتوج تلك العملية إلتزام بالأعمال القلوب بأعمال الجوارح لا تقبل البتة إلا إذا توجت ب بالتزكية، يعلمه ويزكيهم. فيق. وفي آية أخرى يزكيهم ويعلمهم، قد أفلح من تزكى. وذكر اسم ربه فصلت إذا العبادات لا تأتي إلا بعد التزكية، فإذا زكى المرء نفسه بمعنى هذبها. و أخلاها عن الصفات الدنيئة والشوائب الدنيئة، وحلها بالصفات الحميدة، فهذا نوع من المجاهد، لذلك قال الله عز وجل قد أفلح من تزكى. انظر إلى صيغة الفعل في نوع من الشدة، في نوع التضعيف، تزكى في نوع من المجاهدة، إذا يذكرنا ربنا عز وجل. يقول الذي يراك حين تقوم أي ذكر. ربك الذي يراك بمعنى يراقبك حين تقوم الخطاب للنبي صلى الله عليه وسلم، والمراد أمته، فهم أولى بهذا الانقياد، لأن النبي صلى الله عليه وسلم الكامل المكمل لا يحتاج إلى تذكير، حتى يقال إن ربك يراك. إنما المراد به أمته، إذا الذي يراك في جميع أحوالك، ومن أحوالك قيامك، ومن أحوالك قيامك، أي قيامك في الصلاة، أو في أي حال كان، حين تقوم وتقلبك، أي راك في الحين، في حين القيام، وفي حين التقلب في الساجدين في صلاتك. مع الناس. فهنا العلماء قالوا ب تفاضل بين القيام وبين السجود، فالبعض فضل السجود لأنو أقرب يكون العبد إلى ربه وهو ساجد، والبعض فضل القيام بأن فيه القرآن لأنه يتلى فيه القرآن، فالقيم بعتبار القرآن هو أفضل، والسجود باعتبار القرب من الله. فهو أفضل، هناك خلاف كبير، نكتفي بهذا. اشرح المبسط، وقال تعالى وهو معكم أينما كنتم، الضمير في وهو إلى الله عز وجل. يخبر ربنا عز وجل أنه لا يتخلى عن عباده. أينما كانوا، وكيفما كانو، وأي نوع كانو يعني مؤمنا هم ف المعية مع المؤمنين معية الله عز وجل مع المؤمنين تكون بالحفظ والرعاية والصيانة و المعية مع الكافرين، تكون بالرقابة. تكون بالرقة، فالله عز وجل لا يتخلى بمعيته، موجودة مع الكافر ومع المؤمن، لكن معية المؤمن، معية مدح، و معية الكافر معية رقابة وذنب لهم. وهو شهيد عليهم أينما كانو، وقال تعالى إن الله لا يخفى عليه شيء في الأرض ولا في السماء إن الله لا يخفى عليه شيء فاتت كلمة شيء فاعل ليخفى منكرة، والتنكير يفيد التعميم أي أي شيء مهما قل. وكثر، مهما صغر أو كبر، مهما عظم أو حقرة، فالله عز وجل يعلمه، ولا يخفى عليه شيء في الأرض ولا في السماء، وقال تعالى إن ربك لبالمرصاد إن ربك لبالمرصاد، والمقصود هنا بالمرصاد، مرصد، يرصد، أي راقب. يراقب أي إن الله مراقب لكم ولجميع أعمالكم، وقال تعالى يعلم خائنة الأعين وما تخفي الصدور، فهذه الآيات المهيب آت، تذكرنا بأن علينا رقيبا يراقب أعمالنا وأحوالنا و قلوبنا و جوارحنا، ولا يخفى عليه شيء. أتت الآيات أن الله عز وجل يعلم سركم على نيتكم، هذه بالنسبة لنا، نبهنا العلانية، والسر هي بالنسبة لنا، أما بالنسبة لله عز وجل، فلا فرق بين علانية وسر، فالكل له جار، الله عز وجل، ليس هناك شيء عليه خفي، وشيء آخر علني. إنما هذه التعبيرات فقط حتى نفهمها، نحن قال والآيات في الباب كثيرة معلومة. هذا الحديث الذي سنمر على جزء منه. اليوم هو حديث جبريل الذي مر معكم السنة الماضية، وقد اطلعتم عليه لخصه، ويهمنا منه الجزء الأخير. همنا منه، جزء هذا الحديث ذكر الأركان الثلاثة وهي أركان الإسلام، أعمال الجوارح، اعمال الظاهرة، ثم ذكر أركان الإيمان الستة وهي أعمال القلوب، اعمال الباطن، ثم تواجد ذلك بي مقام الإحسان الذي يهمنا الآن. قال فأخبرني عن الإحسان؟ الاحسان. قلنا هو باب المراقبة، والإحسان هو باب التزكية. اختلفت الأسماء، واختلاف الأسماء تدل على شرف المسمى، هذا الأمر العظيم الذي يعني أقصى ما يسعى إليه المسلم أنه يصل إلى مرتبة الإحسان والإحسان، فسر هنا. سيدنا جبريل عليه السلام للصحابة أمام النبي صلى الله عليه وسلم، حتى يكون أدعى للإنتباه، فكان يسأل ثم يجيب، قال أن تعبد الله كأنك تراه، هذا أعلى مقام على مقام أنك تصل إلى مرحلة المشاهدة، على مقام تصل إلى مرحلة. كاشف على مقام تصل مرحاض الحركة أنك وصلت إلى حق اليقين، أو إلى علم. عندنا المرحلة الأولى، نحن في باب الغيب، الا نحن، عفوا باب المشاهدة، يعني مع المشاهدة مشاهدة الخلق، وهناك مشاهد أخرى، مشاهد الخالق، فلما تنتقل من مشاهدة الخلق إلى مشاهدة الخلق كأنك ترى الله عز وجل بمعنى تستحضر عظمته في قلبك، بمعنى كأنه يراك في كل. خاطرة، وفي كل فكرة، وفي كل تصرف، فالمؤمن العادي، فالمؤمن عاد يحاسب نفسه على حركاته، والمؤمن الكامل يحاسب نفسه على حركاته، وحتى على خواطره، حتى الخواطر والفك والفكر التي تأتي الفكرة والعزيمة. لي تأتي، فالقلب هو أيضا، يعني إذا مررت مرة بإنسان فاز ذريته مثلا المؤمن الكامل مباشرة يعاتب نفسه، لا يزل أحدا من خلق الله فيقول نعم بتلك الحكمة العظيمة، م رأيت؟ فالخضر أعتقد. يعني كل الناس أحسن مني، هذا، أصل مؤمن الكامل، يعني لا يتكبر على أي مخلوق من مخلوقات الله عز وجل، هذا مثال. قال أن تعبد الله كأنك تراه. قلنا هاذ المرتبة العليا، وهي مرحلة كأنه كشف لك الغيب، كما يقول الإمام علي عليه السلام رضي الله تعالى عنه، والله لو كشف لي الحجاب ما زدت يقينا، يعني كأنه يرى، فلا يحتاج إلى زيادة، لأن أقسام الناس. ثلاثة أقسام أعلاها هي مقام الأنبياء. وهم دائما في حالة رؤية للغيب. ف إيمانهم دائما في ازدياد، يطلعوا في ازدياد، وأمام الملائكة حالة. إقرار وثبات. لأنهم يرونه مع الله عز وجل، ويرونه رؤية لقبه جل في علاه، ويرون الجنة والنار، وحالنا نحن حالات زيادة أو نقصان، فكلما أكثرنا من الطاعات زاد إيماننا، وكلما ارتكبنا نسأل الله السلامة. المعاصي ة قل إيمانا، فقال أن تعبد الله كأنك تراه. فإن لم تكن تراه فإنه يراك، يعني إذا قل إيمانك، ولم تصل إلى مرحلة القصوى، مرحلة الكبرى العليا من الرؤية الغيبية، كأنك تا لله عز وجل، ف تحاسب خطرات ك، و أحوالك القلبية قبل أعمالك الظاهرة. فإن لم تصل إلى ذلك المكان أو المكانة، فتذكر أنه على الأقل أنه يراك، ف يمنعك ذلك الاعتقاد عن ارتكاب المحظور. طيب هذا مقام التزكية، وقلنا أعلى مقام مقام ااا قبول الأعمال إذا الأعمال. الجوارح وأعمال القلوب لا تقبل إلا بتزكية، نعم ننتقد الحديث الثاني. حديث أبي ذر جندب بفتح الدال و بضمها وقيل بكسرها أي بتثليث الداخل عن أبي ذر جندب بن جنادة وأبي عبد الرحمان معاذ بن جبل رضي الله تعالى عنه أمن وعمره تقريبا 17 سنة رضي الله تعالى عنه ما عن رسول الله صلى الله عليه وسلم. قال اتقي الله حيثما كنت. و أتبع السيئة الحسنة تمحها، وخالق الناس بخلق حسن، هذه وصايا عظيمة، ثلاثة من لدن الموحى إليه، المبجل، المكر برسول الكريم صلى الله عليه وسلم، فأمرنا بجوامع الكلم، إلي هو التقوى والتقوى. كلمة جامعة لكل خير وبر، فالمراد منها عدة تعاريف أفضل، ها أن التقوى هي العمل بالتنزيل، والخوف من الجليل، والاستعداد ليوم الرحيل، والتقوى، أيضا قيل في تعاريف هاو في تفاسير، ها أن يجدك الله عز وجل. Et، ما أمرك، وأن يفتقدك أو يفقدك حيث نهاك، أي راك في طاعاته، ولا راك في المعصية، وقيل التقوى ب عبارات أخرى، الكل يصب بعضها في بعض، وهي عبارات مقاربة. التقوى هي الإتهام بالم أمورات و الانتهاء عن المنهيات، فهذه الدرجة من التقوى هي نفسها التي تحدثنا عنها آنفا. مقام المراقبة أو مقام التزكية، فمن زكى نفسه التقى الله عز وجل، قال واتبع السيئة الحسنة، أردف النبي صلى الله عليه وسلم. لطيفة بإشارة جميلة جدا، وهي أنه لا يلزم من تقواك الله عز وجل من تقواك الله عز وجل أنك لا تخطئ، فأتقي، قد يخطئ، فالمؤمن الكامل قد يخطئ، لذلك قالو أتبع السيدة إذا وقعت منك السيئة. اتبعها بحسنة أخرى، والحسنة عامة. و أقيم الصلاة طرفي النهار، وزلفا من الليل. إن الحسنات يذهبن السيئات، فالإنسان يرتكب محظورا أو مكروها، أو محرما، لابد مباشرة كما جاء في الحديث أن الملك لا يكتب تلك السيئة حتى تمر عليه 6 ساعات، فيبدأ أول ما يبدأ بالاستغفار. بعد الماسية مباشرة يستغفر، و الأفضل من ذلك أنه يستغفر ويأتي بركعتين، جاء في الحديث الصحيح أنه ما من مؤمن يذنب ذنبا، ثم يتطهر. فيحسن الطهور، ثم يصلي ركعتين إلا غفر له ما تقدم من ذنبه وما تأخر، كذلك نذكر الحديث الذيأوصفه النبي صلى الله عليه وسلم صحابي الجليل أنه قالتك الله، فإذا أخطأت، أو إذا أصبت ذنبا. فاتبعها بحسنة، فقال يا رسول الله، ألا إله إلا الله من الحسنات؟ قال هي أفضل الحسن الحسنات، إذا يجب على المؤمن بعد ارتكاب الذنب أن يذكر الله عز وجل بكل ذكر. أي ذكرت فقله، فيذكر، لأن تلك الحسنة ست محو تلك السيئة، واتبع السيئة الحسنة تمحوها، وخالق الناس بخلق حسن، إذا كما جاء في الأحاديث الأخرى أنكم لن تسعوا الناس بما لكم ولابجاه، كم؟ ولاكن. وسعهم أخلاقكم، فالخلق له تعريفات، وأفضلها، كما جاء في الحديث التلميذ ي أنو الخلق وحسن الخلق هو بسط معروف، وكف الأذى بسط المعروف، أو الخلق هو بسط الوجه، وبذل معروف، و كف الأذى. عن الناس، إذن هذه الأخلاق كما جاء في الأحاديث أن أقرب الناس إلى النبي صلى الله عليه وسلم احاسين نا اخلاق، نكتفي بهذا القدر، و الحمد لله الذي بفضله تتم الصالحات، و الحمد لله رب العالمين، والصلاة والسلام على اشرف المرسلين، و السلام عليكم. رحمة الله وبركاته.</p>
+
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
+
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
+
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>
