@@ -1,6 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الرابع عشر</title>
+<head>
+<meta charset="UTF-8">
+<title>الدرس الرابع عشر</title>
+
 <style>
   body {
     font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
@@ -20,7 +24,6 @@
     color: #145a00;
     text-shadow: 0 0 8px #a8ff8a;
   }
-  p { margin: 1rem 0; text-align: justify; }
   .container { text-align: center; margin-bottom: 1.5rem; }
   .button {
     border: none;
@@ -32,137 +35,47 @@
     font-weight: bold;
     font-size: 16px;
     margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
   }
   .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
   }
   .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
+    background: #e6f8e6;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 15px;
   }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
 </style>
+
 </head>
+
 <body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://vrsovtrsmqrpwzbetbuu.supabase.co/storage/v1/object/public/pdf/year2/htmlExtractionCourse/s1/tajwid/ec14tajwids1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
-      <div class="share-buttons">
-        <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
+
+<div class="container">
   
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent9">الدرس الرابع عشر</h1>
-<p id="sent10">بسم الله الرحمان الرحيم. الحمد لله رب العالمين. وأفضل الصلاة وأتم التسليم على سيدنا محمد وعلى آله وصحبه أجمعين، اللهم علمنا ما ينفعنا ونفعنا بما علمتنا وزدنا من لدنك، علم الله ما نفعنا ورفعنا بالقرآن العظيم. إنك على كل شيء قدير، ولا حول ولا قوة إلا بالله العلي العظيم. أما بعد، أيها الإخوة الأكارم، فحديثنا مازال متواصل، أ عن صفات الحروف، وقد تكلمنا في الدرس السابق عن الصفات التي لها ضد، واليوم نشرع في الحديث عن الصفات التي لا ضد لها أمامكم في الشاشة الآن. الصفات إما صفات لازمة، وإما صفات عارضة. وصفات الصفات اللازمة إما صفات لها ضد، وهي الهمس، وضده الجهر. والرخاوة، وضدها الشدة، وبينهما التوسط والاستعلاء، وضده أ. أ. وضده الاستفال والإطباق، وضده الانفتاح، والإدلا. ق، وضده الإسم آت. وهناك صفات ليس لها ضد، وهذا حديثنا اليوم إن شاء الله تعالى، هذه بالنسبة للصفات السبعة المتفق عليها الصفير والقلت، واللين، والإنحراف، والاستطالة، والتكرير، و التفشي والغنة، هل هي حرف أو صفة؟ مسألة مختلف فيها، ثم الخفاء أمر كذلك مختلف فيه، وهناك صفات عارضة، وهذه تدخل في مستحق، والحرف لأنو قال من كل صفة لها و مستحقها، فحق الحرف أن تنطقه من مخرجه، وأن يكون ملازما. بصفاته إما التي لها ضد، أو التي لا ضد لها. و هناك مستحق الحرف، و وصفات العارضة، فا التفخيم مستحق الاستعلاء أ، والترقيق مستحق الاستفال، و يقول الإمام أبن الجزري رحمه الله تعالى في هذا صفيرها صاد وزا، يسيء سينو قلقلة قطب جد. مجدولين، ou. و، ويا أنسكن وانفتح قبلهما، والانحراف صحيحا، فلا مورا و بتكرير جعل و لتفشي الشين ضاد ناس تطل. قال الشارح رحمه الله تعالى ونفعنا الله بعلمه، ثم شرع يذكر الصفات التي لا ضد لها، و وهي مختصة ببعض الحروف دون بعض، وهنا ننبه على مسألة، وهي أن ليس كل الحروف لابد أن تتصف بصفات التي ذكرناها، وإنما بعض الحروف. يعني آه كل الصفات لا بد أن تتصف ب آه صفة أو ضدها، هذا متفق عليه، وهناك حروف لا تتصف ب ااا. اه. La بصفة واحدة من التي من الصفات التي لا ضد لها، فلذلك سيذكرها الآن تباعا إن شاء الله تعالى، قال الصفات التي لا ضد لها سبعة، وهي الصفير، والقلق le، واللين، والانحراف، و التفشي، والتكرير، والاستطالة ne أولا. صفة الصفير صفة الصفير، قال الشارح رحمه الله تعالى ف الصفير في ثلاثة أحرف، ويصا دوزاي، و، والزاي، والسين، كما قال صفيرها صاد، و زاي سين، ووصفت بذلك لأنه يخرج معها صوت يشبه صوت الطائر. لأن الصفير هو صوت يشبه صوت الطائر، وأ قواها الصاد للإست علاء، والإطباق، ويريها الزاي للجهل. طيب عندنا في هذه الصورة. قال الصفيروي حدة في صوت الحرف تنشأ عن مروره في مجرة ضيق. قلنا سابقا أن حروف الصفير هي الصاد، والزاي والسين، فا الصاد، والزاي، والسين، تخرج من رأس اللسان مع الصفحة الداخلية من الثنايا السفلى. وبالتالي، ينشأ هذا الصوت الذي يشبه صوت الطائر الص، الصلاة، الص، الز، الس، إهدنا الصراط المست. تقيم صراط الذين أنعمت عليهم، إذا هذا بالنسبة لي صفتي الصفير أعيد التعريف ه وحدة في صوت الحرف ترش تنشأ عن مروره في مجرى ضيق. وحروفه ثلاثة الصاد، والسين، والزاي، نمر الآن إلى صفة الثانية، ويصفى القلقلة، قال الشارح رحمه الله تعالى و القلقلة في خمسة أحرف المذكورة في قوله قلقلة قطب جد، قلقل حرف القاف. وهي القاف والطاء، والباء، والجيم والدال. قالو القلقلة لغة شدة الصوت، يعني تقول العرب تقلقل القدر إذا اضطربت، و اهتزت. أما ف للإصلاح قالو سميت حروفها بذلك لأنها حال بيان سكونها تتقلقل عند خروجها. يعني يهتز المخرج بتباعد عضوي، النطق، أب، أق أجل، أ، د. Ah bon؟ قال لأنها حالة بيان سكونها، أي حالة سكون الحرف تتقلقل عند خروجها، حتى يسمع لها نبرة قوية. واختصت هذه الحروف بالقلق le دون غيرها، لأن لما سكنت ضعفت أول ما سكنت، ضعفت، فيحتاج إلى ضهور صوت قوي حال سكونها، ننظر إلى الجدول يكون أكثر وضوحا، إذا هذا. تعريف القلقلة بطريقة أخرى. قال هي إخراج الحرف المقلقل حال سكونه. لا حال، يعني حركته حالة حركته، يصحب الحركة منفتحة أو ضمتا أو كسر، أما حالة سكونه بالتباعد بين طرفي عضوي النطق لأن الأصل في الحروف أن تخرج إما بالقرع. أو بالتباعد. هنا، عندنا القلقلة في حالة سكون الحرف. تخرج بالتباعد بين طرفي عضو النطق دون أن يصاحبه شائبة حركة من حركات الثلاث وهي مجموعة في قولنا قطب وجد يقطعون. تاتوم عون. يا دخلون. يجعلون. يا داخلون. يق. يق. يق. يا بطل، يا بطل. يب. يبخلون؟ يجعلون يد يد، يدخلون، ثم نمر إلى الصفة الثالثة، ويصفى لين. قال ولين في حرفين؟ وهما الواو والياء والساكن تان المفتوح ما قبلهما، كما قال نقرأ، ولا من كلام الشارع، ثم ننظر في الجدول. قالولي نوويا أ سكن وانفتح قبلهما؟ يعني حروف اللين الواو الساءل والواو، والياء الساكنة تان المفتوح ما قبلهما، أي بشرط أن ينفتح، أما قبلهما قال و وصف بذلك لأنه ما يخرج يخرج أن بلين، وعدم كلفة على اللسان. لا خوف، لا خوف عليهم، ولا هم ولا هم يحزنون. قال ذلك الكتاب لا ريب فيه، لا ريب. ويجوز فيهم التوسط والطول، ورش إن وليهما همز كشيئ، وسوء إذا نظر هنا قال هي صفة أطلقت على ال وأولياء الساكن تين، المفتوح ما قبلهما لسبب سهولة جري، هما في المخرج. قال نحو خوف. خوف لا خوف عليهم ولا هم يحزنون. قوم نوح البيت فليعبدوا رب هاذا البيت الذي أطعمهم من جوع. لإيلاف قريش إلا فيهم، هذا فيما يتعلق بصفتي اللين، ونسال الله تعالى التوفيق، والإخلاص، إنه ولي ذلك والقادر عليه، وإن شاء الله تعالى في درس قادم مع صفتي التكرير، وصفة التفشي. والحمد لله رب العالمين.</p>
+        <a href="https://your-cdn-domain.com/PDFs/year2/htmlExtractionCourse/year2/ec14tajwids1.pdf" target="_blank">
+          <button class="button">📄 Télécharger le PDF</button>
+        </a>
+      
+  
+<div class="share-buttons">
+  <button onclick="window.print()">🖨️ Imprimer</button>
+  <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+  <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+  <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+  <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+  <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+</div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+</div>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
+<h1 id="s9">الدرس الرابع عشر</h1><p id="s10">بسم الله الرحمان الرحيم. الحمد لله رب العالمين. وأفضل الصلاة وأتم التسليم على سيدنا محمد وعلى آله وصحبه أجمعين، اللهم علمنا ما ينفعنا ونفعنا بما علمتنا وزدنا من لدنك، علم الله ما نفعنا ورفعنا بالقرآن العظيم. إنك على كل شيء قدير، ولا حول ولا قوة إلا بالله العلي العظيم. أما بعد، أيها الإخوة الأكارم، فحديثنا مازال متواصل، أ عن صفات الحروف، وقد تكلمنا في الدرس السابق عن الصفات التي لها ضد، واليوم نشرع في الحديث عن الصفات التي لا ضد لها أمامكم في الشاشة الآن. الصفات إما صفات لازمة، وإما صفات عارضة. وصفات الصفات اللازمة إما صفات لها ضد، وهي الهمس، وضده الجهر. والرخاوة، وضدها الشدة، وبينهما التوسط والاستعلاء، وضده أ. أ. وضده الاستفال والإطباق، وضده الانفتاح، والإدلا. ق، وضده الإسم آت. وهناك صفات ليس لها ضد، وهذا حديثنا اليوم إن شاء الله تعالى، هذه بالنسبة للصفات السبعة المتفق عليها الصفير والقلت، واللين، والإنحراف، والاستطالة، والتكرير، و التفشي والغنة، هل هي حرف أو صفة؟ مسألة مختلف فيها، ثم الخفاء أمر كذلك مختلف فيه، وهناك صفات عارضة، وهذه تدخل في مستحق، والحرف لأنو قال من كل صفة لها و مستحقها، فحق الحرف أن تنطقه من مخرجه، وأن يكون ملازما. بصفاته إما التي لها ضد، أو التي لا ضد لها. و هناك مستحق الحرف، و وصفات العارضة، فا التفخيم مستحق الاستعلاء أ، والترقيق مستحق الاستفال، و يقول الإمام أبن الجزري رحمه الله تعالى في هذا صفيرها صاد وزا، يسيء سينو قلقلة قطب جد. مجدولين، ou. و، ويا أنسكن وانفتح قبلهما، والانحراف صحيحا، فلا مورا و بتكرير جعل و لتفشي الشين ضاد ناس تطل. قال الشارح رحمه الله تعالى ونفعنا الله بعلمه، ثم شرع يذكر الصفات التي لا ضد لها، و وهي مختصة ببعض الحروف دون بعض، وهنا ننبه على مسألة، وهي أن ليس كل الحروف لابد أن تتصف بصفات التي ذكرناها، وإنما بعض الحروف. يعني آه كل الصفات لا بد أن تتصف ب آه صفة أو ضدها، هذا متفق عليه، وهناك حروف لا تتصف ب ااا. اه. La بصفة واحدة من التي من الصفات التي لا ضد لها، فلذلك سيذكرها الآن تباعا إن شاء الله تعالى، قال الصفات التي لا ضد لها سبعة، وهي الصفير، والقلق le، واللين، والانحراف، و التفشي، والتكرير، والاستطالة ne أولا. صفة الصفير صفة الصفير، قال الشارح رحمه الله تعالى ف الصفير في ثلاثة أحرف، ويصا دوزاي، و، والزاي، والسين، كما قال صفيرها صاد، و زاي سين، ووصفت بذلك لأنه يخرج معها صوت يشبه صوت الطائر. لأن الصفير هو صوت يشبه صوت الطائر، وأ قواها الصاد للإست علاء، والإطباق، ويريها الزاي للجهل. طيب عندنا في هذه الصورة. قال الصفيروي حدة في صوت الحرف تنشأ عن مروره في مجرة ضيق. قلنا سابقا أن حروف الصفير هي الصاد، والزاي والسين، فا الصاد، والزاي، والسين، تخرج من رأس اللسان مع الصفحة الداخلية من الثنايا السفلى. وبالتالي، ينشأ هذا الصوت الذي يشبه صوت الطائر الص، الصلاة، الص، الز، الس، إهدنا الصراط المست. تقيم صراط الذين أنعمت عليهم، إذا هذا بالنسبة لي صفتي الصفير أعيد التعريف ه وحدة في صوت الحرف ترش تنشأ عن مروره في مجرى ضيق. وحروفه ثلاثة الصاد، والسين، والزاي، نمر الآن إلى صفة الثانية، ويصفى القلقلة، قال الشارح رحمه الله تعالى و القلقلة في خمسة أحرف المذكورة في قوله قلقلة قطب جد، قلقل حرف القاف. وهي القاف والطاء، والباء، والجيم والدال. قالو القلقلة لغة شدة الصوت، يعني تقول العرب تقلقل القدر إذا اضطربت، و اهتزت. أما ف للإصلاح قالو سميت حروفها بذلك لأنها حال بيان سكونها تتقلقل عند خروجها. يعني يهتز المخرج بتباعد عضوي، النطق، أب، أق أجل، أ، د. Ah bon؟ قال لأنها حالة بيان سكونها، أي حالة سكون الحرف تتقلقل عند خروجها، حتى يسمع لها نبرة قوية. واختصت هذه الحروف بالقلق le دون غيرها، لأن لما سكنت ضعفت أول ما سكنت، ضعفت، فيحتاج إلى ضهور صوت قوي حال سكونها، ننظر إلى الجدول يكون أكثر وضوحا، إذا هذا. تعريف القلقلة بطريقة أخرى. قال هي إخراج الحرف المقلقل حال سكونه. لا حال، يعني حركته حالة حركته، يصحب الحركة منفتحة أو ضمتا أو كسر، أما حالة سكونه بالتباعد بين طرفي عضوي النطق لأن الأصل في الحروف أن تخرج إما بالقرع. أو بالتباعد. هنا، عندنا القلقلة في حالة سكون الحرف. تخرج بالتباعد بين طرفي عضو النطق دون أن يصاحبه شائبة حركة من حركات الثلاث وهي مجموعة في قولنا قطب وجد يقطعون. تاتوم عون. يا دخلون. يجعلون. يا داخلون. يق. يق. يق. يا بطل، يا بطل. يب. يبخلون؟ يجعلون يد يد، يدخلون، ثم نمر إلى الصفة الثالثة، ويصفى لين. قال ولين في حرفين؟ وهما الواو والياء والساكن تان المفتوح ما قبلهما، كما قال نقرأ، ولا من كلام الشارع، ثم ننظر في الجدول. قالولي نوويا أ سكن وانفتح قبلهما؟ يعني حروف اللين الواو الساءل والواو، والياء الساكنة تان المفتوح ما قبلهما، أي بشرط أن ينفتح، أما قبلهما قال و وصف بذلك لأنه ما يخرج يخرج أن بلين، وعدم كلفة على اللسان. لا خوف، لا خوف عليهم، ولا هم ولا هم يحزنون. قال ذلك الكتاب لا ريب فيه، لا ريب. ويجوز فيهم التوسط والطول، ورش إن وليهما همز كشيئ، وسوء إذا نظر هنا قال هي صفة أطلقت على ال وأولياء الساكن تين، المفتوح ما قبلهما لسبب سهولة جري، هما في المخرج. قال نحو خوف. خوف لا خوف عليهم ولا هم يحزنون. قوم نوح البيت فليعبدوا رب هاذا البيت الذي أطعمهم من جوع. لإيلاف قريش إلا فيهم، هذا فيما يتعلق بصفتي اللين، ونسال الله تعالى التوفيق، والإخلاص، إنه ولي ذلك والقادر عليه، وإن شاء الله تعالى في درس قادم مع صفتي التكرير، وصفة التفشي. والحمد لله رب العالمين.</p>
 
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
-      }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
-
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
-
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
-      }
-    });
-  });
-
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+</body>
+</html>

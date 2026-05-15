@@ -1,6 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الثاني عشر</title>
+<head>
+<meta charset="UTF-8">
+<title>	الدرس الثاني عشر</title>
+
 <style>
   body {
     font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
@@ -20,7 +24,6 @@
     color: #145a00;
     text-shadow: 0 0 8px #a8ff8a;
   }
-  p { margin: 1rem 0; text-align: justify; }
   .container { text-align: center; margin-bottom: 1.5rem; }
   .button {
     border: none;
@@ -32,137 +35,47 @@
     font-weight: bold;
     font-size: 16px;
     margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
   }
   .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
   }
   .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
+    background: #e6f8e6;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 15px;
   }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
 </style>
+
 </head>
+
 <body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://vrsovtrsmqrpwzbetbuu.supabase.co/storage/v1/object/public/pdf/year2/htmlExtractionCourse/s1/tajwid/ec12tajwids1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
-      <div class="share-buttons">
-        <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
+
+<div class="container">
   
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent5">الدرس الثاني عشر</h1>
-<p id="sent6">بسم الله الرحمان الرحيم. و الحمد لله رب العالمين، وأفضل الصلاة وأتم التسليم على سيدنا محمد وعلى آله وصحبه أجمعين، ولا حول ولا قوة إلا بالله العلي العظيم، أما بعد أيها الإخوة الأكارم ف نتابع مبادئنا به في صفات الحروف، وتكلمنا في الدرس السابق عنصفات الحروف، وبدأنا في صفة الجهر والهمس، واليوم واليوم إن شاء الله تعالى، نتحدث على بقية صفات الحروف، فنتحدث عن صفتي الشدة والرخاوة، هذا التقسيم باعتباري جراو أن الصوت و مروره. فالمخرج. أما بالنسبة لي، الهمس و الجارف، وجريان النفس، أو عدم جريانه، أي انحباس، فا الحروف الرخوة. هي حروف يجري الصوت، آه عندها. نتيجة انفتاح المخرج. بعكس حروف الشدة فتجد هناك انغلاق تام للمخرج، فما هي إذن الحروف الشديدة؟ وما هي الحروف الرخوة؟ هذا ما سنتعرف عليه إن شاء الله تعالى. في هذا الدرس، قال شارح رحمه الله والحروف الشديدة ثمانية. يجمعها لفظ، أجد قط، بكت، أجد قط. بكت. طبعا هناك حروف. آه إلي هي حروف القلقلة. قطب جد، و أضف عليها الهمزة والكاف والتاء الهمزة، والكاف، والتاء عندنا. هذه الحروف الثمانية. جد قاطن. بكت. قال والشدة في اللغة القوة، و سنيت حروفها شديدة لشدة لزومه المواضع، ها، وقوتها فيها، حتى حبس الصوت أن يجري معها لقوة الاعتماد عليها في مخارجها، أو نقول هي انحباس ااا جريان الصوت عندالحرف عند النطق بالحرف الشديد نتيجة غلق المخرج. لأن الصوت يأتي من الداخل و ينغل. دق المخرج، فلا يجد مكانا ليخرج منه. فهذا الانحباس يسمى الحرف الشديد. قال هنا. وعيد التعريف سميت حروفها شديدة لشدة لزومه المواضع ها وقوتها فيها، تقول مثلا الهمزة، الهمزة، حرف الهمزة، أ. ا. ا. ينغلق المخرج ا. مثلا، حرف؟A pas. A، bon ا. أو ب، لذلك هناك كيفية لخروج الطا أ، ما هي هذه الكفية؟ نقلق لها، نأتي بالقلق، لاط؟كذلك حرف القاء؟ ا. Bon فا يعصر النطق بخروج الصوت. لأنو المخرج منغلق مقفول. فا كيف نطق القاف؟ قال نطقها طبعا القاف الساكنة بالقلم، قلقلا، أق يقطعون. كذلك بالنسبة للهمزة الهمزة حرف آه شديد في نغلق المخرج، ولذلك سهلت العرب الهمزة. أوا بدلته آنفا مثلا؟ التاء والكاف. يعني هما شديدان، ولكنهما مهم وسان، ولذلك لم أنطق مثلا كورت كورت، هناك يعني جريان جزئي للصوت. وجرى جزئي للنفس. وكذلك الكاف مثلا. آه ي أ مثلا لو نطقت الكاف آه ربك ربك قد جعل ربك قد جعل ربك. كي. كي ربك. لو ظهرت أن. أن فقها ساكنة. أقول مثلا ربك؟هكذا، فيخرج، ينغلق المخرج طبعا، ولكن في النهاية سيخرج الصوت، ليش؟ لأنه حرف مهموس كما ذكرنا في السابق. إذا قال هنا حتى حبس الصوت أن يجري مع القوة الاعتماد عليها في مخارجها، لما كانت شديدة هذه الحروف، أوجدت العرب آلية نطقها، ف الهمزة سهلتها. و الحروف ال هي قطب جد قل قلتها. و الكاف والتاء همستها، ولذلك سهلة النطق بها. قال والرخاوة والرخاوة 16 وي ما عداها، وماعدا حروفي للعمر، لأن هناك ل نعمرو بين رخو، والشديد، لن عمر يعني لآمون ون، والعين والميم والراء أ الحروف ال ال البينة، أو التوسط. يعني لا ينحبس المخرج كليا وإنما يعني يجري فيه صوت جريان جزئيا تقول مثلا جعلنا جعلنا أنزلنا الحل، الحل كذلك النون مثلا أن. أن. العين نعبد، نعبد، نعبد، كذلك حرف الميم، الميم، حرف الميم آه أم المستقيم. كي يجيو؟ هاذي بالنسبة كذلك حرف الرا الروح، حمان أر أر، وحمان، وحرف بيني أو متوسط، و الحا الصوت لا ينحبس عند النطق به، ولا يجري جريان الحروف الرخوة، وإنما هو بيني، تقول مثلا الرحمان. الرحمان الرحيم. M le، وأرى لو كان شديدا، لا تحرك، وارتعد اللسان، وتكررت الرا كثيرا، وهذا لحن تقول الرحمان، وهذا ما لا نريده في القراءة، طيب قال والرخاوة في اللغة اللين. وسميت حروفه رخوة لجري الصوت معها حتى لانت عند النطق بها. فا تجري معها بالنسبة لي، الحروف الرخوة. قال التوسط وحروف للعمر خمسة متوسطة بين الشدة والرخاوة، كما قال وبين رخو شديد للعمر إذا عندنا خروف حروف آه شديدة. وهي أجد قط بكت، وعندنا حروف رخوة. وهي ما عدا الحرف الشديدة، وما عدا حروف التوسط أو البينية، وحروف بينية أو توسط، وهي لن عمر. قال سنيت بذلك لكونها بينهما، أي لا يجري الصوت جريان الحروف الرخوة، و لا ينحبس الصوت، انحباس الحروف الشديدة. في بين هذا، وبين ذلك توسط متوسطة، فهو جريان جزئي، لانغلاق، ولا جريان تام، وإنما جريان جزئي. قالو سنيت بذلك لكونها بينهما لجري بعض الصوت معها، وانحصار بعضه، فليس الوقف على الحج كالوقف على المس، كالوقف على المس. وعلى الأمل، مثلا، الحد الحد، فعندنا القلقلة في حرف الجيم. ولولا القلقلة لما استطعنا النطق به الحد. الحد. فيبقى الصوت محبوسا خلف ال ال المخرج، لكن إذا أردت أن أنطق به ساكن الحج الحج. و عندنا المس مثلا شوف الحرف الرخو، المس المستقيم. Mais وعندنا حرف البين يشوف مثلا الموس شوفالصوت يجري، و هناك يعني زمن أطول من زمن حرف الميم مثلا المستقيم. في يوم. م. لا ننطق المستقيم. M. وكذلك لا ننطقها، نقطعها عن الغنى، نقراو هكذا المستقيم. هذا نحن أيضا، وإنما جريان جزئي المستقيم. Mais، امم، إهدنا الصراط المستقيم. في يوم صراط الذين أنعمت عليهم. م. لا تخطفها خطفا. أنعمت، أنعمت، أنعمت عليهم. أه، وكذلك لا يجري صوت عندها أنم، حتى لا أنعمت عليهم. م. فا نفرق بين الحروف الشديدة والحروف الرخوة، والحروف البينية بالصوت، فالحروف الرخوة يعني يطول الزمن الصوت عن الحروف الشديدة، وحروف الرخوة تكون متوسطة بين الشدة وبين. الرخاوة، قال فليس الوقف على الحج كالوقف على المس، وعلى الأمل، لما في الأول من حبس الصوت الحد. الحج وجريانه مع الثاني، الثاني المس. و توسطه مع الثالث، الأمل، الأمل. و كل ذلك مدرك بالحس لمن معه أدنى تمييز، كما قلت نسمع، ننطق، نسمع ونلاحظ مع شدة الملاحظة، ولا بد من شيخ تضبط عليه. القراءة، ثم قال الاستعلاء نكمل إن شاء الله تعالى بقية الصفات في الدرس القادم إن شاء الله تعالى، على أمل اللقاء إلى ذلك الدرس استودعكم الله الذي لا تضيع ودائعه. والسلام عليكم ورحمة الله تعالى وبركاته.</p>
+        <a href="https://your-cdn-domain.com/PDFs/year2/htmlExtractionCourse/year2/ec12tajwids1.pdf" target="_blank">
+          <button class="button">📄 Télécharger le PDF</button>
+        </a>
+      
+  
+<div class="share-buttons">
+  <button onclick="window.print()">🖨️ Imprimer</button>
+  <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+  <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+  <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+  <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+  <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+</div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+</div>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
+<h1 id="s5">	الدرس الثاني عشر</h1><p id="s6">بسم الله الرحمان الرحيم. و الحمد لله رب العالمين، وأفضل الصلاة وأتم التسليم على سيدنا محمد وعلى آله وصحبه أجمعين، ولا حول ولا قوة إلا بالله العلي العظيم، أما بعد أيها الإخوة الأكارم ف نتابع مبادئنا به في صفات الحروف، وتكلمنا في الدرس السابق عنصفات الحروف، وبدأنا في صفة الجهر والهمس، واليوم واليوم إن شاء الله تعالى، نتحدث على بقية صفات الحروف، فنتحدث عن صفتي الشدة والرخاوة، هذا التقسيم باعتباري جراو أن الصوت و مروره. فالمخرج. أما بالنسبة لي، الهمس و الجارف، وجريان النفس، أو عدم جريانه، أي انحباس، فا الحروف الرخوة. هي حروف يجري الصوت، آه عندها. نتيجة انفتاح المخرج. بعكس حروف الشدة فتجد هناك انغلاق تام للمخرج، فما هي إذن الحروف الشديدة؟ وما هي الحروف الرخوة؟ هذا ما سنتعرف عليه إن شاء الله تعالى. في هذا الدرس، قال شارح رحمه الله والحروف الشديدة ثمانية. يجمعها لفظ، أجد قط، بكت، أجد قط. بكت. طبعا هناك حروف. آه إلي هي حروف القلقلة. قطب جد، و أضف عليها الهمزة والكاف والتاء الهمزة، والكاف، والتاء عندنا. هذه الحروف الثمانية. جد قاطن. بكت. قال والشدة في اللغة القوة، و سنيت حروفها شديدة لشدة لزومه المواضع، ها، وقوتها فيها، حتى حبس الصوت أن يجري معها لقوة الاعتماد عليها في مخارجها، أو نقول هي انحباس ااا جريان الصوت عندالحرف عند النطق بالحرف الشديد نتيجة غلق المخرج. لأن الصوت يأتي من الداخل و ينغل. دق المخرج، فلا يجد مكانا ليخرج منه. فهذا الانحباس يسمى الحرف الشديد. قال هنا. وعيد التعريف سميت حروفها شديدة لشدة لزومه المواضع ها وقوتها فيها، تقول مثلا الهمزة، الهمزة، حرف الهمزة، أ. ا. ا. ينغلق المخرج ا. مثلا، حرف؟A pas. A، bon ا. أو ب، لذلك هناك كيفية لخروج الطا أ، ما هي هذه الكفية؟ نقلق لها، نأتي بالقلق، لاط؟كذلك حرف القاء؟ ا. Bon فا يعصر النطق بخروج الصوت. لأنو المخرج منغلق مقفول. فا كيف نطق القاف؟ قال نطقها طبعا القاف الساكنة بالقلم، قلقلا، أق يقطعون. كذلك بالنسبة للهمزة الهمزة حرف آه شديد في نغلق المخرج، ولذلك سهلت العرب الهمزة. أوا بدلته آنفا مثلا؟ التاء والكاف. يعني هما شديدان، ولكنهما مهم وسان، ولذلك لم أنطق مثلا كورت كورت، هناك يعني جريان جزئي للصوت. وجرى جزئي للنفس. وكذلك الكاف مثلا. آه ي أ مثلا لو نطقت الكاف آه ربك ربك قد جعل ربك قد جعل ربك. كي. كي ربك. لو ظهرت أن. أن فقها ساكنة. أقول مثلا ربك؟هكذا، فيخرج، ينغلق المخرج طبعا، ولكن في النهاية سيخرج الصوت، ليش؟ لأنه حرف مهموس كما ذكرنا في السابق. إذا قال هنا حتى حبس الصوت أن يجري مع القوة الاعتماد عليها في مخارجها، لما كانت شديدة هذه الحروف، أوجدت العرب آلية نطقها، ف الهمزة سهلتها. و الحروف ال هي قطب جد قل قلتها. و الكاف والتاء همستها، ولذلك سهلة النطق بها. قال والرخاوة والرخاوة 16 وي ما عداها، وماعدا حروفي للعمر، لأن هناك ل نعمرو بين رخو، والشديد، لن عمر يعني لآمون ون، والعين والميم والراء أ الحروف ال ال البينة، أو التوسط. يعني لا ينحبس المخرج كليا وإنما يعني يجري فيه صوت جريان جزئيا تقول مثلا جعلنا جعلنا أنزلنا الحل، الحل كذلك النون مثلا أن. أن. العين نعبد، نعبد، نعبد، كذلك حرف الميم، الميم، حرف الميم آه أم المستقيم. كي يجيو؟ هاذي بالنسبة كذلك حرف الرا الروح، حمان أر أر، وحمان، وحرف بيني أو متوسط، و الحا الصوت لا ينحبس عند النطق به، ولا يجري جريان الحروف الرخوة، وإنما هو بيني، تقول مثلا الرحمان. الرحمان الرحيم. M le، وأرى لو كان شديدا، لا تحرك، وارتعد اللسان، وتكررت الرا كثيرا، وهذا لحن تقول الرحمان، وهذا ما لا نريده في القراءة، طيب قال والرخاوة في اللغة اللين. وسميت حروفه رخوة لجري الصوت معها حتى لانت عند النطق بها. فا تجري معها بالنسبة لي، الحروف الرخوة. قال التوسط وحروف للعمر خمسة متوسطة بين الشدة والرخاوة، كما قال وبين رخو شديد للعمر إذا عندنا خروف حروف آه شديدة. وهي أجد قط بكت، وعندنا حروف رخوة. وهي ما عدا الحرف الشديدة، وما عدا حروف التوسط أو البينية، وحروف بينية أو توسط، وهي لن عمر. قال سنيت بذلك لكونها بينهما، أي لا يجري الصوت جريان الحروف الرخوة، و لا ينحبس الصوت، انحباس الحروف الشديدة. في بين هذا، وبين ذلك توسط متوسطة، فهو جريان جزئي، لانغلاق، ولا جريان تام، وإنما جريان جزئي. قالو سنيت بذلك لكونها بينهما لجري بعض الصوت معها، وانحصار بعضه، فليس الوقف على الحج كالوقف على المس، كالوقف على المس. وعلى الأمل، مثلا، الحد الحد، فعندنا القلقلة في حرف الجيم. ولولا القلقلة لما استطعنا النطق به الحد. الحد. فيبقى الصوت محبوسا خلف ال ال المخرج، لكن إذا أردت أن أنطق به ساكن الحج الحج. و عندنا المس مثلا شوف الحرف الرخو، المس المستقيم. Mais وعندنا حرف البين يشوف مثلا الموس شوفالصوت يجري، و هناك يعني زمن أطول من زمن حرف الميم مثلا المستقيم. في يوم. م. لا ننطق المستقيم. M. وكذلك لا ننطقها، نقطعها عن الغنى، نقراو هكذا المستقيم. هذا نحن أيضا، وإنما جريان جزئي المستقيم. Mais، امم، إهدنا الصراط المستقيم. في يوم صراط الذين أنعمت عليهم. م. لا تخطفها خطفا. أنعمت، أنعمت، أنعمت عليهم. أه، وكذلك لا يجري صوت عندها أنم، حتى لا أنعمت عليهم. م. فا نفرق بين الحروف الشديدة والحروف الرخوة، والحروف البينية بالصوت، فالحروف الرخوة يعني يطول الزمن الصوت عن الحروف الشديدة، وحروف الرخوة تكون متوسطة بين الشدة وبين. الرخاوة، قال فليس الوقف على الحج كالوقف على المس، وعلى الأمل، لما في الأول من حبس الصوت الحد. الحج وجريانه مع الثاني، الثاني المس. و توسطه مع الثالث، الأمل، الأمل. و كل ذلك مدرك بالحس لمن معه أدنى تمييز، كما قلت نسمع، ننطق، نسمع ونلاحظ مع شدة الملاحظة، ولا بد من شيخ تضبط عليه. القراءة، ثم قال الاستعلاء نكمل إن شاء الله تعالى بقية الصفات في الدرس القادم إن شاء الله تعالى، على أمل اللقاء إلى ذلك الدرس استودعكم الله الذي لا تضيع ودائعه. والسلام عليكم ورحمة الله تعالى وبركاته.</p>
 
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
-      }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
-
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
-
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
-      }
-    });
-  });
-
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+</body>
+</html>

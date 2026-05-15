@@ -1,6 +1,10 @@
+
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس التاسع</title>
+<head>
+<meta charset="UTF-8">
+<title>الدرس التاسع</title>
+
 <style>
   body {
     font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
@@ -20,7 +24,6 @@
     color: #145a00;
     text-shadow: 0 0 8px #a8ff8a;
   }
-  p { margin: 1rem 0; text-align: justify; }
   .container { text-align: center; margin-bottom: 1.5rem; }
   .button {
     border: none;
@@ -32,137 +35,47 @@
     font-weight: bold;
     font-size: 16px;
     margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
   }
   .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 10px;
   }
   .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
+    background: #e6f8e6;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-size: 15px;
   }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
 </style>
+
 </head>
+
 <body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://vrsovtrsmqrpwzbetbuu.supabase.co/storage/v1/object/public/pdf/year2/htmlExtractionCourse/s1/nahw/ec9nahws1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
-      <div class="share-buttons">
-        <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
+
+<div class="container">
   
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent33">الدرس التاسع</h1>
-<p id="sent34">بسم الله الرحمان الرحيم. الحمد لله رب العالمين، والصلاة والسلام على سيدنا ونبينا محمد وعلى آله وصحبه وسلم. الإخوة والأخوات طلبة مشيخة، جامع الزيتونة المعمور، نظام التعليم عن بعد. السلام عليكم ومرحبا بكم، السلام عليكم ورحمة الله تعالى وبركاته، نواصل الحديث معا بإذن الله من خلال كتابنا التحفة السنية، وقد وصلنا إلى درس مهم وهو أنواع الإعراب. تحدثنا في الدرس الماضي عن الإعراب. و هو تغير أواخر الكلم بسبب تع تغير العوامل الداخلة على ال تلك الكلمات. وهو تغيم عوامل الملفوظة أو ماذا مقدرة والتغير إما ملفوظ أو مقدر. ورأينا ما يقابله وهو البناء وهو ثبات أواخر الكلم. على حالة واحدة، لا لعامل من العوامل، الآن سنعود إلى الإعراب، هذا الإعراب. فهم نوعه، و الإعراب أربعة أنواع. إما رفع. أو نصب أو. جر أو جسم. فا. هذه الأربعة، هل كلها؟ تكون موجودة في الأسماء وفي الأفعال على حد سواء؟ أم أن هناك فرقا بينها؟ هناك عاملان، أو هناك نوعان يمكن أن نجدهما في الأسماء وفي الأفعال، وهما ماذا؟ الرفع والنصب؟ كما سنشرح من خلال الأمثلة، وهناك قسم خاص. بالأسماء وهو الجر، وعندنا قسم خاص بال أس بالأفعال وهو الجزم. يصبح الإعراب ثلاثة أنواع يمكن نقسمها إلى ثلاثة أنواع قسم مشترك بين الأفعال و. الأسماء، وهو الرفع. والنصب قسم خاص بالأسماء، وهو الجر، وقسم خاص بالأفعال، وهو الجسم، طيب ما الرفع؟ الرفع لغة هو العلو والارتفاع. في اللغة، الرفع هو العلو والارتفاع، وماذا في الاصطلاح؟ حيث اصطلاح أهل النحو هو تغير مخصوص. يلحق آخر الكلمة تكون الضمة علامة أصلية لها. هو أي علامة علامة أصلية لهذا التغير له هي تكون منظمة علامة أصلية له أو ما ينوب عن الضمة، كما سنرى في دروسنا القادمة بإذن الله تعالى. عندما أقول ي دروس زيد. فا يدرس فعل مضارع مرفوع ل تجرده عن الناصب و الجازم، و علامة رفعه الضمة زيد فاعل مرفوع، وعلامة رفعه الضمة الظاهرة على آخره. هذا هو الرفع أن نصبو لغة الاستواء والاستقامة. وأن نصبو في اصطلاح النحوي ت تغير مخصوص يلحق أواخر الكلمة بسبب عامل من العوامل علامته الأصلية هي الفتحة، أو ما ينوب عنها، كما سنرى في دروسنا القادمة إن شاء الله تعالى. فإذاأقول لن أظلم الولد. فا ظلم فعل مضارع منصوب، لا، وعلامة نصبه الفتحة الظاهرة على آخره، والولد مفعول به منصوب، وعلامة نصبه الفتحة الظاهرة على أخيه. طبعا هذا الإعراب ينطبق على الأمثلة التي عندنا. الأمثلة متنوعة ومختلفة التي في الكتاب. هي تؤدي إلى ماذا؟ إلى نتيجة واحدة، وهي أن في الفعل هناك فتحة، والفعل منصوب، علامة نصبه الفتحة الظاهرة مثلا، وهناك إسم منصوب وعلامة نصبه الفتحة الظاهرة. طيب رأينا الآن الفتحة. والضم، ورأينا أنهما وجدا في الفعل، كما وجد في الأسماء، في الأفعال موجودة في الأسماء، الآن عندنا الخفض، الخفض، لغة، هو التس فل. واخفض جناحك. إذن، هو التس فل وا في اصطلاح النحويين هو تغير مخصوص أيضا، يلحق أواخر الأسماء، انتبه لنقول أواخر الكلمة بالإطلاق أواخر الأسماء. لأن الأفعال لا ت لا يلحقها، ماذا؟ إنخفض؟ إذن؟ يلحق أواخر الأسماء بسبب عامل من العوامل soit الجرد. أو الإضافة، وهذا التغير على مته الأصلية الكسر، أو ما ينوب عنها، كما سنرى في دروسنا القادمة إن شاء الله، فإذا ما قلت هذا، إبن زيد فزيد مضاف إليه مجرور وعلامة جره الكسرة الظاهرة في آخره، وإذا ما قلت ما ر رتب زيد. فزيد اسم مجرور بالباء، وعلامة جره، ماذا؟ الكسرة الظاهرة؟ في آخره؟ نصل الآن إلىالنوع الأخير من الإعراب وهو السكون، وهو ماذا؟ الجزم عفوا وهو الجزم وهو خاص بماذا؟ خاص بالأفعال ف الجزم في اللغة القطع. الجزم رأيه أي قطع في الموضوع، جزم في الموضوع، أي قطع جزم في كذا، أي قطع بأمره وحكم بكذا وكذا، ف الجزم في اللغة القطع، وفي السلاح النحوي ماهو الجزم وتغير مخصوص يلحق أواخر الأفعال. المضارعة طبعا، أيوه. بسبب ع أول عامل من عوامل الجزم علامته الأصلية هي ماذا؟ هي السكون أو ما ينوب عنها، كما سنرى، وكما سنرى بإذن الله تعالى فال الجزمه وقطع للحركة السكون هو ماذا؟ مو قطع للحركة؟ كان الإنسان كانت الشفتان تتحركان فتنتج أن مثلا. ضم أو الفتحة أو الكسرة بالنسبة للأسماء فا. سكنت الشفتان، فلم تتحرك فقط عن الحركة، إذا عندما نقول لم يدرس. فعل مضارع مجزوم بلم، وعلامة جزمه السكون الظاهر في آخره. إذا، أيها الإخوة والأخوات؟كما رأينا من خلال الأمثلة، كما رأينا من خلال الإعراض الذي بإذن الله تعالى، نريد أن نعود آذاننا على سماعه، وكما اتفقنا سنعرض فقط الجزئية المتعلقة بالدرس، حتى لا نثقل عليكم، و لا يتشتت ذهن كم دائما في كل درس نعرب الجزئية المتعلقة بذلك. الدرس، ونكثر من الإعراب قدر الإمكان لي، حتى تتعود الأذن و بإذن الله وقتها عملية التلقي أو عملية حفظ ماتع مانع ربه تصبح سهلة. يصبح ملخص درسنا منو. درس نتحدث عن أنواع الإعراب، رأينا أن هناك أربعة أنواع. الرفع النصب، وهما خاصة ب أ، وهما مشتركان بين الأفعال والأسماء. رأينا الجر وهو خاص بالأسماء ورأينا الجزم وهو خاص بالأفعال. بهذا، أيها الإخوة والأخوات، نكون قد أنهينا درسنا لهذا اليوم، وحتى يجمعنا بكم بإذن الله تعالى لقاء آخر أستودعكم الله الذي لا تضيع ودائعه، والسلام عليكم ورحمة الله تعالى وبركاته.</p>
+        <a href="https://your-cdn-domain.com/PDFs/year2/htmlExtractionCourse/year2/ec9nahws1.pdf" target="_blank">
+          <button class="button">📄 Télécharger le PDF</button>
+        </a>
+      
+  
+<div class="share-buttons">
+  <button onclick="window.print()">🖨️ Imprimer</button>
+  <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+  <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+  <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+  <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+  <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+</div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+</div>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
+<h1 id="s33">الدرس التاسع</h1><p id="s34">بسم الله الرحمان الرحيم. الحمد لله رب العالمين، والصلاة والسلام على سيدنا ونبينا محمد وعلى آله وصحبه وسلم. الإخوة والأخوات طلبة مشيخة، جامع الزيتونة المعمور، نظام التعليم عن بعد. السلام عليكم ومرحبا بكم، السلام عليكم ورحمة الله تعالى وبركاته، نواصل الحديث معا بإذن الله من خلال كتابنا التحفة السنية، وقد وصلنا إلى درس مهم وهو أنواع الإعراب. تحدثنا في الدرس الماضي عن الإعراب. و هو تغير أواخر الكلم بسبب تع تغير العوامل الداخلة على ال تلك الكلمات. وهو تغيم عوامل الملفوظة أو ماذا مقدرة والتغير إما ملفوظ أو مقدر. ورأينا ما يقابله وهو البناء وهو ثبات أواخر الكلم. على حالة واحدة، لا لعامل من العوامل، الآن سنعود إلى الإعراب، هذا الإعراب. فهم نوعه، و الإعراب أربعة أنواع. إما رفع. أو نصب أو. جر أو جسم. فا. هذه الأربعة، هل كلها؟ تكون موجودة في الأسماء وفي الأفعال على حد سواء؟ أم أن هناك فرقا بينها؟ هناك عاملان، أو هناك نوعان يمكن أن نجدهما في الأسماء وفي الأفعال، وهما ماذا؟ الرفع والنصب؟ كما سنشرح من خلال الأمثلة، وهناك قسم خاص. بالأسماء وهو الجر، وعندنا قسم خاص بال أس بالأفعال وهو الجزم. يصبح الإعراب ثلاثة أنواع يمكن نقسمها إلى ثلاثة أنواع قسم مشترك بين الأفعال و. الأسماء، وهو الرفع. والنصب قسم خاص بالأسماء، وهو الجر، وقسم خاص بالأفعال، وهو الجسم، طيب ما الرفع؟ الرفع لغة هو العلو والارتفاع. في اللغة، الرفع هو العلو والارتفاع، وماذا في الاصطلاح؟ حيث اصطلاح أهل النحو هو تغير مخصوص. يلحق آخر الكلمة تكون الضمة علامة أصلية لها. هو أي علامة علامة أصلية لهذا التغير له هي تكون منظمة علامة أصلية له أو ما ينوب عن الضمة، كما سنرى في دروسنا القادمة بإذن الله تعالى. عندما أقول ي دروس زيد. فا يدرس فعل مضارع مرفوع ل تجرده عن الناصب و الجازم، و علامة رفعه الضمة زيد فاعل مرفوع، وعلامة رفعه الضمة الظاهرة على آخره. هذا هو الرفع أن نصبو لغة الاستواء والاستقامة. وأن نصبو في اصطلاح النحوي ت تغير مخصوص يلحق أواخر الكلمة بسبب عامل من العوامل علامته الأصلية هي الفتحة، أو ما ينوب عنها، كما سنرى في دروسنا القادمة إن شاء الله تعالى. فإذاأقول لن أظلم الولد. فا ظلم فعل مضارع منصوب، لا، وعلامة نصبه الفتحة الظاهرة على آخره، والولد مفعول به منصوب، وعلامة نصبه الفتحة الظاهرة على أخيه. طبعا هذا الإعراب ينطبق على الأمثلة التي عندنا. الأمثلة متنوعة ومختلفة التي في الكتاب. هي تؤدي إلى ماذا؟ إلى نتيجة واحدة، وهي أن في الفعل هناك فتحة، والفعل منصوب، علامة نصبه الفتحة الظاهرة مثلا، وهناك إسم منصوب وعلامة نصبه الفتحة الظاهرة. طيب رأينا الآن الفتحة. والضم، ورأينا أنهما وجدا في الفعل، كما وجد في الأسماء، في الأفعال موجودة في الأسماء، الآن عندنا الخفض، الخفض، لغة، هو التس فل. واخفض جناحك. إذن، هو التس فل وا في اصطلاح النحويين هو تغير مخصوص أيضا، يلحق أواخر الأسماء، انتبه لنقول أواخر الكلمة بالإطلاق أواخر الأسماء. لأن الأفعال لا ت لا يلحقها، ماذا؟ إنخفض؟ إذن؟ يلحق أواخر الأسماء بسبب عامل من العوامل soit الجرد. أو الإضافة، وهذا التغير على مته الأصلية الكسر، أو ما ينوب عنها، كما سنرى في دروسنا القادمة إن شاء الله، فإذا ما قلت هذا، إبن زيد فزيد مضاف إليه مجرور وعلامة جره الكسرة الظاهرة في آخره، وإذا ما قلت ما ر رتب زيد. فزيد اسم مجرور بالباء، وعلامة جره، ماذا؟ الكسرة الظاهرة؟ في آخره؟ نصل الآن إلىالنوع الأخير من الإعراب وهو السكون، وهو ماذا؟ الجزم عفوا وهو الجزم وهو خاص بماذا؟ خاص بالأفعال ف الجزم في اللغة القطع. الجزم رأيه أي قطع في الموضوع، جزم في الموضوع، أي قطع جزم في كذا، أي قطع بأمره وحكم بكذا وكذا، ف الجزم في اللغة القطع، وفي السلاح النحوي ماهو الجزم وتغير مخصوص يلحق أواخر الأفعال. المضارعة طبعا، أيوه. بسبب ع أول عامل من عوامل الجزم علامته الأصلية هي ماذا؟ هي السكون أو ما ينوب عنها، كما سنرى، وكما سنرى بإذن الله تعالى فال الجزمه وقطع للحركة السكون هو ماذا؟ مو قطع للحركة؟ كان الإنسان كانت الشفتان تتحركان فتنتج أن مثلا. ضم أو الفتحة أو الكسرة بالنسبة للأسماء فا. سكنت الشفتان، فلم تتحرك فقط عن الحركة، إذا عندما نقول لم يدرس. فعل مضارع مجزوم بلم، وعلامة جزمه السكون الظاهر في آخره. إذا، أيها الإخوة والأخوات؟كما رأينا من خلال الأمثلة، كما رأينا من خلال الإعراض الذي بإذن الله تعالى، نريد أن نعود آذاننا على سماعه، وكما اتفقنا سنعرض فقط الجزئية المتعلقة بالدرس، حتى لا نثقل عليكم، و لا يتشتت ذهن كم دائما في كل درس نعرب الجزئية المتعلقة بذلك. الدرس، ونكثر من الإعراب قدر الإمكان لي، حتى تتعود الأذن و بإذن الله وقتها عملية التلقي أو عملية حفظ ماتع مانع ربه تصبح سهلة. يصبح ملخص درسنا منو. درس نتحدث عن أنواع الإعراب، رأينا أن هناك أربعة أنواع. الرفع النصب، وهما خاصة ب أ، وهما مشتركان بين الأفعال والأسماء. رأينا الجر وهو خاص بالأسماء ورأينا الجزم وهو خاص بالأفعال. بهذا، أيها الإخوة والأخوات، نكون قد أنهينا درسنا لهذا اليوم، وحتى يجمعنا بكم بإذن الله تعالى لقاء آخر أستودعكم الله الذي لا تضيع ودائعه، والسلام عليكم ورحمة الله تعالى وبركاته.</p>
 
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
-      }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
-
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
-
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
-      }
-    });
-  });
-
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+</body>
+</html>
