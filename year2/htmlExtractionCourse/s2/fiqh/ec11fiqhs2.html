@@ -1,10 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<title>الدرس الحادي عشر  موانع الإحرام 2</title>
-
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الحادي عشر  موانع الإحرام 2</title>
 <style>
   body {
     font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
@@ -24,6 +20,7 @@
     color: #145a00;
     text-shadow: 0 0 8px #a8ff8a;
   }
+  p { margin: 1rem 0; text-align: justify; }
   .container { text-align: center; margin-bottom: 1.5rem; }
   .button {
     border: none;
@@ -35,47 +32,137 @@
     font-weight: bold;
     font-size: 16px;
     margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
   }
   .share-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
   }
   .share-buttons button {
-    background: #e6f8e6;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 15px;
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
   }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
 </style>
-
 </head>
-
 <body>
-
-<div class="container">
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/fiqh/ec11fiqhs2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
   
-        <a href="https://your-cdn-domain.com/PDFs/year2/htmlExtractionCourse/year2/ec11fiqhs2.pdf" target="_blank">
-          <button class="button">📄 Télécharger le PDF</button>
-        </a>
-      
-  
-<div class="share-buttons">
-  <button onclick="window.print()">🖨️ Imprimer</button>
-  <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-  <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-  <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-  <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-  <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-</div>
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent3">الدرس الحادي عشر  موانع الإحرام 2</h1>
+<p id="sent4">الحمد لله رب العالمين، وصلى الله وسلم على سيدنا محمد وعلى اله وصحابته الطيبين الطاهرين، و عليهم وعلينا بإحسان إلى يوم الدين، اللهم رب لا علم لنا إلا ما علمتنا، ولا فهم لنا إلا ما فهمتنا، ف نسألك اللهم علما وإخلاصا، فالدينووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد ك الحسنة يا كريم أمين، مرحبا بكم في درس جديد نستكمل فيه بإذن الله تبارك وتعالى. على الموانع التي تمنع يمنع منها المحرم، ذكرنا المانع الأول، والثاني الآن، ثالثا نتكلم على ثالث ااا موانع الإحرام، ألا وهي الطيب، قال ومنع الطيب، ودهنا، وضرق مل، وإلقاء وسخ. ظفر، شعر، و يفتدي لفعل بعض ما ذكر من المحيط لهنا، وإن عذر إذا يقول أبن عاشر هنا رحمه الله تبارك وتعالى، ومنع الطيب، ود هنا أن يمنعو على المحرم حرم استعمال الطيب، سواء كان هذا الطيب له لون. و نعم، و رائحة أو لون فقط، و يمنع إستعمال الدهن للبدن أو الشعر، الدهن والزيوت التي أو المرتبات التي تستعمل ااا سواء الشاري أو للبدن. قال وضع رقم لو إلقاو سخن ظفر شعر. كذلك يمنع على المحرم إزالة القمل نضاره، والوسخ عن البدن، وإزالة الظفر والشعر. قالو يفتدي لفعل بعض ما ذكر من المحيط لهنا، وإن عذر. أي كذلك يجب على المحرم الفدية، أي عليه دي، إن فعل محظورا من هذه المحظورات المذكورة التي ذكرها الماكن رحمه الله تبارك وتعالى، قال ما ذكر من المحيط لهنا، أي إلى قوله ومنع النساء. Wow فسد الجماع. نعم، إلى قول لي هنا المراد به إلى قوله ومنع النساء الممنوع الثالث مما يمنعه الإحرام هو استعمال الطيب، إذا كلامب المؤقت يشرح لنا هذه الأبيات، قالك المسك والعنبر، والكافور والعود وغير ذلك، وتجب الفدية باستعمال هو بنفسه. يجب علي هدي. رابعا الدهن الممنوع الرابع مما يمنعه الإحرام، وهو الدهن أني استعماله، ف يحرم على المحرم دهن اللحية، أو دهن اللحية، و الرأس، وكذا سائر الجسد، وتجب الفدية بذلك، إذن هاته الممنوعات. التي تمنع على المحرم، أو يمنع المحرم من ارتكابها، فإذا ارتكبها وفعل محظورا من هذه المحظورات، فإنه يترتب عليه دي. خامسا. مما يمنع على المحرم قتل القمل، وإزالة الشعر، والظفر الممنوع الخامس، مما يمنعه الإحرام قتل القمل وطرحه، وإزالة الوسخ، وقلم وقلم الأظافر، وإزالة الشعر، فإن فعل شيئا من هذه الأمور الممنوعة. فعليه الفدية. وأشار الناظم رحمه الله تبارك وتعالى بقوله قال وإن عذر إلى أن وجوب الفدية في تلك الأمور، لا فرق فيه بين أن يفعله لعذر أم لا، معنى إن فعل هاته الأشياء لعذر أو لغير عذر، تترتب في حقه الفدية مثلا إن أزال. القمل، أو شيء من ذلك، هوا زاده لعذر. ولكن يترتب عليه ااا. فدية في ذلك، قال والفدية واجبة على من فعل شيئا من ذلك، هي أحد ثلاثة أشياء، ما هي الفدة؟ مما تكون الفدية؟ قال إما مشات أو بقرة، أو بدلة، وإما إطعام ستة نساكين، مدا لكل مسكين إطعام ستة مساكين. مدى لكل مسكين، نعم. وإما صيام ثلاثة أيام، وإما صيام ثلاثة أيام. آه، وذلك كما ورد في الآية السادسة والست وال وال90 بعد ال100 من سورة البقرة، حين قال المولى تبارك وتعالى فمن كان منكم مريضا أو به أذى من رأسه ففدية من صيام أو صدقة أو نسك. نعم، ثم يترتب عليه فدية، والفدية، قلنا إما أن يذبح شاة أو بقرة، أو بدن تا، وإما أن يطعم ستة مساكين، وإما أن يصوم ثلاثة أيام. وقلنا، لكن اليوم ااا من كان قادر على الفدية ليوم له القدرة على الفدية، فغالبا اليوم لم يكن هناك إما أن يعطي قيمة الشاة أو قيمة البقرة، وقيمة البدنة، ولا. ولا يذبح اليوم هناك. قال سادسا قرب النساء، وعقد النكاح، ومنع النساء إذن كذلك من موانع الإحرام يمنع على المحرم القرب القرب من النساء، بمقدمات الجماع من دون جماع، ولو علم من نفسه السلامة من الإنزال. إذن، ومنع النساء أي يمنع عليه القرب من النساء، بمقدمات الجماع ومقدمات الجماع هي القبلة والملامسة، فهذه ممنوعة. قال وأفسد الجماع أي أفسد الجماع الحج والعمرة، أي إذا ما صدر منه جماع أثناء حرامه بطلا حجه، وبطلا، أبطلت عمرته، قالو لو كان هذا الجماع سهوا، أو كان المحرم مكرها. ولو كان مكرها على الجماع ف يفسد حجه ويفسد تفسد عمرته، قالو بل أبعد من ذلك، سواء أنزل أو لم ينزل، سواء نزل منه مني أو لم ينزل منه مني، قالو يلحق بالجماع مقدماته إذا أنزل بسببها. نعم، قال هذا هو الممنوع السادس، ف الإحرام يمنع قرب النساء بالوطئ ومقدماته، أو عقد النكاح، كذلك عندنا نحن السادة المالكية عقد النكاح من موانع الإحرام يمنع على المحرم، حتى أني عقد النكاح سواء له أو لغيره. قال ثم إن كان القرب بالوطئ ناسيا ومتعمدا مكرها، أو طائعا فاعلا، أو مفعولا، أي هو الذي فعل الجماع، أو أو مفعول به، فإن ذلك ممنوع مفسد للحج والعمرة، قال وإن كان القرب غير الجماع القرب من النساء بغير الجماع. من مقدماته، ولو بالعمرة، أو بعقد النكاح، فهو ممنوع، غير مفسد للحج، ولكن عليه الهدي، و إذن مقدمات الجماع مفسدة. مقدمات الجماعية رتب عليها هدي. أما الجماع فإنه مفسد للحد ومفسد للعمرة، فيبطل ذاك الحد، وتبطل ذاك العمرة، وينبغي عليه أن يعيد حده، وأن يعيد العمرة، أن يعيد الحج من قابل، وأن يعيد تلك العمرة، هنا نقول نكون قد وصلنا إلى ختام حصتنا، شكر الله لكم حسن إصغاء كم و استماعكم. وجزاكم الله خيرا. والسلام عليكم ورحمة الله تعالى وبركاته، على أن نلتقيكم في حصص قادمة بإذن الله عز وجل.</p>
 
-</div>
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
 
-<h1 id="s3">الدرس الحادي عشر  موانع الإحرام 2</h1><p id="s4">الحمد لله رب العالمين، وصلى الله وسلم على سيدنا محمد وعلى اله وصحابته الطيبين الطاهرين، و عليهم وعلينا بإحسان إلى يوم الدين، اللهم رب لا علم لنا إلا ما علمتنا، ولا فهم لنا إلا ما فهمتنا، ف نسألك اللهم علما وإخلاصا، فالدينووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد ك الحسنة يا كريم أمين، مرحبا بكم في درس جديد نستكمل فيه بإذن الله تبارك وتعالى. على الموانع التي تمنع يمنع منها المحرم، ذكرنا المانع الأول، والثاني الآن، ثالثا نتكلم على ثالث ااا موانع الإحرام، ألا وهي الطيب، قال ومنع الطيب، ودهنا، وضرق مل، وإلقاء وسخ. ظفر، شعر، و يفتدي لفعل بعض ما ذكر من المحيط لهنا، وإن عذر إذا يقول أبن عاشر هنا رحمه الله تبارك وتعالى، ومنع الطيب، ود هنا أن يمنعو على المحرم حرم استعمال الطيب، سواء كان هذا الطيب له لون. و نعم، و رائحة أو لون فقط، و يمنع إستعمال الدهن للبدن أو الشعر، الدهن والزيوت التي أو المرتبات التي تستعمل ااا سواء الشاري أو للبدن. قال وضع رقم لو إلقاو سخن ظفر شعر. كذلك يمنع على المحرم إزالة القمل نضاره، والوسخ عن البدن، وإزالة الظفر والشعر. قالو يفتدي لفعل بعض ما ذكر من المحيط لهنا، وإن عذر. أي كذلك يجب على المحرم الفدية، أي عليه دي، إن فعل محظورا من هذه المحظورات المذكورة التي ذكرها الماكن رحمه الله تبارك وتعالى، قال ما ذكر من المحيط لهنا، أي إلى قوله ومنع النساء. Wow فسد الجماع. نعم، إلى قول لي هنا المراد به إلى قوله ومنع النساء الممنوع الثالث مما يمنعه الإحرام هو استعمال الطيب، إذا كلامب المؤقت يشرح لنا هذه الأبيات، قالك المسك والعنبر، والكافور والعود وغير ذلك، وتجب الفدية باستعمال هو بنفسه. يجب علي هدي. رابعا الدهن الممنوع الرابع مما يمنعه الإحرام، وهو الدهن أني استعماله، ف يحرم على المحرم دهن اللحية، أو دهن اللحية، و الرأس، وكذا سائر الجسد، وتجب الفدية بذلك، إذن هاته الممنوعات. التي تمنع على المحرم، أو يمنع المحرم من ارتكابها، فإذا ارتكبها وفعل محظورا من هذه المحظورات، فإنه يترتب عليه دي. خامسا. مما يمنع على المحرم قتل القمل، وإزالة الشعر، والظفر الممنوع الخامس، مما يمنعه الإحرام قتل القمل وطرحه، وإزالة الوسخ، وقلم وقلم الأظافر، وإزالة الشعر، فإن فعل شيئا من هذه الأمور الممنوعة. فعليه الفدية. وأشار الناظم رحمه الله تبارك وتعالى بقوله قال وإن عذر إلى أن وجوب الفدية في تلك الأمور، لا فرق فيه بين أن يفعله لعذر أم لا، معنى إن فعل هاته الأشياء لعذر أو لغير عذر، تترتب في حقه الفدية مثلا إن أزال. القمل، أو شيء من ذلك، هوا زاده لعذر. ولكن يترتب عليه ااا. فدية في ذلك، قال والفدية واجبة على من فعل شيئا من ذلك، هي أحد ثلاثة أشياء، ما هي الفدة؟ مما تكون الفدية؟ قال إما مشات أو بقرة، أو بدلة، وإما إطعام ستة نساكين، مدا لكل مسكين إطعام ستة مساكين. مدى لكل مسكين، نعم. وإما صيام ثلاثة أيام، وإما صيام ثلاثة أيام. آه، وذلك كما ورد في الآية السادسة والست وال وال90 بعد ال100 من سورة البقرة، حين قال المولى تبارك وتعالى فمن كان منكم مريضا أو به أذى من رأسه ففدية من صيام أو صدقة أو نسك. نعم، ثم يترتب عليه فدية، والفدية، قلنا إما أن يذبح شاة أو بقرة، أو بدن تا، وإما أن يطعم ستة مساكين، وإما أن يصوم ثلاثة أيام. وقلنا، لكن اليوم ااا من كان قادر على الفدية ليوم له القدرة على الفدية، فغالبا اليوم لم يكن هناك إما أن يعطي قيمة الشاة أو قيمة البقرة، وقيمة البدنة، ولا. ولا يذبح اليوم هناك. قال سادسا قرب النساء، وعقد النكاح، ومنع النساء إذن كذلك من موانع الإحرام يمنع على المحرم القرب القرب من النساء، بمقدمات الجماع من دون جماع، ولو علم من نفسه السلامة من الإنزال. إذن، ومنع النساء أي يمنع عليه القرب من النساء، بمقدمات الجماع ومقدمات الجماع هي القبلة والملامسة، فهذه ممنوعة. قال وأفسد الجماع أي أفسد الجماع الحج والعمرة، أي إذا ما صدر منه جماع أثناء حرامه بطلا حجه، وبطلا، أبطلت عمرته، قالو لو كان هذا الجماع سهوا، أو كان المحرم مكرها. ولو كان مكرها على الجماع ف يفسد حجه ويفسد تفسد عمرته، قالو بل أبعد من ذلك، سواء أنزل أو لم ينزل، سواء نزل منه مني أو لم ينزل منه مني، قالو يلحق بالجماع مقدماته إذا أنزل بسببها. نعم، قال هذا هو الممنوع السادس، ف الإحرام يمنع قرب النساء بالوطئ ومقدماته، أو عقد النكاح، كذلك عندنا نحن السادة المالكية عقد النكاح من موانع الإحرام يمنع على المحرم، حتى أني عقد النكاح سواء له أو لغيره. قال ثم إن كان القرب بالوطئ ناسيا ومتعمدا مكرها، أو طائعا فاعلا، أو مفعولا، أي هو الذي فعل الجماع، أو أو مفعول به، فإن ذلك ممنوع مفسد للحج والعمرة، قال وإن كان القرب غير الجماع القرب من النساء بغير الجماع. من مقدماته، ولو بالعمرة، أو بعقد النكاح، فهو ممنوع، غير مفسد للحج، ولكن عليه الهدي، و إذن مقدمات الجماع مفسدة. مقدمات الجماعية رتب عليها هدي. أما الجماع فإنه مفسد للحد ومفسد للعمرة، فيبطل ذاك الحد، وتبطل ذاك العمرة، وينبغي عليه أن يعيد حده، وأن يعيد العمرة، أن يعيد الحج من قابل، وأن يعيد تلك العمرة، هنا نقول نكون قد وصلنا إلى ختام حصتنا، شكر الله لكم حسن إصغاء كم و استماعكم. وجزاكم الله خيرا. والسلام عليكم ورحمة الله تعالى وبركاته، على أن نلتقيكم في حصص قادمة بإذن الله عز وجل.</p>
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
 
-</body>
-</html>
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>

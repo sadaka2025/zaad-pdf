@@ -1,10 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<title>الدرس السادس  تحذيرات حول كيفية نطق الحروف 2</title>
-
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس السادس  تحذيرات حول كيفية نطق الحروف 2</title>
 <style>
   body {
     font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
@@ -24,6 +20,7 @@
     color: #145a00;
     text-shadow: 0 0 8px #a8ff8a;
   }
+  p { margin: 1rem 0; text-align: justify; }
   .container { text-align: center; margin-bottom: 1.5rem; }
   .button {
     border: none;
@@ -35,47 +32,137 @@
     font-weight: bold;
     font-size: 16px;
     margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
   }
   .share-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
   }
   .share-buttons button {
-    background: #e6f8e6;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 15px;
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
   }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
 </style>
-
 </head>
-
 <body>
-
-<div class="container">
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/tajwid/ec6tajwids2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
   
-        <a href="https://your-cdn-domain.com/PDFs/year2/htmlExtractionCourse/year2/ec6tajwids2.pdf" target="_blank">
-          <button class="button">📄 Télécharger le PDF</button>
-        </a>
-      
-  
-<div class="share-buttons">
-  <button onclick="window.print()">🖨️ Imprimer</button>
-  <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-  <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-  <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-  <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-  <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-</div>
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent15">الدرس السادس  تحذيرات حول كيفية نطق الحروف 2</h1>
+<p id="sent16">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأصلي وأسلم على المبعوث رحمة للعالمين سيدنا محمد وآله وصحبه أجمعين، أما بعد. أيها الإخوة فلنكمل ما بدأنا به في درسنا السابق حول التحذيرات من بعض الأخطاء، قال رحمه الله تعالى التحذير من تفخيم الألف الأول الألف، وإنما نبه عليها مع دخولها في الحروف المستفيدة، فالهمزة حرف مستف ل الانفتاح، الفم عند التلفظ بها، فإذا تلفظ بها وانفتح الفم فربما سار علي. التفخيم، لذلك حذر منها، قال انفتاح الفم عند التلفظ بها، وذلك يؤدي إلى تسميني الحرف، قاله بعض الشراح، واعلم أن قوله و حاذرا تفخيم لفظ الألف إما مطلق، سواء وقعت بعد مستفيدين أو مستعلن. وهو رأي الناظم في التمهيد الناظم إليه، وابن الجزري رحمه الله تعالى ألف كتاب التمهيد، وعمره 17 سنة، أول كتاب يؤلفه، وطبيعة ال الشباب أنه يكون له رأي. في البداية، يتحمس له ويدافع عنه. ثم فيما بعد، عندما يكبر، يعني يهدأ قليلا ويترصد ي يتريض، وبعدها يعني آه يغير رأيه، ففي كتاب التمهيد لابن الجزري رحمه الله تعالى يرى أن الآلف. يعني مرققة دائما يعني سواء كان قبلها مرققا أو مستاء أو حرفا مستفيد أو حرفا مستعليا. لكن الجمهور أن الألف تتبع ما قبلها، فإذا كان قبلها مستعد يا فإنها تفخم، وإذا كان ما قبلها مست فلا فإنها ترقق، قال إما مطلق سواء وقعت بعد مستفيد أو مستعل، وهذا رأي الإمام إبن الجزري. وهو رأي الناظم في التمهيد، أو محمول على ما إذا جاءت بعد مست فل، كما هو اختيار ابن الناظم والقاضي. حتى لو جاءت بعد المستعلي وشبهه. آه تبعه في التفخيم، يعني إذا كان ال الألفما قبل الألف مستعرين فإنها تفخم، وإذا كان ما قبل الألف مرآه مستفز،فإنها ترقق، وهذا هو اختيار جمهور العلماء رحمهم الله تعالى، مثلا خالدين فيها. آه، فإذا جاءت الطامة الكبرى. فالألف هنا آه مفخمة ليش؟ لأنه ما قبلها مستعد. الط. الط الطاقة، لكن جاءت مثلا منقول، جاءت. جاءت. لأ، فإذا جاءت الطامة الكبرى. قال. والمراد بشبهه بشبه الراء، لأنها تخرج من طرف اللسان وما يليه. من أن حلك الأعلى الذي هو محل حروف الاستعلاء، كذلك الراء، فالراء إما أن تكون مفخمة، أو تكون مرققة، فإذا كانت مضمومة ولا مفتوحة فإنها آت فخم، مثلا آه أرحم. أر الرحمن علم القرآن، أو كانت ساكنة، وما قبلها مضموم، أما إذا كانت آه مكسورة فإنها في هذه الحالة ترقق، نعم، آه مثلا. بس يطير؟مثلا هنا ساكن ما قبل ساكن وما قبلها مكسور؟ قال لكن القول المشهور الذي عليه الجمهور، ونص عليه الناظم في النشر، يعني الإمام إبن الجزري له كتاب النشر، ولو كذلك طيبة النشر. قال أن الألف لا توصف بترقيق ولا بتضخيم، بل ترقيقها و تفخيمها بحسب ما يتقدمها، فهي تابعة له تفخيما وتدقيقا، والله سبحانه وتعالى أعلم. ثم قال التحذير من تفخيم الهمزة. الثاني الهمزة، وحذر من تفخيمها في أربعة مواضع، وهي الحمد، الحمد لله الحمد، قال الثاني أعوذ مؤ أعوذ، والثالث إنه دنا، والرابع. الله. عند الابتداء. قال كما قال، وهمزة الحمد أعوذ، هدنا الله، وإنما حذر من تفخيمها مع دخولها في المستفحلة، لبعد مخرجها، واتصافها بالشدة والجهر. بعد مخرجها، مما يجعل المخرج متسعا لها، فربما فخمت. كذلك بات صافية بالشدة والجهر، وكرر الأمثلة ليبين أن الهمزة لا بد من ترقيقها، سواء جورهام فخم كاسم ال آه الله يعني تقرأ الله الهمزة، فهنا مرققة، واللام. مفخمة. أو مرقك البواقي، مثل اهدنا؟آه، الحمد قال. آه، أو. أو جاورها رخوي كالهائم أو غيره كاللام والعين المتوسط، تين. العالمين العام والعالمين. اه. قال أو جاورها متحد متحد معها في المخرج ك الهاء أو غيره، كاللام، والحاصل أن الهمزة يجب ترقيقها، سواء جاورها مفخم أو مرقق، وسواء كانت قطعية، أو وصلية عند الابتداء بها، فلا يختص ترقيقها بمجاورة الأحرف. المذكورة، لكن ينبغي التحفظ من تفخيمها، يعني لم ينبغي الاحتراز هنا من تفخيمها، إذا جاورها حرف مستعد نحو أقاموا وأقاموا الصلاة وآتوا الزكاة. عندنا قى قاموا ما تقر أشقاء قاموا. وكذلك أظلم. فمن أظلم. أ. أظلم. ليش؟ لأنه بعدها الظاء. حرف الضاد. حرف الظاء الظ الضوضاء. ضع وبعد الظاء اللام كذلك؟ اللام ينبغي ترقيقها هنا؟ وأصدق؟ ومن أصدق؟ أ مؤ أصدق أصدق أ، ومن أصدق أو مفخم نحو أراضي تم بالحياة الدنيا؟ أ. أ. أرضيتم بالحياة الدنيا من الآخرة؟قالو أراكم و أراكم ما تحبون أ أرى. أرى لأن كثيرا من القراء يفخم ونها في هذه المواضع. أراكم؟ وهو لحن فاحش يجب التنبه لمثله يعني قول لأن كثيرا من القراء مش القراء، يعني المتقنون الضابط ون ممن تنسب لهم القراءة لا حشاهم، ولكن يعني القراء الذي يقرأ القرآن نعم وخاصة من العوام. ثم قال التحذير من تفخيم اللام الثالث اللام، وحذر من تفخيمها في خمسة مواضع المبينة بقوله ولا ملله لنا، وليتلطف، وعلى الله، ولن قال ويلام الأولى من الله. قال أهل له مش الله، الله اللام في الله؟ آه طبعا الهمزة مرققة، والله الله فلا مفخمة هنا، لكن لله ما في السماوات وما في الأرض، هذه اللام هي مرققة، إذا جاء قبلها مكسور. قال ولا مللنا؟لنا؟ نعم. قالوا وليتلطف كذلك اللام في، وليتلطف ولا مو على الله من قوله تعالى وعلى الله قصد السبيل. سورة النحل. قالوا ولا من قوله ولم نضال. آه اللي قال وقطع المصنف الكلمة لضرورة، وإلا لا يجوز، يعني، أما هي للضرورة يعني في الفي البيت وللظلم يعني المقصود بها ولا الضالين، إذ لا يجوز مثل هذا في الاختيار، يعني الاختيار يعني تبدأ تقرأ وحدك ولا تقرأ في الصلاة أو تقرأ ولدك. فلا يجوز أن تقطع الكلمة، أما في حالة الاختبار ليختبرك الشيخ مثلا يحب يعرف كيف تنتقل لام، أو تريد أن تقطع الحروف لكي تنطقها نطقا سليما، فلا بأس بذلك، قال وإنما نص عليها مع دخول، أم في المستفحلة، لأن اللسان يسري إلى تفخيمها. لا سيما إن جاورها حرف مفخم نحو ولا مضاد. آه إللي ونحو. وعلى الله. وليتلطف وقال سلمتهم لسلطهم. سرت النساء لسلطهم عليكم، ومقصود الناظم بالأمثلة التنبيه على أن اللام مرققة وجوبا في هذه الأمثلة. نحوها لا مطلقا، كما تقدم في الهمزة، لأن من اللمات ما هو مفخم وجوبا، كما في لفظ الجلالة الله لا إله إلا هو الحي القيوم. مثلا في قوله الله لا إله إلا هو الحي القيوم. قال في بعض أحوالها أو جواز النحو الصلاة أه في قراءة ورش في قراءة ورش الصلاة، الصلاة، الصلاة، يعني يفخم اللام لمجاورته، للحرف المستعمل مستعدي دونالت طبعا نعم، قال في قراءة ورش وعليه، فمفهوم الناظم فيه تفصيل. سيأتي معنا حالات تغليظ اللام، وحالات ترقيقها، الأصل فيها الترقيق، وتفخم في حالة، وسيأتي معنا إن شاء الله تعالى التفصيل في ذلك، والله أعلم. والحمد لله رب العالمين.</p>
 
-</div>
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
 
-<h1 id="s15">الدرس السادس  تحذيرات حول كيفية نطق الحروف 2</h1><p id="s16">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأصلي وأسلم على المبعوث رحمة للعالمين سيدنا محمد وآله وصحبه أجمعين، أما بعد. أيها الإخوة فلنكمل ما بدأنا به في درسنا السابق حول التحذيرات من بعض الأخطاء، قال رحمه الله تعالى التحذير من تفخيم الألف الأول الألف، وإنما نبه عليها مع دخولها في الحروف المستفيدة، فالهمزة حرف مستف ل الانفتاح، الفم عند التلفظ بها، فإذا تلفظ بها وانفتح الفم فربما سار علي. التفخيم، لذلك حذر منها، قال انفتاح الفم عند التلفظ بها، وذلك يؤدي إلى تسميني الحرف، قاله بعض الشراح، واعلم أن قوله و حاذرا تفخيم لفظ الألف إما مطلق، سواء وقعت بعد مستفيدين أو مستعلن. وهو رأي الناظم في التمهيد الناظم إليه، وابن الجزري رحمه الله تعالى ألف كتاب التمهيد، وعمره 17 سنة، أول كتاب يؤلفه، وطبيعة ال الشباب أنه يكون له رأي. في البداية، يتحمس له ويدافع عنه. ثم فيما بعد، عندما يكبر، يعني يهدأ قليلا ويترصد ي يتريض، وبعدها يعني آه يغير رأيه، ففي كتاب التمهيد لابن الجزري رحمه الله تعالى يرى أن الآلف. يعني مرققة دائما يعني سواء كان قبلها مرققا أو مستاء أو حرفا مستفيد أو حرفا مستعليا. لكن الجمهور أن الألف تتبع ما قبلها، فإذا كان قبلها مستعد يا فإنها تفخم، وإذا كان ما قبلها مست فلا فإنها ترقق، قال إما مطلق سواء وقعت بعد مستفيد أو مستعل، وهذا رأي الإمام إبن الجزري. وهو رأي الناظم في التمهيد، أو محمول على ما إذا جاءت بعد مست فل، كما هو اختيار ابن الناظم والقاضي. حتى لو جاءت بعد المستعلي وشبهه. آه تبعه في التفخيم، يعني إذا كان ال الألفما قبل الألف مستعرين فإنها تفخم، وإذا كان ما قبل الألف مرآه مستفز،فإنها ترقق، وهذا هو اختيار جمهور العلماء رحمهم الله تعالى، مثلا خالدين فيها. آه، فإذا جاءت الطامة الكبرى. فالألف هنا آه مفخمة ليش؟ لأنه ما قبلها مستعد. الط. الط الطاقة، لكن جاءت مثلا منقول، جاءت. جاءت. لأ، فإذا جاءت الطامة الكبرى. قال. والمراد بشبهه بشبه الراء، لأنها تخرج من طرف اللسان وما يليه. من أن حلك الأعلى الذي هو محل حروف الاستعلاء، كذلك الراء، فالراء إما أن تكون مفخمة، أو تكون مرققة، فإذا كانت مضمومة ولا مفتوحة فإنها آت فخم، مثلا آه أرحم. أر الرحمن علم القرآن، أو كانت ساكنة، وما قبلها مضموم، أما إذا كانت آه مكسورة فإنها في هذه الحالة ترقق، نعم، آه مثلا. بس يطير؟مثلا هنا ساكن ما قبل ساكن وما قبلها مكسور؟ قال لكن القول المشهور الذي عليه الجمهور، ونص عليه الناظم في النشر، يعني الإمام إبن الجزري له كتاب النشر، ولو كذلك طيبة النشر. قال أن الألف لا توصف بترقيق ولا بتضخيم، بل ترقيقها و تفخيمها بحسب ما يتقدمها، فهي تابعة له تفخيما وتدقيقا، والله سبحانه وتعالى أعلم. ثم قال التحذير من تفخيم الهمزة. الثاني الهمزة، وحذر من تفخيمها في أربعة مواضع، وهي الحمد، الحمد لله الحمد، قال الثاني أعوذ مؤ أعوذ، والثالث إنه دنا، والرابع. الله. عند الابتداء. قال كما قال، وهمزة الحمد أعوذ، هدنا الله، وإنما حذر من تفخيمها مع دخولها في المستفحلة، لبعد مخرجها، واتصافها بالشدة والجهر. بعد مخرجها، مما يجعل المخرج متسعا لها، فربما فخمت. كذلك بات صافية بالشدة والجهر، وكرر الأمثلة ليبين أن الهمزة لا بد من ترقيقها، سواء جورهام فخم كاسم ال آه الله يعني تقرأ الله الهمزة، فهنا مرققة، واللام. مفخمة. أو مرقك البواقي، مثل اهدنا؟آه، الحمد قال. آه، أو. أو جاورها رخوي كالهائم أو غيره كاللام والعين المتوسط، تين. العالمين العام والعالمين. اه. قال أو جاورها متحد متحد معها في المخرج ك الهاء أو غيره، كاللام، والحاصل أن الهمزة يجب ترقيقها، سواء جاورها مفخم أو مرقق، وسواء كانت قطعية، أو وصلية عند الابتداء بها، فلا يختص ترقيقها بمجاورة الأحرف. المذكورة، لكن ينبغي التحفظ من تفخيمها، يعني لم ينبغي الاحتراز هنا من تفخيمها، إذا جاورها حرف مستعد نحو أقاموا وأقاموا الصلاة وآتوا الزكاة. عندنا قى قاموا ما تقر أشقاء قاموا. وكذلك أظلم. فمن أظلم. أ. أظلم. ليش؟ لأنه بعدها الظاء. حرف الضاد. حرف الظاء الظ الضوضاء. ضع وبعد الظاء اللام كذلك؟ اللام ينبغي ترقيقها هنا؟ وأصدق؟ ومن أصدق؟ أ مؤ أصدق أصدق أ، ومن أصدق أو مفخم نحو أراضي تم بالحياة الدنيا؟ أ. أ. أرضيتم بالحياة الدنيا من الآخرة؟قالو أراكم و أراكم ما تحبون أ أرى. أرى لأن كثيرا من القراء يفخم ونها في هذه المواضع. أراكم؟ وهو لحن فاحش يجب التنبه لمثله يعني قول لأن كثيرا من القراء مش القراء، يعني المتقنون الضابط ون ممن تنسب لهم القراءة لا حشاهم، ولكن يعني القراء الذي يقرأ القرآن نعم وخاصة من العوام. ثم قال التحذير من تفخيم اللام الثالث اللام، وحذر من تفخيمها في خمسة مواضع المبينة بقوله ولا ملله لنا، وليتلطف، وعلى الله، ولن قال ويلام الأولى من الله. قال أهل له مش الله، الله اللام في الله؟ آه طبعا الهمزة مرققة، والله الله فلا مفخمة هنا، لكن لله ما في السماوات وما في الأرض، هذه اللام هي مرققة، إذا جاء قبلها مكسور. قال ولا مللنا؟لنا؟ نعم. قالوا وليتلطف كذلك اللام في، وليتلطف ولا مو على الله من قوله تعالى وعلى الله قصد السبيل. سورة النحل. قالوا ولا من قوله ولم نضال. آه اللي قال وقطع المصنف الكلمة لضرورة، وإلا لا يجوز، يعني، أما هي للضرورة يعني في الفي البيت وللظلم يعني المقصود بها ولا الضالين، إذ لا يجوز مثل هذا في الاختيار، يعني الاختيار يعني تبدأ تقرأ وحدك ولا تقرأ في الصلاة أو تقرأ ولدك. فلا يجوز أن تقطع الكلمة، أما في حالة الاختبار ليختبرك الشيخ مثلا يحب يعرف كيف تنتقل لام، أو تريد أن تقطع الحروف لكي تنطقها نطقا سليما، فلا بأس بذلك، قال وإنما نص عليها مع دخول، أم في المستفحلة، لأن اللسان يسري إلى تفخيمها. لا سيما إن جاورها حرف مفخم نحو ولا مضاد. آه إللي ونحو. وعلى الله. وليتلطف وقال سلمتهم لسلطهم. سرت النساء لسلطهم عليكم، ومقصود الناظم بالأمثلة التنبيه على أن اللام مرققة وجوبا في هذه الأمثلة. نحوها لا مطلقا، كما تقدم في الهمزة، لأن من اللمات ما هو مفخم وجوبا، كما في لفظ الجلالة الله لا إله إلا هو الحي القيوم. مثلا في قوله الله لا إله إلا هو الحي القيوم. قال في بعض أحوالها أو جواز النحو الصلاة أه في قراءة ورش في قراءة ورش الصلاة، الصلاة، الصلاة، يعني يفخم اللام لمجاورته، للحرف المستعمل مستعدي دونالت طبعا نعم، قال في قراءة ورش وعليه، فمفهوم الناظم فيه تفصيل. سيأتي معنا حالات تغليظ اللام، وحالات ترقيقها، الأصل فيها الترقيق، وتفخم في حالة، وسيأتي معنا إن شاء الله تعالى التفصيل في ذلك، والله أعلم. والحمد لله رب العالمين.</p>
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
 
-</body>
-</html>
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>

@@ -1,10 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<title>الدرس الخامس عشر</title>
-
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الخامس عشر</title>
 <style>
   body {
     font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
@@ -24,6 +20,7 @@
     color: #145a00;
     text-shadow: 0 0 8px #a8ff8a;
   }
+  p { margin: 1rem 0; text-align: justify; }
   .container { text-align: center; margin-bottom: 1.5rem; }
   .button {
     border: none;
@@ -35,47 +32,137 @@
     font-weight: bold;
     font-size: 16px;
     margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
   }
   .share-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
   }
   .share-buttons button {
-    background: #e6f8e6;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 15px;
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
   }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
 </style>
-
 </head>
-
 <body>
-
-<div class="container">
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/fiqh/ec15fiqhs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
   
-        <a href="https://your-cdn-domain.com/PDFs/year2/htmlExtractionCourse/year2/ec15fiqhs1.pdf" target="_blank">
-          <button class="button">📄 Télécharger le PDF</button>
-        </a>
-      
-  
-<div class="share-buttons">
-  <button onclick="window.print()">🖨️ Imprimer</button>
-  <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-  <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-  <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-  <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-  <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-</div>
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent11">الدرس الخامس عشر</h1>
+<p id="sent12">الحمد لله الذي خلق الإنسان معلمه، ورفع قدر العلم وعظمه، وفق التفقه في دينه، من اختاره وفهمه، أحمده حمدا يعصم من نقمه، ويتكفل بدوام نعمه، والصلاة والسلام على سيدنا محمد خير الأنام، وعلى آله وأصحابه الكرام، اللهم يا ربي لا علم لنا إلا ما علمتنا، ولا فهم لنا إلا ما فهمتنا. أه، فأسألك اللهم علما وإخلاص في الدين، ووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد ك للحسنى ياكريم أمين. إذا، مرحبا بكم في حصة جديدة نستكمل فيها بإذن الله تبارك وتعالى. و ما كنا قد تطرقنا إليه في الحصة الماضية عن مسألة التأويل القريب والتأويل البعيد، ثم بعد ذلك نذكر موببي حات الفطر في رمضان. نعم. اذن، يقول بمؤقت رحمه الله، والتأويل القريب هو مستند صاحبه إلى سبب موجود، والتأويل البعيد هو مستند صاحبه إلى سبب معدوم غالبا، ومن أمثلة التاويل القريب ك من أفطر ناسيا، أو من طهرت من الحيض قبل الفجر، ولم تغتسل إلا بعد طلوع الفجر. أو من تسحر في الفجر، أو سافر دون مسافة القصر، فظن إباحة الفطر، فبيته، أو أصبح فيه مفطرا، أو رأى هلال شوال يوم ال30 نهارا، فظن أنه،لليلة الماضية. لليلة الماضية، فظن كل واحد منهم أن الفطر مباح له، فا فطر، أي كل من سبق ذكرهم، ظنو أن أن الفطر مباح في حقهم، فا فطرو. قال هنا فلا كفارة على واحد منهم، ولكن عليهم الإثم، إذ لا يحل للإنسان أن يفعل شيئا حتى يعلم حكم الله فيه، إذا، فالمسلم لا يقبل على عمل ما، حتى يعلم حكم الله فيه هل هو حلال؟أم حرام؟ نعم إذن من تؤول تأويلا قريبا، هنا عليه القضاء دون الكفارة، وسيأتي معنا في التأويل القالب عيد التاو يلقنه، والاجتهاد أعمال ما لديه، واجتهد. نعم. عندنا تأويل قريب، وتأويل بعيد، التاويل القريب فيه القضاء دون الكفارة، و التاويل البعيد فيه القضاء، والكفارة، كما سيأتي معنا في المثال. قال ومن أمثلة التأويل البعيد كمن رأى الهلال ولم تقبل شهادته، ف أفطر، ومن أفطر لحمة تأتيه أول حيض عادتها أن يأتيها في مثل ذاك اليوم، سواء أتى ذلك أو لم يأتي، أو أفطر لسماعه. حديث. أفطر الحاجم و المحجوب نعم أفطر الحاجم، وألمح جو منعم، وعن ثوبان في هذا الحديث رضي الله عنه القول بوجوب الكفارة، والقول بوجوب الكفارة على من تؤول ظانا إباحة الفطر بسبب الحجامة. لابن حبيب، والمعتمد قول بن القاسم أن هذا من التأويل القريب الذي يسقط الكفارة، يعني تجب فيه القضاء دون الكفارة كما ذهب لذلك أبن القاسم نعم، وهو من أجل تلامذة الإمام مالك رحمه الله. عبد الرحمان إبن القاسم المصري. نعم، أ وأفطر لسماعه حديث أفطر الحاجم، وألمح جو م، أو كون المغتاب لا صيام له، فتاوي لهؤلاء كال عدن، أي تأويلهم تأويل قريب، اجتهاد بعيد. تحري بعيد. قالو تجب الكفارة على كل واحد منهم مع القضاء إذا منت أول تأويلا قريبا تجيب يجب عليه القضاء دون الكفارة، ومن تؤول تأويلا بعيدا يجب عليه القضاء والكفارة، نعم، قال، وأما الجاهل الذي لا كفارة عليه. فهو من كان حديث عهد بالإسلام. فظن أن الفطر إنما هو بالأكل والشرب دون الجماع، فجامع، فلا يجب عليه إلا القضاء فقط، لماذا؟ لأنه حديث عهد بالإسلام، و ليست له دراية ك كافية. ب بتفاصيل تعاليم الإسلام. نعم. فهذا حديث، فهذا الذي هو حديث عهد بالإسلام، إذا ما حدث منه ذلك، فا كف عن الأكل والشرب مثلا، وجامع في رمضان، فعليه القضاء دون الكفارة، لماذا؟ وهذا من سماحة الإسلام، لأننا لو قلنا له يجب عليك القضاء والكفارة. ربما نرتد، نقوله، إمرا عليك القضاء والكفارة أن تصوم شهرين، لا، فهذا من سماحة الإسلام، قال وفهم من قول الناظم في رمضان أنه لا كفارة على من أفطر في غير رمضان، كان فطره عمدا أو نسيا، أولو في قضاء. رمضان. نعم. وفهم من قوله إن عمد أي من أفطر في رمضان ناسيا، فلا كفارة عليه، وفهم من قوله فمن أيمن تعمد في رمضان إدخال شيء من أنفه أو أذنه مثلا، فلا كفارة عليه، وفهم. نقصد هنا كفارة عليه، أي أنه يقضي ذاك اليوم دون كفارة. وفهم من قوله، أو لل مني أن من خرج منه المني في رمضان من غير تسبب في إخراجه، فلا كفرة عليه، بل ولا قضاء، نعم إذا خرج منه مني دون أن يتسبب أ، أو تحدث منه مقدمات لإخراج المني. هنا لا كفارة عليه، بل قيل، ولا قضاء عليه، كمن احتلم. نام، فاحتل منام. الآن، مسألة أخرى هي مباحات الفطر في رمضان، يقول أبن عاشر رحمه الله ويباح للضر أو سفر قصر، أي bob أي مباح نعم، ويباح للضر، أو سفر قصر أي مباح. قال ويباح أي ويباح الفطر لأجل ضرر لحقه بسبب الصوم. أو كان خاف زيادة الضر؟أو تماديه؟ ولكن الإباحة هنا مقيدة بما إذا لم يخف على نفسه هلاكا. أو شديدة أدى، وإلا حرمة. نعم. الصوم وجب الفطر، لماذا؟نعم. إذا خاف ال المر إن صام، وأنه سيلحقه شديد أدى بهذا الصوم، فهنا لا يباح له الصوم، بل يجب عليه الفطر، لماذا؟ لأن حفظ النفس واجب ما أمكن، و دين الله يسر، و الصوم يقضى، والنفس لا تقضى. نعم، قال ويباح للضرر أو سفر قصر أي مباح، أي ويباح الفطر لأجل سفر قصر. نعم، مباح كالتجارة، قال وإن لم تنل ضرورة، أي وإن لم تكن هناك ضرورة ملحة لهذا. لهذا السفر، سفر التجارة، قالو الصيام هنا أفضل. سي أم في هاته الحالة، أفضل إن كان مسافر، سفر، تجارة، و هاته التجارة ليست ضرورة، نعم، و جواز الفطر في السفر، هناك شروط نعم يأتي ذكرها بإذن الله تبارك وتعالى، إذا قال يباح الفطر، و يجوز لأحد أمرينيقول أبن عاشر ويباح للضرر، أو سفر قصر أي مباح، إذن يباح الفطر، و يجوز لأحد أمرين إثنين إمال ضرر يلحقه بسبب الصيام، أو. لما هو مضنى الضار؟ إن لم يحصل الضرر وهو السفر الذي تقصر فيه الصلاة وهو السفر الطويل المباح، والذي قلناه و84 كم؟ قال أما إباحة الفطر لضرر فمحله إذا خافت مادة، ضره بقول طبيب أمين، أو تجربة، أو تجربة في نفسه. أو خياطة، أو خاف زيادته، أي زيادة هذا الذر وهذا المرض، أو حدوث مرض آخر. أو يخاف، إن هو صام، سيحدث له مرض آخر، عنده مرض سيحدث له مرض آخر، أو خاف للمشقة، لضعفه بالمرض، فإن كان. لو تكلفه لقدر عليه في فطرو دين، الله يسر، لأننا قلنا حفظ النفس. لا تقضى، وأما الصوم يقضى، قال إما لو خافت لفاو الأذى الشديد، إن صام هنا في هاته الحالة يحرم عليه، فإن الصوم يحرم عليه حينئذ، ويجب عليه الفطر، لأن حفظ النفس واجب ما أمكن، هنا نكون قد وصلنا. إلى ختام حصتنا شكر الله لكم حسن إصغاء كم و استماعكم. سبحانك اللهم وبحمدك، نشهد أن لا إله إلا أنت، نستغفرك ونتوب إليك، و السلام عليكم و رحمة الله تعالى و بركاته.</p>
 
-</div>
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
 
-<h1 id="s11">الدرس الخامس عشر</h1><p id="s12">الحمد لله الذي خلق الإنسان معلمه، ورفع قدر العلم وعظمه، وفق التفقه في دينه، من اختاره وفهمه، أحمده حمدا يعصم من نقمه، ويتكفل بدوام نعمه، والصلاة والسلام على سيدنا محمد خير الأنام، وعلى آله وأصحابه الكرام، اللهم يا ربي لا علم لنا إلا ما علمتنا، ولا فهم لنا إلا ما فهمتنا. أه، فأسألك اللهم علما وإخلاص في الدين، ووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد ك للحسنى ياكريم أمين. إذا، مرحبا بكم في حصة جديدة نستكمل فيها بإذن الله تبارك وتعالى. و ما كنا قد تطرقنا إليه في الحصة الماضية عن مسألة التأويل القريب والتأويل البعيد، ثم بعد ذلك نذكر موببي حات الفطر في رمضان. نعم. اذن، يقول بمؤقت رحمه الله، والتأويل القريب هو مستند صاحبه إلى سبب موجود، والتأويل البعيد هو مستند صاحبه إلى سبب معدوم غالبا، ومن أمثلة التاويل القريب ك من أفطر ناسيا، أو من طهرت من الحيض قبل الفجر، ولم تغتسل إلا بعد طلوع الفجر. أو من تسحر في الفجر، أو سافر دون مسافة القصر، فظن إباحة الفطر، فبيته، أو أصبح فيه مفطرا، أو رأى هلال شوال يوم ال30 نهارا، فظن أنه،لليلة الماضية. لليلة الماضية، فظن كل واحد منهم أن الفطر مباح له، فا فطر، أي كل من سبق ذكرهم، ظنو أن أن الفطر مباح في حقهم، فا فطرو. قال هنا فلا كفارة على واحد منهم، ولكن عليهم الإثم، إذ لا يحل للإنسان أن يفعل شيئا حتى يعلم حكم الله فيه، إذا، فالمسلم لا يقبل على عمل ما، حتى يعلم حكم الله فيه هل هو حلال؟أم حرام؟ نعم إذن من تؤول تأويلا قريبا، هنا عليه القضاء دون الكفارة، وسيأتي معنا في التأويل القالب عيد التاو يلقنه، والاجتهاد أعمال ما لديه، واجتهد. نعم. عندنا تأويل قريب، وتأويل بعيد، التاويل القريب فيه القضاء دون الكفارة، و التاويل البعيد فيه القضاء، والكفارة، كما سيأتي معنا في المثال. قال ومن أمثلة التأويل البعيد كمن رأى الهلال ولم تقبل شهادته، ف أفطر، ومن أفطر لحمة تأتيه أول حيض عادتها أن يأتيها في مثل ذاك اليوم، سواء أتى ذلك أو لم يأتي، أو أفطر لسماعه. حديث. أفطر الحاجم و المحجوب نعم أفطر الحاجم، وألمح جو منعم، وعن ثوبان في هذا الحديث رضي الله عنه القول بوجوب الكفارة، والقول بوجوب الكفارة على من تؤول ظانا إباحة الفطر بسبب الحجامة. لابن حبيب، والمعتمد قول بن القاسم أن هذا من التأويل القريب الذي يسقط الكفارة، يعني تجب فيه القضاء دون الكفارة كما ذهب لذلك أبن القاسم نعم، وهو من أجل تلامذة الإمام مالك رحمه الله. عبد الرحمان إبن القاسم المصري. نعم، أ وأفطر لسماعه حديث أفطر الحاجم، وألمح جو م، أو كون المغتاب لا صيام له، فتاوي لهؤلاء كال عدن، أي تأويلهم تأويل قريب، اجتهاد بعيد. تحري بعيد. قالو تجب الكفارة على كل واحد منهم مع القضاء إذا منت أول تأويلا قريبا تجيب يجب عليه القضاء دون الكفارة، ومن تؤول تأويلا بعيدا يجب عليه القضاء والكفارة، نعم، قال، وأما الجاهل الذي لا كفارة عليه. فهو من كان حديث عهد بالإسلام. فظن أن الفطر إنما هو بالأكل والشرب دون الجماع، فجامع، فلا يجب عليه إلا القضاء فقط، لماذا؟ لأنه حديث عهد بالإسلام، و ليست له دراية ك كافية. ب بتفاصيل تعاليم الإسلام. نعم. فهذا حديث، فهذا الذي هو حديث عهد بالإسلام، إذا ما حدث منه ذلك، فا كف عن الأكل والشرب مثلا، وجامع في رمضان، فعليه القضاء دون الكفارة، لماذا؟ وهذا من سماحة الإسلام، لأننا لو قلنا له يجب عليك القضاء والكفارة. ربما نرتد، نقوله، إمرا عليك القضاء والكفارة أن تصوم شهرين، لا، فهذا من سماحة الإسلام، قال وفهم من قول الناظم في رمضان أنه لا كفارة على من أفطر في غير رمضان، كان فطره عمدا أو نسيا، أولو في قضاء. رمضان. نعم. وفهم من قوله إن عمد أي من أفطر في رمضان ناسيا، فلا كفارة عليه، وفهم من قوله فمن أيمن تعمد في رمضان إدخال شيء من أنفه أو أذنه مثلا، فلا كفارة عليه، وفهم. نقصد هنا كفارة عليه، أي أنه يقضي ذاك اليوم دون كفارة. وفهم من قوله، أو لل مني أن من خرج منه المني في رمضان من غير تسبب في إخراجه، فلا كفرة عليه، بل ولا قضاء، نعم إذا خرج منه مني دون أن يتسبب أ، أو تحدث منه مقدمات لإخراج المني. هنا لا كفارة عليه، بل قيل، ولا قضاء عليه، كمن احتلم. نام، فاحتل منام. الآن، مسألة أخرى هي مباحات الفطر في رمضان، يقول أبن عاشر رحمه الله ويباح للضر أو سفر قصر، أي bob أي مباح نعم، ويباح للضر، أو سفر قصر أي مباح. قال ويباح أي ويباح الفطر لأجل ضرر لحقه بسبب الصوم. أو كان خاف زيادة الضر؟أو تماديه؟ ولكن الإباحة هنا مقيدة بما إذا لم يخف على نفسه هلاكا. أو شديدة أدى، وإلا حرمة. نعم. الصوم وجب الفطر، لماذا؟نعم. إذا خاف ال المر إن صام، وأنه سيلحقه شديد أدى بهذا الصوم، فهنا لا يباح له الصوم، بل يجب عليه الفطر، لماذا؟ لأن حفظ النفس واجب ما أمكن، و دين الله يسر، و الصوم يقضى، والنفس لا تقضى. نعم، قال ويباح للضرر أو سفر قصر أي مباح، أي ويباح الفطر لأجل سفر قصر. نعم، مباح كالتجارة، قال وإن لم تنل ضرورة، أي وإن لم تكن هناك ضرورة ملحة لهذا. لهذا السفر، سفر التجارة، قالو الصيام هنا أفضل. سي أم في هاته الحالة، أفضل إن كان مسافر، سفر، تجارة، و هاته التجارة ليست ضرورة، نعم، و جواز الفطر في السفر، هناك شروط نعم يأتي ذكرها بإذن الله تبارك وتعالى، إذا قال يباح الفطر، و يجوز لأحد أمرينيقول أبن عاشر ويباح للضرر، أو سفر قصر أي مباح، إذن يباح الفطر، و يجوز لأحد أمرين إثنين إمال ضرر يلحقه بسبب الصيام، أو. لما هو مضنى الضار؟ إن لم يحصل الضرر وهو السفر الذي تقصر فيه الصلاة وهو السفر الطويل المباح، والذي قلناه و84 كم؟ قال أما إباحة الفطر لضرر فمحله إذا خافت مادة، ضره بقول طبيب أمين، أو تجربة، أو تجربة في نفسه. أو خياطة، أو خاف زيادته، أي زيادة هذا الذر وهذا المرض، أو حدوث مرض آخر. أو يخاف، إن هو صام، سيحدث له مرض آخر، عنده مرض سيحدث له مرض آخر، أو خاف للمشقة، لضعفه بالمرض، فإن كان. لو تكلفه لقدر عليه في فطرو دين، الله يسر، لأننا قلنا حفظ النفس. لا تقضى، وأما الصوم يقضى، قال إما لو خافت لفاو الأذى الشديد، إن صام هنا في هاته الحالة يحرم عليه، فإن الصوم يحرم عليه حينئذ، ويجب عليه الفطر، لأن حفظ النفس واجب ما أمكن، هنا نكون قد وصلنا. إلى ختام حصتنا شكر الله لكم حسن إصغاء كم و استماعكم. سبحانك اللهم وبحمدك، نشهد أن لا إله إلا أنت، نستغفرك ونتوب إليك، و السلام عليكم و رحمة الله تعالى و بركاته.</p>
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
 
-</body>
-</html>
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>

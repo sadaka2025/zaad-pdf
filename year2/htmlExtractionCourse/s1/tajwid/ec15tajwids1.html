@@ -1,10 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<title>الدرس الخامس عشر</title>
-
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الخامس عشر</title>
 <style>
   body {
     font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
@@ -24,6 +20,7 @@
     color: #145a00;
     text-shadow: 0 0 8px #a8ff8a;
   }
+  p { margin: 1rem 0; text-align: justify; }
   .container { text-align: center; margin-bottom: 1.5rem; }
   .button {
     border: none;
@@ -35,47 +32,137 @@
     font-weight: bold;
     font-size: 16px;
     margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
   }
   .share-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
   }
   .share-buttons button {
-    background: #e6f8e6;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 15px;
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
   }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
 </style>
-
 </head>
-
 <body>
-
-<div class="container">
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/tajwid/ec15tajwids1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
   
-        <a href="https://your-cdn-domain.com/PDFs/year2/htmlExtractionCourse/year2/ec15tajwids1.pdf" target="_blank">
-          <button class="button">📄 Télécharger le PDF</button>
-        </a>
-      
-  
-<div class="share-buttons">
-  <button onclick="window.print()">🖨️ Imprimer</button>
-  <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-  <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-  <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-  <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-  <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-</div>
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent11">الدرس الخامس عشر</h1>
+<p id="sent12">بسم اللهالرحمن الرحيم، الحمد لله ربالعالمين، وأفضل الصلاةوأتم التسليم على سيدنا محمدالنبي الأمي وعلى آله وصحبهأجمعين، اللهم علمنا ماينفعناوانفعنا بما علمتنا وزدنامن لدنك علما، اللهم أنفعناورفعنا بالقرآن العظيم، إنك يا مولانا. على كل شيء قدير،وبالإجابة جدير. أما بعد أيها الإخوةالأكارم، فقد تحدثنا فيالحصة الأخيرة عن صيفتيالصفير، وعن صفة اللين، ثم بعدها ذكر صفة الانحراف، قالوالانحراف في حرفين، قالشالناظم رحمه اللهو لانحرافوصحيحا في اللام والراء،لماذا؟ قال صحيحا؟ لأنهناك خلاف في قضية الانحراف،هل يكون مصاحب اللام والراءمعا، أو في اللام فقط؟ قال وفي والانحراف صحيح، أي أن آ الشيخ إبنالجازي ال رحمه الله تعالىاختار صفة الانحراف فياللام وفرا قال وهما ألام وراهالمبين ان بقوله ولانحراف صحيحا في اللهم برا. قال الشارح وللحراف الميل، وسميح رفاهمنحرفين، لأنه منحرفا عمخرجي، هما حتى اتصل بمخرج غير هما فلام فيه انحراف إلى طرفاللسان، يعني قلنا سابقا أن اللام تخرج منأدنى طرفين لسان إلى منتهاه. مع ال الحنك الأعلى في ويق الثنايا العليا قا، ففيها ميل إلى مخرج النون، لذلك يحذر من يقرأ، وجعلنا أن يبين اللام الساكنة، ثم ينطق النون. مع مادها، وجعلنا أنزلنا. لا يقرأها، وجعلنا وجعلنا أنزلنا مثلا. قال وراء فيهانحراف إذا إلىظهر، ظهر اللسان، يعنيفي الرا فيهانحراف إلى اللام. نعم، قالو ميل قليل إلى جهة اللام،ولذلك يجعلوه لأ لثغ، لا، ما هنا سنبين في الصورة. كيف أناللام تنحرف، وا؟أي أن الصوت شلامينحرف إلى جانبي طرفاللسان؟ لماذا؟ لاعتراض الطال، اللسان طريق اللام؟ هنا قلنا أن. ال ال الهواءوالصوت يأتي. من الداخل، هكذا؟ولام تخرج من أدنى. طرفي اللسان. من هنا؟ أدنى. حافت اللسان إلىمنتهى طرفه. وإذ يصطدم بال فويق الثناية. العليا. فأين سيخرج هذا الصوت؟س ينحرفو يمين و ينحرفوا شمال؟ال ال ال. هذابالنسبة للانحراف فياللام يكون انحراف صوتاللام إلى جانبي طرفي لست طرف اللسانلاعتراض الطرف طريق ال آم فالصوت لما يخرج فا. يجد أن المخرج يعني شبه مقفل، فأين سيتجه؟ الصوت؟يتجه يمينا وشمالا، أماالانحراف بالنسبة للرأي، ف ننظر إلى الصورة، قالينحرف الصوت بها من جانبي طرف اللسان إلى وسطه، فيكوناللسان يعني شبه مقعر، هكذا مقور. ف تنطقها أر أر أر، ويكون هذا المخرج. هذا الضيق يخرج منه الصوت. بالنسبة إلى أراء الرحمن، بسم الله الرحمن الرحيم. ببم؟ الحمد لله رب العالمين. مم؟ الرحمن الرحيم. ولولا هذهالكيفية في خروج الراء،لصارت الراء محصر مه، وإذا صارت محاصر ما أدى ذلك إلى المبالغة فيتكرير الراء، وسوى. يعني صار هناك عدة راءات، وهذا ما ينبغي. آه يعني التحذير منه،فليس المقصود كما سيأتي معنا في التكرير الرائع أن لا نكررها، وأنعدم التكرار وإنما عدمالمبالغة فيها، لا ننطقها، أر الرحمن الرحمنالرحيم، ليش؟ لأن هناك. يعني انغلاق فيالمخرج، فا يأتي الصوت؟ ويضغط على هذهالمنطقة فيرتعد الصوت، ولذلكيعني ينشأ عن هراءات كثيرة،فنحن نقول لا بد أن تجعله مق وراها كذا،فيأتي الصوت ويخرج من هذاالمخرج الضيق. قال. وميل قليل إلى جهة الله،ولذلك اجعلها الألفه لا، من ثم نمر إلىصفتي التكرير على كل قالوالتكرير في الرأي فقط كماقالو بتكرير جعل أي أنالتكرير خاص بصفتي بحرفالراء قالو التكرير وإعادةالشيء وأقله مرة. ومعنى تكريره أن لهقبول التكرار، يعني يقبلالتكرار،الارتعاد، طرف اللسان عندالنطق به، لماذا يرتعداللسان؟ قال نتيجة ضيق مخرج ها. نعم، إذا فليحذر القارئمن التكرير المؤدي إلى ظهور أكثر من راء، وطريقة التخلص من هذا المبدأ منالمبالغة في التكرير أننجعل مثل الفرجة الصغيرةوسط اللسان يخرج منهاالصوت، قال هناك قولهملغير الضاحك. أنه ضاحك إنسانضاحك، يعني ضاحك بالقوة لابالفعل، حتى أنه لو لميضحك، لكنه ضاحك بالقوة،كذلك بالنسبة للراء يقبل التكرير. قالو اتصاف الشيءبالشيء عم من أن يكون بالفعل أو بالقوة، لا تكره بالفعل. وارتعاد اللسان به، فإن ذلك لحن يجب التحرز منه، كما يأتي في باب الرائع. يعني لا تنطقمثل الرحمن الرحمن ولنتنطق. وكذلك يعني. بدوني، آت كرير أر. أر. الله الله الرحمن، لأ الرحمن الرحيم. أيي، مم؟ فما قالوالتفشي لغة الانتشار. هذه صفة التفشي، وهو وصف الشين بذلك، لأن الصوت ينتشر في الفم عند خروجه حتى يتصل بمخرج الظاء، يعنيحتى يصطدم بصفحة الداخليةللأسنان العليا والسفلى، تقولالش. الش. الشيطان يعدكم الفقر، إذا، هنا الشيطان. أوون أعوذ بالله من الشيطان الرجيم. ننظر إلى هذه الصورة قالو انتشار صوت الشين في من مخرجه، يعني إللي هو وسط اللسان معالحنك الأعلى حتى يصطدمبصفحة الداخلية للأسنان العلياوالسفلى، وصفة التفشي خاصة بصفة. بحرف آه الشين، خلافا لمن ادعى أنها في الضاد كذلك، وفي الظاءوغيرها منها الحروف. ثم قال والاستطالة،وتفيد بادي، نختم صي الصفات التي لا بدلها، بصفتي الاستطالة،ونوليهااهتماما إن شاء الله تعالى،ومزيدا من الوقت، ف إلىذلك اللقاء نستودعكم اللهالذي لا تضيع ودائعه،والسلام عليكمورحمة الله تعالى. وبركاته.</p>
 
-</div>
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
 
-<h1 id="s11">الدرس الخامس عشر</h1><p id="s12">بسم اللهالرحمن الرحيم، الحمد لله ربالعالمين، وأفضل الصلاةوأتم التسليم على سيدنا محمدالنبي الأمي وعلى آله وصحبهأجمعين، اللهم علمنا ماينفعناوانفعنا بما علمتنا وزدنامن لدنك علما، اللهم أنفعناورفعنا بالقرآن العظيم، إنك يا مولانا. على كل شيء قدير،وبالإجابة جدير. أما بعد أيها الإخوةالأكارم، فقد تحدثنا فيالحصة الأخيرة عن صيفتيالصفير، وعن صفة اللين، ثم بعدها ذكر صفة الانحراف، قالوالانحراف في حرفين، قالشالناظم رحمه اللهو لانحرافوصحيحا في اللام والراء،لماذا؟ قال صحيحا؟ لأنهناك خلاف في قضية الانحراف،هل يكون مصاحب اللام والراءمعا، أو في اللام فقط؟ قال وفي والانحراف صحيح، أي أن آ الشيخ إبنالجازي ال رحمه الله تعالىاختار صفة الانحراف فياللام وفرا قال وهما ألام وراهالمبين ان بقوله ولانحراف صحيحا في اللهم برا. قال الشارح وللحراف الميل، وسميح رفاهمنحرفين، لأنه منحرفا عمخرجي، هما حتى اتصل بمخرج غير هما فلام فيه انحراف إلى طرفاللسان، يعني قلنا سابقا أن اللام تخرج منأدنى طرفين لسان إلى منتهاه. مع ال الحنك الأعلى في ويق الثنايا العليا قا، ففيها ميل إلى مخرج النون، لذلك يحذر من يقرأ، وجعلنا أن يبين اللام الساكنة، ثم ينطق النون. مع مادها، وجعلنا أنزلنا. لا يقرأها، وجعلنا وجعلنا أنزلنا مثلا. قال وراء فيهانحراف إذا إلىظهر، ظهر اللسان، يعنيفي الرا فيهانحراف إلى اللام. نعم، قالو ميل قليل إلى جهة اللام،ولذلك يجعلوه لأ لثغ، لا، ما هنا سنبين في الصورة. كيف أناللام تنحرف، وا؟أي أن الصوت شلامينحرف إلى جانبي طرفاللسان؟ لماذا؟ لاعتراض الطال، اللسان طريق اللام؟ هنا قلنا أن. ال ال الهواءوالصوت يأتي. من الداخل، هكذا؟ولام تخرج من أدنى. طرفي اللسان. من هنا؟ أدنى. حافت اللسان إلىمنتهى طرفه. وإذ يصطدم بال فويق الثناية. العليا. فأين سيخرج هذا الصوت؟س ينحرفو يمين و ينحرفوا شمال؟ال ال ال. هذابالنسبة للانحراف فياللام يكون انحراف صوتاللام إلى جانبي طرفي لست طرف اللسانلاعتراض الطرف طريق ال آم فالصوت لما يخرج فا. يجد أن المخرج يعني شبه مقفل، فأين سيتجه؟ الصوت؟يتجه يمينا وشمالا، أماالانحراف بالنسبة للرأي، ف ننظر إلى الصورة، قالينحرف الصوت بها من جانبي طرف اللسان إلى وسطه، فيكوناللسان يعني شبه مقعر، هكذا مقور. ف تنطقها أر أر أر، ويكون هذا المخرج. هذا الضيق يخرج منه الصوت. بالنسبة إلى أراء الرحمن، بسم الله الرحمن الرحيم. ببم؟ الحمد لله رب العالمين. مم؟ الرحمن الرحيم. ولولا هذهالكيفية في خروج الراء،لصارت الراء محصر مه، وإذا صارت محاصر ما أدى ذلك إلى المبالغة فيتكرير الراء، وسوى. يعني صار هناك عدة راءات، وهذا ما ينبغي. آه يعني التحذير منه،فليس المقصود كما سيأتي معنا في التكرير الرائع أن لا نكررها، وأنعدم التكرار وإنما عدمالمبالغة فيها، لا ننطقها، أر الرحمن الرحمنالرحيم، ليش؟ لأن هناك. يعني انغلاق فيالمخرج، فا يأتي الصوت؟ ويضغط على هذهالمنطقة فيرتعد الصوت، ولذلكيعني ينشأ عن هراءات كثيرة،فنحن نقول لا بد أن تجعله مق وراها كذا،فيأتي الصوت ويخرج من هذاالمخرج الضيق. قال. وميل قليل إلى جهة الله،ولذلك اجعلها الألفه لا، من ثم نمر إلىصفتي التكرير على كل قالوالتكرير في الرأي فقط كماقالو بتكرير جعل أي أنالتكرير خاص بصفتي بحرفالراء قالو التكرير وإعادةالشيء وأقله مرة. ومعنى تكريره أن لهقبول التكرار، يعني يقبلالتكرار،الارتعاد، طرف اللسان عندالنطق به، لماذا يرتعداللسان؟ قال نتيجة ضيق مخرج ها. نعم، إذا فليحذر القارئمن التكرير المؤدي إلى ظهور أكثر من راء، وطريقة التخلص من هذا المبدأ منالمبالغة في التكرير أننجعل مثل الفرجة الصغيرةوسط اللسان يخرج منهاالصوت، قال هناك قولهملغير الضاحك. أنه ضاحك إنسانضاحك، يعني ضاحك بالقوة لابالفعل، حتى أنه لو لميضحك، لكنه ضاحك بالقوة،كذلك بالنسبة للراء يقبل التكرير. قالو اتصاف الشيءبالشيء عم من أن يكون بالفعل أو بالقوة، لا تكره بالفعل. وارتعاد اللسان به، فإن ذلك لحن يجب التحرز منه، كما يأتي في باب الرائع. يعني لا تنطقمثل الرحمن الرحمن ولنتنطق. وكذلك يعني. بدوني، آت كرير أر. أر. الله الله الرحمن، لأ الرحمن الرحيم. أيي، مم؟ فما قالوالتفشي لغة الانتشار. هذه صفة التفشي، وهو وصف الشين بذلك، لأن الصوت ينتشر في الفم عند خروجه حتى يتصل بمخرج الظاء، يعنيحتى يصطدم بصفحة الداخليةللأسنان العليا والسفلى، تقولالش. الش. الشيطان يعدكم الفقر، إذا، هنا الشيطان. أوون أعوذ بالله من الشيطان الرجيم. ننظر إلى هذه الصورة قالو انتشار صوت الشين في من مخرجه، يعني إللي هو وسط اللسان معالحنك الأعلى حتى يصطدمبصفحة الداخلية للأسنان العلياوالسفلى، وصفة التفشي خاصة بصفة. بحرف آه الشين، خلافا لمن ادعى أنها في الضاد كذلك، وفي الظاءوغيرها منها الحروف. ثم قال والاستطالة،وتفيد بادي، نختم صي الصفات التي لا بدلها، بصفتي الاستطالة،ونوليهااهتماما إن شاء الله تعالى،ومزيدا من الوقت، ف إلىذلك اللقاء نستودعكم اللهالذي لا تضيع ودائعه،والسلام عليكمورحمة الله تعالى. وبركاته.</p>
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
 
-</body>
-</html>
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>

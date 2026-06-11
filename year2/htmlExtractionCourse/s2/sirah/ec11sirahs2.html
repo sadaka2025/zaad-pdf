@@ -1,10 +1,6 @@
-
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<title>الدرس الحادي عشر  سرية أسامة</title>
-
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الحادي عشر  سرية أسامة</title>
 <style>
   body {
     font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
@@ -24,6 +20,7 @@
     color: #145a00;
     text-shadow: 0 0 8px #a8ff8a;
   }
+  p { margin: 1rem 0; text-align: justify; }
   .container { text-align: center; margin-bottom: 1.5rem; }
   .button {
     border: none;
@@ -35,47 +32,137 @@
     font-weight: bold;
     font-size: 16px;
     margin: 5px;
+    transition: all 0.3s ease;
+  }
+  .button:hover { background: #4bd61e; transform: scale(1.05); }
+  .button:disabled {
+    background: #ccc !important;
+    cursor: not-allowed !important;
+    opacity: 0.8;
   }
   .share-buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-top: 10px;
+    display: flex; justify-content: center; flex-wrap: wrap;
+    gap: 10px; margin-top: 10px;
   }
   .share-buttons button {
-    background: #e6f8e6;
-    border: none;
-    border-radius: 6px;
-    padding: 8px 16px;
-    cursor: pointer;
-    font-size: 15px;
+    background: #e6f8e6; border: none; border-radius: 6px;
+    padding: 8px 16px; cursor: pointer; font-size: 15px;
+    transition: background-color 0.3s ease;
   }
+  .share-buttons button:hover { background: #c8f5c8; }
+  #clockDate {
+    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
+  }
+  .search-container { text-align: center; margin: 1rem 0 2rem; }
+  #searchBox {
+    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
+    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
+  }
+  #clearSearch {
+    padding: 10px 20px; margin-left: 10px; font-size: 16px;
+    background-color: #ff4d4d; color: white; border-radius: 6px;
+    border: none; cursor: pointer;
+  }
+  #clearSearch:hover { background-color: #ff0000; }
+  #searchResults {
+    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
+    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
+    overflow-y: auto;
+  }
+  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
+  .result-item:hover { background-color: #e0ffe0; }
+  mark { background-color: yellow; }
 </style>
-
 </head>
-
 <body>
-
-<div class="container">
+  <div id="clockDate"></div>
+  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/sirah/ec11sirahs2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+      <div class="share-buttons">
+        <button onclick="window.print()">🖨️ Imprimer</button>
+        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
+        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
+        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
+        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
+        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
+      </div></div>
   
-        <a href="https://your-cdn-domain.com/PDFs/year2/htmlExtractionCourse/year2/ec11sirahs2.pdf" target="_blank">
-          <button class="button">📄 Télécharger le PDF</button>
-        </a>
-      
-  
-<div class="share-buttons">
-  <button onclick="window.print()">🖨️ Imprimer</button>
-  <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-  <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-  <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-  <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-  <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-</div>
+      <div class="search-container">
+        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
+        <button id="clearSearch" class="button">مسح</button>
+        <div id="searchResults"></div>
+      </div><h1 id="sent3">الدرس الحادي عشر  سرية أسامة</h1>
+<p id="sent4">بسم الله الرحمان الرحيم. الحمد لله وكفى والصلاة والسلام على النبي الكريم المصطفى أحبتي في الله أينما كنتم، السلام عليكم ورحمة الله تعالى وبركاته. لما كان يوم الإثنين أربع ليال بقين من سفر سنة 11 هجري أمر النبي صلى الله عليه وسلم الناس ب التهيؤ لغزو الروم. فلما كان من الغد، دعا أسامة بن زيد. فقال سر إلى موضع مقتل إ بيك. فا. وأهم الخيل. فقد وليتك هذا الجيش. فاغر صباحا على أه لأبنة. موضع بين عسقلان والرملة. وحرق عليهم، و أسرع السيرة تسبق الأخبار، فإن ظفرك الله فأقل لبس فيهم، وخذ معك الادلاء، وقدم العيون والطلائع أمامك. فلما كان يوم الأربعاء بدء بالنبي صلى الله عليه وسلم صداع، فلما أصبح يوم الخميس عقد لأسامة اللواء بيده، ثم قال orson باسم الله في سبيل الله، فقاتل من كفر بالله، فخرج بروائ هو عقودا، فدفعه إلى بريدة بن الحصي بالإسلامي، وعسكر في منطقة الجرف، فلميبقى أحد من الوجوه المهاجرين الأولين والأنصار إلا انتدب في تلك الغزوة، فيهم أبو بكر الصديق عمر بن الخطاب، و أبو عبيدة بن الجراح، و سعد بن أبي وقاص، وسعيد بن زيد رضي الله عنه، فتكلم قوم وقالوا يستعمل هذا الغلام على المهاجرين الأولين، فغضب النبي صلى الله عليه وسلم غضبا. جديدا، فخرج وقد عصب على رأسه عصابة، وعليه قطيفة، فصعد المنبر، فحمد الله وأثنى عليه، ثم قال أما بعد أيها الناس، فما مقالة بلغتني عن بعضكم في تأمير أسامة؟ ولا إنت عنتم في إمارة أسامة؟ لقدت عنتم في إمارة أبيه من قبل، و أيما لله. إن كان للإمارة ل خليقا، وإن ابنه من بعده ل خليق للإمارة، وإن كان لمن أحب الناس إليه، وإنهم لم خيلان لكل خير، أي مظلة لكل خير، واستوصوا بيخير، فإنه من خياركم. ويؤيد صغر سنه ذلك أن الخليفة المهدي لما دخل البصرة رأى ياسر بن معاوية الذي يضرب به المثل في الذكاء، وهو الصبي. وخلفه 400 من العلماء وأصحابه الطيالسة، فقال المهدي أف لهذه العثمانين؟ أما كان فيهم شيخ يتقدمهم غير هذا الحدث؟ثم التفت إليه المهدي وقال كم سنك يا فته؟ فقال سني أطال الله بقاء أمير المؤمنين سنة أسامة بن زيد بن حارثة رضي الله تعالى عنهم. لما ولاه رسول الله صلى الله عليه وسلم جيشا فيه؟ أبو بكر وعمر رضي الله تعالى عنه؟ ماوهذا يوضح لنا مكان لشباب المسلمين قديما من دور حيوي في إثراء الحضارة الإسلامية. فكانت أعمارهم تتفاوت بين 20 و30 عاما، عندما كان روادا، وقادة حرب، وملوك، وعلماء، وفلاسفة، ومن أبرز هؤلاء الشباب، هارون الرشيد، وهو أشهر خلفاء العباسيين في العصر الذهبي الإسلامي. ففي عمر 15 عاما، كان قائد للجيش العباسي. و تولى الخلافة في ال20 من عمره، و محمد بن قاسم الثقافي في عمري السابعة عشر عاما، فتح بلاد السن باكستان اليوم عبد الرحمان القرشي صقر قريش. ففي عمر الخامسة وال20 عاما أقام إمارة أموية في الأندلس إسبانيا اليوم حتى جعلها مقر. الملكة. عبد الرحمان الناصر لدين الله في عمر الثالثة وال20 عاما تولى حكم الأندلس واستمر حكمه 50 عاما. أسس مدينة الزهراء واتخذها عاصمة له، وتميز عهده بالنهضة العمرانية. ولما كان يوم الأحد؟اشتد بالنبي صلى الله عليه وسلم وجعه،فدخل أسامة بن معسكره النبي صلى الله عليه وسلم مغمور، فتعطى أسامة، فقبل هو النبي صل الله عليه وسلم لا يتكلم. وجعل يرفع يديه إلى السماء، ثم يضعهم على أسامة، قال فعرفت أنه يدعو لي. كان أسامة مفطورا على حب الجهاد والخروج إلى الغزو شجاعا مقداما منذ نشأته، فخارج مع النبي عليه الصلاة والسلام في غزوة أحد. لكنه رده لصغر سنه، ثم شارك في الأحزاب بعدا نشد عوده، واشترك مع أبيه زيد بن حارثة في غزوة مؤتة، وكان ممن ثبت مع النبي صلى الله عليه وسلم في حنين، حين تفرق المسلمون في الجولة الأولى من المعركة، وفر منهم منفر، ورجع أسامة إلى معسكره، ثم دخل يوم الإثنين. وأصبح النبي صلى الله عليه وسلم فيقا، فقال له ordre على بركة الله؟فهو دعوة أسامة، وخرج إلى معسكره، فأمر الناس بالرحيل. فبينما هو يريد الركوب، إذا رسول أمه أيمن أم أيمن؟ قد جاءه يقول إن رسول الله صلى الله عليه وسلم يموت، فأقبل، وقبل معه عمر، و أبو عبيدة رضي الله عنهم، فانتهوا إلى النبي صلى الله عليه وسلم وهو يموت، فتوفي يوم الإثنين 12 ربيع الأول. ودخل المسلمون الذين عسكر بالجر في إلى المدينة المنورة، ودخل بريدة بن الحصيد بروائي أسامة معقودا، حتى أتي به باب النبي صلى الله عليه وسلم غرزه عنده، ولما بوع أبو بكر الخلافة أمر بريدة بن الحسين باللواء إلى بيت أسامة، ليمضي لوجهه، فمضى به بريدة إلى معسكرهم الأول. لم ارتدت العرب عن الإسلام؟ كل ماؤوك في حبس أسامة. فأبى. و كلم أبو بكر أسامة في عمر أن يأذن له في التخلف فعل. فلما مات صلى الله عليه وسلم، ارتدت العرب، وظهر النفاق، وقويت نفوس أهل النصرانية واليهودية، وصار المسلمون كالغنم المطيرة في الليلة الش آتية، وارتد الطوائف من العرب، وقال و نصلي، و لا ندفع الزكاة. وعند ذلك كل مع بكر رضي الله عنه في منع أسامة من السفر. أي قاله كيف يتوجه هذا الجيش إلى الروم؟ وقد رددت العرب حول المدينة؟فأبى وقال والله الذي لا إله إلا هو، لو جرت الكلاب بأ رجل أزواج رسول الله صلى الله عليه وسلم ما أرد جيشا وجه رسول الله صلى الله عليه وسلم، ولا حللت لواء عقده. وفي لفظ والله لأن تخطفني الطير أحب إلي من أن أبدأ بشيء قبل أمري رسول الله صلى الله عليه وسلم. وقال عمر رضي الله عنه. فإن الأنصار أمروني أن أبلغك أنهم يطلبون أن تولي أمرهم رجلا أقدم سنا من أسامة. فوثب أبو بكر وكان جالسا، وأخذ بلحية عمر، وقال ثكلتك أمك، وعدم tequila بن الخطاب، استعمله رسول الله صلى الله عليه وسلم، وتأمرني أن أ نزعه، فخرج عمر إلى الناس فقال انظروا ثكلتكم، أمهاتكم، مالقيت اليوم بسببكم من خليفة رسول الله صلى الله عليه وسلم. خير؟فلما كان هلال شهر ربيع الثان سنة 11 هجري، خرج أسامة، فصار إلى أهل أبناء 20 ليلة، فشن عليهم الغارة فقط لمن أشرف له، وسبب نقدر عليه، وحرق في طوائفها بالنار، وحرق منازلهم وحروبهم ونخلهم، وكان أسامة على فرس أبيه سبحا، وقتل قاتل أبيه في الغارة. فلما أنسى أمر الناس بالرحيل، ثم أخذ السيرة فورد وادي القرى في تسع ليال، ثم بعث بشيرا إلى المدينة المنورة يخبر بسلامتهم، وما أصيب من المسلمين أحد، وخرج أبو بكر في المهاجرين وأهل المدينة يتلقونه سرورا بسلامتهم، ودخل على فرسا بيهسبحان واللواء وأمامه يحمله بريدة بن الحصين حتى انتهى إلى المسجد، فدخل ف صلى ركعتين، ثم انصرف إلى بيته، وبلغ هرقل وهو بحمص ما صنع أسامة. فبعث رابطة يكونون بال بلقاء، فلم تزل هناك حتى قدمت البحوث إلى الشام في خلافة أبو بكر رضي الله عنه، إلى هنا نكون قد أنهينا درسنا، ثم في رعاية الله استودعكم الله. السلام عليكم و رحمة الله تعالى و بركاته.</p>
 
-</div>
+<script>
+// === Horloge en haut de page ===
+const clockDate = document.getElementById('clockDate');
+function updateClock() {
+  const now = new Date();
+  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
+}
+setInterval(updateClock, 1000); updateClock();
 
-<h1 id="s3">الدرس الحادي عشر  سرية أسامة</h1><p id="s4">بسم الله الرحمان الرحيم. الحمد لله وكفى والصلاة والسلام على النبي الكريم المصطفى أحبتي في الله أينما كنتم، السلام عليكم ورحمة الله تعالى وبركاته. لما كان يوم الإثنين أربع ليال بقين من سفر سنة 11 هجري أمر النبي صلى الله عليه وسلم الناس ب التهيؤ لغزو الروم. فلما كان من الغد، دعا أسامة بن زيد. فقال سر إلى موضع مقتل إ بيك. فا. وأهم الخيل. فقد وليتك هذا الجيش. فاغر صباحا على أه لأبنة. موضع بين عسقلان والرملة. وحرق عليهم، و أسرع السيرة تسبق الأخبار، فإن ظفرك الله فأقل لبس فيهم، وخذ معك الادلاء، وقدم العيون والطلائع أمامك. فلما كان يوم الأربعاء بدء بالنبي صلى الله عليه وسلم صداع، فلما أصبح يوم الخميس عقد لأسامة اللواء بيده، ثم قال orson باسم الله في سبيل الله، فقاتل من كفر بالله، فخرج بروائ هو عقودا، فدفعه إلى بريدة بن الحصي بالإسلامي، وعسكر في منطقة الجرف، فلميبقى أحد من الوجوه المهاجرين الأولين والأنصار إلا انتدب في تلك الغزوة، فيهم أبو بكر الصديق عمر بن الخطاب، و أبو عبيدة بن الجراح، و سعد بن أبي وقاص، وسعيد بن زيد رضي الله عنه، فتكلم قوم وقالوا يستعمل هذا الغلام على المهاجرين الأولين، فغضب النبي صلى الله عليه وسلم غضبا. جديدا، فخرج وقد عصب على رأسه عصابة، وعليه قطيفة، فصعد المنبر، فحمد الله وأثنى عليه، ثم قال أما بعد أيها الناس، فما مقالة بلغتني عن بعضكم في تأمير أسامة؟ ولا إنت عنتم في إمارة أسامة؟ لقدت عنتم في إمارة أبيه من قبل، و أيما لله. إن كان للإمارة ل خليقا، وإن ابنه من بعده ل خليق للإمارة، وإن كان لمن أحب الناس إليه، وإنهم لم خيلان لكل خير، أي مظلة لكل خير، واستوصوا بيخير، فإنه من خياركم. ويؤيد صغر سنه ذلك أن الخليفة المهدي لما دخل البصرة رأى ياسر بن معاوية الذي يضرب به المثل في الذكاء، وهو الصبي. وخلفه 400 من العلماء وأصحابه الطيالسة، فقال المهدي أف لهذه العثمانين؟ أما كان فيهم شيخ يتقدمهم غير هذا الحدث؟ثم التفت إليه المهدي وقال كم سنك يا فته؟ فقال سني أطال الله بقاء أمير المؤمنين سنة أسامة بن زيد بن حارثة رضي الله تعالى عنهم. لما ولاه رسول الله صلى الله عليه وسلم جيشا فيه؟ أبو بكر وعمر رضي الله تعالى عنه؟ ماوهذا يوضح لنا مكان لشباب المسلمين قديما من دور حيوي في إثراء الحضارة الإسلامية. فكانت أعمارهم تتفاوت بين 20 و30 عاما، عندما كان روادا، وقادة حرب، وملوك، وعلماء، وفلاسفة، ومن أبرز هؤلاء الشباب، هارون الرشيد، وهو أشهر خلفاء العباسيين في العصر الذهبي الإسلامي. ففي عمر 15 عاما، كان قائد للجيش العباسي. و تولى الخلافة في ال20 من عمره، و محمد بن قاسم الثقافي في عمري السابعة عشر عاما، فتح بلاد السن باكستان اليوم عبد الرحمان القرشي صقر قريش. ففي عمر الخامسة وال20 عاما أقام إمارة أموية في الأندلس إسبانيا اليوم حتى جعلها مقر. الملكة. عبد الرحمان الناصر لدين الله في عمر الثالثة وال20 عاما تولى حكم الأندلس واستمر حكمه 50 عاما. أسس مدينة الزهراء واتخذها عاصمة له، وتميز عهده بالنهضة العمرانية. ولما كان يوم الأحد؟اشتد بالنبي صلى الله عليه وسلم وجعه،فدخل أسامة بن معسكره النبي صلى الله عليه وسلم مغمور، فتعطى أسامة، فقبل هو النبي صل الله عليه وسلم لا يتكلم. وجعل يرفع يديه إلى السماء، ثم يضعهم على أسامة، قال فعرفت أنه يدعو لي. كان أسامة مفطورا على حب الجهاد والخروج إلى الغزو شجاعا مقداما منذ نشأته، فخارج مع النبي عليه الصلاة والسلام في غزوة أحد. لكنه رده لصغر سنه، ثم شارك في الأحزاب بعدا نشد عوده، واشترك مع أبيه زيد بن حارثة في غزوة مؤتة، وكان ممن ثبت مع النبي صلى الله عليه وسلم في حنين، حين تفرق المسلمون في الجولة الأولى من المعركة، وفر منهم منفر، ورجع أسامة إلى معسكره، ثم دخل يوم الإثنين. وأصبح النبي صلى الله عليه وسلم فيقا، فقال له ordre على بركة الله؟فهو دعوة أسامة، وخرج إلى معسكره، فأمر الناس بالرحيل. فبينما هو يريد الركوب، إذا رسول أمه أيمن أم أيمن؟ قد جاءه يقول إن رسول الله صلى الله عليه وسلم يموت، فأقبل، وقبل معه عمر، و أبو عبيدة رضي الله عنهم، فانتهوا إلى النبي صلى الله عليه وسلم وهو يموت، فتوفي يوم الإثنين 12 ربيع الأول. ودخل المسلمون الذين عسكر بالجر في إلى المدينة المنورة، ودخل بريدة بن الحصيد بروائي أسامة معقودا، حتى أتي به باب النبي صلى الله عليه وسلم غرزه عنده، ولما بوع أبو بكر الخلافة أمر بريدة بن الحسين باللواء إلى بيت أسامة، ليمضي لوجهه، فمضى به بريدة إلى معسكرهم الأول. لم ارتدت العرب عن الإسلام؟ كل ماؤوك في حبس أسامة. فأبى. و كلم أبو بكر أسامة في عمر أن يأذن له في التخلف فعل. فلما مات صلى الله عليه وسلم، ارتدت العرب، وظهر النفاق، وقويت نفوس أهل النصرانية واليهودية، وصار المسلمون كالغنم المطيرة في الليلة الش آتية، وارتد الطوائف من العرب، وقال و نصلي، و لا ندفع الزكاة. وعند ذلك كل مع بكر رضي الله عنه في منع أسامة من السفر. أي قاله كيف يتوجه هذا الجيش إلى الروم؟ وقد رددت العرب حول المدينة؟فأبى وقال والله الذي لا إله إلا هو، لو جرت الكلاب بأ رجل أزواج رسول الله صلى الله عليه وسلم ما أرد جيشا وجه رسول الله صلى الله عليه وسلم، ولا حللت لواء عقده. وفي لفظ والله لأن تخطفني الطير أحب إلي من أن أبدأ بشيء قبل أمري رسول الله صلى الله عليه وسلم. وقال عمر رضي الله عنه. فإن الأنصار أمروني أن أبلغك أنهم يطلبون أن تولي أمرهم رجلا أقدم سنا من أسامة. فوثب أبو بكر وكان جالسا، وأخذ بلحية عمر، وقال ثكلتك أمك، وعدم tequila بن الخطاب، استعمله رسول الله صلى الله عليه وسلم، وتأمرني أن أ نزعه، فخرج عمر إلى الناس فقال انظروا ثكلتكم، أمهاتكم، مالقيت اليوم بسببكم من خليفة رسول الله صلى الله عليه وسلم. خير؟فلما كان هلال شهر ربيع الثان سنة 11 هجري، خرج أسامة، فصار إلى أهل أبناء 20 ليلة، فشن عليهم الغارة فقط لمن أشرف له، وسبب نقدر عليه، وحرق في طوائفها بالنار، وحرق منازلهم وحروبهم ونخلهم، وكان أسامة على فرس أبيه سبحا، وقتل قاتل أبيه في الغارة. فلما أنسى أمر الناس بالرحيل، ثم أخذ السيرة فورد وادي القرى في تسع ليال، ثم بعث بشيرا إلى المدينة المنورة يخبر بسلامتهم، وما أصيب من المسلمين أحد، وخرج أبو بكر في المهاجرين وأهل المدينة يتلقونه سرورا بسلامتهم، ودخل على فرسا بيهسبحان واللواء وأمامه يحمله بريدة بن الحصين حتى انتهى إلى المسجد، فدخل ف صلى ركعتين، ثم انصرف إلى بيته، وبلغ هرقل وهو بحمص ما صنع أسامة. فبعث رابطة يكونون بال بلقاء، فلم تزل هناك حتى قدمت البحوث إلى الشام في خلافة أبو بكر رضي الله عنه، إلى هنا نكون قد أنهينا درسنا، ثم في رعاية الله استودعكم الله. السلام عليكم و رحمة الله تعالى و بركاته.</p>
+// === Recherche dynamique ===
+const searchBox = document.getElementById('searchBox');
+const searchResults = document.getElementById('searchResults');
+const clearButton = document.getElementById('clearSearch');
+const paragraphs = Array.from(document.querySelectorAll('p'));
 
-</body>
-</html>
+let globalId = 1;
+
+// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+paragraphs.forEach(p => {
+  const sentences = p.textContent.split(/([.!؟?!])\s+/);
+  if (sentences.length > 1) {
+    p.innerHTML = '';
+    for (let i = 0; i < sentences.length; i += 2) {
+      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+      if (sentence) {
+        const span = document.createElement('span');
+        span.textContent = sentence;
+        span.id = 'sent' + globalId++;
+        p.appendChild(span);
+        p.appendChild(document.createTextNode(' '));
+      }
+    }
+  } else {
+    if (!p.id) p.id = 'sent' + globalId++;
+  }
+});
+
+// Fonction de recherche
+function updateSearch() {
+  const query = searchBox.value.trim();
+  if (query === '') {
+    searchResults.style.display = 'none';
+    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
+    return;
+  }
+
+  let matches = 0;
+  let resultsHTML = '';
+  paragraphs.forEach(p => {
+    Array.from(p.children).forEach(span => {
+      const text = span.textContent;
+      const regex = new RegExp(query, 'gi');
+      if (text.match(regex)) {
+        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
+        matches++;
+        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
+      } else {
+        span.innerHTML = text;
+      }
+    });
+  });
+
+  searchResults.innerHTML = matches > 0
+    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+    : '❌ لا توجد نتائج مطابقة.';
+  searchResults.style.display = 'block';
+}
+
+searchBox.addEventListener('input', updateSearch);
+clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
+</script>
+
+</body></html>
