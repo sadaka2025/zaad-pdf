@@ -1,168 +1,380 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الرابع الحكمة السادسة</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/akhlaq/ec4akhlaqs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الرابع الحكمة السادسة</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/akhlaq/ec4akhlaqs1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent21">الدرس الرابع الحكمة السادسة</h1>
-<p id="sent22">بسم الله الرحمان الرحيم. الحمد لله رب العالمين. وأفضل الصلاة وأتم التسليم على سيدنا وحبيبنا ومولانا وقرة اعيننا سيدنا محمد الصادق الوعد الأمين، وحبيبي رب العالمين وعلى آله وصحبه وسلم أجمعين. وبعد ou. معشر السادة والسيدات الطلبة والطالبات. مرحبا بحضراتكم جميعا في هذا اللقاء المتجدد، و نحن معشر حكم إبن عطاء الله السكندري مع الحكمة السادسة من كلام أبن عطاء الله. الحقيقة حين نظرت في الحكم. يعني لا نستطيع أن ننتقي من ماذا ننتقي؟لكن حاولت أن ااا أنوع المواضيع. من أجل أن تعم الفائدة. لأننا نستطيع أن نقول، أيها السادة، والسيدات. نستطيع أن نقول أن الحكم إبن عطاء الله مدرسة. مدرسة مستقلة. مدرسة تربوية تهذيبية متكاملة، هذه حقيقة. وأنا الحقيقة أقول أن كل من درس الحكمة العطاء. ية. وا أمعن فيها بصدق وإخلاص، إلا وحسنت حاله. وتغيرت حاله. أنا اضمن هذا بإذن الله تعالى. وعشت سهل كلام سمعته من شيوخ وقالوا تغيرت حالنا و علاقتنا مع الله و عباداتنا بعد أن قرأنا الحكمة العطاء. و أنا أقول أيها الإخوة والأخوات. أنا ني أفادت كثيرا من حكم أبن عطاء الله السكندري رضي الله تعالى عنه وارضاه، و نفعنا الله بعلومه وبسائر أشياء خينا. امين، قلت لا نستطيع أن نذهب في الحكم بالسرد وراء بعضها بعضا، وإنما ننتقي اليوم مع الحكمة السادسة. في الكتاب. وهي. آه. الدرس الثالث. والحكمة السادسة. يقول رضي الله عنه لا يكن. تأخر. أما العطاء. مع الإلحاح في الدعاء. موجب اليأس، ك. فهو، سبحانه. ضامن لك الإجابة فيما يختاره لك، لا فيما تختاره لنفسك. وفي الوقت الذي يريد، لا في الوقت الذي تريد. يا سلام على هذه الحكمة، والله. والله حكمة جميلة جدا. يقول نعيده مرة ثانيه لا يكن تأخر أمد العطاء. و الأمد هي المدة. لا يكن تأخر، أما بالعطاء لا يكون تأخر مدة العطاء. تأخرت كثيرا في أن يستجاب دعائي. مع الإلحاح في الدعاء. وكأن أحدا ايقول ياربي. وحتى بالدعاء أمرتنا بالدعاء ووعدتنا بالإجابة. يارب منذ زمن، وأنا أدعو. منذ زمن، وأنا اطلب. يعرب، لم لم تستجب لي؟ فلربما أنا مقصر، لربما أنا عبادتي. لربما أنا مطرود من رحمة الله، لربما أنا الله تعالى لم يستجب لي أن الله غاضب. عليه. أن تأويلات كثيرة من هنا وهناك، لا. لا. بن عطاء الله يجيبك من قريب. ويجعلك في طمأنينة شديدة، يقول لا يكن تأخر أمد العطاء، العطاء، أي استجابة، الدعاء من الله الذي طلبته، مع الإلحاح في الدعاء. يعني مع أنك قد أتيت بما ينبغي عليك. من الإلحاح في الدعاء، يعني أديت الذي عليك. و أديت الذي ما هو مطلوب منك الحضور في الدعاء والإلحاح في الدعاء والتضرع في الليالي، وفي سواد الليل، وفي جنح الليل، يا رب، إذا لم لم تستجب لي. قال لا ينبغي ذلك، ذلك التأخر مع الإلحاح. مع توفر الشرط القبول، وشرط نعم ال قبول الدعاء موجب اليأس ك ياك أن يكون ذلك التأخر موجب اليأس que، فهو ضامن لك الإجابة. طيب هاذي واحد. طيب أليس الله تعالى قال هذا القرآن الكريم ادعوني أستجيب لكم إذا طلب مع جواب. وكان هنا التقدير. إنت دعوني أستجيب لكم، إذا هناك شرط، وهو و وجوابه، والله تعالى يخلف الميعاد، فإذا فهو ضامن لك الإجابة هذه الكلمة الأولى. إ فيما يختاره لك. وأنت طلبته الآن. فهمت عليا؟أو طلبت الشيء الفلاني، لكنه قال كلا يا فلان، أناس أستجيب لك، سأعطيك شيئا آخر خيرا منه، لكن هذا الشيء الآخر خير منه. نعم سوف يتهيأ لك، و سوف تكون قادرا عليه في وقت في وقت آخر. لأن هو الآن غير موجود. هو الذي تريده، إنت الآن في مكان الآخر. إذن هو ضامنة، لكن إجابة فيما يختاره لك، ياربي، أنا أريد الأمر الفلاني، طيب، نعم نحن باش نعطيك احسن منو. لكن مش تو الذي تريده مازال في الخارج لم يأت بعد أو مازال لم يصنع بعد أو مازال وعطيناك هو الآن. الآن نعم لا ينفعك الا ولا تستفيد منه. إذن، سوف نعطيك ه في وقت أن تستفيد منه تمام الفائدة. لا، فيما تختاره لنفسك. هذي وحدة. فهو ضامن لك الإجابة فيما يختاره لك، لا فيما تختاره لنفسك. يا رب، أنا أريد الأرض الفلانية. قال لك لا. أنا سأعطيك أرض أخرى أحسن منه. يا ربي، أنا أريد التخصص الفلاني. لا، أنا سأعطيك التخصص الفلاني أحسن منه. يا ربي، أنا أريد أن النجاح في هذه البضاعة، نعم، suce جيبلك، لكن أصبر شوية، لأن هذه البضاعة لو تأخر سعرها بعد قليل سوف يزداد ثمنها أضعافا مضاعفة، اذن هو سبحانه ضامن لك الإجابة فيما يختاره لك، لا فيما تختاره لنفسك. وفي الوقت الذي يريد، لا في الوقت الذي تريد. إذن، هناك، نعم، نحن طلبنا من الله سبحانه وتعالى وبعض الأحيان يعطينا ما نريد طيف إنتاحر العطاء، قال لا ينبغي أن يكون ذلك التأخير سببا في يأس، كما أن. ب من الله سبحانه وتعالى سببا في قنوتك، سببا في قضائك، انقباض. ك. سببا في حزنك، سببا في أن تسيء الظن بالله عز وجل، أو تسيء الظن بنفسك، وإنما عليك أن تقول كما يقول عبد الخالص لله عز وجل. أنا دعوت الله سبحانه وتعالى كما أمرني وهو يستجيب ليك ماشاء، وفي الوقت الذي شاء وعسى التأخير، هذا فيه حكمة ع سى نعم ااا. نعم كما قال في القرآن الكريم ربنا سبحانه وتعالى عسى ربنا أني بدينا خيرا منه. إنا إلى ربنا راغبون. في أصحاب القرية، كما قال ذلك ربنا سبحانه وتعالى، الناس الذين أعطاهم الله عز وجل فهما عن الله عز وجل، فكما قال العبد الصالح صوت الكهف لأخيه ال الجاحد، فعسى ربي أن يأتيني خيرا من جنتك، فعسى ربي إذا هو مازال. أصل لماذا نذهب بعيدا؟يقال أن سيدنا موسى عليه السلام استجاب الله له و لأخيه هارون عليهم السلام بعد 40 عاما بعد أن وعدهم الله، وحقق لهم الإجابة ب، ب. الوعد بالإجابة، قال قد أجيب ال دعوتكما فاستقيما، قد أجيب ال دعوتكما. فاستقيما، ولا تتبعان سبيل الذين لا يعلمون، قال أهل العلم استجاب الله لسيدنا موسى لأخيه هارون بعد 40 عاما، وكذلك الحال سيدنا يعقوب عليه السلام، و الحال في سيدنا يوسف عليه السلام، و كل هذه نعم دلالات. و سيدنا رسول الله صلى الله عليه وسلم في اية الله سبحانه وتعالى يجيبهم اذا بالسين. نعم يجيبهم اذا بالوعد بالصين، وتارة يجيبه بوعد ماذا؟ بسبب سوف؟مرة بالسين، أي بقرب الأجل، ومرة ب سوف آيب بعد الأجل، وكل ذلك سواء الصين، ولا سوف كله إنما تحقق ماذا بعد الهجرة؟بعد الهاجر؟ صلوات الله وسلامه عليه فلات عشر عاما، وهو صابر محتسب راض عن الله سبحانه وتعالى، إذا رضي الله عنك يا بن عطاء الله في هذه الحكمة، وأنت تمسح على قلوبنا يا أيها السادة، ويا أيها الإخوة والأخوات، لا تأخذ هذه المادة أنها مادة للامتحان. أنها مادة من أجل أنو امتحن بها، لا، إنما خذوها مادة سلوك، خذوها مادة عمل هي 16 حكمة في السداسي الأول، و16 إن شاء الله تعالى في السداسي الثاني، لو حفظنا هذه 32 حكمة في حياتنا، يعني سوف نكون يعني ااا امم من أجل ما تكون. ماذا؟ حياتنا ومشاعرنا ونظرتنا للحياة كلها؟ قال لا فيما تختاره لنفسك، وفي الوقت الذي يريد، لا في الوقت الذي تريد أي تريده. أنت في حديث قدسي عبدي أنت تريد وأنا أريد، فإن سلمت لي فيما أريد كفيتك فيما تريد، وإن لم تسلم لي فيما أريد. أتعبتك فيما تريد، ثم لا يكون إلا. إلا ما أريد. نأتي إلى الشيخ الشرنوبي في شرحه رضي الله عنه يقول أي لا يكن، تأخر وقت العطاء، أو كلمة الأمد، فسرها بالوقت. وقت العطاء المطلوب مع الإلحاح، أي المداومة في الدعاء، موجب اليأس، كمن إجابة الدعاء. هو سبحانه ضامن لك الإجابة. والله هذي بشار كبيرة جدا. يعني يا جماعة. يعني يا مسلم. يا مسلم. يا من دعوت الله سبحانه وتعالى إياك أن تقنط. إياك أن تيأس. إياك أن تضجر. نعم، فهو سبحانه ضامن لك الإجابة بقوله تعالى ادعوني أستجب لكم. فا وتقدير الكلام إن تدعوني أستجب لكم فيما يختاره لك، لا فيما تختاره لنفسك، فإنه أعلم بما يصلح لك منك، فربما طلبت شيئا كان الأولى لك منعه. كان الأولى لك، منعه منك عنك، فيكون المنع عين العطاء، و سوف تأتي معنا هذه الحكمة كما قال المصنف فيما يأتي ربما منعك فأعطاك، وربما أعطاك. ف منعك يشهد ذلك من تحقق بمقام، وعسى أن تكرهوا أن تكرهو شيئا. وهو خير لكم، وعسى أن تحبوا شيئا وهو شر لكم، والله يعلم وأنتم لا تعلمون، ولذا قال بعض العارفين، ومنعك في التحقيق ذا عين إعطاء. وكذلك ضامن لك الإجابة في الوقت الذي يريد، لا، في الوقت الذي تريد، فكن موساوية الصبر شابه الشيخ، فإن الصبر وعدم الاستعجال أولى بالعبيد، ألا ترى أن موسى كان يدعو على فرعون وقومه، وهارون يأمن على قوله ربنا اطمس على أموالهم؟إلى آخر ما قص الله في كتابه المكنون، وبعد 40 سنة حصل المدعو به، وقال تعالى قد أجيب الدمع أن الله قال لهم قد أجيب ال دعوتكما في السقيمة، ولا تتبعان سبيل الذين يعلمون، وفي الحديث إن الله يحب الملحين في الدعاء، وورد أن العبد الصالح إذا دعا الله تعالى قال جبريلياربي عبدك فلان، إقضي حاجته، فيقول دعوة عبدي، فإني أحب أن أسمع صوته، فقم أيها المريد بما أمرك به يوميا الله من الدعاء بما أمرك الله به من الدعاء، وسلم لهم مرادهم، فربما أجاب quoi دهر لك بدل مطلوب ك ما تنال به الحسنى وزيادة. نقف عند هذا القدر، لكن كما تعودنا أن ننهي حديثنا ب إن نعيد قراءة الحكمة، لن تفتتح بها، ونختم بها، يقول رضي الله عنه لا يكن تأخر أمد العطاء مع الإلحاح في الدعاء، موجب اليأس ك، فهو سبحانه ضامن لك الإجابة فيما تختار يختاره لك. لا، فيما تختاره لنفسك، وفي الوقت الذي يريد، لا في الوقت الذي تريد، وبهذا نختم درسنا اليوم، والحمد لله رب العالمين، وصلي اللهم على سيدنا محمد وعلى آله وأصحابه أجمعين، والسلام عليكم ورحمة الله وبركاته، وإلى لقاء آخر إن شاء الله تعالى.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent21">الدرس الرابع الحكمة السادسة</h1>
+    <p id="sent22">
+      بسم الله الرحمان الرحيم. الحمد لله رب العالمين. وأفضل الصلاة وأتم التسليم
+      على سيدنا وحبيبنا ومولانا وقرة اعيننا سيدنا محمد الصادق الوعد الأمين،
+      وحبيبي رب العالمين وعلى آله وصحبه وسلم أجمعين. وبعد ou. معشر السادة
+      والسيدات الطلبة والطالبات. مرحبا بحضراتكم جميعا في هذا اللقاء المتجدد، و
+      نحن معشر حكم إبن عطاء الله السكندري مع الحكمة السادسة من كلام أبن عطاء
+      الله. الحقيقة حين نظرت في الحكم. يعني لا نستطيع أن ننتقي من ماذا ننتقي؟لكن
+      حاولت أن ااا أنوع المواضيع. من أجل أن تعم الفائدة. لأننا نستطيع أن نقول،
+      أيها السادة، والسيدات. نستطيع أن نقول أن الحكم إبن عطاء الله مدرسة. مدرسة
+      مستقلة. مدرسة تربوية تهذيبية متكاملة، هذه حقيقة. وأنا الحقيقة أقول أن كل
+      من درس الحكمة العطاء. ية. وا أمعن فيها بصدق وإخلاص، إلا وحسنت حاله. وتغيرت
+      حاله. أنا اضمن هذا بإذن الله تعالى. وعشت سهل كلام سمعته من شيوخ وقالوا
+      تغيرت حالنا و علاقتنا مع الله و عباداتنا بعد أن قرأنا الحكمة العطاء. و أنا
+      أقول أيها الإخوة والأخوات. أنا ني أفادت كثيرا من حكم أبن عطاء الله
+      السكندري رضي الله تعالى عنه وارضاه، و نفعنا الله بعلومه وبسائر أشياء خينا.
+      امين، قلت لا نستطيع أن نذهب في الحكم بالسرد وراء بعضها بعضا، وإنما ننتقي
+      اليوم مع الحكمة السادسة. في الكتاب. وهي. آه. الدرس الثالث. والحكمة
+      السادسة. يقول رضي الله عنه لا يكن. تأخر. أما العطاء. مع الإلحاح في الدعاء.
+      موجب اليأس، ك. فهو، سبحانه. ضامن لك الإجابة فيما يختاره لك، لا فيما تختاره
+      لنفسك. وفي الوقت الذي يريد، لا في الوقت الذي تريد. يا سلام على هذه الحكمة،
+      والله. والله حكمة جميلة جدا. يقول نعيده مرة ثانيه لا يكن تأخر أمد العطاء.
+      و الأمد هي المدة. لا يكن تأخر، أما بالعطاء لا يكون تأخر مدة العطاء. تأخرت
+      كثيرا في أن يستجاب دعائي. مع الإلحاح في الدعاء. وكأن أحدا ايقول ياربي.
+      وحتى بالدعاء أمرتنا بالدعاء ووعدتنا بالإجابة. يارب منذ زمن، وأنا أدعو. منذ
+      زمن، وأنا اطلب. يعرب، لم لم تستجب لي؟ فلربما أنا مقصر، لربما أنا عبادتي.
+      لربما أنا مطرود من رحمة الله، لربما أنا الله تعالى لم يستجب لي أن الله
+      غاضب. عليه. أن تأويلات كثيرة من هنا وهناك، لا. لا. بن عطاء الله يجيبك من
+      قريب. ويجعلك في طمأنينة شديدة، يقول لا يكن تأخر أمد العطاء، العطاء، أي
+      استجابة، الدعاء من الله الذي طلبته، مع الإلحاح في الدعاء. يعني مع أنك قد
+      أتيت بما ينبغي عليك. من الإلحاح في الدعاء، يعني أديت الذي عليك. و أديت
+      الذي ما هو مطلوب منك الحضور في الدعاء والإلحاح في الدعاء والتضرع في
+      الليالي، وفي سواد الليل، وفي جنح الليل، يا رب، إذا لم لم تستجب لي. قال لا
+      ينبغي ذلك، ذلك التأخر مع الإلحاح. مع توفر الشرط القبول، وشرط نعم ال قبول
+      الدعاء موجب اليأس ك ياك أن يكون ذلك التأخر موجب اليأس que، فهو ضامن لك
+      الإجابة. طيب هاذي واحد. طيب أليس الله تعالى قال هذا القرآن الكريم ادعوني
+      أستجيب لكم إذا طلب مع جواب. وكان هنا التقدير. إنت دعوني أستجيب لكم، إذا
+      هناك شرط، وهو و وجوابه، والله تعالى يخلف الميعاد، فإذا فهو ضامن لك الإجابة
+      هذه الكلمة الأولى. إ فيما يختاره لك. وأنت طلبته الآن. فهمت عليا؟أو طلبت
+      الشيء الفلاني، لكنه قال كلا يا فلان، أناس أستجيب لك، سأعطيك شيئا آخر خيرا
+      منه، لكن هذا الشيء الآخر خير منه. نعم سوف يتهيأ لك، و سوف تكون قادرا عليه
+      في وقت في وقت آخر. لأن هو الآن غير موجود. هو الذي تريده، إنت الآن في مكان
+      الآخر. إذن هو ضامنة، لكن إجابة فيما يختاره لك، ياربي، أنا أريد الأمر
+      الفلاني، طيب، نعم نحن باش نعطيك احسن منو. لكن مش تو الذي تريده مازال في
+      الخارج لم يأت بعد أو مازال لم يصنع بعد أو مازال وعطيناك هو الآن. الآن نعم
+      لا ينفعك الا ولا تستفيد منه. إذن، سوف نعطيك ه في وقت أن تستفيد منه تمام
+      الفائدة. لا، فيما تختاره لنفسك. هذي وحدة. فهو ضامن لك الإجابة فيما يختاره
+      لك، لا فيما تختاره لنفسك. يا رب، أنا أريد الأرض الفلانية. قال لك لا. أنا
+      سأعطيك أرض أخرى أحسن منه. يا ربي، أنا أريد التخصص الفلاني. لا، أنا سأعطيك
+      التخصص الفلاني أحسن منه. يا ربي، أنا أريد أن النجاح في هذه البضاعة، نعم،
+      suce جيبلك، لكن أصبر شوية، لأن هذه البضاعة لو تأخر سعرها بعد قليل سوف
+      يزداد ثمنها أضعافا مضاعفة، اذن هو سبحانه ضامن لك الإجابة فيما يختاره لك،
+      لا فيما تختاره لنفسك. وفي الوقت الذي يريد، لا في الوقت الذي تريد. إذن،
+      هناك، نعم، نحن طلبنا من الله سبحانه وتعالى وبعض الأحيان يعطينا ما نريد طيف
+      إنتاحر العطاء، قال لا ينبغي أن يكون ذلك التأخير سببا في يأس، كما أن. ب من
+      الله سبحانه وتعالى سببا في قنوتك، سببا في قضائك، انقباض. ك. سببا في حزنك،
+      سببا في أن تسيء الظن بالله عز وجل، أو تسيء الظن بنفسك، وإنما عليك أن تقول
+      كما يقول عبد الخالص لله عز وجل. أنا دعوت الله سبحانه وتعالى كما أمرني وهو
+      يستجيب ليك ماشاء، وفي الوقت الذي شاء وعسى التأخير، هذا فيه حكمة ع سى نعم
+      ااا. نعم كما قال في القرآن الكريم ربنا سبحانه وتعالى عسى ربنا أني بدينا
+      خيرا منه. إنا إلى ربنا راغبون. في أصحاب القرية، كما قال ذلك ربنا سبحانه
+      وتعالى، الناس الذين أعطاهم الله عز وجل فهما عن الله عز وجل، فكما قال العبد
+      الصالح صوت الكهف لأخيه ال الجاحد، فعسى ربي أن يأتيني خيرا من جنتك، فعسى
+      ربي إذا هو مازال. أصل لماذا نذهب بعيدا؟يقال أن سيدنا موسى عليه السلام
+      استجاب الله له و لأخيه هارون عليهم السلام بعد 40 عاما بعد أن وعدهم الله،
+      وحقق لهم الإجابة ب، ب. الوعد بالإجابة، قال قد أجيب ال دعوتكما فاستقيما، قد
+      أجيب ال دعوتكما. فاستقيما، ولا تتبعان سبيل الذين لا يعلمون، قال أهل العلم
+      استجاب الله لسيدنا موسى لأخيه هارون بعد 40 عاما، وكذلك الحال سيدنا يعقوب
+      عليه السلام، و الحال في سيدنا يوسف عليه السلام، و كل هذه نعم دلالات. و
+      سيدنا رسول الله صلى الله عليه وسلم في اية الله سبحانه وتعالى يجيبهم اذا
+      بالسين. نعم يجيبهم اذا بالوعد بالصين، وتارة يجيبه بوعد ماذا؟ بسبب سوف؟مرة
+      بالسين، أي بقرب الأجل، ومرة ب سوف آيب بعد الأجل، وكل ذلك سواء الصين، ولا
+      سوف كله إنما تحقق ماذا بعد الهجرة؟بعد الهاجر؟ صلوات الله وسلامه عليه فلات
+      عشر عاما، وهو صابر محتسب راض عن الله سبحانه وتعالى، إذا رضي الله عنك يا بن
+      عطاء الله في هذه الحكمة، وأنت تمسح على قلوبنا يا أيها السادة، ويا أيها
+      الإخوة والأخوات، لا تأخذ هذه المادة أنها مادة للامتحان. أنها مادة من أجل
+      أنو امتحن بها، لا، إنما خذوها مادة سلوك، خذوها مادة عمل هي 16 حكمة في
+      السداسي الأول، و16 إن شاء الله تعالى في السداسي الثاني، لو حفظنا هذه 32
+      حكمة في حياتنا، يعني سوف نكون يعني ااا امم من أجل ما تكون. ماذا؟ حياتنا
+      ومشاعرنا ونظرتنا للحياة كلها؟ قال لا فيما تختاره لنفسك، وفي الوقت الذي
+      يريد، لا في الوقت الذي تريد أي تريده. أنت في حديث قدسي عبدي أنت تريد وأنا
+      أريد، فإن سلمت لي فيما أريد كفيتك فيما تريد، وإن لم تسلم لي فيما أريد.
+      أتعبتك فيما تريد، ثم لا يكون إلا. إلا ما أريد. نأتي إلى الشيخ الشرنوبي في
+      شرحه رضي الله عنه يقول أي لا يكن، تأخر وقت العطاء، أو كلمة الأمد، فسرها
+      بالوقت. وقت العطاء المطلوب مع الإلحاح، أي المداومة في الدعاء، موجب اليأس،
+      كمن إجابة الدعاء. هو سبحانه ضامن لك الإجابة. والله هذي بشار كبيرة جدا.
+      يعني يا جماعة. يعني يا مسلم. يا مسلم. يا من دعوت الله سبحانه وتعالى إياك
+      أن تقنط. إياك أن تيأس. إياك أن تضجر. نعم، فهو سبحانه ضامن لك الإجابة بقوله
+      تعالى ادعوني أستجب لكم. فا وتقدير الكلام إن تدعوني أستجب لكم فيما يختاره
+      لك، لا فيما تختاره لنفسك، فإنه أعلم بما يصلح لك منك، فربما طلبت شيئا كان
+      الأولى لك منعه. كان الأولى لك، منعه منك عنك، فيكون المنع عين العطاء، و سوف
+      تأتي معنا هذه الحكمة كما قال المصنف فيما يأتي ربما منعك فأعطاك، وربما
+      أعطاك. ف منعك يشهد ذلك من تحقق بمقام، وعسى أن تكرهوا أن تكرهو شيئا. وهو
+      خير لكم، وعسى أن تحبوا شيئا وهو شر لكم، والله يعلم وأنتم لا تعلمون، ولذا
+      قال بعض العارفين، ومنعك في التحقيق ذا عين إعطاء. وكذلك ضامن لك الإجابة في
+      الوقت الذي يريد، لا، في الوقت الذي تريد، فكن موساوية الصبر شابه الشيخ، فإن
+      الصبر وعدم الاستعجال أولى بالعبيد، ألا ترى أن موسى كان يدعو على فرعون
+      وقومه، وهارون يأمن على قوله ربنا اطمس على أموالهم؟إلى آخر ما قص الله في
+      كتابه المكنون، وبعد 40 سنة حصل المدعو به، وقال تعالى قد أجيب الدمع أن الله
+      قال لهم قد أجيب ال دعوتكما في السقيمة، ولا تتبعان سبيل الذين يعلمون، وفي
+      الحديث إن الله يحب الملحين في الدعاء، وورد أن العبد الصالح إذا دعا الله
+      تعالى قال جبريلياربي عبدك فلان، إقضي حاجته، فيقول دعوة عبدي، فإني أحب أن
+      أسمع صوته، فقم أيها المريد بما أمرك به يوميا الله من الدعاء بما أمرك الله
+      به من الدعاء، وسلم لهم مرادهم، فربما أجاب quoi دهر لك بدل مطلوب ك ما تنال
+      به الحسنى وزيادة. نقف عند هذا القدر، لكن كما تعودنا أن ننهي حديثنا ب إن
+      نعيد قراءة الحكمة، لن تفتتح بها، ونختم بها، يقول رضي الله عنه لا يكن تأخر
+      أمد العطاء مع الإلحاح في الدعاء، موجب اليأس ك، فهو سبحانه ضامن لك الإجابة
+      فيما تختار يختاره لك. لا، فيما تختاره لنفسك، وفي الوقت الذي يريد، لا في
+      الوقت الذي تريد، وبهذا نختم درسنا اليوم، والحمد لله رب العالمين، وصلي
+      اللهم على سيدنا محمد وعلى آله وأصحابه أجمعين، والسلام عليكم ورحمة الله
+      وبركاته، وإلى لقاء آخر إن شاء الله تعالى.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

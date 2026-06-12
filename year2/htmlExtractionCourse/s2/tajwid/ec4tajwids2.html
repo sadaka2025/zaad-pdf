@@ -1,168 +1,373 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الرابع  قراءة القرآن بالألحان</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/tajwid/ec4tajwids2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الرابع قراءة القرآن بالألحان</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/tajwid/ec4tajwids2.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent11">الدرس الرابع  قراءة القرآن بالألحان</h1>
-<p id="sent12">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأصلي وأسلم على المبعوث رحمة للعالمين سيدنا محمد وآله وسلم تسليما كثيرا، اللهم علمنا ما ينفعنا وانفعنا بما علمتنا وزدنا من لدنك علما، اللهم أنفعنا وارفعنا بالقرآن العظيم. ولا حول ولا قوة إلا بالله العلي العظيم، أما بعد أيها الإخوة الأكارم، فما زلنا متواصلين مع نظم الجزرية وشرحها، و وصلنا إلى قراءة القرآن الكريم بالألحان. وقلنا في السابق أيها الإخوة الأكارم إنه ينبغي على من يقرأ القرآن الكريم أن يراعي قواعده، أي أن يراعي آه قراءة القرآن بالتجويد. و هذا من المرغب فيه، و المندوب عند العلماء، والواجب عند بعضهم. واليوم أيها الإخوة الأكارم، نتكلم حول مسألة، وهي حكم قراءة القرآن الكريم بالألحان. ال الألحان المقصود بها هنا هي الألحان الموسيقية أو المقامات أو الطبوع، وهذه ال المقامات آه ضبطها ال أهل الفن. بأنها سبعة، وفيها تفاصيل، وفيها تفريع مجموعة في قولهم صنع بسحر إللي هي الصاد آه صبأ، والنون نهوند، والعين عجم. والباء بس حرباء بيات، وسينسي جا والحاء حجاز، والراء رست. وهذه المقامات كل مقام له فروع، وله قواعد تندرج تحته، يعرفها أهل الاختصاص، فهل يجوز قراءة القرآن الكريم؟ بي اللحم؟ يعني بهذه المقامات، فلا نتحدث عن اللحن، يعني الموسيقى، أي المعازف، هذا مما أجمع العلماء على تحريمه. لأن القرآن الكريم ينبغي تعظيمه، وهو من شعائر الله تعالى، ومن حرمات الله، والمعازف، كما تعلمون فهي محرمة، فلا ينبغي قراءة القرآن الكريم بالمعازف، لكن بالألحان، يعني بالمقامات هل يجوز قراءة القرآن الكريم بالمقامات أم لا؟طبعا ال آه اختلف العلماء. وهذا ما سيتحدث عنه الشيخ رحمة الله تعالى عليه، نتابع ما قرأه قاله الشيخ رحمه الله تعالى يقول القراءة بالألحان، فائدة القراءة بالتلحين أي الأنغام، وهي المسماة في عرفنا ب الطبوع، يعني تسمى بالمقامات، وتسمى أيضا بالألحان. وتسمى الأنغام وتسمى ب الطبوع أي نعم. هناك ورد حديثه وإقرأ القرآن بلح العرب، بغض النظر على أن هذا الحديث هل هو صحيح أم لا، لكن إنه هذا الحديث يعني آه يعني لا أصل له، والمقصود على فرض صحته، اقرءوا القرآن بلحون العرب يعني بي. سليق تهم في قراءة القرآن، يعني الصحابة كيف قرأوا؟والتابعون كيف قرأوا؟والنبي عليه الصلاة والسلام كيف قرأ القرآن الكريم؟ هذا هو المقصود، يعني بكيفية قراءتي، النبي عليه الصلاة والسلام و. آه العرب بشكل عام بن من غير تكلف من غير تصنع. نعم. قال. وهي المسماة في عرفنا ب الطبوع، إن لم تحصل معها المحافظة على صحة ألفاظ القوى. الحروف حرمت بإجماع. طبعا نفرق الآن حول قراءة القرآن بالمقام، هل المقصود هو المقام وبعده؟ هل راعى القارئ التجويد أم لا؟أم. أم؟ أ؟ هذا موضوع؟ أو أنه قرأ القرآن بالتجويد و. و وافق أن قرأ بلحن من اللحون؟الأولى، وهي التي يراعي فيها اللحن أي المقام مع الخروج عن قواعد التجويد والتلاوة، بأن زاد حرفا أو مد فيما لا يمد مثلا، أو أنه أنقص المد الطبيعي، أو أتى بلحن جلي من أجل ماذا؟ من أجل اللحن، فهذا محرم بإجماع. أما إذا قرأ القرآن الكريم، و وراعى فيه قواعد التجويد، وقرأ قراءة سليمة مع قصدي ال ال المقام، هذا مختلف فيه، قيل بالجواز، وقيل بالكراهة، مذهب الكراهة، هو مذهب الإمام مالك، ورواية للإمام الشافعي. رضي الله تعالى عنه، ورواية عن الإمام أحمد، والقول أنه إذا راعى قواعد التجويد، مع آ مراعاة المقام، هذا قول ثاني، وهو قول الإمام أبي حنيفة، ورواية ثانيه للإمام أحمد، والشافعي رحمهم الله تعالى. إذا. قال إن لم تحصل معها المحافظة على صحة ألفاظ الحروف، حرمت بإجماع. وإن حصلت معها المحافظة، فقيل بالكراهة يعني إذا واحد قرأ القرآن بالتجويد، لكن جاء قرأ بالمقام، يعني هو قصد المقام، لكن قرأ بالتجويد، هنالك هنا لقاء الكراهة، وقيل بالجواز طبعا مع مراعاة تي. آر قواعد. التجويد، أما الخروج عن قواعد التجويد والإتيان باللحن الجلي، و آه قصد المقام، فهذا مما يحرم بي الإجماع، كما يفعله بعض آه المغنين مثلا، أو بعض، آه يعني ممن يقرأ القرآن آه ويقصد الطبوع، ويقصد المقامات. ولكنه جاهل بقرب قواعد التلاوة والترتيل، فهنا سيخرج عن القواعد التجويدية، يصير يراعي، ماذا؟ يراعي ال ال المقام، ويراعي الطبوع، وبالتالي ربما يغير المعنى أو ينقص حرفا أو يزيد فيه. وهذا مما لا يجوز أيها الإخوة، قال أما تحسين الصوت بالقراءة من غير إخراج، القراءة عن وجهها المنقول فيها، فهو أمر مطلوب، مستحسن مندوب، وقد ورد طبعا أحاديث أن النبي عليه الصلاة والسلام قال زينوا القرآن بأصواتكم. قال لا سيما إن كان من حسن. آه صوت يعني ممن؟ كان صوته حسن، فيزيد ال ال القرآن بهاء، ويشنف الأسماع، ويطرب القلوب. قال فإنه يزيد غبطة بالقرآن وإيمانا، ويكسب القلب خشية. ويشهد له قوله صلى الله عليه وسلم زينوا القرآن بأصواتكم، وفي حديث لابن عباس رضي الله تعالى عنهما قال لكل شيء حلية، وحلية، القرآن حسن الصوت، يعني أن يحسن صوته بقدر الإمكان، يعني هو في الحديث الآخر. قال النبي عليه الصلاة والسلام ليس منا من لم يتغنى بالقرآن. فالمقصود بالتغني بالقرآن والتزين، وقراءة القرآن باللحون، ما لم يخرج عن القواعد والتلاوة، فإن خرج عنها بأن آتى باللحن الجلي، أو أتى باللحن الخفي ممن هو من أهل الاختصاص، فهذا مما يمنع. ويقبح في حقه، يمنع ويحرم على من؟ تق قصد اللحن، وأتى باللحن الجلي، ويمنع بالنسبة لل متقن، والقارئ فهو لا يليق به أن يقرأ القرآن بغير القواعد، والله سبحانه وتعالى أكرمنا معشر المسلمين. لهذا القرآن الكريم، وحفظ آه القرآن الكريم، وحفظ تلاوته كذلك، فكما حفظ القرآن الكريم آه وهو منزل من عند الله تعالى، كذلك حفظت قراءته وكيفية قراءته، وحفظت قراءاته، وحفظت علومه، فينبغي على المسلم. أن يراقب هذه التلاوة، وأن يأخذ القراءة عن شيخ ماهر متقن، حاذ، حاذق، فإن قارئ القرآن يقال له يوم القيامة، اقرأ وارتقي، ورتل كما كنت ترتل في الدنيا، فإن منزلتك عند آخر آية. أن تقرأها، والنبي عليه الصلاة والسلام يقول الماهر بالقرآن مع السفرة الكرام البررة. فهذا ما ينبغي الوقوف عليه في هذه المسألة، ثم انتقل للحديث على فضيلة تدبر القرآن الكريم، القراءة السليمة، القراءة الصحيحة المجودة، هي في الحقيقة وسيلة لفهم كتاب الله تعالى، والله عز وجل أمرنا بتدبر القرآن والتفكر فيه. وقال عز وجل أفلا يتدبرون القرآن أم على قلوب أقفالها أفلا يتدبرون القرآن ولو كان من عند غير الله. لوجدوا فيه اختلافا كثيرا فى ينبغي لمن قرأ القرآن الكريم قراءة مجودة سليمة، أن يراعي فهم القرآن الكريم، وأن يفهم ما يقرأ، وأن يتدبره، وأن يعمل به، يعني حتى يسعد في الدنيا. وفي الآخرة بإذن الله تعالى. قال فضيلة التدبر لكل من وفقه الله تعالى لا يجتزئ بإتقان اللفظ، وإحسان اللسان، ويترك التدبر في معنى كتاب الله عز وجل، بل تكون همته وعزيمته التدبر في معانيه، والتفكر في غوامضه، وترك حديث النفس وقت فات تلاوته. قال الله تعالى ليدبروا آياته وليتذكر أولوا الألباب يعني المحروم حقيقة هو الذي حرم و حرم التوفيق، وحرم، وحجب عن تدبر القرآن الكريم، لأن هذا القرآن حقيقة كنز لا يفنى. وكان ذو ثمين لمن تدبره، ولم نعمل به، قال تعالى ليدبروا آياته. وليتذكر أولو الألباب، وقال علي رضي الله تعالى عنه لا خير في عبادة الله فقه فيها، ولا قراءة لا تدبر فيها، يعني تصور واحد يقرأ، يتعبد المولى عز وجل، ولا يعرف آه شروطها، يصلي، لا يعرف شروط الصلاة. آه، ولا يعرف أركان الصلاة، ولا يعرف بطلاتها فلات، فلا تصح منه أصلا، فمن شروط العبادة العلم بها، العلم بأركانها العلم بشروطها، حتى يعني يستوفي هذه الشروط والأسباب، ويأتي بالأركان، ويترك. هل أهال المفسدات؟ نعم، فتكون الصلاة صحيحة و مع الخشوع والتدبر فيها فتكون بإذن الله تعالى مقبولة، كذلك القراءة. هو يقرأ القرآن، قال في الحديث رب قارئ للقرآن، والقرآن يلعنه. فيقرأ القرآن، يمر بآية فيها أمر، فالواجب عليه أن يمتثل لهذا الأمر. ويمر بآية فيها نهي، فالواجب عليه أن يمتثل لترك هذا المنهي عنه، وبالتالي يكون مجتنبا للمحرمات. آه آه ممتثلا لي المأمورات و بالتالي يكون يعني آه يفعل ما يقوله. ويفعل ويطبق ما يفهمه من القرآن الكريم، وإلا وقع في أفلا يتدبرون القرآن أم على قلوب أقفالها يا أيها الذين آمنوا لم تقولون ما لا تفعلون، فينبغي التدبر والفهم لكتاب الله تعالي. قال ومثل من يقرأ القرآن ويترك، والتدبر في معانيه، ويشتغل بحديث النفس كمثل من هو في رياض عجيب، أشجار مختلفة الأنواع، يني عة الثمار، عظيمة المقدار، وحصباؤها الدر والياقوت، وعن بعيد منو جيفة وقذارة، فصار يتطلع على تلك الجيفة. والقذارة، ويترك التناهي التنزه في محل فيه، فأي حمق وحرمان أعظم من هذا؟ نسأل الله التوفيق، والهداية إلى أقوم طريق بجاه رسوله صلى الله عليه وسلم، وصاحبيه الصديق والفاروق، والحمد لله رب العالمين.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent11">الدرس الرابع قراءة القرآن بالألحان</h1>
+    <p id="sent12">
+      بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأصلي وأسلم على المبعوث
+      رحمة للعالمين سيدنا محمد وآله وسلم تسليما كثيرا، اللهم علمنا ما ينفعنا
+      وانفعنا بما علمتنا وزدنا من لدنك علما، اللهم أنفعنا وارفعنا بالقرآن
+      العظيم. ولا حول ولا قوة إلا بالله العلي العظيم، أما بعد أيها الإخوة
+      الأكارم، فما زلنا متواصلين مع نظم الجزرية وشرحها، و وصلنا إلى قراءة القرآن
+      الكريم بالألحان. وقلنا في السابق أيها الإخوة الأكارم إنه ينبغي على من يقرأ
+      القرآن الكريم أن يراعي قواعده، أي أن يراعي آه قراءة القرآن بالتجويد. و هذا
+      من المرغب فيه، و المندوب عند العلماء، والواجب عند بعضهم. واليوم أيها
+      الإخوة الأكارم، نتكلم حول مسألة، وهي حكم قراءة القرآن الكريم بالألحان. ال
+      الألحان المقصود بها هنا هي الألحان الموسيقية أو المقامات أو الطبوع، وهذه
+      ال المقامات آه ضبطها ال أهل الفن. بأنها سبعة، وفيها تفاصيل، وفيها تفريع
+      مجموعة في قولهم صنع بسحر إللي هي الصاد آه صبأ، والنون نهوند، والعين عجم.
+      والباء بس حرباء بيات، وسينسي جا والحاء حجاز، والراء رست. وهذه المقامات كل
+      مقام له فروع، وله قواعد تندرج تحته، يعرفها أهل الاختصاص، فهل يجوز قراءة
+      القرآن الكريم؟ بي اللحم؟ يعني بهذه المقامات، فلا نتحدث عن اللحن، يعني
+      الموسيقى، أي المعازف، هذا مما أجمع العلماء على تحريمه. لأن القرآن الكريم
+      ينبغي تعظيمه، وهو من شعائر الله تعالى، ومن حرمات الله، والمعازف، كما
+      تعلمون فهي محرمة، فلا ينبغي قراءة القرآن الكريم بالمعازف، لكن بالألحان،
+      يعني بالمقامات هل يجوز قراءة القرآن الكريم بالمقامات أم لا؟طبعا ال آه
+      اختلف العلماء. وهذا ما سيتحدث عنه الشيخ رحمة الله تعالى عليه، نتابع ما
+      قرأه قاله الشيخ رحمه الله تعالى يقول القراءة بالألحان، فائدة القراءة
+      بالتلحين أي الأنغام، وهي المسماة في عرفنا ب الطبوع، يعني تسمى بالمقامات،
+      وتسمى أيضا بالألحان. وتسمى الأنغام وتسمى ب الطبوع أي نعم. هناك ورد حديثه
+      وإقرأ القرآن بلح العرب، بغض النظر على أن هذا الحديث هل هو صحيح أم لا، لكن
+      إنه هذا الحديث يعني آه يعني لا أصل له، والمقصود على فرض صحته، اقرءوا
+      القرآن بلحون العرب يعني بي. سليق تهم في قراءة القرآن، يعني الصحابة كيف
+      قرأوا؟والتابعون كيف قرأوا؟والنبي عليه الصلاة والسلام كيف قرأ القرآن
+      الكريم؟ هذا هو المقصود، يعني بكيفية قراءتي، النبي عليه الصلاة والسلام و.
+      آه العرب بشكل عام بن من غير تكلف من غير تصنع. نعم. قال. وهي المسماة في
+      عرفنا ب الطبوع، إن لم تحصل معها المحافظة على صحة ألفاظ القوى. الحروف حرمت
+      بإجماع. طبعا نفرق الآن حول قراءة القرآن بالمقام، هل المقصود هو المقام
+      وبعده؟ هل راعى القارئ التجويد أم لا؟أم. أم؟ أ؟ هذا موضوع؟ أو أنه قرأ
+      القرآن بالتجويد و. و وافق أن قرأ بلحن من اللحون؟الأولى، وهي التي يراعي
+      فيها اللحن أي المقام مع الخروج عن قواعد التجويد والتلاوة، بأن زاد حرفا أو
+      مد فيما لا يمد مثلا، أو أنه أنقص المد الطبيعي، أو أتى بلحن جلي من أجل
+      ماذا؟ من أجل اللحن، فهذا محرم بإجماع. أما إذا قرأ القرآن الكريم، و وراعى
+      فيه قواعد التجويد، وقرأ قراءة سليمة مع قصدي ال ال المقام، هذا مختلف فيه،
+      قيل بالجواز، وقيل بالكراهة، مذهب الكراهة، هو مذهب الإمام مالك، ورواية
+      للإمام الشافعي. رضي الله تعالى عنه، ورواية عن الإمام أحمد، والقول أنه إذا
+      راعى قواعد التجويد، مع آ مراعاة المقام، هذا قول ثاني، وهو قول الإمام أبي
+      حنيفة، ورواية ثانيه للإمام أحمد، والشافعي رحمهم الله تعالى. إذا. قال إن لم
+      تحصل معها المحافظة على صحة ألفاظ الحروف، حرمت بإجماع. وإن حصلت معها
+      المحافظة، فقيل بالكراهة يعني إذا واحد قرأ القرآن بالتجويد، لكن جاء قرأ
+      بالمقام، يعني هو قصد المقام، لكن قرأ بالتجويد، هنالك هنا لقاء الكراهة،
+      وقيل بالجواز طبعا مع مراعاة تي. آر قواعد. التجويد، أما الخروج عن قواعد
+      التجويد والإتيان باللحن الجلي، و آه قصد المقام، فهذا مما يحرم بي الإجماع،
+      كما يفعله بعض آه المغنين مثلا، أو بعض، آه يعني ممن يقرأ القرآن آه ويقصد
+      الطبوع، ويقصد المقامات. ولكنه جاهل بقرب قواعد التلاوة والترتيل، فهنا سيخرج
+      عن القواعد التجويدية، يصير يراعي، ماذا؟ يراعي ال ال المقام، ويراعي الطبوع،
+      وبالتالي ربما يغير المعنى أو ينقص حرفا أو يزيد فيه. وهذا مما لا يجوز أيها
+      الإخوة، قال أما تحسين الصوت بالقراءة من غير إخراج، القراءة عن وجهها
+      المنقول فيها، فهو أمر مطلوب، مستحسن مندوب، وقد ورد طبعا أحاديث أن النبي
+      عليه الصلاة والسلام قال زينوا القرآن بأصواتكم. قال لا سيما إن كان من حسن.
+      آه صوت يعني ممن؟ كان صوته حسن، فيزيد ال ال القرآن بهاء، ويشنف الأسماع،
+      ويطرب القلوب. قال فإنه يزيد غبطة بالقرآن وإيمانا، ويكسب القلب خشية. ويشهد
+      له قوله صلى الله عليه وسلم زينوا القرآن بأصواتكم، وفي حديث لابن عباس رضي
+      الله تعالى عنهما قال لكل شيء حلية، وحلية، القرآن حسن الصوت، يعني أن يحسن
+      صوته بقدر الإمكان، يعني هو في الحديث الآخر. قال النبي عليه الصلاة والسلام
+      ليس منا من لم يتغنى بالقرآن. فالمقصود بالتغني بالقرآن والتزين، وقراءة
+      القرآن باللحون، ما لم يخرج عن القواعد والتلاوة، فإن خرج عنها بأن آتى
+      باللحن الجلي، أو أتى باللحن الخفي ممن هو من أهل الاختصاص، فهذا مما يمنع.
+      ويقبح في حقه، يمنع ويحرم على من؟ تق قصد اللحن، وأتى باللحن الجلي، ويمنع
+      بالنسبة لل متقن، والقارئ فهو لا يليق به أن يقرأ القرآن بغير القواعد، والله
+      سبحانه وتعالى أكرمنا معشر المسلمين. لهذا القرآن الكريم، وحفظ آه القرآن
+      الكريم، وحفظ تلاوته كذلك، فكما حفظ القرآن الكريم آه وهو منزل من عند الله
+      تعالى، كذلك حفظت قراءته وكيفية قراءته، وحفظت قراءاته، وحفظت علومه، فينبغي
+      على المسلم. أن يراقب هذه التلاوة، وأن يأخذ القراءة عن شيخ ماهر متقن، حاذ،
+      حاذق، فإن قارئ القرآن يقال له يوم القيامة، اقرأ وارتقي، ورتل كما كنت ترتل
+      في الدنيا، فإن منزلتك عند آخر آية. أن تقرأها، والنبي عليه الصلاة والسلام
+      يقول الماهر بالقرآن مع السفرة الكرام البررة. فهذا ما ينبغي الوقوف عليه في
+      هذه المسألة، ثم انتقل للحديث على فضيلة تدبر القرآن الكريم، القراءة
+      السليمة، القراءة الصحيحة المجودة، هي في الحقيقة وسيلة لفهم كتاب الله
+      تعالى، والله عز وجل أمرنا بتدبر القرآن والتفكر فيه. وقال عز وجل أفلا
+      يتدبرون القرآن أم على قلوب أقفالها أفلا يتدبرون القرآن ولو كان من عند غير
+      الله. لوجدوا فيه اختلافا كثيرا فى ينبغي لمن قرأ القرآن الكريم قراءة مجودة
+      سليمة، أن يراعي فهم القرآن الكريم، وأن يفهم ما يقرأ، وأن يتدبره، وأن يعمل
+      به، يعني حتى يسعد في الدنيا. وفي الآخرة بإذن الله تعالى. قال فضيلة التدبر
+      لكل من وفقه الله تعالى لا يجتزئ بإتقان اللفظ، وإحسان اللسان، ويترك التدبر
+      في معنى كتاب الله عز وجل، بل تكون همته وعزيمته التدبر في معانيه، والتفكر
+      في غوامضه، وترك حديث النفس وقت فات تلاوته. قال الله تعالى ليدبروا آياته
+      وليتذكر أولوا الألباب يعني المحروم حقيقة هو الذي حرم و حرم التوفيق، وحرم،
+      وحجب عن تدبر القرآن الكريم، لأن هذا القرآن حقيقة كنز لا يفنى. وكان ذو ثمين
+      لمن تدبره، ولم نعمل به، قال تعالى ليدبروا آياته. وليتذكر أولو الألباب،
+      وقال علي رضي الله تعالى عنه لا خير في عبادة الله فقه فيها، ولا قراءة لا
+      تدبر فيها، يعني تصور واحد يقرأ، يتعبد المولى عز وجل، ولا يعرف آه شروطها،
+      يصلي، لا يعرف شروط الصلاة. آه، ولا يعرف أركان الصلاة، ولا يعرف بطلاتها
+      فلات، فلا تصح منه أصلا، فمن شروط العبادة العلم بها، العلم بأركانها العلم
+      بشروطها، حتى يعني يستوفي هذه الشروط والأسباب، ويأتي بالأركان، ويترك. هل
+      أهال المفسدات؟ نعم، فتكون الصلاة صحيحة و مع الخشوع والتدبر فيها فتكون بإذن
+      الله تعالى مقبولة، كذلك القراءة. هو يقرأ القرآن، قال في الحديث رب قارئ
+      للقرآن، والقرآن يلعنه. فيقرأ القرآن، يمر بآية فيها أمر، فالواجب عليه أن
+      يمتثل لهذا الأمر. ويمر بآية فيها نهي، فالواجب عليه أن يمتثل لترك هذا
+      المنهي عنه، وبالتالي يكون مجتنبا للمحرمات. آه آه ممتثلا لي المأمورات و
+      بالتالي يكون يعني آه يفعل ما يقوله. ويفعل ويطبق ما يفهمه من القرآن الكريم،
+      وإلا وقع في أفلا يتدبرون القرآن أم على قلوب أقفالها يا أيها الذين آمنوا لم
+      تقولون ما لا تفعلون، فينبغي التدبر والفهم لكتاب الله تعالي. قال ومثل من
+      يقرأ القرآن ويترك، والتدبر في معانيه، ويشتغل بحديث النفس كمثل من هو في
+      رياض عجيب، أشجار مختلفة الأنواع، يني عة الثمار، عظيمة المقدار، وحصباؤها
+      الدر والياقوت، وعن بعيد منو جيفة وقذارة، فصار يتطلع على تلك الجيفة.
+      والقذارة، ويترك التناهي التنزه في محل فيه، فأي حمق وحرمان أعظم من هذا؟
+      نسأل الله التوفيق، والهداية إلى أقوم طريق بجاه رسوله صلى الله عليه وسلم،
+      وصاحبيه الصديق والفاروق، والحمد لله رب العالمين.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

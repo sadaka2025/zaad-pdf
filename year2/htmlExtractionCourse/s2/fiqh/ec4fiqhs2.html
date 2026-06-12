@@ -1,168 +1,369 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الرابع صفة الحج 1</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/fiqh/ec4fiqhs2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الرابع صفة الحج 1</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/fiqh/ec4fiqhs2.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent21">الدرس الرابع صفة الحج 1</h1>
-<p id="sent22">الحمد لله رب العالمين، وصلى الله وسلم على سيدنا محمد، وعلى آله وصحابته الطيبين الطاهرين، وعليهم علينا بإحسان إلى يوم الدين، اللهم يا رب لا علم لنا إلا ما علمتنا، ولا فهم لنا إلا ما فهمتنا، فنسألك اللهم علما واخلاص في الدين. توفقنا اللهم توفيق الصالحين. وعد علينا ب عوائدك الحسنى ي كريم آمين. مرحبا بكم في حصة جديدة نستكمل فيها الحديثة على أحكام الحج. نعم، سيشرع ااا سيدي عبد الواحد بن عاشر ااا في هذه الأبيات التي سنذكرها على بيان صفة الحج إذا، ثم قال وإنت رد ترتيب حجيك اسمع بيانه والذهن منك استجمع، وإن تريد ترتيب حجك حجك، اسمع بيانه والذهن منك استجمع. إذن؟ قال هنا، أي وإن تريد أيها الحاج ترتيب أفعال حجك. نعم، على الوجه الصحيح، فاسمع مني بيانه وصفته. أيها الحاج، إن أردت ااا ترتيب أفعال الحج على الوجه الصحيح، فما عليك أن تسمع مني. ترتيبه، تسمع مني بيان الحج وصفته. قال وذهنك نعم، وذهنك أحضر. هو استجمعه لهذا قال والذهن منك استجمعها، أي واستحضر ذهنك، و انتبه، وكن منتبها، لأنني سأعد أعددلك. بيان صفة الحج إذا قال وإنت رد ترتيب حجك، أسمع بيانه، والذهن منك، استجمع، إذا قال فاسمع مني بيانه وصفته، وذهنك أحضره، واستجمع ه. أي استحضر ذهنك حتى تستوعب صفة الحج؟نعم، و استجمعه بأن بالتركيز على ما سأذكر لك أيها الحاج، ثم شرع رحمه الله تبارك وتعالى في بيان صفة الحج قائلا إن جئت ر ابغا تنظف، واغتسل الك واجب، و بالشروع يتصل، نعم إن جئت ر؟ ابغا نعم. وجئت رابغ وذكرنا في الحصة الماضية على ال المواقيت المكانية للإحرام، ذكرنا قلنا الجحفة، ويعبر عن الجحفة برابغ، هو هناك عبر عنها ب الجحفة، وهنا. وهنا عبر عنها برابغ، فعندما نقول الجحفة المراد بها رابغ. وعندما نقول رابغ المراد بها الجحفة، وقلنا رابغ، والجحفة هي ميقات لأهل الشام ومصر، ومنهم في جهة المغرب. قال إن جئت ر ابغا تنظف، واغتسل الك واجب، و بالشروع يتصل قوله إن جئت ر ابغا، معناها إن جئت أيها الحاج من جهة المغرب. و وصلت إلى رابغ، أي وصلت إلى الجحفة، وهي قرية قريبة من نقاط. نعم، قرية قريبة من نقاط الجحفة. استعد للإحرام،نعم، يستعد للإحرام بالآتي أي بهاته. الأمور؟ قال إن جئت رابغ ا تنظف. أول الأمور التي تستعد بها أيها المحرم، و أيها الحاج، أو أيها المعتمر، هيا لتنظف. نعم، والتنظف هنا ندما ب حلق العانة و نطف الإبط وتقليم الأظافر، لقوله تنظف إن جئت ر ابغا تنظف؟ نعم. ثم بعد ذلك الاغتسال استنانا ك الغسل الواجب الذي هو الجنابة، وإن لم تكن جنبا نعم، وإن لم تكن جنبا، والمرأة تغتسل كذلك، وإن كانت حائضا أو نفساء، لقوله واغتسل كواجب، إذن الشيء الثاني الذي تفعله قلنا أولا. تنظف، ثانيا تغتسل، اغتسال الواجب؟ نعم. وثالثا قالو بالشروع يتصل معناها اتصال الغسل بالشروع في الإحرام ندبا لقوله و بالشروع يتصل. نعم. ولكن اليوم ااا صار الحجاج يستعدون بالتنظف والاغتسال، ولبس الإحرام في بيوتهم، لماذا؟ لتعذر النزول برابغ اليوم؟ لكون أسفارهم صارت اليوم عبر الطائرات، فإنهم يتنظفون يفعلون أفعال الإحرام؟ من. من التنظف والاغتسال؟ واتصال غسلي بالشروع في الإحرام، هنا هناك فاصل بينهم لأنهم صاروا ااا، نعم يستعدون ااا، صار، صار الحجاج اليوم يذهبون ااا في أسفارهم عبر الطائرات، لا، ما كا بخلاف ما كان عليه الأمر من ذي قبل، قالوا لبس ريدا وأزرة. من علينا إذن؟كذلك أن يستعد الحاج أو المعتمر الإحرام بلبس لبس لباس الإحرام بالنسبة للرجل إلى المرأة بعد الغسل، فيضع رداء على الكتف و إزارا أو إزارا على الوسط يستر العورة، ونع، ونعلن في الرجل. غير ساتر للكعب لقوله والبس ريدا وأزرة عليني، واستصحب الهديان. نعم، قال ااا. أخذ الهدي من باب السنة للوجوب لقوله، واستصحب الهدي، وهذا من ذي قبل، عندما كان الناس يصحبون ااا الهدي معهم، لكن اليوم تغير الأمر، حيث أن الحاج يقطع وصلا به، يكون، يكون هذا الوصل هو الهدي. قالو استصحب الهديا وركعتين ب الكافرون. ثم الإخلاص. هما نعم. إذن، من الأمور التي يستعد بها ااا ال ال المحرم للإحرام هي صلاة ركعتي الإحرام بعد أن يفعل، يلبي يقرأ في الركعة، يصلي ركعتين، يقرأ في الركعة الأولى الفاتحة، و الكافرون، وفي الركعة الثانية الفاتحة، و صورة الإخلاص. ولهذا قال و ركعتين ب الكافرون، ثم الإخلاص هما. قال فإن ركبت أو مشيت أحر ما، فإن ركبت أو مشيت أحر ما. قوله فإن ركبت أو مشيت أحر ما، أي، وبعد الانتهاء من الاستعداد للإحرام، أحرم أيها الحاج من الميقات بالحج إفرادا، أو قرانا، أو تمتعا، كما سيأتي معنا، نبين ما المراد بالإفراد، وما المراد بالقران، وما الأراء المراد. في التمتع وسر أي سر أيها الحال، محرم إلى مكة، ااا راكبا أو ماشيا، ويكون مشي وك مصاحبا ل نية؟ الإحرام؟ نعم معناها عند مشيك انطلاقك نحو آ مكة، فينبغي عليك أن يكون مشي كمشي ك مصاحبا. للإحرام لقوله بنية تصحب بنية تصحب قولا، والقول المراد به هو لبيك اللهم لبيك، لبيك لا شريك لك لبيك، إن الحمد والنعمة لك والملك، لا شريك لك، معنى أن تصل هذه النية قول، والمراد به قول الإحرام بنية، نعم، قول التلبية. بينية تصحب قولا وعمل كمشي أو تلبية مما اتصل قالو جديدا منها وجديد. انها كلما تجددت حال، وإن صليتها أراد أن يقول هنا أي وجدد التلبية أيها الحاج أو المعتمر في كل وقت وحين. كلما تجددت حالك من قيام وقعود وأكل وشرب وصلاة وملاقاة للرفاق العام، فينبغي للمحرم أن يجدد التلبية بين الفينة والأخرى، إذا نشرع الآن في ذكر كلام ابن المؤقت رحمه الله. إذن قال فإذا أردت ترتيب أفعال حجك، فاستمع ا بيان ذلك، واستجمع ذهنك، وأحضره لتكون على بصيرة في ما أذكر لك بالتنظف والاغتسال عند الإحرام، وذلك أن مريد الإحرام إذا وصل ميقاته حرم عليه مجاوزته حلالا، أين متحللا؟ فمن كان من أهل المغرب أو الشام أو مصر، فإنه يحرم من رابغ. بأنه من أعمال الجحفة، فإذا وصله تنظف بحلق الوسط، وهو العانة، ونتف الإبطين، وقص الشارب والأظفار، وأما حلق الرأس فيندب تركه طلب ال لشعث في الحج. ثم يغتسل ولو كان حائضا أو نفساء، صغيرا أو كبيرا، كذلك المرأة لا تغتسل، نعم، ولو كانت حائضا أو نفساء، صغيرة أو كبيرا، وإن كان جنوبا يغتسل للجنابة والإحرام، نعم غسلا واحدا اغتسل الجنابة والإحرام غسلا واحدا إن كان هو جنب فإنه يغتسل. .1 لل للجنابة و الإحرام، وكذلك إذا طهرت الحائض، كذلك إن طهرت الحائض فإنها تغتسل الاغتسال الواجب عليها من انقطاع دم الحيض، و آ اغتسال المراد به الإحرام، وي تدلك في هذا الغسل، ويزيل الوسخ، بخلاف ما بعدهم، ناغتس الات الآتيةفي صفة الحج فليس فيها إلا إمرار اليد مع الماء. نعم. فأراد أن يقول هذا الاغتسال الذي اغتسل له ال ال. ال. المحرم. يتغ لك فيه، بخلاف الاغتسال ات الأخرى، فإنه لا يتد لك فيها. نعم، وإلى صفة هذا الغسل ي أشار بقوله كواجب، أي مثل غسل الواجب، أي كما تفعل في الغسل الواجب ال غسل من جنابة. تفعل كذلك في اغتسال الإحرام. ويكون هذا الاغتسال متصلا بالإحرام، كغسل الجمعة بصلاتها، نحن عندنا أن إذا اغتسلت للجمعة أن يكون اغتسال ك متصلا بالجمعة، كذلك الاغتسال للنام. الاغتسال وا للإحرام يكون متصلا بالإحرام، قال لبس إزار، ورداء، ونعلين، وصلاة ركعتين، إذا قال فإذا اغتسل بعد أن يغتسل المحرم لبس إزارا، ورداء ونعلين، قالولو ارتدى بثوب واحد جازا، ثم يستصحب هديا. ثم يصلي ركعتين يقرأ فيهما مع الفاتحة ب الكافرون، والإخلاص، ويدعو إثرهم انام، يدعو ااا إثر هاتين الركعتين، أن يسدد الله عز وجل سعيه وخطاه لما سيقوم به من هاته الطاعة والعبادة. نعم. قال الإحرام بعد الاستواء على المركب. قال ثم يركب راحلته، فإذا استوى عليه أحرم نعم، وإن كان راجلا أحرم حين يشرع في المشي، إذا إذا كان راكبا عندما يركب، يشرع في التلبية، نعم، أشروا شرع في الإحرام. لبيك اللهم حج أو لبيك، اللهم عمرة، أو لبيك اللهم حجا وعمرة، قال ثم يركب راحلته، فإذا استوى عليه أحرم، وإن كان راجلا أحرم حتى يشعر، يشرع في المشي، إذا كان يي ذاهبا قاصدا لمكة مترجلا، فإنه لا يحرم إلا بعد الشروع في المشي. قالوا الإحرام هو الدخول بالنية في أحد ن سكين معقول يتعلق بالإحرام والتلبية، والتكبير إذا قالوا الإحرام هو الدخول بالنية في أحد الن سكين معقول يتعلق بال إحرامك التلبية. لبيك اللهم لبيك، لبيك لا شريك لك لبيك، إن الحمد والنعمة. لك والملك لا شريك لك. نعم، و يشرع كذلك في التكبير نعم، و. وهنا نكون قد وصلنا إلى ختام حصتنا، شكر الله لكم حسن إصغائكم واستماعكم، وجزاكم الله خيرا، على أن نلتقيكم في حصة حصة قادمة. سلام عليكم ورحمة الله.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent21">الدرس الرابع صفة الحج 1</h1>
+    <p id="sent22">
+      الحمد لله رب العالمين، وصلى الله وسلم على سيدنا محمد، وعلى آله وصحابته
+      الطيبين الطاهرين، وعليهم علينا بإحسان إلى يوم الدين، اللهم يا رب لا علم
+      لنا إلا ما علمتنا، ولا فهم لنا إلا ما فهمتنا، فنسألك اللهم علما واخلاص في
+      الدين. توفقنا اللهم توفيق الصالحين. وعد علينا ب عوائدك الحسنى ي كريم آمين.
+      مرحبا بكم في حصة جديدة نستكمل فيها الحديثة على أحكام الحج. نعم، سيشرع ااا
+      سيدي عبد الواحد بن عاشر ااا في هذه الأبيات التي سنذكرها على بيان صفة الحج
+      إذا، ثم قال وإنت رد ترتيب حجيك اسمع بيانه والذهن منك استجمع، وإن تريد
+      ترتيب حجك حجك، اسمع بيانه والذهن منك استجمع. إذن؟ قال هنا، أي وإن تريد
+      أيها الحاج ترتيب أفعال حجك. نعم، على الوجه الصحيح، فاسمع مني بيانه وصفته.
+      أيها الحاج، إن أردت ااا ترتيب أفعال الحج على الوجه الصحيح، فما عليك أن
+      تسمع مني. ترتيبه، تسمع مني بيان الحج وصفته. قال وذهنك نعم، وذهنك أحضر. هو
+      استجمعه لهذا قال والذهن منك استجمعها، أي واستحضر ذهنك، و انتبه، وكن
+      منتبها، لأنني سأعد أعددلك. بيان صفة الحج إذا قال وإنت رد ترتيب حجك، أسمع
+      بيانه، والذهن منك، استجمع، إذا قال فاسمع مني بيانه وصفته، وذهنك أحضره،
+      واستجمع ه. أي استحضر ذهنك حتى تستوعب صفة الحج؟نعم، و استجمعه بأن بالتركيز
+      على ما سأذكر لك أيها الحاج، ثم شرع رحمه الله تبارك وتعالى في بيان صفة الحج
+      قائلا إن جئت ر ابغا تنظف، واغتسل الك واجب، و بالشروع يتصل، نعم إن جئت ر؟
+      ابغا نعم. وجئت رابغ وذكرنا في الحصة الماضية على ال المواقيت المكانية
+      للإحرام، ذكرنا قلنا الجحفة، ويعبر عن الجحفة برابغ، هو هناك عبر عنها ب
+      الجحفة، وهنا. وهنا عبر عنها برابغ، فعندما نقول الجحفة المراد بها رابغ.
+      وعندما نقول رابغ المراد بها الجحفة، وقلنا رابغ، والجحفة هي ميقات لأهل
+      الشام ومصر، ومنهم في جهة المغرب. قال إن جئت ر ابغا تنظف، واغتسل الك واجب،
+      و بالشروع يتصل قوله إن جئت ر ابغا، معناها إن جئت أيها الحاج من جهة المغرب.
+      و وصلت إلى رابغ، أي وصلت إلى الجحفة، وهي قرية قريبة من نقاط. نعم، قرية
+      قريبة من نقاط الجحفة. استعد للإحرام،نعم، يستعد للإحرام بالآتي أي بهاته.
+      الأمور؟ قال إن جئت رابغ ا تنظف. أول الأمور التي تستعد بها أيها المحرم، و
+      أيها الحاج، أو أيها المعتمر، هيا لتنظف. نعم، والتنظف هنا ندما ب حلق العانة
+      و نطف الإبط وتقليم الأظافر، لقوله تنظف إن جئت ر ابغا تنظف؟ نعم. ثم بعد ذلك
+      الاغتسال استنانا ك الغسل الواجب الذي هو الجنابة، وإن لم تكن جنبا نعم، وإن
+      لم تكن جنبا، والمرأة تغتسل كذلك، وإن كانت حائضا أو نفساء، لقوله واغتسل
+      كواجب، إذن الشيء الثاني الذي تفعله قلنا أولا. تنظف، ثانيا تغتسل، اغتسال
+      الواجب؟ نعم. وثالثا قالو بالشروع يتصل معناها اتصال الغسل بالشروع في
+      الإحرام ندبا لقوله و بالشروع يتصل. نعم. ولكن اليوم ااا صار الحجاج يستعدون
+      بالتنظف والاغتسال، ولبس الإحرام في بيوتهم، لماذا؟ لتعذر النزول برابغ
+      اليوم؟ لكون أسفارهم صارت اليوم عبر الطائرات، فإنهم يتنظفون يفعلون أفعال
+      الإحرام؟ من. من التنظف والاغتسال؟ واتصال غسلي بالشروع في الإحرام، هنا هناك
+      فاصل بينهم لأنهم صاروا ااا، نعم يستعدون ااا، صار، صار الحجاج اليوم يذهبون
+      ااا في أسفارهم عبر الطائرات، لا، ما كا بخلاف ما كان عليه الأمر من ذي قبل،
+      قالوا لبس ريدا وأزرة. من علينا إذن؟كذلك أن يستعد الحاج أو المعتمر الإحرام
+      بلبس لبس لباس الإحرام بالنسبة للرجل إلى المرأة بعد الغسل، فيضع رداء على
+      الكتف و إزارا أو إزارا على الوسط يستر العورة، ونع، ونعلن في الرجل. غير
+      ساتر للكعب لقوله والبس ريدا وأزرة عليني، واستصحب الهديان. نعم، قال ااا.
+      أخذ الهدي من باب السنة للوجوب لقوله، واستصحب الهدي، وهذا من ذي قبل، عندما
+      كان الناس يصحبون ااا الهدي معهم، لكن اليوم تغير الأمر، حيث أن الحاج يقطع
+      وصلا به، يكون، يكون هذا الوصل هو الهدي. قالو استصحب الهديا وركعتين ب
+      الكافرون. ثم الإخلاص. هما نعم. إذن، من الأمور التي يستعد بها ااا ال ال
+      المحرم للإحرام هي صلاة ركعتي الإحرام بعد أن يفعل، يلبي يقرأ في الركعة،
+      يصلي ركعتين، يقرأ في الركعة الأولى الفاتحة، و الكافرون، وفي الركعة الثانية
+      الفاتحة، و صورة الإخلاص. ولهذا قال و ركعتين ب الكافرون، ثم الإخلاص هما.
+      قال فإن ركبت أو مشيت أحر ما، فإن ركبت أو مشيت أحر ما. قوله فإن ركبت أو
+      مشيت أحر ما، أي، وبعد الانتهاء من الاستعداد للإحرام، أحرم أيها الحاج من
+      الميقات بالحج إفرادا، أو قرانا، أو تمتعا، كما سيأتي معنا، نبين ما المراد
+      بالإفراد، وما المراد بالقران، وما الأراء المراد. في التمتع وسر أي سر أيها
+      الحال، محرم إلى مكة، ااا راكبا أو ماشيا، ويكون مشي وك مصاحبا ل نية؟
+      الإحرام؟ نعم معناها عند مشيك انطلاقك نحو آ مكة، فينبغي عليك أن يكون مشي
+      كمشي ك مصاحبا. للإحرام لقوله بنية تصحب بنية تصحب قولا، والقول المراد به هو
+      لبيك اللهم لبيك، لبيك لا شريك لك لبيك، إن الحمد والنعمة لك والملك، لا شريك
+      لك، معنى أن تصل هذه النية قول، والمراد به قول الإحرام بنية، نعم، قول
+      التلبية. بينية تصحب قولا وعمل كمشي أو تلبية مما اتصل قالو جديدا منها
+      وجديد. انها كلما تجددت حال، وإن صليتها أراد أن يقول هنا أي وجدد التلبية
+      أيها الحاج أو المعتمر في كل وقت وحين. كلما تجددت حالك من قيام وقعود وأكل
+      وشرب وصلاة وملاقاة للرفاق العام، فينبغي للمحرم أن يجدد التلبية بين الفينة
+      والأخرى، إذا نشرع الآن في ذكر كلام ابن المؤقت رحمه الله. إذن قال فإذا أردت
+      ترتيب أفعال حجك، فاستمع ا بيان ذلك، واستجمع ذهنك، وأحضره لتكون على بصيرة
+      في ما أذكر لك بالتنظف والاغتسال عند الإحرام، وذلك أن مريد الإحرام إذا وصل
+      ميقاته حرم عليه مجاوزته حلالا، أين متحللا؟ فمن كان من أهل المغرب أو الشام
+      أو مصر، فإنه يحرم من رابغ. بأنه من أعمال الجحفة، فإذا وصله تنظف بحلق
+      الوسط، وهو العانة، ونتف الإبطين، وقص الشارب والأظفار، وأما حلق الرأس فيندب
+      تركه طلب ال لشعث في الحج. ثم يغتسل ولو كان حائضا أو نفساء، صغيرا أو كبيرا،
+      كذلك المرأة لا تغتسل، نعم، ولو كانت حائضا أو نفساء، صغيرة أو كبيرا، وإن
+      كان جنوبا يغتسل للجنابة والإحرام، نعم غسلا واحدا اغتسل الجنابة والإحرام
+      غسلا واحدا إن كان هو جنب فإنه يغتسل. .1 لل للجنابة و الإحرام، وكذلك إذا
+      طهرت الحائض، كذلك إن طهرت الحائض فإنها تغتسل الاغتسال الواجب عليها من
+      انقطاع دم الحيض، و آ اغتسال المراد به الإحرام، وي تدلك في هذا الغسل، ويزيل
+      الوسخ، بخلاف ما بعدهم، ناغتس الات الآتيةفي صفة الحج فليس فيها إلا إمرار
+      اليد مع الماء. نعم. فأراد أن يقول هذا الاغتسال الذي اغتسل له ال ال. ال.
+      المحرم. يتغ لك فيه، بخلاف الاغتسال ات الأخرى، فإنه لا يتد لك فيها. نعم،
+      وإلى صفة هذا الغسل ي أشار بقوله كواجب، أي مثل غسل الواجب، أي كما تفعل في
+      الغسل الواجب ال غسل من جنابة. تفعل كذلك في اغتسال الإحرام. ويكون هذا
+      الاغتسال متصلا بالإحرام، كغسل الجمعة بصلاتها، نحن عندنا أن إذا اغتسلت
+      للجمعة أن يكون اغتسال ك متصلا بالجمعة، كذلك الاغتسال للنام. الاغتسال وا
+      للإحرام يكون متصلا بالإحرام، قال لبس إزار، ورداء، ونعلين، وصلاة ركعتين،
+      إذا قال فإذا اغتسل بعد أن يغتسل المحرم لبس إزارا، ورداء ونعلين، قالولو
+      ارتدى بثوب واحد جازا، ثم يستصحب هديا. ثم يصلي ركعتين يقرأ فيهما مع الفاتحة
+      ب الكافرون، والإخلاص، ويدعو إثرهم انام، يدعو ااا إثر هاتين الركعتين، أن
+      يسدد الله عز وجل سعيه وخطاه لما سيقوم به من هاته الطاعة والعبادة. نعم. قال
+      الإحرام بعد الاستواء على المركب. قال ثم يركب راحلته، فإذا استوى عليه أحرم
+      نعم، وإن كان راجلا أحرم حين يشرع في المشي، إذا إذا كان راكبا عندما يركب،
+      يشرع في التلبية، نعم، أشروا شرع في الإحرام. لبيك اللهم حج أو لبيك، اللهم
+      عمرة، أو لبيك اللهم حجا وعمرة، قال ثم يركب راحلته، فإذا استوى عليه أحرم،
+      وإن كان راجلا أحرم حتى يشعر، يشرع في المشي، إذا كان يي ذاهبا قاصدا لمكة
+      مترجلا، فإنه لا يحرم إلا بعد الشروع في المشي. قالوا الإحرام هو الدخول
+      بالنية في أحد ن سكين معقول يتعلق بالإحرام والتلبية، والتكبير إذا قالوا
+      الإحرام هو الدخول بالنية في أحد الن سكين معقول يتعلق بال إحرامك التلبية.
+      لبيك اللهم لبيك، لبيك لا شريك لك لبيك، إن الحمد والنعمة. لك والملك لا شريك
+      لك. نعم، و يشرع كذلك في التكبير نعم، و. وهنا نكون قد وصلنا إلى ختام حصتنا،
+      شكر الله لكم حسن إصغائكم واستماعكم، وجزاكم الله خيرا، على أن نلتقيكم في
+      حصة حصة قادمة. سلام عليكم ورحمة الله.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

@@ -1,168 +1,341 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الثالث عشر</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/nahw/ec13nahws1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الثالث عشر</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/nahw/ec13nahws1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent7">الدرس الثالث عشر</h1>
-<p id="sent8">بسم اللهالرحمن الرحيم، الحمد لله ربالعالمين، والصلاةوالسلام على سيدنا ونبينا محمد وعلى آله وصحبه وسلم،الإخوة والأخوات طلبتيمشيخة، جامع الزيتونة،المعمور، نظام التعليم عنبعد، طلبة السنة الثانية،السلام عليكم. ورحمة اللهتعالي وبركاته نلتقي مجددا من خلال كتابناالتحفة الثانية لنتعرف في هذا الدرس بإذن الله تعالى معا عن الحرفالثاني الذي ينوب في حالة الرفع عن الضمة، طبعا في تولي درس. نقومبعملية تذكير للدرس السابقوالذي قبله، حتى نربط لمايكون بينهما ترابط من نوع ما، إذا اتفقنافي الدروس الماضية على أنللأسماء و للأفعال حالاتمن بينها حالة الرفع. وأن هذه الحالة. هي دليل على قيامتلك الكلمات بوظائف. وحتى نتعرف على تلكالوظائف، لابد من أدلةتساعدنا أيمن علامة، توجدفيها آخر هذه الكلمات، تبينلنا أن الكلمة في حالة رفع، واتفقنا على أنالعلامه الأصلية للرفعهي الضمة،ورأينا بالاتفاق،واتفقنا علىأماكن وجودها. وهي ماذا؟الاسم المفرد، جمع التكسير،جمع المؤنث، السالم، والفعلالمضارع الذي خلق، آخره من ألف لإثنين أو واو الجماعة أو ياء المخاطبة،وخالا منني التوكيد كما خلى من نوني. الإناث نون النسوة، هذا الأصل. وهذه الكلمات التيتكون فيها الضمة علامةأصلية، ثم رأينا في الدرسالماضي، واتفقنا على أن الواوا هيعلامة للرفع. هاهاها في هشام علم ذكرالسالمي. وهو كل سمندل على أكثر من إثنين بزيادة واو نون صالحا للتجريد وعطف مثله عليه مثل قوله تعالى فرح المخلفونوقولناالمؤمنون. المسلمون إذاالزيدون، كل هذه الكلمات هيجمع مذكر سالما، الواوفيها علامة للرفع في ماتت،ونوفي، ماتت ون، الكلمة فيهمرفوعة، في حاجة رفعا،والنون كما اتفقنا عوض عن التنوين في جسم المفرق. النوع الثاني مماتكون فيه الواو نائبة عنالضمة، اتفقنا على أنهالأسماء الخمسة أب، أخ، حم. و. فوق، وذوق،التي بمعنى صاحب، ورأيناشروطها،واتفقنا على أنك تقول هذا أخوك، ا فا هاو مرفوع، لم ترفع الواو نيابة عنالضمة النوع. الذي سندرسهالآن، ليست الواو، هيعلامة على الرفع، وإنماالألف، فتكون الألف علامة للرفع في لاسم المثنى. طيب ما هو اسم المثنى؟ قال العلماءقال اسمه المثنى كلهاسمندل على إثنين. أوإثنتين، إذا، ف يطلق علىالمذكر والمؤنث كل وس مندل على إثنين أو سنتينبزيادة آلف و ونون. صالحا للتجريد، وعطفمثله عليه. سنشرح هذا. المصطلح إذا كلاسم ندلة، على ماذا؟ علىإثنان أوإثنتان، لأنه لو دل على أكثر من إثنين أوإثنتان سيلتحق بماذا؟ بجمعالمذكر السالم. بشروط جمعالمذكر السالم ي، أو يلتحقبجمع التكسير بشروط جمعالتكسير. إذا كل اسم دل على ماذا؟ دل علىإثنين أو إثنتان. بزيادة ماذا؟ ألف ونون، إذا هذه أو هذا التحول من مفرد إلى مثنى، يكون كما شرحنا في جمع المذكر السالم، لو تذكرون يكون بماذا؟ بوجود إثنين ألف ونون اتفقت. فيالدرس الماضي، ونعيد هات منباب التفكير في هذا الدرس، علىأن للألف و النوني في حالةاستماع، هما وظيفة. ثم إن ذهبنا إلىالألف وحدها لها وظيفةأخرى، وإن نظرنا إلىالنون لها وظيفة أخرى فيحالة اجتماع الألف والنونوظيفتهما معا، أن يحول الكلمة من مفرد إلى مثنى. عندي زيدنظيف، نزعم بجانبها الألف،وإنه تصبح زيدان. عندي هندن تصبح هند اني زينب زينب، اني. رجل، رجل، اني. مسلمة، مسلمة، تان،إذا هذه الوظيفة أنتحول الكلمة من المفرد إلى المثنى. لكن إن نظرنا إليها. بمعنى إلى الحرفين، كلواحد على حدة، تصبح للألفوظيفة، و للنون وظيفة. كذاسنشرح طيب قاع لكل سمندل على أكثر ذا عفو دل على إثنين أوإثنتان بزيادة ألف ونون صالح للتجريد. ليه؟ ماذا؟ لأنه لماقول مسلم النزيل الألفوالنون تصبح مسلم؟ الكلمةدلت على معنى ولاه هاهاها. طيب. عندنا بعضالكلمات ليست صالحة للتجريد. بمعنى إن جردتها. لا تدل على مفرد، فهلنستطيع أن نسميها؟مثنىتسمية حقيقية؟ لأ، سنقول عنهاملحق بالمثنى، يعني كلمةإثنان إذا ما أذن الألفوالنون ستصبح إثم، لا يوجدفي اللغة العربية فيأسمه إثم، وإنما يوجد كلفة 11 و1. =. 2، إذا لو جردنا. كلمة0.002 والنون هل تصبح الكلمة دالة على معنى لا تصبح دالةعلى معنى؟ فنقول إن تلكالكلمة ملحقة أي معاملةمعاملة المسن وليست مسنا في الأصر. إذا يجب أن تكون حتىنسميها مثنى 100% يجب أنتكون صالحة للتجريد. وعطفمثله عليه. فعندما تقولمسلم انك بدل ما تقول جاءمسلم ومسلم قلت جاء مسلما. تمام، بدأيدخل، جاء رجل، ورجل، قلت جاءرجل يعني، فالأصل فيه رجل ورجل، أردنا أن نختصر، ومن بابالتطور اللغوي، فجاء المثنى،فقال ماذا مسلمان؟ أو رجل يعني؟ال؟ لم يكن مما يمكنعطف مثله عليه لا يسمى مسنن،و رأينه على هيئة المثنى لايسمى مسن، وإن ما يسمى ملحقاكما رأينا في كلمة الثنانيأصلها واحدوواحد وليس إثنان واث. إذا، هذه الألفاظ التيتوفرت فيها الشروط؟حتى نطلق عليهالفظة مثنى، فإنها في حالة الرفع تكونالألف علامة للرفع. فعندما تقول حذر ال زيدان والهندان فعندنا الزيدان فاعلال مرفوع وعلامة رفعهالألف، لأنهم سن وعلامةرفعه، ماذا؟ الألف نيابة عن الضمة؟ لأنهمثنى، والنونو عوض عن التنوين في الاسمالمفرد. لأنه في المفرد موزيدون كما اتفقنا، نسمعالنون ولا نكتبها فيالمثنى كما رأينا فيالجمع، أيضا، تلك النون التينسمعها ذلك التنوين الذينسمعه يتحول إلى نون، ماذا؟مكتوبة ومسموعة؟ فنقولالزيدان والهند ان في هند إذا. عندما نقولأقبل ال زيدان الزيدان فاعلمرفوع وعلامة رفعه، ماذا؟الألف؟ لأنه ماذا؟ مسن؟والنون عوة عن التنوين فيالاسم المفرد. إذا، الآن، سرنا متعرفين على ماذا؟ ثلاثة؟أشياء، ثلاثة، أدلة،ثلاثة على مات، تخبرون أنالكلمة، ماذا؟ في حالة رفععلامة، أصل، وهي الضمة، و علامة ماذا؟ وعلامة فرعيتان. العلامه الأولىالتي درسناها في الدرسالماضي وهي الواو في جمعالمذكر السالم، والأسماءالخامسة،واليوم أخذنا معا وتعرفنا مع بعض. على التعرفني على الألفة في حالةمدى، في المسنى، وهيعلامة من علامات الرفع،نائبة عن الضمة. بهذاأيها الإخوة والأخوات، نكونقد أنهينا درسنا لهذااليوم، وحتى يسمعنا بكملقاء آخر، أسأل الله لنا ولكمالعفووالعافية. والسلام عليكمورحمة الله تعالى وبركاته.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent7">الدرس الثالث عشر</h1>
+    <p id="sent8">
+      بسم اللهالرحمن الرحيم، الحمد لله ربالعالمين، والصلاةوالسلام على سيدنا
+      ونبينا محمد وعلى آله وصحبه وسلم،الإخوة والأخوات طلبتيمشيخة، جامع
+      الزيتونة،المعمور، نظام التعليم عنبعد، طلبة السنة الثانية،السلام عليكم.
+      ورحمة اللهتعالي وبركاته نلتقي مجددا من خلال كتابناالتحفة الثانية لنتعرف في
+      هذا الدرس بإذن الله تعالى معا عن الحرفالثاني الذي ينوب في حالة الرفع عن
+      الضمة، طبعا في تولي درس. نقومبعملية تذكير للدرس السابقوالذي قبله، حتى نربط
+      لمايكون بينهما ترابط من نوع ما، إذا اتفقنافي الدروس الماضية على أنللأسماء
+      و للأفعال حالاتمن بينها حالة الرفع. وأن هذه الحالة. هي دليل على قيامتلك
+      الكلمات بوظائف. وحتى نتعرف على تلكالوظائف، لابد من أدلةتساعدنا أيمن علامة،
+      توجدفيها آخر هذه الكلمات، تبينلنا أن الكلمة في حالة رفع، واتفقنا على
+      أنالعلامه الأصلية للرفعهي الضمة،ورأينا بالاتفاق،واتفقنا علىأماكن وجودها.
+      وهي ماذا؟الاسم المفرد، جمع التكسير،جمع المؤنث، السالم، والفعلالمضارع الذي
+      خلق، آخره من ألف لإثنين أو واو الجماعة أو ياء المخاطبة،وخالا منني التوكيد
+      كما خلى من نوني. الإناث نون النسوة، هذا الأصل. وهذه الكلمات التيتكون فيها
+      الضمة علامةأصلية، ثم رأينا في الدرسالماضي، واتفقنا على أن الواوا هيعلامة
+      للرفع. هاهاها في هشام علم ذكرالسالمي. وهو كل سمندل على أكثر من إثنين
+      بزيادة واو نون صالحا للتجريد وعطف مثله عليه مثل قوله تعالى فرح
+      المخلفونوقولناالمؤمنون. المسلمون إذاالزيدون، كل هذه الكلمات هيجمع مذكر
+      سالما، الواوفيها علامة للرفع في ماتت،ونوفي، ماتت ون، الكلمة فيهمرفوعة، في
+      حاجة رفعا،والنون كما اتفقنا عوض عن التنوين في جسم المفرق. النوع الثاني
+      مماتكون فيه الواو نائبة عنالضمة، اتفقنا على أنهالأسماء الخمسة أب، أخ، حم.
+      و. فوق، وذوق،التي بمعنى صاحب، ورأيناشروطها،واتفقنا على أنك تقول هذا أخوك،
+      ا فا هاو مرفوع، لم ترفع الواو نيابة عنالضمة النوع. الذي سندرسهالآن، ليست
+      الواو، هيعلامة على الرفع، وإنماالألف، فتكون الألف علامة للرفع في لاسم
+      المثنى. طيب ما هو اسم المثنى؟ قال العلماءقال اسمه المثنى كلهاسمندل على
+      إثنين. أوإثنتين، إذا، ف يطلق علىالمذكر والمؤنث كل وس مندل على إثنين أو
+      سنتينبزيادة آلف و ونون. صالحا للتجريد، وعطفمثله عليه. سنشرح هذا. المصطلح
+      إذا كلاسم ندلة، على ماذا؟ علىإثنان أوإثنتان، لأنه لو دل على أكثر من إثنين
+      أوإثنتان سيلتحق بماذا؟ بجمعالمذكر السالم. بشروط جمعالمذكر السالم ي، أو
+      يلتحقبجمع التكسير بشروط جمعالتكسير. إذا كل اسم دل على ماذا؟ دل علىإثنين أو
+      إثنتان. بزيادة ماذا؟ ألف ونون، إذا هذه أو هذا التحول من مفرد إلى مثنى،
+      يكون كما شرحنا في جمع المذكر السالم، لو تذكرون يكون بماذا؟ بوجود إثنين ألف
+      ونون اتفقت. فيالدرس الماضي، ونعيد هات منباب التفكير في هذا الدرس، علىأن
+      للألف و النوني في حالةاستماع، هما وظيفة. ثم إن ذهبنا إلىالألف وحدها لها
+      وظيفةأخرى، وإن نظرنا إلىالنون لها وظيفة أخرى فيحالة اجتماع الألف
+      والنونوظيفتهما معا، أن يحول الكلمة من مفرد إلى مثنى. عندي زيدنظيف، نزعم
+      بجانبها الألف،وإنه تصبح زيدان. عندي هندن تصبح هند اني زينب زينب، اني. رجل،
+      رجل، اني. مسلمة، مسلمة، تان،إذا هذه الوظيفة أنتحول الكلمة من المفرد إلى
+      المثنى. لكن إن نظرنا إليها. بمعنى إلى الحرفين، كلواحد على حدة، تصبح
+      للألفوظيفة، و للنون وظيفة. كذاسنشرح طيب قاع لكل سمندل على أكثر ذا عفو دل
+      على إثنين أوإثنتان بزيادة ألف ونون صالح للتجريد. ليه؟ ماذا؟ لأنه لماقول
+      مسلم النزيل الألفوالنون تصبح مسلم؟ الكلمةدلت على معنى ولاه هاهاها. طيب.
+      عندنا بعضالكلمات ليست صالحة للتجريد. بمعنى إن جردتها. لا تدل على مفرد،
+      فهلنستطيع أن نسميها؟مثنىتسمية حقيقية؟ لأ، سنقول عنهاملحق بالمثنى، يعني
+      كلمةإثنان إذا ما أذن الألفوالنون ستصبح إثم، لا يوجدفي اللغة العربية فيأسمه
+      إثم، وإنما يوجد كلفة 11 و1. =. 2، إذا لو جردنا. كلمة0.002 والنون هل تصبح
+      الكلمة دالة على معنى لا تصبح دالةعلى معنى؟ فنقول إن تلكالكلمة ملحقة أي
+      معاملةمعاملة المسن وليست مسنا في الأصر. إذا يجب أن تكون حتىنسميها مثنى
+      100% يجب أنتكون صالحة للتجريد. وعطفمثله عليه. فعندما تقولمسلم انك بدل ما
+      تقول جاءمسلم ومسلم قلت جاء مسلما. تمام، بدأيدخل، جاء رجل، ورجل، قلت جاءرجل
+      يعني، فالأصل فيه رجل ورجل، أردنا أن نختصر، ومن بابالتطور اللغوي، فجاء
+      المثنى،فقال ماذا مسلمان؟ أو رجل يعني؟ال؟ لم يكن مما يمكنعطف مثله عليه لا
+      يسمى مسنن،و رأينه على هيئة المثنى لايسمى مسن، وإن ما يسمى ملحقاكما رأينا
+      في كلمة الثنانيأصلها واحدوواحد وليس إثنان واث. إذا، هذه الألفاظ التيتوفرت
+      فيها الشروط؟حتى نطلق عليهالفظة مثنى، فإنها في حالة الرفع تكونالألف علامة
+      للرفع. فعندما تقول حذر ال زيدان والهندان فعندنا الزيدان فاعلال مرفوع
+      وعلامة رفعهالألف، لأنهم سن وعلامةرفعه، ماذا؟ الألف نيابة عن الضمة؟
+      لأنهمثنى، والنونو عوض عن التنوين في الاسمالمفرد. لأنه في المفرد موزيدون
+      كما اتفقنا، نسمعالنون ولا نكتبها فيالمثنى كما رأينا فيالجمع، أيضا، تلك
+      النون التينسمعها ذلك التنوين الذينسمعه يتحول إلى نون، ماذا؟مكتوبة ومسموعة؟
+      فنقولالزيدان والهند ان في هند إذا. عندما نقولأقبل ال زيدان الزيدان
+      فاعلمرفوع وعلامة رفعه، ماذا؟الألف؟ لأنه ماذا؟ مسن؟والنون عوة عن التنوين
+      فيالاسم المفرد. إذا، الآن، سرنا متعرفين على ماذا؟ ثلاثة؟أشياء، ثلاثة،
+      أدلة،ثلاثة على مات، تخبرون أنالكلمة، ماذا؟ في حالة رفععلامة، أصل، وهي
+      الضمة، و علامة ماذا؟ وعلامة فرعيتان. العلامه الأولىالتي درسناها في
+      الدرسالماضي وهي الواو في جمعالمذكر السالم، والأسماءالخامسة،واليوم أخذنا
+      معا وتعرفنا مع بعض. على التعرفني على الألفة في حالةمدى، في المسنى،
+      وهيعلامة من علامات الرفع،نائبة عن الضمة. بهذاأيها الإخوة والأخوات، نكونقد
+      أنهينا درسنا لهذااليوم، وحتى يسمعنا بكملقاء آخر، أسأل الله لنا
+      ولكمالعفووالعافية. والسلام عليكمورحمة الله تعالى وبركاته.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

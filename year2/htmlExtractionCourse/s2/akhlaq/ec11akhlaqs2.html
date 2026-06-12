@@ -1,168 +1,400 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الحادي عشر الحكمة الثالثة والثلاثون بعد المائة من الكتاب</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/akhlaq/ec11akhlaqs2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      الدرس الحادي عشر الحكمة الثالثة والثلاثون بعد المائة من الكتاب
+    </title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/akhlaq/ec11akhlaqs2.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent3">الدرس الحادي عشر الحكمة الثالثة والثلاثون بعد المائة من الكتاب</h1>
-<p id="sent4">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأفضل الصلاة وأتم التسليم على سيدنا و حبيبنا و مولانا وقرة أعيننا سيدنا محمد. الصادق الوعد الأمين، وحبيب رب العالمين، وعلى آله وأصحابه أجمعين، سبحانك لا علم لنا إلا ما علمتنا، فعلمنا مولانا ما ينفعنا، وانفعنا بما علمتنا، وزدنا علما وعملا وصدقا. وإخلاصا في الدين. وافتح علينا فتح العارفين. وفقنا توفيق الصالحين. عد علينا بعوائد ك الحسنة يا كريم. وصلي لهم وسلم وبارك على سيدنا محمد البشير النذير، السراج المنير، وعلى آله وصحبه وسلم أجمعين. وبعد ou. معشر السادة والسيدات الطلبة والطالبات مع الدرس الحادي عشر. مع الدرس الحادي عشر. من مادة الأخلاق شرح الحكم، العطاء. ية. للإمام الشيخ الشرنوبي رحمهم الله تعالى جميعا، ونفع الله بسائر و علوم سائر أشياء خنا أمين أمين. ونحن اليوم. مع الحكمة الثالثة وال30. بعد ال100 الأولى. يقول الإمام أبن عطاء الله رضي الله عنه. الستر على قسمين. ستر عن المعصية. وستر فيها. ستر. عن المعصية. وستر فيه. فالعامة؟يطلبون من الله تعالى الستر فيه. حين الوقوع فيه. خشية سقوط مرتبة مرتبتهم عند الخلق. والخاصة. يطلبون من الله. السترة عنها خشية سقوطهم من نظر الملك الحق. رضي الله عنك يا بن عطاء الله السكندري. ما كنا نسمع من ذي قبل. بستر ستر عن المعصية. وإنما نعرف جميعا. الستر في المعصية. السر te ستة، ترى طلب الستر عند ارتكاب المعصية، والمخالفة خشية افتضاح بين أعين الخلق والناس والبشر. ولكننا لم يأتي على بالنا أبدا القسم الأول، وهو القسم الستر. نعم عن المعصية. نبدأ كما تعودنا أن نقرأ كلام الشيخ. الإيمان شر nous بي ارضي الله عنه. الشيخ عبد المجيد الشرنوبي من علماء الأزهر الشريف المتوفى سنة 29 و900 وألف ميلادية. بما يوافق الثامنة وال40. سنة 48 و300 وألف هجرية. يقول الشيخ عبد المجيد الشرنوبي. رضي الله عنه. آمين. يا هني. أن العامة يطلبون الستر في المعصية. خوف اطلاع الناس عليهم. فهم. كما قال ربنا سبحانه وتعالى. يستخفون من الناس. ولا يستخفون من الله. وهو معهم. إذ يبيتون ما لا يرضى من القول، وكان الله بما يعملون محيطا. قال ابن عباس. في قوله تعالى يعلم. خائنة الأعين، ومات في الصدور. قال هو الرجل يكون في القوم. فتمر به المرأة. ف يريهم أنه يغض بصره عنه. فإذا رأى من القوم غفلة. لحظة. إليه، أي نظر إليها بلحظه. وهذا شأن المرائين الذين يستخفون بنظر الله الجبار. سبحانه. و يهابون الناس أن يطلعوا عليهم. فيما يرتكبونه من الأوزار. وهذا شأن عامة الناس. وشأن العامة هنا. يريد بذلك الغافلين. عن الله سبحانه وتعالى، وليس شأن المريدين. ولا شأن الواصلين. ولا شأن العارفين بالله سبحانه وتعالى، وإنماهذا شأن الغافلين عن الله عز وجل، المرائين بأعمالهم. لأنه لولا الغفلة المستحكمة بالقرب. ما كان لهذا الإنسان؟أن يغض بصره أمام الناس. ويلحظ. نعم، المحرمات عند غفلتهم. قال وأما الخاصة؟فهم يطلبون من الله الستر عنها. بأن يجعل بينهم وبينها حجابا. حتى لا تخطر بقلوبهم. خشية سقوطهم من نظر الملك. الحق. سبحانك. كم هي المنازل عالية؟ هؤلاء؟القسم الأول. يطلبون الستر في المعصية. غاشية افتضاح هم من قلوب الخلق، افتضاح هم عند الخلق. وهو أن يقول الناس فلان ينظر إلى المحرمات، وإلى المخالفات. الشرعية ومنها الله عز وجل عنه. بينما. الخاصة من عباد الله، الذين لا يغفلون عن الله عز وجل. وكأن الإمام بن عطاء الله. يريد أن يترقى بنا. وأن يقول لنا يا فلان. يا من تغض بصرك أمام الناس. وربما سنحت منك لحظات عند غفلتهم، ف تستغفر الله سبحانه وتعالى وتتوب إليه. قال هناك أناس آخرون. المعصية يطلبون من الله أن لا تخطر المعاصي ببالهم. ما هذا؟هل هناك من الناس؟من يطلبون من الله؟ ليس السترة عند الوقوع أو السترة في الوقوع. وإنما يطلبون من الله الستر. في عدم عن عدم الوقوع. سترى أن لا يقع. وسترى أن لا يخطر ببالهم. لماذا كل ذلك؟ لشدة حضورهم؟ولشدة مراقبتهم؟ولشدة ملاحظتهم أن الله عز وجل مطلع عليهم. قلوبهم يقضة. قولوا موهم و جيلة قلوبهم. خائفة من الله سبحانه وتعالى، فهم بعيدون كل البعد، ولذلك مما قرآنا في كتب الفقه أن رسول الله صلى الله عليه وسلم حين كان يخرج من ال خلاء، قال كان يقول غفرانك. قال أهل العلم. نعم، يقول ذلك لي سنة. لأمته. لكن هل رسول الله صلى وسلم مذنبا حتى يقول غفرانك حتى يطلب المغفرة؟قال أنه يستغفر. عن تلكى الساعات، يعني التلك الوقت، ذلك الوقت الذي جلسه في. أو قوافيه حاجته. ولم يذكر لها تعالى فيه. فإذا هو يستغفر الله سبحانه وتعالى عن تلك ال اللحظات التي قضى فيها حاجته. ولم يذكر لها تعالى فيها. إذا، أيها السادة، أيتها السيدات. هناك ستة عن المعصية. وهؤلاء، وهذه المعارض المقام عال. إنما هو خاص بالناس العارفين بالله. السالكين الطريق إلى الله، الواصلين إلى الله عز وجل، هؤلاء الذين لا يفترون عن ذكر الله، ولا يغفرون عن الله عز وجل، لحظة في حياتهم، بلدهم دائما على ذكر بالله سبحانه وتعالى في ليلهم. وفي نهارهم إذا أكل، وذكر والله، وإذا شرب واذكروا الله، وإذا قام وذكروا الله، وإذا جالس واذكروا الله، وإذا لبس واذكروا الله، وإذا دخلو بيوتهم ذكروا الله، وإذا خرجوا من بيوتهم ذكر، والله سبحانه وتعالى فهم في حضور دائم مع الله سبحانه وتعالى. فهم يطلبون من الله عز وجل الستر عن المعصية أيا يطلبون من الله أن لا يغسلو، ويطلبون من الله أن لا يغيب، وعنه، ويطلبون عن من الله أن لا يشغلهم بشو أغل الدنيا، و بشو أغلالا خيار يطلبون من الله سبحانه وتعالى أن يحفظهم، وأن يديم عليهم. نعمة الحضور مع الله سبحانه وتعالى. شكرا للإمام أبن عطاء الله هذه اللفتة الكريمة وهذا الإحساس المرهف حين قال لنا هناك إذا شكر عن الستر عن معصية وست وستر في معصية. نكملو القراءة؟ قالو أما الخاصة فهم يطلبون من الله الستر عنها بأن يجعل بينهم وبينها حجا حاجبا، حتى لا تخطر ب قلوبهم، خشية سقوطهم من نظر الملك الحق سبحانه. هؤلاء الأولون يخشون من سقوطهم من أعين الخلق، وهؤلاء يخافون أنهم لو خطرة، خطرة، معصية ب قلوبهم، est حلونا من الله عز وجل، ويخشون أن يسقطوا من نظر الحق سبحانه وتعالى. فشتان من يراقب الخلق، وشتان من يراقب الحق، شتان من يراقب العبيد، وشتان من يراقب المعبود، بحق سبحانه وتعالى الخالق الإله العظيم سبحانه وتعالى، سبحان من نعم ضيق على نفسه. فأصبح نوره قاصرا، يخشى عمراوي أمل بكرا، فتجده يتقربل. زيدو لفلان و لفلان، فيخشى زيدا، ويؤمل بكرا، ويرضى لرضا فلان، ويسقط لسخط فلان، فتجده الري كالك شن عن كالش كالورق، وتجده أك السنبلة. أو تجده كالريشة في مهب الريح، تلعب به الرياح حيث جاءت يمنة أو يسرة، بينما ذاك لالا. إنما هو ك الجبري أص م كالجبل الشامخ، لا تهزو هذه الشهوات، ولا تلعب به الأهواء بأنه هذه كلها لا تخطر على باله. لا، لأنه معصوم، لا أبدا، وإنما عنده خشية من الله عز وجل منعته لا عن الوقوع في المعصية، بل حتى لا تخطر بباله، خشية أن يسقط من عين الله عز وجل في مقامه، وفي رفعته، فهو يرى ويقول لنفسه هو أكبر من ذلك بكثير. وهو أعظم من ذلك بكثير، بأنه يتعامل مع سيده، ويتعامل مع ملك الملوك سبحانه وتعالى، والتعامل مع الملوك ينبغي أن يكون بقدر بأدب جم عال يليق بقدر الملوك. نعم، قال حتى لا تخطر ب قلوبهم خشية سقوطهم من نظر الملك الحق، وإلى هذا المعنى أشار سيدنا أبو الحسن الشاذ ري رضي الله عنه في دعاء في قوله اللهم إنا نسألك التوبة ودوامها. ونعوذ بك من المعصية وأسبابها. وذكرنا بالخوف منك قبل هجوم خطرات ها، وحملنا على النجاة منها، ومن التفكر في طرائقها. اللهم إنا نسألك التوبة، ودوامها، ونعوذ بك من المعصية و أسبابها. وذكرنا بالخوف منك. قبل هجوم خطرات، ها؟ حتى لا تخطر على بالنا، وحتى لا تأتي المعصية في بالنا حتى لا نتمناها بقلوبنا حتى لا نتفكر فيها، حتى لا تأتي على بالنا، ولا على خاطرنا، وحملنا على النجاة منها، ومن التفكر في طرائقها. وفي أساليب ها، وفي في كيفية الوصول إليها، يارب، ذكرنا بالخوف منك. قبل هجوم خطرات المعاصي. وحملنا على النجاة منها ومن التفكر. ما جينا من هذه؟ نعم، المعاصي و الأذان؟ نعم، ونجينا من التفكر أيضا، حتى في طرائقها. رضي الله عن إبن عطاء الله هذه الحكمة الجميلة. الطيبة المباركة، وهو يذكرنا بأن الستر قسمان إثنان. قسم أوستر. في المعصية. وهذا للخلق كلهم. نعم لمن تصيبه الغفلة. فهؤلاء نعم يدعون الله سبحانه وتعالى أن يسترهم في معصيته. م. وهذا أمر مطلوب. وها قل يا عبادي الذين أشرفو على أنفسهم، لا تقنطوا من رحمة الله، إن الله يغفر الذنوب جميعا، إنه هو الغفور الرحيم، و لو لم تذنبوا لذهب الله بكم، وجاء بقوم يذنبون فيستغفرون الله تعالى فيغفر لهم. فهذا شأن عامة المسلمين، وعامة الناس، يطلبون من الله أن يسترهم، نعم، وحاشى لكرم الله سبحانه وتعالى، إذا ستر عبده في الدنيا أن يفضحه يوم القيامة، لكن لابد للعبد أن يطلب من الله عز وجل الستر. ولذلك ورد لولا ستر الله عز وجل لعباده ما صافح أحد أحد. ه أحدا، ولا كلم أحد أحدا. نعم الله سبحانه وتعالى ااا. يستر خلقه، ويستر عبادهم، و يوم القيامة يقول الحق سبحانه وتعالى لأحد عباده. ناديه و يدنيه منه. ويصبر عليه سترهم. ويقول أي عبد ي أتذكر ذنب كذا وكذا في ساعة كذا وكذا من يوم كذا وكذا. في تصب بالعبد عرقا ويكاد يموت فرقا. يقول أيا ربي. أذكر هو لا أنساه في قول الحق سبحانه وتعالى له. أي عبد. ي. سترته عليك في الدنيا، وأنا اليوم اغفره لك. أنا اليوم اغفره لك. نعم، الله سبحانه وتعالى ستار ويحب الستر، ويحب منا أن يستر بعضنا بعضا، نعم رسول الله صلوات الله وسلامه عليه. جاء أحد أصحابه يوما فقال يا رسول الله، رأيت فلانا مع فلانة؟ رؤيتهما؟مع بعضهما في طبع في وضع مخل، فقال له صلوات الله وسلامه عليه ألا سترته ما بثوبك. ألا ساتر، تهما بثوبك، وجاء في الحديث من ستر مسلما ستره الله في الدنيا والآخرة، وأنا ها عن فضح المسلمين، وقال للمنافقين يا معشر من آمن بلسانه، ولم يفض الإيمان إلى قلبه، لا تتبعوا عورات المسلمين. لا تتبع عورات المسلمين، فإنه من تتبع عورة امرئ مسلم تتبع الله عورته، ومن يتبع الله عورته يفضح، ولو في جوف داره. والقسم الثاني هو أعلى مقاما منه من الأول. هو، وهذا الذي يريده منا الإمام بن عطاء الله، ل يدفعنا إلى مقام أعلى. قال هناك ستر وستر عن المعصية أن تطلب من الله عز وجل أن لا تخطر المعصية ببالك، وأن لا تخطر المعصية بخلدك. وأن لا، نعم، تسلك مسالكها، وأن لا تجالس أهلها، وأن لا تصاحبهم، وأن لا أن لا تتفكر فيها البت، وألا تتعرف عليها البتة إن فعلت ذلك، كذلك كنت في حصن حصين من المخالفة الشرعية، وحفظك الله عز وجل. بستره الجميل، أمين، أمين، أقف عند هذا القدر، معشرة الإخوة والأخوات، الطلبة والطالبات، إلى درس آخر إن شاء الله عز وجل، استودعكم الله تعالى الذي لا تضيع ودائعه، والسلام عليكم. ورحمة الله تعالى وبركاته.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent3">
+      الدرس الحادي عشر الحكمة الثالثة والثلاثون بعد المائة من الكتاب
+    </h1>
+    <p id="sent4">
+      بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأفضل الصلاة وأتم التسليم
+      على سيدنا و حبيبنا و مولانا وقرة أعيننا سيدنا محمد. الصادق الوعد الأمين،
+      وحبيب رب العالمين، وعلى آله وأصحابه أجمعين، سبحانك لا علم لنا إلا ما
+      علمتنا، فعلمنا مولانا ما ينفعنا، وانفعنا بما علمتنا، وزدنا علما وعملا
+      وصدقا. وإخلاصا في الدين. وافتح علينا فتح العارفين. وفقنا توفيق الصالحين.
+      عد علينا بعوائد ك الحسنة يا كريم. وصلي لهم وسلم وبارك على سيدنا محمد
+      البشير النذير، السراج المنير، وعلى آله وصحبه وسلم أجمعين. وبعد ou. معشر
+      السادة والسيدات الطلبة والطالبات مع الدرس الحادي عشر. مع الدرس الحادي عشر.
+      من مادة الأخلاق شرح الحكم، العطاء. ية. للإمام الشيخ الشرنوبي رحمهم الله
+      تعالى جميعا، ونفع الله بسائر و علوم سائر أشياء خنا أمين أمين. ونحن اليوم.
+      مع الحكمة الثالثة وال30. بعد ال100 الأولى. يقول الإمام أبن عطاء الله رضي
+      الله عنه. الستر على قسمين. ستر عن المعصية. وستر فيها. ستر. عن المعصية.
+      وستر فيه. فالعامة؟يطلبون من الله تعالى الستر فيه. حين الوقوع فيه. خشية
+      سقوط مرتبة مرتبتهم عند الخلق. والخاصة. يطلبون من الله. السترة عنها خشية
+      سقوطهم من نظر الملك الحق. رضي الله عنك يا بن عطاء الله السكندري. ما كنا
+      نسمع من ذي قبل. بستر ستر عن المعصية. وإنما نعرف جميعا. الستر في المعصية.
+      السر te ستة، ترى طلب الستر عند ارتكاب المعصية، والمخالفة خشية افتضاح بين
+      أعين الخلق والناس والبشر. ولكننا لم يأتي على بالنا أبدا القسم الأول، وهو
+      القسم الستر. نعم عن المعصية. نبدأ كما تعودنا أن نقرأ كلام الشيخ. الإيمان
+      شر nous بي ارضي الله عنه. الشيخ عبد المجيد الشرنوبي من علماء الأزهر الشريف
+      المتوفى سنة 29 و900 وألف ميلادية. بما يوافق الثامنة وال40. سنة 48 و300
+      وألف هجرية. يقول الشيخ عبد المجيد الشرنوبي. رضي الله عنه. آمين. يا هني. أن
+      العامة يطلبون الستر في المعصية. خوف اطلاع الناس عليهم. فهم. كما قال ربنا
+      سبحانه وتعالى. يستخفون من الناس. ولا يستخفون من الله. وهو معهم. إذ يبيتون
+      ما لا يرضى من القول، وكان الله بما يعملون محيطا. قال ابن عباس. في قوله
+      تعالى يعلم. خائنة الأعين، ومات في الصدور. قال هو الرجل يكون في القوم. فتمر
+      به المرأة. ف يريهم أنه يغض بصره عنه. فإذا رأى من القوم غفلة. لحظة. إليه،
+      أي نظر إليها بلحظه. وهذا شأن المرائين الذين يستخفون بنظر الله الجبار.
+      سبحانه. و يهابون الناس أن يطلعوا عليهم. فيما يرتكبونه من الأوزار. وهذا شأن
+      عامة الناس. وشأن العامة هنا. يريد بذلك الغافلين. عن الله سبحانه وتعالى،
+      وليس شأن المريدين. ولا شأن الواصلين. ولا شأن العارفين بالله سبحانه وتعالى،
+      وإنماهذا شأن الغافلين عن الله عز وجل، المرائين بأعمالهم. لأنه لولا الغفلة
+      المستحكمة بالقرب. ما كان لهذا الإنسان؟أن يغض بصره أمام الناس. ويلحظ. نعم،
+      المحرمات عند غفلتهم. قال وأما الخاصة؟فهم يطلبون من الله الستر عنها. بأن
+      يجعل بينهم وبينها حجابا. حتى لا تخطر بقلوبهم. خشية سقوطهم من نظر الملك.
+      الحق. سبحانك. كم هي المنازل عالية؟ هؤلاء؟القسم الأول. يطلبون الستر في
+      المعصية. غاشية افتضاح هم من قلوب الخلق، افتضاح هم عند الخلق. وهو أن يقول
+      الناس فلان ينظر إلى المحرمات، وإلى المخالفات. الشرعية ومنها الله عز وجل
+      عنه. بينما. الخاصة من عباد الله، الذين لا يغفلون عن الله عز وجل. وكأن
+      الإمام بن عطاء الله. يريد أن يترقى بنا. وأن يقول لنا يا فلان. يا من تغض
+      بصرك أمام الناس. وربما سنحت منك لحظات عند غفلتهم، ف تستغفر الله سبحانه
+      وتعالى وتتوب إليه. قال هناك أناس آخرون. المعصية يطلبون من الله أن لا تخطر
+      المعاصي ببالهم. ما هذا؟هل هناك من الناس؟من يطلبون من الله؟ ليس السترة عند
+      الوقوع أو السترة في الوقوع. وإنما يطلبون من الله الستر. في عدم عن عدم
+      الوقوع. سترى أن لا يقع. وسترى أن لا يخطر ببالهم. لماذا كل ذلك؟ لشدة
+      حضورهم؟ولشدة مراقبتهم؟ولشدة ملاحظتهم أن الله عز وجل مطلع عليهم. قلوبهم
+      يقضة. قولوا موهم و جيلة قلوبهم. خائفة من الله سبحانه وتعالى، فهم بعيدون كل
+      البعد، ولذلك مما قرآنا في كتب الفقه أن رسول الله صلى الله عليه وسلم حين
+      كان يخرج من ال خلاء، قال كان يقول غفرانك. قال أهل العلم. نعم، يقول ذلك لي
+      سنة. لأمته. لكن هل رسول الله صلى وسلم مذنبا حتى يقول غفرانك حتى يطلب
+      المغفرة؟قال أنه يستغفر. عن تلكى الساعات، يعني التلك الوقت، ذلك الوقت الذي
+      جلسه في. أو قوافيه حاجته. ولم يذكر لها تعالى فيه. فإذا هو يستغفر الله
+      سبحانه وتعالى عن تلك ال اللحظات التي قضى فيها حاجته. ولم يذكر لها تعالى
+      فيها. إذا، أيها السادة، أيتها السيدات. هناك ستة عن المعصية. وهؤلاء، وهذه
+      المعارض المقام عال. إنما هو خاص بالناس العارفين بالله. السالكين الطريق إلى
+      الله، الواصلين إلى الله عز وجل، هؤلاء الذين لا يفترون عن ذكر الله، ولا
+      يغفرون عن الله عز وجل، لحظة في حياتهم، بلدهم دائما على ذكر بالله سبحانه
+      وتعالى في ليلهم. وفي نهارهم إذا أكل، وذكر والله، وإذا شرب واذكروا الله،
+      وإذا قام وذكروا الله، وإذا جالس واذكروا الله، وإذا لبس واذكروا الله، وإذا
+      دخلو بيوتهم ذكروا الله، وإذا خرجوا من بيوتهم ذكر، والله سبحانه وتعالى فهم
+      في حضور دائم مع الله سبحانه وتعالى. فهم يطلبون من الله عز وجل الستر عن
+      المعصية أيا يطلبون من الله أن لا يغسلو، ويطلبون من الله أن لا يغيب، وعنه،
+      ويطلبون عن من الله أن لا يشغلهم بشو أغل الدنيا، و بشو أغلالا خيار يطلبون
+      من الله سبحانه وتعالى أن يحفظهم، وأن يديم عليهم. نعمة الحضور مع الله
+      سبحانه وتعالى. شكرا للإمام أبن عطاء الله هذه اللفتة الكريمة وهذا الإحساس
+      المرهف حين قال لنا هناك إذا شكر عن الستر عن معصية وست وستر في معصية. نكملو
+      القراءة؟ قالو أما الخاصة فهم يطلبون من الله الستر عنها بأن يجعل بينهم
+      وبينها حجا حاجبا، حتى لا تخطر ب قلوبهم، خشية سقوطهم من نظر الملك الحق
+      سبحانه. هؤلاء الأولون يخشون من سقوطهم من أعين الخلق، وهؤلاء يخافون أنهم لو
+      خطرة، خطرة، معصية ب قلوبهم، est حلونا من الله عز وجل، ويخشون أن يسقطوا من
+      نظر الحق سبحانه وتعالى. فشتان من يراقب الخلق، وشتان من يراقب الحق، شتان من
+      يراقب العبيد، وشتان من يراقب المعبود، بحق سبحانه وتعالى الخالق الإله
+      العظيم سبحانه وتعالى، سبحان من نعم ضيق على نفسه. فأصبح نوره قاصرا، يخشى
+      عمراوي أمل بكرا، فتجده يتقربل. زيدو لفلان و لفلان، فيخشى زيدا، ويؤمل بكرا،
+      ويرضى لرضا فلان، ويسقط لسخط فلان، فتجده الري كالك شن عن كالش كالورق، وتجده
+      أك السنبلة. أو تجده كالريشة في مهب الريح، تلعب به الرياح حيث جاءت يمنة أو
+      يسرة، بينما ذاك لالا. إنما هو ك الجبري أص م كالجبل الشامخ، لا تهزو هذه
+      الشهوات، ولا تلعب به الأهواء بأنه هذه كلها لا تخطر على باله. لا، لأنه
+      معصوم، لا أبدا، وإنما عنده خشية من الله عز وجل منعته لا عن الوقوع في
+      المعصية، بل حتى لا تخطر بباله، خشية أن يسقط من عين الله عز وجل في مقامه،
+      وفي رفعته، فهو يرى ويقول لنفسه هو أكبر من ذلك بكثير. وهو أعظم من ذلك
+      بكثير، بأنه يتعامل مع سيده، ويتعامل مع ملك الملوك سبحانه وتعالى، والتعامل
+      مع الملوك ينبغي أن يكون بقدر بأدب جم عال يليق بقدر الملوك. نعم، قال حتى لا
+      تخطر ب قلوبهم خشية سقوطهم من نظر الملك الحق، وإلى هذا المعنى أشار سيدنا
+      أبو الحسن الشاذ ري رضي الله عنه في دعاء في قوله اللهم إنا نسألك التوبة
+      ودوامها. ونعوذ بك من المعصية وأسبابها. وذكرنا بالخوف منك قبل هجوم خطرات
+      ها، وحملنا على النجاة منها، ومن التفكر في طرائقها. اللهم إنا نسألك التوبة،
+      ودوامها، ونعوذ بك من المعصية و أسبابها. وذكرنا بالخوف منك. قبل هجوم خطرات،
+      ها؟ حتى لا تخطر على بالنا، وحتى لا تأتي المعصية في بالنا حتى لا نتمناها
+      بقلوبنا حتى لا نتفكر فيها، حتى لا تأتي على بالنا، ولا على خاطرنا، وحملنا
+      على النجاة منها، ومن التفكر في طرائقها. وفي أساليب ها، وفي في كيفية الوصول
+      إليها، يارب، ذكرنا بالخوف منك. قبل هجوم خطرات المعاصي. وحملنا على النجاة
+      منها ومن التفكر. ما جينا من هذه؟ نعم، المعاصي و الأذان؟ نعم، ونجينا من
+      التفكر أيضا، حتى في طرائقها. رضي الله عن إبن عطاء الله هذه الحكمة الجميلة.
+      الطيبة المباركة، وهو يذكرنا بأن الستر قسمان إثنان. قسم أوستر. في المعصية.
+      وهذا للخلق كلهم. نعم لمن تصيبه الغفلة. فهؤلاء نعم يدعون الله سبحانه وتعالى
+      أن يسترهم في معصيته. م. وهذا أمر مطلوب. وها قل يا عبادي الذين أشرفو على
+      أنفسهم، لا تقنطوا من رحمة الله، إن الله يغفر الذنوب جميعا، إنه هو الغفور
+      الرحيم، و لو لم تذنبوا لذهب الله بكم، وجاء بقوم يذنبون فيستغفرون الله
+      تعالى فيغفر لهم. فهذا شأن عامة المسلمين، وعامة الناس، يطلبون من الله أن
+      يسترهم، نعم، وحاشى لكرم الله سبحانه وتعالى، إذا ستر عبده في الدنيا أن
+      يفضحه يوم القيامة، لكن لابد للعبد أن يطلب من الله عز وجل الستر. ولذلك ورد
+      لولا ستر الله عز وجل لعباده ما صافح أحد أحد. ه أحدا، ولا كلم أحد أحدا. نعم
+      الله سبحانه وتعالى ااا. يستر خلقه، ويستر عبادهم، و يوم القيامة يقول الحق
+      سبحانه وتعالى لأحد عباده. ناديه و يدنيه منه. ويصبر عليه سترهم. ويقول أي
+      عبد ي أتذكر ذنب كذا وكذا في ساعة كذا وكذا من يوم كذا وكذا. في تصب بالعبد
+      عرقا ويكاد يموت فرقا. يقول أيا ربي. أذكر هو لا أنساه في قول الحق سبحانه
+      وتعالى له. أي عبد. ي. سترته عليك في الدنيا، وأنا اليوم اغفره لك. أنا اليوم
+      اغفره لك. نعم، الله سبحانه وتعالى ستار ويحب الستر، ويحب منا أن يستر بعضنا
+      بعضا، نعم رسول الله صلوات الله وسلامه عليه. جاء أحد أصحابه يوما فقال يا
+      رسول الله، رأيت فلانا مع فلانة؟ رؤيتهما؟مع بعضهما في طبع في وضع مخل، فقال
+      له صلوات الله وسلامه عليه ألا سترته ما بثوبك. ألا ساتر، تهما بثوبك، وجاء
+      في الحديث من ستر مسلما ستره الله في الدنيا والآخرة، وأنا ها عن فضح
+      المسلمين، وقال للمنافقين يا معشر من آمن بلسانه، ولم يفض الإيمان إلى قلبه،
+      لا تتبعوا عورات المسلمين. لا تتبع عورات المسلمين، فإنه من تتبع عورة امرئ
+      مسلم تتبع الله عورته، ومن يتبع الله عورته يفضح، ولو في جوف داره. والقسم
+      الثاني هو أعلى مقاما منه من الأول. هو، وهذا الذي يريده منا الإمام بن عطاء
+      الله، ل يدفعنا إلى مقام أعلى. قال هناك ستر وستر عن المعصية أن تطلب من الله
+      عز وجل أن لا تخطر المعصية ببالك، وأن لا تخطر المعصية بخلدك. وأن لا، نعم،
+      تسلك مسالكها، وأن لا تجالس أهلها، وأن لا تصاحبهم، وأن لا أن لا تتفكر فيها
+      البت، وألا تتعرف عليها البتة إن فعلت ذلك، كذلك كنت في حصن حصين من المخالفة
+      الشرعية، وحفظك الله عز وجل. بستره الجميل، أمين، أمين، أقف عند هذا القدر،
+      معشرة الإخوة والأخوات، الطلبة والطالبات، إلى درس آخر إن شاء الله عز وجل،
+      استودعكم الله تعالى الذي لا تضيع ودائعه، والسلام عليكم. ورحمة الله تعالى
+      وبركاته.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

@@ -1,168 +1,394 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الثاني عشر</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/akhlaq/ec12akhlaqs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الثاني عشر</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/akhlaq/ec12akhlaqs1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent5">الدرس الثاني عشر</h1>
-<p id="sent6">بسم الله الرحمان الرحيم. الحمد لله رب العالمين. وأفضل الصلاة وأتم التسليم على سيدنا وحبيبنا ومولانا وقرة اعيننا سيدنا محمد الصادق الوعد الأمين وحبيبي رب العالمين، وعلى آله وأصحابه أجمعين، سبحانك لا علم لنا إلا ما علمتنا. فعلمنا مولانا ما ينفعونا، وانفعنا بما علمتنا وزدنا علما وعملا وصدقا وإخلاصا في الدين، افتح علينا فتح العارفين، وفقنا توفيق الصالحين، عد علينا مولانا بعوائد ك الحسنة يا كريم أمين، معشر السادة و السيدات. الطلبة والطالبات، مرحبا بكم في هذا اللقاء الإيماني المتجدد مع مادة الأخلاق، نتناول خلالها شرح حكم مختارة من كلام الإمام أبن عطاء الله السكندري رضي الله تعالى عنه، ونحن مع الحكمة الثالثة وال40. وهو الدرس الحادي عشر، يقول فيه رضي الله تعالى عنهو أرضاه. لا تصحب. من لا ينهض ك حاله؟ ولا يدلك على الله مقاله. يا سلام. لا تصحب. من لا ينهض ك حاله؟ ولا يدلك على الله. مقاله يعني هذه الحكمة تصب في خانة حسن اختيار الصحبة. والحقيقة الصحبة في غاية الأهمية، وإنما حاز الصحابة رضوان الله عنهم أعلى المراتب، وكانو في الدرجة الثانية بعد الأنبياء والمرسلين، لأنهم صاحبو المصطفى صلى الله عليه وسلم. من هنا؟ الصاحب ساحب. و المرء على دين خليله. فانظر من تصاحب؟انظر من تصاحب. ومع من تجلس؟ومع من تقرا؟ وعمن تذهب؟ وعما؟ من تجيب تجي إ. وتعود كل ذلك في غاية الأهمية في تكوين وفي تحديد مسار الإنسان. وتحديد حياته. حتى في كل شأن حياته. سواء في الشراكة في العمل. وسواء في شريكة الحياة، وسواء في الصاحب في الدراسة، و سواء في الصاحب في العمل، و سواء في الصاحب في السفر. و إلى ما هنالك الصاحب ساحب. الصاحب ساحب؟و بن عطاء الله رضي الله عنه ينصحنا هنا وفي بهذه النصيحة المهمة، يعني ينبغي علينا. النص حب أو ااا، أن نبتعد أولا عن من لا يدلنا على الله عز و جل. نعم همته. أن لا نصحب أصحاب الهمم. الدنية أصحاب الهمم الضعيفة. أصحاب النعم، المقاصد. القريبة المقاصد، وأصحاب الذين ينظرون إلى الحياة نظرة لا مبالاة. فالذي تا إذا جلست مع إنسان لا يكترث، لا بعمل ولا بكسب ولا بدين، ولا بأخلاق، مهمته ضعيفة، فلا شك أن الطبع كما قلنا سابقا سراق، فسوف ي ستسرق من طبعه. بينما إذا جلست إلى إنسان ذكي، إذا إنسان نشط، إنسان عاقل، إنسان، لبيب، إنسان حكيم، إنسان يحب عمله، إنسان يحب الحلال، إنسانا، نعم، يخشى الله سبحانه وتعالى إنسانا ذو همة عالية. أصحاب الهمم العالية، لأنك إذا جلست إلى صاحب همة عالية، سوف تأخذ من همته. وسوف، نعم، ترتفع معنوياتك. وكان شيخنا يقول الإنسان كتلة مشاعر. كأنه بالونة، فإذا نفخت فيها، وبثت فيها الروح، ارتفعت، وارتقت إلى السماء. أما إذا خرجت منها الروح، أو خرجت منها الهمم والمعنويات العالية،par مد ماذا؟ إلى الأرض؟ ولا تستطيع أن تحرك؟ تحرك قيد أنملة. إذن هنا أبن عطاء الله ينصحنا، لا تصحب من لا ينهض ك حاله. ولا يدلك على الله مقاله، يعني ينبغي إذا أردت أن تصحب إنسانا ينفعك في دينك، يعني إنسان لبق في كلامه. إنسان تستفيد منه في علمه، تستفيد منه في اخلاقه، تستفيد منه في moi في تجاربه في الحياة، فساد تستفيد منه في حلمه، تستفيد منه في حسن تدبيره. تستفيد منهم في حسن معالجته للأمور. كيف يعالج القضايا؟وكيف يعالج المشاكل بالحكمة والتؤدة وبالحلم؟ نعم دون عجلة ودون تردد، وإلى ما هنالك، ولذلك سيدنا رسول الله صلى الله وسلامه عليه قالوا يا رسول الله من صاحب؟فا النبي صلى الله عليه وسلم هنا نبه هموقال من ر كركم الله رؤيته. وزاد في علمكم منطقه. وسهل هدكم في الدنيا عمله. وزهد كم في الدنيا عمله. يعني أي جلسة إنا خير؟هكذا النص يا رسول الله؟ أي جلسا إنا خير. فقال من ذكركم الله رأيته، إذا، إذا رأيته ذكرت الله. ومن ااا زهد كم في الدنيا عمله. ومن زادكم في العلم منطقه؟يعني إذا تكلم أفدت منه علما، وإذا سكت أفدت منه حلما، وسمت أحسنا، و هدوء ووقارا وسكينة، فالمدار كله في الحقيقة فعلا على الصح عن الصحبة، ولذلك قالوا الرفيق قبل الطريق، وقالوا الجار قبل الدار. ورسول الله صلى الله عليه وسلم قال تخيرو لنطفكم. ورسوله وسلم قال إذا جاءكم من ترضون دينه وخلقه فزوجوه. إذا ااا أ رسول الله عليه وسلم يحث دائما النص حب أهل العلم و أهل الحلم، و أهل الأخلاق، و أهل القيم، و أهل المبادئ. ولذلك، ورد أن أحد الحكماء أ أراد أن ينصح ولده يبعده عن الصحبة الفاسدين. فا جاء إلى ولده، فقال أي ولده، أنت تدري ماذا عملت اليوم؟ وبماذا بعت؟ واشتريت اليوم يا ولدي؟قال نعم يا أبي، أعرف. قال كيف ذلك؟ قال انتظرني قليلا. فذهب الأبو الولد إلى الغرفة المجاورة، وأخر، وانظر في القفة. فا رجع إلى به، قال يا أبي، أنت اليوم بعت واشتريت في الدقيق. قال وكيف ذا عرفت ذلك؟ قال أني وجدت أثر الدقيق في القفة. فعرفت أنك اليوم بعت أو اشتريت، فالدقيقة، وجاء في اليوم الثاني. أتدري بماذا بعت؟ واشتريت اليوم يا ولدي؟ فقال نعم يا أبي، انتظرني قليلا، أو لم يقل له في اليوم الأول. فذهب إليه القفة ونظر فوجد أثرا، فالشعير بين الشعير حباتي من الشعير. فقال يا ولا يا أبي، أنت اليوم اشتغلت في الشعير. وهكذا، و اال نعم في اليوم الثالث يسأله، ثم قال أي بني، إنما سألتك هذه الأسئلة من أجل أن. أن به كل شيء مهم يا ولدي، قال وكيف ذاك يا أبي؟ قال أرأيت إلى قفة؟ أو رأيت إلى زنبيل؟من خشب ومربوط بالنحاس وإلى ما هنالك تأثر بما وضعت فيه خلال العمل اليوم من دقيق و قمح وشعير وثراث، و وجدت آثارها فيه قا، نعم يا أبي، قال وكذلك قلب الإنسان يا ولدي. حين يصاحب. م سوف يتعثر قلبه إن سلبا وإيجابا. إما أن تصحب ناس طيبين يا ولدي، فتأخذ منهم الحكمة والعلم، والكلام الطيب، والمثال الحسن، والابتسامة، وحسن المعاملة، وإما أن تصحب إنسانا سيئا في وقر في قلبك، ويبقي فيك قلبك، أثر تلك الأخلاق التي تفو تكتسبها منهم. لا محالة، فا هنا رضي الله عن إبن عطاء الله، هذه الحكمة لا تصحب من لاينهض كحاله. يعني لا. لم يقل صاحب المعصية، لكن مفروغ منه. صاحب المعصية مفروغ منه. وإنما هو يريد مقاما أعلى. مقام الترقي. لم يقل فلان لا تصاحب ااا مصلي صاحب المصلي. لا، لا. لا، وإنما قال أصحاب الهمم. أصحاب الهمم العالية. لأن صاحب الهمة العالية، هذا لا يقع. وصاحب الهمة العالية، لا يتقهقر. وصاحب لأم الهمة العائلة، يستسلم ولا يرفع الراية. لأنه ينم هم بهمته العالية على حسن توكله. وعلى فهمه العميق في حسن معاملته مع الله سبحانه وتعالى. يعني الكثيرون والكثيرون اليوم تنقصهم الهمم. تجده مستسلما الحياة، مستسلمة ل دروب الحياة. والحقيقة الإنسان إنما خلق ليعمل، وإنما خلق ل يكابد، وإنما خلق ليتحملو ليسهر أقدامه في الثرى، و رأسه همته في الثريا. كان بيف الأ قمار في النجوم في السماء، لأنهم هذا متوكل على الله سبحانه وتعالى، ونحن نقتبس هذا كله من خلال قرائتنا لسيرة رسول الله صلى الله عليه وسلم من خلال قرائتنا لسيرة أصحاب نظام الله عنهم، من خلال قرائتنا لسيرة سلفنا الصالح رضوان الله تعالى عنهم. مع مرورا ب الأئمة الأربعة مالك و أبي حنيفة، والشافعي، وأحمد بن حنبل، هؤلاء الأئمة الذي إجلاء الذين كا بدوا وصبروا، وصابروا و تحملوا في مجالس العلم، وفي مجالس المذاكرة. نعم. وتحمل السفر والمشاق حتى واصلو. ماذا؟ إلى تلك المراتب العالية رضوان الله عنهم؟ فإذن لا تصحب من لا ينهض كحاله، ولا يدلك على الله مقاله. ايلا تصحب من لا يرقيك حاله الذي هو عليه. لعدم علو همته. لا تصحب. من لا يرقيك حاله؟الذي هو عليه؟لعدم علوه ممته. نعم. فإن الطبع سراق. إذن، والمعنى؟اصحب صاحب الهمة العالية. أصحاب صاحب الهمة العالية. وابتعد عن صاحب همة هزيلة. همته ضعيفة. همتهم، متوكلة. نفس. نعم، ضعيفة. نفس مستسلمة. نافس تعيش سبهللة دون هدف. هذا لا يمكن، ماذا؟ أن يكون منه شيء البتة؟وإنما إنما يكون العطاء، وإنما يكون الوصول لمن كانت له همة. ماذا عالية، كما كان رسول الله صلوات الله وسلامه له همم، لا منتهى لكبار ها. وهمته الصغرى. أجل من البحر. نعم، فإن الطبع سراق، كما قال بعضهم. بنية اجتنب كل ذي بدعة، ولا تصحب منبها يوصف. فيسرق طبعك من طبعه، وأنت بذلك لا تعرف. الطبع يسرق من الطابع، يعني سرقة سرا خفية دون أن يشعر ماذا الآخر؟ أي نعم. يا سلام. بني يجتنب كل الذي بدعة، يعني كل من يخالف الشرع ويرتكب المخالفة الشرعية والبدعة هي الشيء الذي صنع على غير مثال سبق. البدعة هنا؟في الدين. وهي المخالفة والمعصية. البدعة في الدين هي الأمر المبتدع التي لا تنطوي تحت أصل شرعي، ليس كل جديد إسمه بدع، بدعة لغوية، وإنما الذي يعنينا البدعة الشرعية، هو لو كل أمر مخالف للشرع. ولذلك رسول الله صلى الله وسلام عليه نعم من أحدث في أمرنا، هذا ما ليس منه، ما ليس منطويا تحت أصوله، من منطويا، تحت قواعده، تحت أدلته الشرعية، فإذا كان منطويا تحت الأدلة الشرعية، وإن لم يكن موجودا. منذ قبل، لا يصبح ماذا؟ سنة؟ حسنة، بدليل من سن في الإسلام سنة حسنة، فله أجر ها، وأجرم نعمل بها إلى يوم القيامة. قال بلي صحب. شيخا عارفا، ينهض كحاله بأن تكون همته متعلقة بالله تعالى، فلا يلجأ في حوائجه إلا إليه، ولا يتوكل في جميع أموره إلا عليه، ويدلك على الله ما قاله لمعرفته بالله تعالى. ف صحبة الأخيار أصل كبير في طريق القوم. وأما صحبة الأشرار ففيها كبير، اللوم، لما فيها من عظيم الآفات الموجبة إلى الرجوع القهقرى، ولانحطاط عن علي الدرجات، كما قال المصنف رحمه الله تعالى، وهذه حكمة ثانيه، نأتي إليها بعد ذلك. نعم، ااا، فالدرس الذي بعده، ربما كنت مسيئا، فأراك الإحسان منك، صحبتك من هو أسوأ حالا منك. نعم، نقف عند هذه الحكمة، وهي حقيقة حقيقة حكمة جليلة. لا تصحب من لا ينهض. ك. و شوف التعبير بكلمة ينهض ك. وكأنك جالس وهو يأتي ويأخذ بيدك لي وقفك. رحم الله من قال إن أح اك الصدق. من كان معك؟ ومن يضر نفسه ل ينفعك؟ ومن إذا ريب الزمان صدعك، شتت فيك شمله ليجمعك، لا تصحب من لا ينهض ك. أ يقومك و يجعلك تقف مستقيما حاله؟ قبل قاله؟فالحال نعم، له تأثير. الحال له تأثير كبير. الحكمة في قادمة إن شاء الله، سنتكلم عن الحال. من لا ينهض كحاله، ولا يدلك على الله مقاله، إذا أنت بحاجة إلى أن تصحب من توفر فيه صفتان، إثنتان مع بعضهما، أن يكون عالما بالدين، يعي ما يقول، يعرف أحكام الحلال والحرام. يعرف حكم الشرع، ومع ذلك عا، وعامل بما علم، حتى أصبح سمته يدل على الله سبحانه وتعالى، ويذكرك بالله سبحانه وتعالى دون أن ينطق، ودون أن ااا يتكلم، فأنت تهتدي إلى الخير، و إلى الهمم العالية. من خلال رؤيته فحسب، من خلال حاله، دون أن يتكلم، بارك الله فيكم، وشكر الله لكم، وجعلنا الله وإياكم من الذين يستمعون القول فيتبعون أحسنه، ويا سلام عليكم ورحمة الله تعالى وبركاته، وإلى لقاء آخر إن شاء الله تعالى.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent5">الدرس الثاني عشر</h1>
+    <p id="sent6">
+      بسم الله الرحمان الرحيم. الحمد لله رب العالمين. وأفضل الصلاة وأتم التسليم
+      على سيدنا وحبيبنا ومولانا وقرة اعيننا سيدنا محمد الصادق الوعد الأمين
+      وحبيبي رب العالمين، وعلى آله وأصحابه أجمعين، سبحانك لا علم لنا إلا ما
+      علمتنا. فعلمنا مولانا ما ينفعونا، وانفعنا بما علمتنا وزدنا علما وعملا
+      وصدقا وإخلاصا في الدين، افتح علينا فتح العارفين، وفقنا توفيق الصالحين، عد
+      علينا مولانا بعوائد ك الحسنة يا كريم أمين، معشر السادة و السيدات. الطلبة
+      والطالبات، مرحبا بكم في هذا اللقاء الإيماني المتجدد مع مادة الأخلاق،
+      نتناول خلالها شرح حكم مختارة من كلام الإمام أبن عطاء الله السكندري رضي
+      الله تعالى عنه، ونحن مع الحكمة الثالثة وال40. وهو الدرس الحادي عشر، يقول
+      فيه رضي الله تعالى عنهو أرضاه. لا تصحب. من لا ينهض ك حاله؟ ولا يدلك على
+      الله مقاله. يا سلام. لا تصحب. من لا ينهض ك حاله؟ ولا يدلك على الله. مقاله
+      يعني هذه الحكمة تصب في خانة حسن اختيار الصحبة. والحقيقة الصحبة في غاية
+      الأهمية، وإنما حاز الصحابة رضوان الله عنهم أعلى المراتب، وكانو في الدرجة
+      الثانية بعد الأنبياء والمرسلين، لأنهم صاحبو المصطفى صلى الله عليه وسلم. من
+      هنا؟ الصاحب ساحب. و المرء على دين خليله. فانظر من تصاحب؟انظر من تصاحب. ومع
+      من تجلس؟ومع من تقرا؟ وعمن تذهب؟ وعما؟ من تجيب تجي إ. وتعود كل ذلك في غاية
+      الأهمية في تكوين وفي تحديد مسار الإنسان. وتحديد حياته. حتى في كل شأن
+      حياته. سواء في الشراكة في العمل. وسواء في شريكة الحياة، وسواء في الصاحب في
+      الدراسة، و سواء في الصاحب في العمل، و سواء في الصاحب في السفر. و إلى ما
+      هنالك الصاحب ساحب. الصاحب ساحب؟و بن عطاء الله رضي الله عنه ينصحنا هنا وفي
+      بهذه النصيحة المهمة، يعني ينبغي علينا. النص حب أو ااا، أن نبتعد أولا عن من
+      لا يدلنا على الله عز و جل. نعم همته. أن لا نصحب أصحاب الهمم. الدنية أصحاب
+      الهمم الضعيفة. أصحاب النعم، المقاصد. القريبة المقاصد، وأصحاب الذين ينظرون
+      إلى الحياة نظرة لا مبالاة. فالذي تا إذا جلست مع إنسان لا يكترث، لا بعمل
+      ولا بكسب ولا بدين، ولا بأخلاق، مهمته ضعيفة، فلا شك أن الطبع كما قلنا سابقا
+      سراق، فسوف ي ستسرق من طبعه. بينما إذا جلست إلى إنسان ذكي، إذا إنسان نشط،
+      إنسان عاقل، إنسان، لبيب، إنسان حكيم، إنسان يحب عمله، إنسان يحب الحلال،
+      إنسانا، نعم، يخشى الله سبحانه وتعالى إنسانا ذو همة عالية. أصحاب الهمم
+      العالية، لأنك إذا جلست إلى صاحب همة عالية، سوف تأخذ من همته. وسوف، نعم،
+      ترتفع معنوياتك. وكان شيخنا يقول الإنسان كتلة مشاعر. كأنه بالونة، فإذا نفخت
+      فيها، وبثت فيها الروح، ارتفعت، وارتقت إلى السماء. أما إذا خرجت منها الروح،
+      أو خرجت منها الهمم والمعنويات العالية،par مد ماذا؟ إلى الأرض؟ ولا تستطيع
+      أن تحرك؟ تحرك قيد أنملة. إذن هنا أبن عطاء الله ينصحنا، لا تصحب من لا ينهض
+      ك حاله. ولا يدلك على الله مقاله، يعني ينبغي إذا أردت أن تصحب إنسانا ينفعك
+      في دينك، يعني إنسان لبق في كلامه. إنسان تستفيد منه في علمه، تستفيد منه في
+      اخلاقه، تستفيد منه في moi في تجاربه في الحياة، فساد تستفيد منه في حلمه،
+      تستفيد منه في حسن تدبيره. تستفيد منهم في حسن معالجته للأمور. كيف يعالج
+      القضايا؟وكيف يعالج المشاكل بالحكمة والتؤدة وبالحلم؟ نعم دون عجلة ودون
+      تردد، وإلى ما هنالك، ولذلك سيدنا رسول الله صلى الله وسلامه عليه قالوا يا
+      رسول الله من صاحب؟فا النبي صلى الله عليه وسلم هنا نبه هموقال من ر كركم
+      الله رؤيته. وزاد في علمكم منطقه. وسهل هدكم في الدنيا عمله. وزهد كم في
+      الدنيا عمله. يعني أي جلسة إنا خير؟هكذا النص يا رسول الله؟ أي جلسا إنا خير.
+      فقال من ذكركم الله رأيته، إذا، إذا رأيته ذكرت الله. ومن ااا زهد كم في
+      الدنيا عمله. ومن زادكم في العلم منطقه؟يعني إذا تكلم أفدت منه علما، وإذا
+      سكت أفدت منه حلما، وسمت أحسنا، و هدوء ووقارا وسكينة، فالمدار كله في
+      الحقيقة فعلا على الصح عن الصحبة، ولذلك قالوا الرفيق قبل الطريق، وقالوا
+      الجار قبل الدار. ورسول الله صلى الله عليه وسلم قال تخيرو لنطفكم. ورسوله
+      وسلم قال إذا جاءكم من ترضون دينه وخلقه فزوجوه. إذا ااا أ رسول الله عليه
+      وسلم يحث دائما النص حب أهل العلم و أهل الحلم، و أهل الأخلاق، و أهل القيم،
+      و أهل المبادئ. ولذلك، ورد أن أحد الحكماء أ أراد أن ينصح ولده يبعده عن
+      الصحبة الفاسدين. فا جاء إلى ولده، فقال أي ولده، أنت تدري ماذا عملت اليوم؟
+      وبماذا بعت؟ واشتريت اليوم يا ولدي؟قال نعم يا أبي، أعرف. قال كيف ذلك؟ قال
+      انتظرني قليلا. فذهب الأبو الولد إلى الغرفة المجاورة، وأخر، وانظر في القفة.
+      فا رجع إلى به، قال يا أبي، أنت اليوم بعت واشتريت في الدقيق. قال وكيف ذا
+      عرفت ذلك؟ قال أني وجدت أثر الدقيق في القفة. فعرفت أنك اليوم بعت أو اشتريت،
+      فالدقيقة، وجاء في اليوم الثاني. أتدري بماذا بعت؟ واشتريت اليوم يا ولدي؟
+      فقال نعم يا أبي، انتظرني قليلا، أو لم يقل له في اليوم الأول. فذهب إليه
+      القفة ونظر فوجد أثرا، فالشعير بين الشعير حباتي من الشعير. فقال يا ولا يا
+      أبي، أنت اليوم اشتغلت في الشعير. وهكذا، و اال نعم في اليوم الثالث يسأله،
+      ثم قال أي بني، إنما سألتك هذه الأسئلة من أجل أن. أن به كل شيء مهم يا ولدي،
+      قال وكيف ذاك يا أبي؟ قال أرأيت إلى قفة؟ أو رأيت إلى زنبيل؟من خشب ومربوط
+      بالنحاس وإلى ما هنالك تأثر بما وضعت فيه خلال العمل اليوم من دقيق و قمح
+      وشعير وثراث، و وجدت آثارها فيه قا، نعم يا أبي، قال وكذلك قلب الإنسان يا
+      ولدي. حين يصاحب. م سوف يتعثر قلبه إن سلبا وإيجابا. إما أن تصحب ناس طيبين
+      يا ولدي، فتأخذ منهم الحكمة والعلم، والكلام الطيب، والمثال الحسن،
+      والابتسامة، وحسن المعاملة، وإما أن تصحب إنسانا سيئا في وقر في قلبك، ويبقي
+      فيك قلبك، أثر تلك الأخلاق التي تفو تكتسبها منهم. لا محالة، فا هنا رضي الله
+      عن إبن عطاء الله، هذه الحكمة لا تصحب من لاينهض كحاله. يعني لا. لم يقل صاحب
+      المعصية، لكن مفروغ منه. صاحب المعصية مفروغ منه. وإنما هو يريد مقاما أعلى.
+      مقام الترقي. لم يقل فلان لا تصاحب ااا مصلي صاحب المصلي. لا، لا. لا، وإنما
+      قال أصحاب الهمم. أصحاب الهمم العالية. لأن صاحب الهمة العالية، هذا لا يقع.
+      وصاحب الهمة العالية، لا يتقهقر. وصاحب لأم الهمة العائلة، يستسلم ولا يرفع
+      الراية. لأنه ينم هم بهمته العالية على حسن توكله. وعلى فهمه العميق في حسن
+      معاملته مع الله سبحانه وتعالى. يعني الكثيرون والكثيرون اليوم تنقصهم الهمم.
+      تجده مستسلما الحياة، مستسلمة ل دروب الحياة. والحقيقة الإنسان إنما خلق
+      ليعمل، وإنما خلق ل يكابد، وإنما خلق ليتحملو ليسهر أقدامه في الثرى، و رأسه
+      همته في الثريا. كان بيف الأ قمار في النجوم في السماء، لأنهم هذا متوكل على
+      الله سبحانه وتعالى، ونحن نقتبس هذا كله من خلال قرائتنا لسيرة رسول الله صلى
+      الله عليه وسلم من خلال قرائتنا لسيرة أصحاب نظام الله عنهم، من خلال قرائتنا
+      لسيرة سلفنا الصالح رضوان الله تعالى عنهم. مع مرورا ب الأئمة الأربعة مالك و
+      أبي حنيفة، والشافعي، وأحمد بن حنبل، هؤلاء الأئمة الذي إجلاء الذين كا بدوا
+      وصبروا، وصابروا و تحملوا في مجالس العلم، وفي مجالس المذاكرة. نعم. وتحمل
+      السفر والمشاق حتى واصلو. ماذا؟ إلى تلك المراتب العالية رضوان الله عنهم؟
+      فإذن لا تصحب من لا ينهض كحاله، ولا يدلك على الله مقاله. ايلا تصحب من لا
+      يرقيك حاله الذي هو عليه. لعدم علو همته. لا تصحب. من لا يرقيك حاله؟الذي هو
+      عليه؟لعدم علوه ممته. نعم. فإن الطبع سراق. إذن، والمعنى؟اصحب صاحب الهمة
+      العالية. أصحاب صاحب الهمة العالية. وابتعد عن صاحب همة هزيلة. همته ضعيفة.
+      همتهم، متوكلة. نفس. نعم، ضعيفة. نفس مستسلمة. نافس تعيش سبهللة دون هدف. هذا
+      لا يمكن، ماذا؟ أن يكون منه شيء البتة؟وإنما إنما يكون العطاء، وإنما يكون
+      الوصول لمن كانت له همة. ماذا عالية، كما كان رسول الله صلوات الله وسلامه له
+      همم، لا منتهى لكبار ها. وهمته الصغرى. أجل من البحر. نعم، فإن الطبع سراق،
+      كما قال بعضهم. بنية اجتنب كل ذي بدعة، ولا تصحب منبها يوصف. فيسرق طبعك من
+      طبعه، وأنت بذلك لا تعرف. الطبع يسرق من الطابع، يعني سرقة سرا خفية دون أن
+      يشعر ماذا الآخر؟ أي نعم. يا سلام. بني يجتنب كل الذي بدعة، يعني كل من يخالف
+      الشرع ويرتكب المخالفة الشرعية والبدعة هي الشيء الذي صنع على غير مثال سبق.
+      البدعة هنا؟في الدين. وهي المخالفة والمعصية. البدعة في الدين هي الأمر
+      المبتدع التي لا تنطوي تحت أصل شرعي، ليس كل جديد إسمه بدع، بدعة لغوية،
+      وإنما الذي يعنينا البدعة الشرعية، هو لو كل أمر مخالف للشرع. ولذلك رسول
+      الله صلى الله وسلام عليه نعم من أحدث في أمرنا، هذا ما ليس منه، ما ليس
+      منطويا تحت أصوله، من منطويا، تحت قواعده، تحت أدلته الشرعية، فإذا كان
+      منطويا تحت الأدلة الشرعية، وإن لم يكن موجودا. منذ قبل، لا يصبح ماذا؟ سنة؟
+      حسنة، بدليل من سن في الإسلام سنة حسنة، فله أجر ها، وأجرم نعمل بها إلى يوم
+      القيامة. قال بلي صحب. شيخا عارفا، ينهض كحاله بأن تكون همته متعلقة بالله
+      تعالى، فلا يلجأ في حوائجه إلا إليه، ولا يتوكل في جميع أموره إلا عليه،
+      ويدلك على الله ما قاله لمعرفته بالله تعالى. ف صحبة الأخيار أصل كبير في
+      طريق القوم. وأما صحبة الأشرار ففيها كبير، اللوم، لما فيها من عظيم الآفات
+      الموجبة إلى الرجوع القهقرى، ولانحطاط عن علي الدرجات، كما قال المصنف رحمه
+      الله تعالى، وهذه حكمة ثانيه، نأتي إليها بعد ذلك. نعم، ااا، فالدرس الذي
+      بعده، ربما كنت مسيئا، فأراك الإحسان منك، صحبتك من هو أسوأ حالا منك. نعم،
+      نقف عند هذه الحكمة، وهي حقيقة حقيقة حكمة جليلة. لا تصحب من لا ينهض. ك. و
+      شوف التعبير بكلمة ينهض ك. وكأنك جالس وهو يأتي ويأخذ بيدك لي وقفك. رحم الله
+      من قال إن أح اك الصدق. من كان معك؟ ومن يضر نفسه ل ينفعك؟ ومن إذا ريب
+      الزمان صدعك، شتت فيك شمله ليجمعك، لا تصحب من لا ينهض ك. أ يقومك و يجعلك
+      تقف مستقيما حاله؟ قبل قاله؟فالحال نعم، له تأثير. الحال له تأثير كبير.
+      الحكمة في قادمة إن شاء الله، سنتكلم عن الحال. من لا ينهض كحاله، ولا يدلك
+      على الله مقاله، إذا أنت بحاجة إلى أن تصحب من توفر فيه صفتان، إثنتان مع
+      بعضهما، أن يكون عالما بالدين، يعي ما يقول، يعرف أحكام الحلال والحرام. يعرف
+      حكم الشرع، ومع ذلك عا، وعامل بما علم، حتى أصبح سمته يدل على الله سبحانه
+      وتعالى، ويذكرك بالله سبحانه وتعالى دون أن ينطق، ودون أن ااا يتكلم، فأنت
+      تهتدي إلى الخير، و إلى الهمم العالية. من خلال رؤيته فحسب، من خلال حاله،
+      دون أن يتكلم، بارك الله فيكم، وشكر الله لكم، وجعلنا الله وإياكم من الذين
+      يستمعون القول فيتبعون أحسنه، ويا سلام عليكم ورحمة الله تعالى وبركاته، وإلى
+      لقاء آخر إن شاء الله تعالى.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

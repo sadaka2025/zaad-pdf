@@ -1,168 +1,352 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الحادي عشر</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/fiqh/ec11fiqhs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الحادي عشر</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/fiqh/ec11fiqhs1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent3">الدرس الحادي عشر</h1>
-<p id="sent4">الحمد لله الذي خلق الإنسان وعلمه، ورفع قدر العلم وعظمه، ووفق لل تفكه في دينه، من اختاره، وفهمه، أحمده حمدا يعصم من نقمه، ويتكفل بدوام نعمه، والصلاة والسلام على سيدنا محمد خير الأنام، وعلى آله وأصحابه الكرام. اللهمرب لا علم لنا إلا ما علمتنا، و لا فهم لنا إلا ما فهمتنا، ف نسألك اللهم علما وإخلاصا في الدين، ووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد ك الحسنة يا كريم أمين. مرحبا بكم في حصة جديدة نستكمل فيها الحديث بإذن الله تبارك وتعالى على ما يتعلق بباب الصوم، ونذكر شروط وجوب الصوم، نعم. ثم قال والعقل في أوله شرط نجوب، واليقظة فاقده، سيذكر لنا هنا شروط وجوب الصوم. وهي ستة، إذا يقول أبن عاشر رحمه الله، والعقل في أوله شرط للجنوب. نعم، قال، أي في أول الصوم عند طلوع الفجر. في أول بداية الصوم، لابد أن يكون. الإنسان عاقلا. غير، غير مجنون؟قال والعقل في أوله شرط الوجوب، و ليقضي فاقده، أي هنا فاقد العقل وجوبا، يقضيو لو رجع إليه عقله بالقرب. والمعتمد أن المغمى عليه كالمجنون في القضاء. إذن؟ فمن فقد عقله، يجب عليه هنا أن يقضي. قال شروط وجوب الصوم ستة، وهي الإسلام. والعقل أن يكون عاقلا. و البلوغ أن يكون بالغا. و الصحة غير مريض، و الإقامة غير مسافر. والنقاء من دم الحيض والنفاس. قال ثم اعلم أن العقل في أول الصوم عند طلوع الفجر شرط وجوب في الصوم، وشرط صحة. نعم، حتى يجب الصوم على المكلف، وحتى يصح منه لا بد أن يكون عاقلا غير مجنون. قال فمن؟ فقد العقل عند طلوع الفجر بجنون؟ أو إغماء، أو إسكار بحلال، أو حرام. أو غيبوبة عقل لعلى؟ يذهب عقله لمرض ما لم يصح صومه. ووجد عليه، ووجد عليه قضائه. نعم. لا بد في أول بداية الصوم، أن يكون. امم. عاقل عاقل. ألا يكون مجنون؟ allo؟أي أي أن يكون مستحضرا. لفرضية الصوم. لا يكون مغمى عليه. إذن، مسألة أخرى هي وجوب قضاء الصوم على الحائض والنفساء، يقول أبن عاشر رحمه الله، والحيض منع صوما، وتقضي الفرض، إن به ارتفع، والحيض منع صوما، وتقضي الفرض، إن به متنا عا إذا قالولي قضي فاقده، و ليقضي فاقده، والحيض منع صوما، وتقضي الفرض، إن به ارتفع. إذا قال والحيض ك. النفاس. منع الصوم مطلقا، سواء كان الصوم. صوم فرض أو نفل إذا كانت المرأة حائض أو نفساء فإنها ممتنعة من الصيام، سواء كان الصوم فرضا. أو لا، فلا. نعم، قال والحيض منع صوما. قال والحائض، وتقضي الفرض أي و تقضي الحائض الصوم الفرضة. نعم، دون النفل، قال إن به ارتفع. أي قال إن كان به الحيض، إرتفع. ا. أي إن ارتفع عنها. دم الحيض ودم النفاس، فيجب عليها أن تقضي أن تقضي الصوم، قال الحيض مانع من الصوم، كان الصوم واجبا أو غير واجب، قال ثم إن الحائض تقضي الصوم الفرض دون غيره من صوم التطوع، فإذا أصبحت صائمة صياما واجبا،ففاضت، فإن صومها يبطل، ويجب عليها قضائه. فإذا أصبحت، قال ثم إن الحائض تقضي الصوم الفرض دون غيره. فا ف صوم التطوع غير مطالبة بقضائه دون غيره من صوم التطوع، قال فإذا أصبحت صائمة سي أما واجبا فم حاضت، فإن صومها يبطل، ويجب عليها أن تقضي ذاك اليوم. مسألة أخرى كراهة لمس المرأة وتقبيلها ومباشرتها. ثم قال يقول أبن عاشر ويكره اللمس، وفكر سليما دابا من المذي وإلا حرما، ويكبر ويكره اللمس، وفكر سليمة دابا من المذي وإلا وإلا حرما أي ويكره للصائم اللمس يلمس المرأة. وكذلك يكره له. فكر أي تفكر في النساء؟ وهذا مقيد، أي الكراهة مقيدة بما إذا سلم الأمس و المتفكر. قال وفكر سليمة دابا، أي عادة من المذهب، وإلا حرما. أي إن تفكر. في النساء. وسليم من المدي؟هذا يكره. وإلا، إن لم يسلم إلى المدين، بقيت فكر في النساء، ولكنه أمضى هنا، هنا يحرم يحرم عليه، لهذا قال أبن عاشر رحمه الله ويكره اللمس، وفكر سليمة دابا، أي عادة عادة من المذ، إن سلم عادة من المذ، وإن لم يسلم. تمادى في التفكر، حتى خرج منه المبين، هنا يحرم علي، هنا، قال وإلا أي، وإلا بأن لم يعلم ااا السلامة، أو ظن. عدمها أو شك، أو توهم، أو لم يعلم شيئا، حرما، أي حرم، اللمس والفكر. ولا خصوصية للمس والفكر هناك. بل وكذلك النظر المستدام أن ينظر إلى من يلتذ به نعم، والنظر المستدام، والقبلة، والملاعبة، ولا فرق في ذلك بين الشيخ والشاب، ولا بين الرجل والمرأة. ولا بين الفرض والنفل. نعم، إذن يكره اللمس والفكر، هذا بشرط، إذا سلم المرء من خروج المفيد، لكن إنت مادة في اللمس وفي النظر حتى أمضى هذا يحرمك. لهذا قال يكره للصائم اللمس والفكر إذا سلم دائما من خروج المذي ن، و أحرار المني، أي من باب أولى المني، وإن لم يسلم دائما من ذلك، يحرم عليه اللمس والفكر، وكذلك يحرم عليه تعاطي أسباب الجماع من النظر. و القبلة والمباشرة والملاعبة، فإن كان يعلم من نفسه السلامة من المذي، والمني لم تحرم، ولكنها مكروهة، نعم مسألة أخرى، وهي تتعلق ب كراهة ذوق الطعام، وكثرة الكلام. يقول ابن عاش يرحمه الله وكرهوا ذوق كقدر، و هذر غالب قيئ، وذباب مغتفر، غبار صانع وطرق وسواك وسواك. يابس est. صباح إ صباح جنابة كذاك. نعيد الأبيات، وكرهوا ذوق ذوقك قدر. وهذا غالب قيئ وذباب مغتفر. غبار صانع وطرق وسواك. يابس est. صباح جنابة كذاك إذا ذكر لنا بعض المكروهات هنا قال او كرهوا. فالضمير هنا. على من يعود كره، ومنهم كرهوا، أي العلماء العلماء، أي وكره العلماء للصائمين ذوقا شيء كقدر. أي أن طابخ الطعام يكره له أن يذوق بلسانه ما في القدر. نعم، لماذا؟ لأنه مخافة أن يتسرب شيئا مما ذاقه إلى. إلى جوفه. قال وكرهوا ذوق كقدر و هذر. أي و هكذاك آه يكره كثرة الكلام بالباطل في الصيام. أو لغير منفعة. فذوقوا الطعام. وكثرة الكلام في الباطل غير منفعة، هذا مكروه، ولله در القائل حينما قال إذا لم يكن في الصوم من يتص، امم، إذا لم يكن في الصوم، من يتص امم، وفي بصري غضب، وفي منطق صمت، وفي بصري غضب، وفي منطق. صمت. فحسب إذا من صوم الجوع والظمأ أ وإن قلت أني صمت يوما، فما صمت؟ نعم. إذن قال وكرهوا ذوق ذوق كقدر وهدر، أي وكره العلماء للصائم، تذوق شيء من القدر كقدر، وكذلك وذر. يقال أن فف لأن يهدر كثيرا، يكثر الكلام فيما لا ي يكثر الكلام، قال وهذا غ البقاء نعم، أي غالبا لقي لا قضاء فيه لمشقة الاحتراز منه أن غلبها لقي. نعم، وغالب ذباب مغتفر، كذلك إن غلبه. ذباب. دخل إلى جوف، هذا أمر مختفر، قال غبار صانع وطرق وسواك. غبار صانع يشتغل مثلا في المخبزة. أو يشتغل في مطحنة، يطحن الدقيقة. فإذا ما دخل إلى جوفه شيئا من هذا الدقيق. فلا ف la، فلا إثم عليه، لأنه هذا في الصنعة، متعلق من صنعته. قال غبار صانع أي غبار الصنعة كالدقيق، وطرق أي غبار الطريق، هذا مختفر، قال وسواك يابس أي استعمال السواك اليابس الذي لا يتحلل. مختفر ق الإصباح، جنابة كذاك، اصباح، جنابة كذاك. لماذا؟ لأن الجنابة؟ لأن. عفوا، لأن الطهارة ليس. ليست شرطا في صحة الصيام، أيمن أصبح. على جنابة فا، فإن صومها صحيح، لكنه ذاك مغتفر، لكنه مكروه، إذا نقف هنا. عندها هذا ونستكمل الحديث بإذن الله تبارك وتعالى عن هاته المكروهات في الحصة القادمة، شكر الله لكم حسن إصغاء كم و استماعكم، وجزاكم الله خيرا. والسلام عليكم ورحمة الله تعالى وبركاته.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent3">الدرس الحادي عشر</h1>
+    <p id="sent4">
+      الحمد لله الذي خلق الإنسان وعلمه، ورفع قدر العلم وعظمه، ووفق لل تفكه في
+      دينه، من اختاره، وفهمه، أحمده حمدا يعصم من نقمه، ويتكفل بدوام نعمه،
+      والصلاة والسلام على سيدنا محمد خير الأنام، وعلى آله وأصحابه الكرام.
+      اللهمرب لا علم لنا إلا ما علمتنا، و لا فهم لنا إلا ما فهمتنا، ف نسألك
+      اللهم علما وإخلاصا في الدين، ووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد
+      ك الحسنة يا كريم أمين. مرحبا بكم في حصة جديدة نستكمل فيها الحديث بإذن الله
+      تبارك وتعالى على ما يتعلق بباب الصوم، ونذكر شروط وجوب الصوم، نعم. ثم قال
+      والعقل في أوله شرط نجوب، واليقظة فاقده، سيذكر لنا هنا شروط وجوب الصوم. وهي
+      ستة، إذا يقول أبن عاشر رحمه الله، والعقل في أوله شرط للجنوب. نعم، قال، أي
+      في أول الصوم عند طلوع الفجر. في أول بداية الصوم، لابد أن يكون. الإنسان
+      عاقلا. غير، غير مجنون؟قال والعقل في أوله شرط الوجوب، و ليقضي فاقده، أي هنا
+      فاقد العقل وجوبا، يقضيو لو رجع إليه عقله بالقرب. والمعتمد أن المغمى عليه
+      كالمجنون في القضاء. إذن؟ فمن فقد عقله، يجب عليه هنا أن يقضي. قال شروط وجوب
+      الصوم ستة، وهي الإسلام. والعقل أن يكون عاقلا. و البلوغ أن يكون بالغا. و
+      الصحة غير مريض، و الإقامة غير مسافر. والنقاء من دم الحيض والنفاس. قال ثم
+      اعلم أن العقل في أول الصوم عند طلوع الفجر شرط وجوب في الصوم، وشرط صحة.
+      نعم، حتى يجب الصوم على المكلف، وحتى يصح منه لا بد أن يكون عاقلا غير مجنون.
+      قال فمن؟ فقد العقل عند طلوع الفجر بجنون؟ أو إغماء، أو إسكار بحلال، أو
+      حرام. أو غيبوبة عقل لعلى؟ يذهب عقله لمرض ما لم يصح صومه. ووجد عليه، ووجد
+      عليه قضائه. نعم. لا بد في أول بداية الصوم، أن يكون. امم. عاقل عاقل. ألا
+      يكون مجنون؟ allo؟أي أي أن يكون مستحضرا. لفرضية الصوم. لا يكون مغمى عليه.
+      إذن، مسألة أخرى هي وجوب قضاء الصوم على الحائض والنفساء، يقول أبن عاشر رحمه
+      الله، والحيض منع صوما، وتقضي الفرض، إن به ارتفع، والحيض منع صوما، وتقضي
+      الفرض، إن به متنا عا إذا قالولي قضي فاقده، و ليقضي فاقده، والحيض منع صوما،
+      وتقضي الفرض، إن به ارتفع. إذا قال والحيض ك. النفاس. منع الصوم مطلقا، سواء
+      كان الصوم. صوم فرض أو نفل إذا كانت المرأة حائض أو نفساء فإنها ممتنعة من
+      الصيام، سواء كان الصوم فرضا. أو لا، فلا. نعم، قال والحيض منع صوما. قال
+      والحائض، وتقضي الفرض أي و تقضي الحائض الصوم الفرضة. نعم، دون النفل، قال إن
+      به ارتفع. أي قال إن كان به الحيض، إرتفع. ا. أي إن ارتفع عنها. دم الحيض ودم
+      النفاس، فيجب عليها أن تقضي أن تقضي الصوم، قال الحيض مانع من الصوم، كان
+      الصوم واجبا أو غير واجب، قال ثم إن الحائض تقضي الصوم الفرض دون غيره من صوم
+      التطوع، فإذا أصبحت صائمة صياما واجبا،ففاضت، فإن صومها يبطل، ويجب عليها
+      قضائه. فإذا أصبحت، قال ثم إن الحائض تقضي الصوم الفرض دون غيره. فا ف صوم
+      التطوع غير مطالبة بقضائه دون غيره من صوم التطوع، قال فإذا أصبحت صائمة سي
+      أما واجبا فم حاضت، فإن صومها يبطل، ويجب عليها أن تقضي ذاك اليوم. مسألة
+      أخرى كراهة لمس المرأة وتقبيلها ومباشرتها. ثم قال يقول أبن عاشر ويكره
+      اللمس، وفكر سليما دابا من المذي وإلا حرما، ويكبر ويكره اللمس، وفكر سليمة
+      دابا من المذي وإلا وإلا حرما أي ويكره للصائم اللمس يلمس المرأة. وكذلك يكره
+      له. فكر أي تفكر في النساء؟ وهذا مقيد، أي الكراهة مقيدة بما إذا سلم الأمس و
+      المتفكر. قال وفكر سليمة دابا، أي عادة من المذهب، وإلا حرما. أي إن تفكر. في
+      النساء. وسليم من المدي؟هذا يكره. وإلا، إن لم يسلم إلى المدين، بقيت فكر في
+      النساء، ولكنه أمضى هنا، هنا يحرم يحرم عليه، لهذا قال أبن عاشر رحمه الله
+      ويكره اللمس، وفكر سليمة دابا، أي عادة عادة من المذ، إن سلم عادة من المذ،
+      وإن لم يسلم. تمادى في التفكر، حتى خرج منه المبين، هنا يحرم علي، هنا، قال
+      وإلا أي، وإلا بأن لم يعلم ااا السلامة، أو ظن. عدمها أو شك، أو توهم، أو لم
+      يعلم شيئا، حرما، أي حرم، اللمس والفكر. ولا خصوصية للمس والفكر هناك. بل
+      وكذلك النظر المستدام أن ينظر إلى من يلتذ به نعم، والنظر المستدام، والقبلة،
+      والملاعبة، ولا فرق في ذلك بين الشيخ والشاب، ولا بين الرجل والمرأة. ولا بين
+      الفرض والنفل. نعم، إذن يكره اللمس والفكر، هذا بشرط، إذا سلم المرء من خروج
+      المفيد، لكن إنت مادة في اللمس وفي النظر حتى أمضى هذا يحرمك. لهذا قال يكره
+      للصائم اللمس والفكر إذا سلم دائما من خروج المذي ن، و أحرار المني، أي من
+      باب أولى المني، وإن لم يسلم دائما من ذلك، يحرم عليه اللمس والفكر، وكذلك
+      يحرم عليه تعاطي أسباب الجماع من النظر. و القبلة والمباشرة والملاعبة، فإن
+      كان يعلم من نفسه السلامة من المذي، والمني لم تحرم، ولكنها مكروهة، نعم
+      مسألة أخرى، وهي تتعلق ب كراهة ذوق الطعام، وكثرة الكلام. يقول ابن عاش يرحمه
+      الله وكرهوا ذوق كقدر، و هذر غالب قيئ، وذباب مغتفر، غبار صانع وطرق وسواك
+      وسواك. يابس est. صباح إ صباح جنابة كذاك. نعيد الأبيات، وكرهوا ذوق ذوقك
+      قدر. وهذا غالب قيئ وذباب مغتفر. غبار صانع وطرق وسواك. يابس est. صباح جنابة
+      كذاك إذا ذكر لنا بعض المكروهات هنا قال او كرهوا. فالضمير هنا. على من يعود
+      كره، ومنهم كرهوا، أي العلماء العلماء، أي وكره العلماء للصائمين ذوقا شيء
+      كقدر. أي أن طابخ الطعام يكره له أن يذوق بلسانه ما في القدر. نعم، لماذا؟
+      لأنه مخافة أن يتسرب شيئا مما ذاقه إلى. إلى جوفه. قال وكرهوا ذوق كقدر و
+      هذر. أي و هكذاك آه يكره كثرة الكلام بالباطل في الصيام. أو لغير منفعة.
+      فذوقوا الطعام. وكثرة الكلام في الباطل غير منفعة، هذا مكروه، ولله در القائل
+      حينما قال إذا لم يكن في الصوم من يتص، امم، إذا لم يكن في الصوم، من يتص
+      امم، وفي بصري غضب، وفي منطق صمت، وفي بصري غضب، وفي منطق. صمت. فحسب إذا من
+      صوم الجوع والظمأ أ وإن قلت أني صمت يوما، فما صمت؟ نعم. إذن قال وكرهوا ذوق
+      ذوق كقدر وهدر، أي وكره العلماء للصائم، تذوق شيء من القدر كقدر، وكذلك وذر.
+      يقال أن فف لأن يهدر كثيرا، يكثر الكلام فيما لا ي يكثر الكلام، قال وهذا غ
+      البقاء نعم، أي غالبا لقي لا قضاء فيه لمشقة الاحتراز منه أن غلبها لقي. نعم،
+      وغالب ذباب مغتفر، كذلك إن غلبه. ذباب. دخل إلى جوف، هذا أمر مختفر، قال غبار
+      صانع وطرق وسواك. غبار صانع يشتغل مثلا في المخبزة. أو يشتغل في مطحنة، يطحن
+      الدقيقة. فإذا ما دخل إلى جوفه شيئا من هذا الدقيق. فلا ف la، فلا إثم عليه،
+      لأنه هذا في الصنعة، متعلق من صنعته. قال غبار صانع أي غبار الصنعة كالدقيق،
+      وطرق أي غبار الطريق، هذا مختفر، قال وسواك يابس أي استعمال السواك اليابس
+      الذي لا يتحلل. مختفر ق الإصباح، جنابة كذاك، اصباح، جنابة كذاك. لماذا؟ لأن
+      الجنابة؟ لأن. عفوا، لأن الطهارة ليس. ليست شرطا في صحة الصيام، أيمن أصبح.
+      على جنابة فا، فإن صومها صحيح، لكنه ذاك مغتفر، لكنه مكروه، إذا نقف هنا.
+      عندها هذا ونستكمل الحديث بإذن الله تبارك وتعالى عن هاته المكروهات في الحصة
+      القادمة، شكر الله لكم حسن إصغاء كم و استماعكم، وجزاكم الله خيرا. والسلام
+      عليكم ورحمة الله تعالى وبركاته.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

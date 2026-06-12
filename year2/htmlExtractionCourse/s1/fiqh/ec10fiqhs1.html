@@ -1,168 +1,363 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس العاشر</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/fiqh/ec10fiqhs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس العاشر</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/fiqh/ec10fiqhs1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent1">الدرس العاشر</h1>
-<p id="sent2">الحمد لله وكفى، والصلاة والسلام على عباده الذين اصطفى لهم، يا رب، لا علم لنا إلا ما علمتنا، ولا فهم لنا إلا ما فهمتنا، ف نسألك اللهم علما وإخلاصا في الدين، ووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد ك الحسنة يا كريم أمين. مرحبا بكم في حصة جديدة. نأخذ فيها بإذن الله تبارك وتعالى بما يثبت شهر الصيام، ونذكر أيضا فرائض الصوم. يقول بن عاشور رحمه الله. ويثبت الشهر برؤية الهلال أو ب30 قبيلا في كمال، ويثبت الشهر برؤية الهلال أو ب30 قبيلا في كمال. أي ويثبت شهر بأحد أمرين إثنين. إما برؤية الهلال ويكون رأى وتكون رؤية الهلال من عدل. الشهادة. و لوكان بصح و. نعم، ولو كان الجو صحوا، ليس مغيما، فيطلب. تطلب الشهادة من شخصين عدلين، نعم، قال ويثبت ويثبت الشهر برؤية الهلال. نعم إما برؤية الهلال أو إما ب30 يو ب30 يوما قبيلا قبيلا، أي قبل رمضان وهو شعبان. أي قبيلا في تمام. إذن، يثبت الشهر إما برؤية الهلال أو ب30 يوما، نعم بتمام 30 يوما من شعبان. قال يثبت، يقول إبن مؤقت رحمه الله نفعنا الله بعلومه و علوم مشايخنا في الدارين، آمين، يثبت دخول شهر رمضان بأحد أمرينإثنين إما برؤية الهلال أي برؤية عدلين حرين ذكرين، ليس أحدهما الحاكم، أو جماعة كثيرة. وإما بإكمال شعبان 30 يوما. قال وإذا كان الغيم ولم يرى الهلال، ف صبيحة تلك الليلة هو يوم الشكي، فينبغي إن ساكه حتى يستبرئ بمن يأتي من السفاري السفار. قيلالمراد ب السفاره بالمسافرين وغيرهم، قال فإن ثبت نهارا وجبال إن sac، وإن كان أفطر a وجب القضاء لعدم النية الجازمة. قال وإن لم يمسكوا فطر. فإنت أول أنه يجوز فطره، فلا كفارة عليه، وإن لم يت أول فالمشهور وجوب كفارته، كفارته، إذا إذا كان. آه. إذا كان اليوم. يوما غائما. لا يرى فيه، ولم يرى الهلال ف صبيحة تلك الليلة. أياه ليلى تحري الهلال. عند الغروب. قبيل الغروب أو بعد الغروب، كان هذا الوقت فيهم غي مافيه غيم، فيه صحب، لا يمكننا أن نرى الهلال. ف صبيحة تلك الليلة. نعم، هو يوم الشك. أي من الغد هو يوم الشك. فينبغي إمساكه، أي أن نمسك عن الأكل والشرب، وعن الجماعيين، لماذا؟ حتى نس تبرئ. و نتأكد هل هو صيام؟ أو ليس بالصيام؟ فإن ثبت نهارا فإن جاء النهار، وثبت أن هذا اليوم يوم الشك، هو هو يوم الصيام، نعم وجب الإمساك. قال فإن ثبت نهارا وجب الإمساك، وإن كان أفطر. معناه إن سبق له أنه أفطر، ينبغي عليه أن يمسك بقية النهار ي، ويجب عليه، ووجب القضاء لماذا؟ لعدم النية الجازمة، وإن لم يمسكوا فطرا. فإنت أول أنه يجوز فطره، معناه اجتهدت أولا. الت أول مرا به هو اجتهاده والتحري، فإنت أول أنه يجوز فطره. فلا كفارة عليه، فإن تا، ولأنه يجوز، ف فطره، ف أفطر، فلا كفرت عليه، وإن لميت أول، وإن لم يجتهد، وإن لم يتحرى، فالمشهور في المذهب هو وجوب كفارة ذاك اليوم. نعم. الآن فرائض الصيام، ثم قال يقول عبد الواحد بن عاشر رحمه الله فرض الصيام نية بليله. وترك وطئ شربه، وأكله، و. وألقي، إما مع إيصال شيء للمعد من أذن أو عين، أو أن فورد وقت طلوع فجره إلى الغروب، قال فرض الصيام نية بليله، وترك، وطئ شربه، وأكله، والقيئ مع إيصال شيء ل لم يعد من أذن أو عين أو أنف. ورد. من أذن أو عين أو أنفي، ورد وقت طلوع فجره إلى الغروب، إذا قال هنا. فرض. أي فرائض الصيام؟نية بليده وقلنا المراد بنية هو قصد الشيء مقترنا بفعله، قال بلي له. أي في أول ليلة من الصيام من الصوم، وأول وقتها، وأول وقتها من الغروب حتى مطلع الفجر، فلا تكفي قبل الغروب، ولا بعد الغروب، ولا بعد الفجر، نعم، فلا تكفي قبل الغروب، ولا بعد الفجر اتفاقا. نعم. فلا بد أن تكون بعد الغروب. وقبل. فجر يومي يوم الصيام، لا بد أن يبيتها بالليل. قال فرض الصيام ليى بريره، وترك وطئ. نعم. و نعم، و فرض أيضا فرض الصيام، ترك وطئ. أي ترك الجماعي، أما خروج المني و المذي من غير تسبب، كان يكون مستن كحا. نعم. أو يحتل منهارا، فإنه فإن ذلك لا يضر، وصيامه صحيح، ولا قضاء عليه. قال وفرضه، وترك، وطئ، أي وفرضه ترك وطئ. شربه، وأكله، أي، وترك الأكل والشرب. نعم. فالضمير هنا. آه، عائد على الصائم، قال شربه وأكله، أي أن يترك. وفرضه كذلك فرض الصيام، الصيام أن يترك للشرب، والأكل، قال والقيئ مع إيصال شيء للمعد كذلك. ترك إخراج القيم مع ترك إيصال شيء. ااا، هل لم يعد أي للمعدة سواءا؟ وصل لل هذا الشيء للمعدة من أذن أو عين أو أنف؟ قال والقيئ مع إيصالي. ايوا من فروض أيضا من فروض الصيام أيضا مع ما ذكر حيث أنه ذكر لن اترك ال وطئ وترك الأكل والشرب وترك إخراج القيئ كذلك، نعم، ومن فروضه مع ما ذكر إيصال شيء للمعدة، نعم من أذن. أو عين، أو أن، فنعم الأذن أن يدخل من الأذن، مثلا ااا يدخل من العين كل كتحال، نعم. ل أذن أو من عين، او من أنف، قد ورد، أي وردا يوصل أ ورد إلى المعدة، وصلا وصل من هذه المنافذ إلى المعدة. قال وقت طلوع. وألقي أهنا نستدرك على القي قال، وترك إخراج القي. أما تعمد إخراجه فهو مبطل للصيام. ويجب منه القضاء دون دون الكفارة، إذا قال وقت طلوع، فجره إلى الغروب، أين وقت طلوع الفجر إلى غروب، وهذا راجع إلى المسائل الأربعة. نعم، وقت طلوع الفجر إلى الغروب، نعم، أ يترك الوطي، وترك الأكل والشرب، وترك إلى تعمد إخراج القي، وترك إيصال شيء للمعدة، نعم يكون من وقت طلوع، فجره إلى. إلى غروب، إلى غروب الشمس. إذا قال فرائض الصيام مطلقا كان واجبا، أو غير واجب؟ خمسة؟ خمسة أشياء أولها النية، وهي قصد الشيء القصد إلى الشيء والعزيمة عليه، وقلنا أن النية هي قصد الشيء مقترنا بفعله. ومحلها الليل، ولا يكفي تقديمها قبله، إذا قلنا لا تجزئ النية قبل الغروب. ولا بعد الفجر، بل ينبغي أن تكون ما بين الغروب. وما بين بين الفجر أن تبيت في الليل. Allo، لقول النبي صلى الله عليه وسلمبسند حسن عن حفصة أم المؤمنين رضي الله عنها أن رسول الله صلى الله عليه وسلم قال من لم يجمع الصيام قبل الفجر، من لم يجمع الصيام قبل الفجر فلا صيام له. الفر، والثاني من فرائض الصيام، ترك ال وطئ، وما في معناه من إخراج المني و المذي. وقلنا أن إخراج إذا خرج المني بلذة وجب فيه القضاء والكفارة. وأما المذي إذا خرج بلذة فيجب فيه القضاء دون الكفارة، إذا قال ترك الوضع، وما في معناه من إخراج المني، و المذي قضى عن فكر أو نظر، أو قبلة، أو مباشرة، أو ملاعبة، أدام ذلك أملاك. من قرب طلوع الفجر إلى الغروب، إذا ثانيا ترك الوطن أولا النية، ثانيا، ترك ال وطئ. ثالثا ترك الأكل والشرب من قرب طلوع الفجر إلى الغروب، وترك الأكل والشرب، وقلنا سواءا وصل ذلك من الفم أو العين، أو وصل شيء المعيدة من الفم أو العين، أو الأذن أو الدبر. نعم. رابعا ترك إخراج القيئ من قرب طلوع الفجر إلى الغروب، فلو خرج غلبة من غير تسبب في إخراجه، فلا أثر له في كفارة، ولا قضاء، إلا أن يرجع منه شيء إلى الجوف بعد إمكان طرحه، فإن رجع غلبة أو نسيانا فعليه القضاء. وإن رجع عمدا فعليه القضاء والكفارة، إذا قال. ترك إخراج القيد. فلو خرج غلبة من غير أن يتسبب هو في إخراجه. فلا شيء عليه، لا قضاء ولا كفارة، إلا إذا رجع شيئا من القارئ إلى الجوف. بعد إمكان طرحه، ويمكنه خرج الق، يمكنه أن يطر أن يطرح القيئ بالكلية، لكن إن ارجع منه شيء غلبة، غلبه القيء ورجع منه أو غلبه ورجع منه ااا نعم، أو رجع منه نسيانا، فعليه القضاء هنا. وإن رجع منه عمدا، وإن تعمد إرجاع القيئ فعليه القضاء والكفارة. الفرض الخامس من فرائض الصوم. ترك وصول شي إلى المعدة، قال وهي التي يقصد المعدة، وهي التي يجتمع فيها المأكول والمشروب، وفيها يكون الهضم الأول المعدة هي التي يكون فيها الهضم الأولون. ومن المعدة، ينبعث الغذاء إلى الكبدي. وهذا يسمى الهضم الثاني، ومن الكبد ينبعث الغذاء إلى سائر الأعضاء. وهذا يسمى بالهضم الثالث. قال ويبطل الصوم بما يصل إليها، سواء وصل لها من أذن أو عين، أو أنف، أو فمن، أو دبر من طلوع الفجر إلى غروب الشمس، ي هنا نكون قد وصلنا إلى ختام حصتنا. شكر الله لكم حسن إصغاء كم و استماعكم. وجزاكم الله خيرا. والسلام عليكم ورحمة الله تعالى وبركاته.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent1">الدرس العاشر</h1>
+    <p id="sent2">
+      الحمد لله وكفى، والصلاة والسلام على عباده الذين اصطفى لهم، يا رب، لا علم
+      لنا إلا ما علمتنا، ولا فهم لنا إلا ما فهمتنا، ف نسألك اللهم علما وإخلاصا
+      في الدين، ووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد ك الحسنة يا كريم
+      أمين. مرحبا بكم في حصة جديدة. نأخذ فيها بإذن الله تبارك وتعالى بما يثبت
+      شهر الصيام، ونذكر أيضا فرائض الصوم. يقول بن عاشور رحمه الله. ويثبت الشهر
+      برؤية الهلال أو ب30 قبيلا في كمال، ويثبت الشهر برؤية الهلال أو ب30 قبيلا
+      في كمال. أي ويثبت شهر بأحد أمرين إثنين. إما برؤية الهلال ويكون رأى وتكون
+      رؤية الهلال من عدل. الشهادة. و لوكان بصح و. نعم، ولو كان الجو صحوا، ليس
+      مغيما، فيطلب. تطلب الشهادة من شخصين عدلين، نعم، قال ويثبت ويثبت الشهر
+      برؤية الهلال. نعم إما برؤية الهلال أو إما ب30 يو ب30 يوما قبيلا قبيلا، أي
+      قبل رمضان وهو شعبان. أي قبيلا في تمام. إذن، يثبت الشهر إما برؤية الهلال أو
+      ب30 يوما، نعم بتمام 30 يوما من شعبان. قال يثبت، يقول إبن مؤقت رحمه الله
+      نفعنا الله بعلومه و علوم مشايخنا في الدارين، آمين، يثبت دخول شهر رمضان
+      بأحد أمرينإثنين إما برؤية الهلال أي برؤية عدلين حرين ذكرين، ليس أحدهما
+      الحاكم، أو جماعة كثيرة. وإما بإكمال شعبان 30 يوما. قال وإذا كان الغيم ولم
+      يرى الهلال، ف صبيحة تلك الليلة هو يوم الشكي، فينبغي إن ساكه حتى يستبرئ بمن
+      يأتي من السفاري السفار. قيلالمراد ب السفاره بالمسافرين وغيرهم، قال فإن ثبت
+      نهارا وجبال إن sac، وإن كان أفطر a وجب القضاء لعدم النية الجازمة. قال وإن
+      لم يمسكوا فطر. فإنت أول أنه يجوز فطره، فلا كفارة عليه، وإن لم يت أول
+      فالمشهور وجوب كفارته، كفارته، إذا إذا كان. آه. إذا كان اليوم. يوما غائما.
+      لا يرى فيه، ولم يرى الهلال ف صبيحة تلك الليلة. أياه ليلى تحري الهلال. عند
+      الغروب. قبيل الغروب أو بعد الغروب، كان هذا الوقت فيهم غي مافيه غيم، فيه
+      صحب، لا يمكننا أن نرى الهلال. ف صبيحة تلك الليلة. نعم، هو يوم الشك. أي من
+      الغد هو يوم الشك. فينبغي إمساكه، أي أن نمسك عن الأكل والشرب، وعن
+      الجماعيين، لماذا؟ حتى نس تبرئ. و نتأكد هل هو صيام؟ أو ليس بالصيام؟ فإن ثبت
+      نهارا فإن جاء النهار، وثبت أن هذا اليوم يوم الشك، هو هو يوم الصيام، نعم
+      وجب الإمساك. قال فإن ثبت نهارا وجب الإمساك، وإن كان أفطر. معناه إن سبق له
+      أنه أفطر، ينبغي عليه أن يمسك بقية النهار ي، ويجب عليه، ووجب القضاء لماذا؟
+      لعدم النية الجازمة، وإن لم يمسكوا فطرا. فإنت أول أنه يجوز فطره، معناه
+      اجتهدت أولا. الت أول مرا به هو اجتهاده والتحري، فإنت أول أنه يجوز فطره.
+      فلا كفارة عليه، فإن تا، ولأنه يجوز، ف فطره، ف أفطر، فلا كفرت عليه، وإن
+      لميت أول، وإن لم يجتهد، وإن لم يتحرى، فالمشهور في المذهب هو وجوب كفارة ذاك
+      اليوم. نعم. الآن فرائض الصيام، ثم قال يقول عبد الواحد بن عاشر رحمه الله
+      فرض الصيام نية بليله. وترك وطئ شربه، وأكله، و. وألقي، إما مع إيصال شيء
+      للمعد من أذن أو عين، أو أن فورد وقت طلوع فجره إلى الغروب، قال فرض الصيام
+      نية بليله، وترك، وطئ شربه، وأكله، والقيئ مع إيصال شيء ل لم يعد من أذن أو
+      عين أو أنف. ورد. من أذن أو عين أو أنفي، ورد وقت طلوع فجره إلى الغروب، إذا
+      قال هنا. فرض. أي فرائض الصيام؟نية بليده وقلنا المراد بنية هو قصد الشيء
+      مقترنا بفعله، قال بلي له. أي في أول ليلة من الصيام من الصوم، وأول وقتها،
+      وأول وقتها من الغروب حتى مطلع الفجر، فلا تكفي قبل الغروب، ولا بعد الغروب،
+      ولا بعد الفجر، نعم، فلا تكفي قبل الغروب، ولا بعد الفجر اتفاقا. نعم. فلا بد
+      أن تكون بعد الغروب. وقبل. فجر يومي يوم الصيام، لا بد أن يبيتها بالليل. قال
+      فرض الصيام ليى بريره، وترك وطئ. نعم. و نعم، و فرض أيضا فرض الصيام، ترك
+      وطئ. أي ترك الجماعي، أما خروج المني و المذي من غير تسبب، كان يكون مستن
+      كحا. نعم. أو يحتل منهارا، فإنه فإن ذلك لا يضر، وصيامه صحيح، ولا قضاء عليه.
+      قال وفرضه، وترك، وطئ، أي وفرضه ترك وطئ. شربه، وأكله، أي، وترك الأكل
+      والشرب. نعم. فالضمير هنا. آه، عائد على الصائم، قال شربه وأكله، أي أن يترك.
+      وفرضه كذلك فرض الصيام، الصيام أن يترك للشرب، والأكل، قال والقيئ مع إيصال
+      شيء للمعد كذلك. ترك إخراج القيم مع ترك إيصال شيء. ااا، هل لم يعد أي للمعدة
+      سواءا؟ وصل لل هذا الشيء للمعدة من أذن أو عين أو أنف؟ قال والقيئ مع إيصالي.
+      ايوا من فروض أيضا من فروض الصيام أيضا مع ما ذكر حيث أنه ذكر لن اترك ال وطئ
+      وترك الأكل والشرب وترك إخراج القيئ كذلك، نعم، ومن فروضه مع ما ذكر إيصال
+      شيء للمعدة، نعم من أذن. أو عين، أو أن، فنعم الأذن أن يدخل من الأذن، مثلا
+      ااا يدخل من العين كل كتحال، نعم. ل أذن أو من عين، او من أنف، قد ورد، أي
+      وردا يوصل أ ورد إلى المعدة، وصلا وصل من هذه المنافذ إلى المعدة. قال وقت
+      طلوع. وألقي أهنا نستدرك على القي قال، وترك إخراج القي. أما تعمد إخراجه فهو
+      مبطل للصيام. ويجب منه القضاء دون دون الكفارة، إذا قال وقت طلوع، فجره إلى
+      الغروب، أين وقت طلوع الفجر إلى غروب، وهذا راجع إلى المسائل الأربعة. نعم،
+      وقت طلوع الفجر إلى الغروب، نعم، أ يترك الوطي، وترك الأكل والشرب، وترك إلى
+      تعمد إخراج القي، وترك إيصال شيء للمعدة، نعم يكون من وقت طلوع، فجره إلى.
+      إلى غروب، إلى غروب الشمس. إذا قال فرائض الصيام مطلقا كان واجبا، أو غير
+      واجب؟ خمسة؟ خمسة أشياء أولها النية، وهي قصد الشيء القصد إلى الشيء والعزيمة
+      عليه، وقلنا أن النية هي قصد الشيء مقترنا بفعله. ومحلها الليل، ولا يكفي
+      تقديمها قبله، إذا قلنا لا تجزئ النية قبل الغروب. ولا بعد الفجر، بل ينبغي
+      أن تكون ما بين الغروب. وما بين بين الفجر أن تبيت في الليل. Allo، لقول
+      النبي صلى الله عليه وسلمبسند حسن عن حفصة أم المؤمنين رضي الله عنها أن رسول
+      الله صلى الله عليه وسلم قال من لم يجمع الصيام قبل الفجر، من لم يجمع الصيام
+      قبل الفجر فلا صيام له. الفر، والثاني من فرائض الصيام، ترك ال وطئ، وما في
+      معناه من إخراج المني و المذي. وقلنا أن إخراج إذا خرج المني بلذة وجب فيه
+      القضاء والكفارة. وأما المذي إذا خرج بلذة فيجب فيه القضاء دون الكفارة، إذا
+      قال ترك الوضع، وما في معناه من إخراج المني، و المذي قضى عن فكر أو نظر، أو
+      قبلة، أو مباشرة، أو ملاعبة، أدام ذلك أملاك. من قرب طلوع الفجر إلى الغروب،
+      إذا ثانيا ترك الوطن أولا النية، ثانيا، ترك ال وطئ. ثالثا ترك الأكل والشرب
+      من قرب طلوع الفجر إلى الغروب، وترك الأكل والشرب، وقلنا سواءا وصل ذلك من
+      الفم أو العين، أو وصل شيء المعيدة من الفم أو العين، أو الأذن أو الدبر.
+      نعم. رابعا ترك إخراج القيئ من قرب طلوع الفجر إلى الغروب، فلو خرج غلبة من
+      غير تسبب في إخراجه، فلا أثر له في كفارة، ولا قضاء، إلا أن يرجع منه شيء إلى
+      الجوف بعد إمكان طرحه، فإن رجع غلبة أو نسيانا فعليه القضاء. وإن رجع عمدا
+      فعليه القضاء والكفارة، إذا قال. ترك إخراج القيد. فلو خرج غلبة من غير أن
+      يتسبب هو في إخراجه. فلا شيء عليه، لا قضاء ولا كفارة، إلا إذا رجع شيئا من
+      القارئ إلى الجوف. بعد إمكان طرحه، ويمكنه خرج الق، يمكنه أن يطر أن يطرح
+      القيئ بالكلية، لكن إن ارجع منه شيء غلبة، غلبه القيء ورجع منه أو غلبه ورجع
+      منه ااا نعم، أو رجع منه نسيانا، فعليه القضاء هنا. وإن رجع منه عمدا، وإن
+      تعمد إرجاع القيئ فعليه القضاء والكفارة. الفرض الخامس من فرائض الصوم. ترك
+      وصول شي إلى المعدة، قال وهي التي يقصد المعدة، وهي التي يجتمع فيها المأكول
+      والمشروب، وفيها يكون الهضم الأول المعدة هي التي يكون فيها الهضم الأولون.
+      ومن المعدة، ينبعث الغذاء إلى الكبدي. وهذا يسمى الهضم الثاني، ومن الكبد
+      ينبعث الغذاء إلى سائر الأعضاء. وهذا يسمى بالهضم الثالث. قال ويبطل الصوم
+      بما يصل إليها، سواء وصل لها من أذن أو عين، أو أنف، أو فمن، أو دبر من طلوع
+      الفجر إلى غروب الشمس، ي هنا نكون قد وصلنا إلى ختام حصتنا. شكر الله لكم حسن
+      إصغاء كم و استماعكم. وجزاكم الله خيرا. والسلام عليكم ورحمة الله تعالى
+      وبركاته.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

@@ -1,168 +1,396 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس السابع</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/sirah/ec7sirahs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس السابع</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/sirah/ec7sirahs1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent27">الدرس السابع</h1>
-<p id="sent28">بسم الله الرحمان الرحيم. الحمد لله وكفى والصلاة والسلام على النبي الكريم المصطفى أحبتي. فلا أينما كنتم. السلام عليكم ورحمة الله تعالى وبركاته. مضى من الزمن ما بين البعثة، وإرسال الرسل والرسائل 19 عاما، كانت الدعوة الإسلامية فيها محصورة في الإطار الجغرافي المحدود في بلاد العرب. ما عدا الهجرتين إلى الحبشة. وكانت ا. دورة تدريبية مستقبلية للمسلمين لمتابعة الدعوة إلى الله في بلاد غير بلاد العرب. ول أمم تختلف في مواطن ها وألوانها، ولغاتها ومصالحها وعقائدها. ونظام الحكم فيه. وكانت الدعوة في الإطار الجغرافي المحدود في بلاد العرب مرتكزة على قاعدة المدينة النبوية ذات الإمكانات المحدودة بشريا واقتصاديا وسياسيا وعسكريا. وبعد النضال دعوة استمر ست سنوات، امتلكت المدينة النبوية إمكانيات جغرافية وبشرية واقتصادية وسياسية وعسكرية، مكنت رسول الله صلى الله عليه وسلم من إرسال الرسل إلى الأمم و الملوك و الأمراء في الإطار الجغرافي الأوسع، والأكثر بعدا عن المدينة. فب صلح الحديبية، كان الاعتراف السياسي الكامل للزعامة العربية بالوجود الإسلامي للدولة النبوية الإسلامية. وقد تحققت لها السيادة والاستقلالية المادية والمعنوية، والصفة الدينية والتشريعية، والوجود الحقيقي على أرض العرب. فأمكن لأي قبيلة من القبائل أن تقيم معها حلفا وعقدا. رأيتم كم كان فيه من فائدة صلح الحديبية. لتشكل معا قوة دفاع مشترك، كيف لا، وقد ظهر للعرب مدى قوة دعوة، أن النبي صلى الله عليه وسلم وصدقها،فمن س يتجاسر على قتال قريش، فضلا عن الإنتصار عليهم المرة الأخرى. ومن الذي ستتنازل للصلح معه وهم منهم عزة وبأسا بين العرب؟ قريش؟ ومن الذي سيتمكن من اليهود؟ الأمة التي كانت منبع الرسالات و سلالة الأنبياء؟ إلا من كان الله ناصرا؟ فالمعنى الإجمالي لما تحقق مع صلح الحديبية أن رسول الله صلى الله عليه وسلم قد امتلك القدرة على مخاطبة الملوك و الأمراء، و دعوة الأمم إلى دين الله، وبيده قواعد. تابتة راسخة تستطيع تحمل مسؤولية ذلك. وبالتالي أخد صلى الله عليه وسلم في توسيع دائرة الدعوة خارج إطار العروبة و حدود الجزيرة العربية. فتبين لهم، بل و لجميع الأمم هموم الرسالة و انتفاء التحديد المكاني الذي أعلن القرآن في قوله تعالى وما أرسلناك إلا كافة للناس. و قوله تعالى يا أيها الناس إني رسول الله إليكم جميعا في أواخر السنة السادسة للهجرة إلى رجع رسول الله صلى الله عليه وسلم من الحديبية، كتب إلى الملوك، يدعوهم إلى الإسلام. ولما أراد أن يكتب إلى هؤلاء الملوك، قيل له إنهم لا يقبلون إلا وعليه خاتم، فاتخذ النبي صلى الله عليه وسلم خاتما من فضة، نقاشه محمد رسول الله. واختار من أصحاب. ه رسلا لهم معرفة وخبرة، وأرسلهم إلى الملوك. فكتب النبي صلى الله عليه وسلم إلى النجاشي ملك الحبشة، وكتب إلى المقوقص ملك مصر والإسكندرية. فأخذ المقوقس كتاب النبي صلى الله عليه وسلم. فجعله في حق من عاج، وختم عليه، ثم أكرم حامله، وبعث معه إلى النبي صلى الله عليه وسلم ب جاريتين، لهما مكان في القبة عظيم، و بكسوة، و أهدى إليه بغلة ليركبها، وكتب النبي صلى الله عليه وسلم إلي كسرى. ملك فارس تمزقه كسر. ولما بلغ ذلك. رسول الله صلى الله عليه وسلم قال مزق الله ملكه، وهو ما حصل بعد ذلك. وكتب كذلك إلى قيصر ملك الروم. جاء فيه بسم الله الرحمان الرحيم أن محمد عبد الله ورسوله إلى هرقل عظيم الروم، سلام على من اتبع الهدى. أسلم. تسلم. أسلم. يؤتك الله أجرك مرتين. فإن توليت فإن عليك إثم لارسين. يا أهل الكتاب، تعالوا إلى كلمة سواء بيننا وبينكم. هل لا نعبد إلا الله ولا نشرك به شيئا، ولا يتخذ بعضنا بعضا أربابا من دون الله؟ فإن تولوا فقولوا اشهدوا بأن مسلمون. وقد أرسله رقا إلى أبي سفيان بن حرب. في ركب من قريش، وكان التجار أ بالشام. ثم قال أول ما سألني عنه أن. أن قال كيف نسبه فيكم؟ فقلت هو فينا ذو نسب. قال فهل قال هذا القول منكم أحد قط قبله؟قلت لا. قال فهل كان من آبائه من ملك؟ قلت له. قال فأشرف الناس اتبعو؟ أم ضعفاء؟ هم؟قلت بال ضعفاء هم؟قال أي زيدون أم ينقصون؟ قلت بلي زيدون. قال فهل يرتد أحد منهم؟ سخطى لدينه بعد أن يدخل فيه؟ قلت لا. قال فهل تتهمونه بالكذب قبل أن يقول ما قال؟ قلت له. قال فهل يغدر؟ قلت له ونحن منه في مد، في في مدة لا ندري ما هو فاعل فيها،قال ولم تمكنني كلمة ادخلو فيها شيئا غير هذه الكلمة. قال فهل قاتلت موه؟ قلت نعم. قال فكيف كان قتالكم إياه؟ قلت الحرب بيننا وبينه سجال، ينال منا، وننال منا. قال ماذا يأمركم؟ قلت يقول عبد الله وحدة ولا تشرك به شيئا، واترك ما يقول آباؤكم، ويأمرنا بالصلاة والصدق والعفاف والصلة. فقال ترجمان؟ قل له سألتك عن نسبه، فذكرت أنه فيكم دون سب، وكذلك الرسل تبعث في نسب من قومها. وسعادتك؟ هل قال أحد منكم هذا القول قبله؟ فذكرت أن لاعب قلت لو كان أحد قال هذا القول قبله، لقلت رجل يتأسى بقول قيل قبله. و سألتك هل كان من آبائهم نملك؟ فذكرت أن لا. فقلت لو كان من آبائهم نملك، قلت رجل يطلب ملكا بيه. و سألتك هل كنت تتهمونه بالكذب قبل أن يقول ما قال؟ فذكرت أن لا. فقد. أعرف أنه لم يكن ليذر الكذب على الناس، ويكذب على الله، وسألت ك أشراف الناس، اتبعو أم ضعفاء هم؟ فذكرت أن ضعفاء هم تبعوه. وهم أتباع الرسل. وسألت كايزيدو نعم، ينقصون؟ فذكرت أنهم يزيدون، و كذلك أمر الإيمان حتى يتم. وسألت كا يرتد أحدا سقطة لدينه بعد أن يدخل فيه فذكرت أن لا، وكذلك الإيمان حين تخالط بشاشته القلوب، وسألتك هل يغدر؟ ذكرت أن لا، وكذلك الرسل لا تغدر. و سألتك بماذا يأمر؟ ذكرت أنه يأمركم أن تعبد الله، ولا تشرك به شيء، و ينهاكم عن عبادة الأوثان. ويأمركم بالصلاة والصدق والعفاف، فإن كان ما تقول حقا. فسي ملك موضع قدمي هاتين. وقد كنت أعلم أنه خارج، ولم أكن أظن أنه منكم. فلو أني أعلم أني أخلص إليه. ل تجشمت لقاء. ولو كنت عنده ل. غسلت عن قدميه. ثم دعا بكتاب رسول الله صلى الله عليه وسلم فقرأه، فلما فرا من قراءة الكتاب ارتفعت الأصوات عنده، وكثر اللغط، وأمر بنا، فأخرجنا، قال فقلت لأصحابي حين أخرجنا. لقد أمر أمر ابن أبي كبشه. إنه لا يخافه ملك بني الأصفر. فما زالت، فما زلت موقنا بأمر رسول الله صلى الله عليه وسلم أنه سيظهر حتى أدخل الله عليه الإسلام. وتعد إرسال الرسل خطوة ونقطة تحول هامة في تاريخ العرب والإسلام، ليس لأن الرسول صلى الله عليه وسلم سوف يوحد عرب الجزيرة العربية تحت راية الإسلام فحسب. ولكن لأن هؤلاء العرب بعد أن اعتنقو الإسلام وتمثل رسالة السماء و غيط بمحمل الدعوة الإسلامية إلى البشرية كافة،ويشير المنهج النبوي في دعوة الزعماء والملوك، إذا ما يجب أن تكون عليه وسائل الدعوة. فإلى جانب دعوة الأمراء والشعوب، اختار الرسول صلى الله عليه وسلم أسلوبا جديدا من أساليب الدعوة، وهو مراسلة البنوك ورؤساء القبائل. وكان ل أسلوب فيس الرسائل إلى الملوك و الأمراء أثر بارز في دخول بعضهم الإسلام، وإظهار الود من البعض الآخر. كما كشفت هذه الرسائل مواقف بعض الملوك الأمراء من الدعوة الإسلامية ودولتها في المدينة. وبذلك. حققت هذه الرسائل نتائج كثيرة. واستطاعت الدولة الإسلامية من خلال ردود الفعل المختلفة تجاه الرسائل، أن تنتهج نهجا سياسيا وعسكريا واضحا ومتميزا، أما بخصوص. إعداد تأهيل الرسل، فإن الرسل تحتاج إلى معرفة. طيب بأحوال الأمم التي سيبعثون إليهم، ولغته، ولغات تخاطبهم، وأعرافهم الدبل الدبلوماسية. وعقائدهم التي يدينون بها وأحوالهم السياسية و المعاشية، وأخلاقهم العامة، والطرق التي يمكن عبورها للوصول إليهم. كذلك تعلم اللغات الأجنبية قد أمر رسول الله صلى الله عليه وسلم الرسل قبل بعثهم إلى الملوك و الأمراء، بتعلم لغات الأقوام التي سيرسلهم إليهم. وكان عمر بن أمية ضمري يعلم لغة الحبشة. و دحية بن خليفة الكلبي يعلم لغة الروم. و حاطب بن أبي بلسعة يعلم لغة القبط. عبد الله بن حذافة السهمي يعلم لغة الفرس. كان زايدا من ثابت ترجمان رسول الله صلى الله عليه وسلم، وكاتب رسائله، وقارئ الرسائل الواردة إلى النبي صلى الله عليه وسلم. وكل رسول من الرسل يعلم لغة القوم الذين س يبلغهم رسالة رسول الله صلى الله عليه وسلم. كذلك كان لهم فصاحة اللسان، وحسن البيان، وقوة الحجة، و. وفور العقل في جميع الرسل. فكانت لهم أيضا الهيئة واللياقة في الصورة والمظهر. من رسل رسول الله صلى الله عليه وسلم؟ دحية بن خليفة، الكلب الذي كان ذو هيئة ولياقة، تشابه هيئة لياقة الروم، كان جميل الصورة، حسن المظهر، عالما بطبائع الروم. وكان بالكلب يسكنون أطراف الشام، وكانت الشام تحت حكم الروم، يجيد دحية لغتهم، ويعرف عاداتهم وأعرافهم، وكان عمرو بن أمية ضمريش بيه الهيئة بال أح باش، وكانت أمه حبشية ويجيد لغة الأحباش. وربما كان على معرفة مباشرة بالن جا شي، الذي أمضى زمنا من حياته عبدا لرجل من بني ضمرة، يرعى له الغنم. وكان عبد الله ابن آفة يجيد اللغة الفارسية. ويتردد كثيرا على بلاد فارس وبلاد كسرى. مما جعله ذا بصيرة بأحوال الفرس. وكان صليت بن عمر يختلف إلى اليمامة، ويعلم أمورها وأحوالها. ففي مواصفات الرسل، فقد بعث الرسول صلى الله عليه وسلم رئيس رسائله إلى كسرى وقيصر، و المقوقص و النجا شي، والحارث بن أبي شمر الغساني، وحوض بن علي الحنفي، وهذه الرسائل تحمل نفس الهدف، ولكنها تختلف في الشكل. ففيها الدعوة إلى أهل الكتاب و إلى أهل المجوس، وإلى المشركين العرب، و مما يلاحظ فيها الاحترام الشديد يبديه رسول الله صلى الله عليه وسلم لمن يخاطبه في جله، ويعظم احتراما. لي مكانته في قومه. فيقول إلى عظيم الروم إلى عظيم الفرص، إلى عظيم القبط، هذه صفات رسائله صلى الله عليه وسلم. وكذلك وضوح النص، عدم وجود لبس أو غموض فيه. والحرص على فتح الحوار مع المرسل إليه، وتشجيعه على الإيمان. وفي رسائله، تحميل. المسؤولية؟ آه راعيته حمله مسؤولية رعيته. واحترام مكانته في نفسه، وحرصه على ملكيته، فلا ينازع عليها إذا آمن بالله وأسلم. تجرد رسول الله صلى الله عليه وسلم عن كل مظاهر الملك والعظم في راس أإله، وتعريفه بنفسه أنه عبد الله ورسوله، وفي ذلك دلالة واضحة على أن العبودية لله وحدة. كذلك انسجام نصوص الكتب والرسائل مع الهدف المطلوب ووحدتها الموضوعية. فهي مجرد عن معالجة مشكلات شخصية أو خلافات سياسية. و موضوعه الهادفه والوحدانية لله سبحانه وتعالى. واعتماد طريقة الملوك والأمراء في خط من؟وحافظة لتثبيت صحة المصدر. وضمان سلامة الرسالة. وهكذا، فإن رسائل النبي صلى الله عليه وسلم إلى أمراء العرب و الملوك المجاورين لبلاده، تعتبرنقطة تحول في سياسة دولة الرسول الخارجية. فعظم شأنها، وأصبحت لها مكانة دينية وسياسية بين الدول. وذلك قبل فتح مكة. كما أن هذه السياسة مهدت لتوحيد الرسول صلى الله عليه وسلم لسائر أنحاء بلاد العرب في عام الوفود. إلى هنا، نكون قد أنهينا. درسنا. دمتم في رعاية الله، السلام عليكم ورحمة الله تعالى وبركاته.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent27">الدرس السابع</h1>
+    <p id="sent28">
+      بسم الله الرحمان الرحيم. الحمد لله وكفى والصلاة والسلام على النبي الكريم
+      المصطفى أحبتي. فلا أينما كنتم. السلام عليكم ورحمة الله تعالى وبركاته. مضى
+      من الزمن ما بين البعثة، وإرسال الرسل والرسائل 19 عاما، كانت الدعوة
+      الإسلامية فيها محصورة في الإطار الجغرافي المحدود في بلاد العرب. ما عدا
+      الهجرتين إلى الحبشة. وكانت ا. دورة تدريبية مستقبلية للمسلمين لمتابعة
+      الدعوة إلى الله في بلاد غير بلاد العرب. ول أمم تختلف في مواطن ها وألوانها،
+      ولغاتها ومصالحها وعقائدها. ونظام الحكم فيه. وكانت الدعوة في الإطار
+      الجغرافي المحدود في بلاد العرب مرتكزة على قاعدة المدينة النبوية ذات
+      الإمكانات المحدودة بشريا واقتصاديا وسياسيا وعسكريا. وبعد النضال دعوة استمر
+      ست سنوات، امتلكت المدينة النبوية إمكانيات جغرافية وبشرية واقتصادية وسياسية
+      وعسكرية، مكنت رسول الله صلى الله عليه وسلم من إرسال الرسل إلى الأمم و
+      الملوك و الأمراء في الإطار الجغرافي الأوسع، والأكثر بعدا عن المدينة. فب
+      صلح الحديبية، كان الاعتراف السياسي الكامل للزعامة العربية بالوجود الإسلامي
+      للدولة النبوية الإسلامية. وقد تحققت لها السيادة والاستقلالية المادية
+      والمعنوية، والصفة الدينية والتشريعية، والوجود الحقيقي على أرض العرب. فأمكن
+      لأي قبيلة من القبائل أن تقيم معها حلفا وعقدا. رأيتم كم كان فيه من فائدة
+      صلح الحديبية. لتشكل معا قوة دفاع مشترك، كيف لا، وقد ظهر للعرب مدى قوة
+      دعوة، أن النبي صلى الله عليه وسلم وصدقها،فمن س يتجاسر على قتال قريش، فضلا
+      عن الإنتصار عليهم المرة الأخرى. ومن الذي ستتنازل للصلح معه وهم منهم عزة
+      وبأسا بين العرب؟ قريش؟ ومن الذي سيتمكن من اليهود؟ الأمة التي كانت منبع
+      الرسالات و سلالة الأنبياء؟ إلا من كان الله ناصرا؟ فالمعنى الإجمالي لما
+      تحقق مع صلح الحديبية أن رسول الله صلى الله عليه وسلم قد امتلك القدرة على
+      مخاطبة الملوك و الأمراء، و دعوة الأمم إلى دين الله، وبيده قواعد. تابتة
+      راسخة تستطيع تحمل مسؤولية ذلك. وبالتالي أخد صلى الله عليه وسلم في توسيع
+      دائرة الدعوة خارج إطار العروبة و حدود الجزيرة العربية. فتبين لهم، بل و
+      لجميع الأمم هموم الرسالة و انتفاء التحديد المكاني الذي أعلن القرآن في قوله
+      تعالى وما أرسلناك إلا كافة للناس. و قوله تعالى يا أيها الناس إني رسول الله
+      إليكم جميعا في أواخر السنة السادسة للهجرة إلى رجع رسول الله صلى الله عليه
+      وسلم من الحديبية، كتب إلى الملوك، يدعوهم إلى الإسلام. ولما أراد أن يكتب
+      إلى هؤلاء الملوك، قيل له إنهم لا يقبلون إلا وعليه خاتم، فاتخذ النبي صلى
+      الله عليه وسلم خاتما من فضة، نقاشه محمد رسول الله. واختار من أصحاب. ه رسلا
+      لهم معرفة وخبرة، وأرسلهم إلى الملوك. فكتب النبي صلى الله عليه وسلم إلى
+      النجاشي ملك الحبشة، وكتب إلى المقوقص ملك مصر والإسكندرية. فأخذ المقوقس
+      كتاب النبي صلى الله عليه وسلم. فجعله في حق من عاج، وختم عليه، ثم أكرم
+      حامله، وبعث معه إلى النبي صلى الله عليه وسلم ب جاريتين، لهما مكان في القبة
+      عظيم، و بكسوة، و أهدى إليه بغلة ليركبها، وكتب النبي صلى الله عليه وسلم إلي
+      كسرى. ملك فارس تمزقه كسر. ولما بلغ ذلك. رسول الله صلى الله عليه وسلم قال
+      مزق الله ملكه، وهو ما حصل بعد ذلك. وكتب كذلك إلى قيصر ملك الروم. جاء فيه
+      بسم الله الرحمان الرحيم أن محمد عبد الله ورسوله إلى هرقل عظيم الروم، سلام
+      على من اتبع الهدى. أسلم. تسلم. أسلم. يؤتك الله أجرك مرتين. فإن توليت فإن
+      عليك إثم لارسين. يا أهل الكتاب، تعالوا إلى كلمة سواء بيننا وبينكم. هل لا
+      نعبد إلا الله ولا نشرك به شيئا، ولا يتخذ بعضنا بعضا أربابا من دون الله؟
+      فإن تولوا فقولوا اشهدوا بأن مسلمون. وقد أرسله رقا إلى أبي سفيان بن حرب. في
+      ركب من قريش، وكان التجار أ بالشام. ثم قال أول ما سألني عنه أن. أن قال كيف
+      نسبه فيكم؟ فقلت هو فينا ذو نسب. قال فهل قال هذا القول منكم أحد قط قبله؟قلت
+      لا. قال فهل كان من آبائه من ملك؟ قلت له. قال فأشرف الناس اتبعو؟ أم ضعفاء؟
+      هم؟قلت بال ضعفاء هم؟قال أي زيدون أم ينقصون؟ قلت بلي زيدون. قال فهل يرتد
+      أحد منهم؟ سخطى لدينه بعد أن يدخل فيه؟ قلت لا. قال فهل تتهمونه بالكذب قبل
+      أن يقول ما قال؟ قلت له. قال فهل يغدر؟ قلت له ونحن منه في مد، في في مدة لا
+      ندري ما هو فاعل فيها،قال ولم تمكنني كلمة ادخلو فيها شيئا غير هذه الكلمة.
+      قال فهل قاتلت موه؟ قلت نعم. قال فكيف كان قتالكم إياه؟ قلت الحرب بيننا
+      وبينه سجال، ينال منا، وننال منا. قال ماذا يأمركم؟ قلت يقول عبد الله وحدة
+      ولا تشرك به شيئا، واترك ما يقول آباؤكم، ويأمرنا بالصلاة والصدق والعفاف
+      والصلة. فقال ترجمان؟ قل له سألتك عن نسبه، فذكرت أنه فيكم دون سب، وكذلك
+      الرسل تبعث في نسب من قومها. وسعادتك؟ هل قال أحد منكم هذا القول قبله؟ فذكرت
+      أن لاعب قلت لو كان أحد قال هذا القول قبله، لقلت رجل يتأسى بقول قيل قبله. و
+      سألتك هل كان من آبائهم نملك؟ فذكرت أن لا. فقلت لو كان من آبائهم نملك، قلت
+      رجل يطلب ملكا بيه. و سألتك هل كنت تتهمونه بالكذب قبل أن يقول ما قال؟ فذكرت
+      أن لا. فقد. أعرف أنه لم يكن ليذر الكذب على الناس، ويكذب على الله، وسألت ك
+      أشراف الناس، اتبعو أم ضعفاء هم؟ فذكرت أن ضعفاء هم تبعوه. وهم أتباع الرسل.
+      وسألت كايزيدو نعم، ينقصون؟ فذكرت أنهم يزيدون، و كذلك أمر الإيمان حتى يتم.
+      وسألت كا يرتد أحدا سقطة لدينه بعد أن يدخل فيه فذكرت أن لا، وكذلك الإيمان
+      حين تخالط بشاشته القلوب، وسألتك هل يغدر؟ ذكرت أن لا، وكذلك الرسل لا تغدر.
+      و سألتك بماذا يأمر؟ ذكرت أنه يأمركم أن تعبد الله، ولا تشرك به شيء، و
+      ينهاكم عن عبادة الأوثان. ويأمركم بالصلاة والصدق والعفاف، فإن كان ما تقول
+      حقا. فسي ملك موضع قدمي هاتين. وقد كنت أعلم أنه خارج، ولم أكن أظن أنه منكم.
+      فلو أني أعلم أني أخلص إليه. ل تجشمت لقاء. ولو كنت عنده ل. غسلت عن قدميه.
+      ثم دعا بكتاب رسول الله صلى الله عليه وسلم فقرأه، فلما فرا من قراءة الكتاب
+      ارتفعت الأصوات عنده، وكثر اللغط، وأمر بنا، فأخرجنا، قال فقلت لأصحابي حين
+      أخرجنا. لقد أمر أمر ابن أبي كبشه. إنه لا يخافه ملك بني الأصفر. فما زالت،
+      فما زلت موقنا بأمر رسول الله صلى الله عليه وسلم أنه سيظهر حتى أدخل الله
+      عليه الإسلام. وتعد إرسال الرسل خطوة ونقطة تحول هامة في تاريخ العرب
+      والإسلام، ليس لأن الرسول صلى الله عليه وسلم سوف يوحد عرب الجزيرة العربية
+      تحت راية الإسلام فحسب. ولكن لأن هؤلاء العرب بعد أن اعتنقو الإسلام وتمثل
+      رسالة السماء و غيط بمحمل الدعوة الإسلامية إلى البشرية كافة،ويشير المنهج
+      النبوي في دعوة الزعماء والملوك، إذا ما يجب أن تكون عليه وسائل الدعوة. فإلى
+      جانب دعوة الأمراء والشعوب، اختار الرسول صلى الله عليه وسلم أسلوبا جديدا من
+      أساليب الدعوة، وهو مراسلة البنوك ورؤساء القبائل. وكان ل أسلوب فيس الرسائل
+      إلى الملوك و الأمراء أثر بارز في دخول بعضهم الإسلام، وإظهار الود من البعض
+      الآخر. كما كشفت هذه الرسائل مواقف بعض الملوك الأمراء من الدعوة الإسلامية
+      ودولتها في المدينة. وبذلك. حققت هذه الرسائل نتائج كثيرة. واستطاعت الدولة
+      الإسلامية من خلال ردود الفعل المختلفة تجاه الرسائل، أن تنتهج نهجا سياسيا
+      وعسكريا واضحا ومتميزا، أما بخصوص. إعداد تأهيل الرسل، فإن الرسل تحتاج إلى
+      معرفة. طيب بأحوال الأمم التي سيبعثون إليهم، ولغته، ولغات تخاطبهم، وأعرافهم
+      الدبل الدبلوماسية. وعقائدهم التي يدينون بها وأحوالهم السياسية و المعاشية،
+      وأخلاقهم العامة، والطرق التي يمكن عبورها للوصول إليهم. كذلك تعلم اللغات
+      الأجنبية قد أمر رسول الله صلى الله عليه وسلم الرسل قبل بعثهم إلى الملوك و
+      الأمراء، بتعلم لغات الأقوام التي سيرسلهم إليهم. وكان عمر بن أمية ضمري يعلم
+      لغة الحبشة. و دحية بن خليفة الكلبي يعلم لغة الروم. و حاطب بن أبي بلسعة
+      يعلم لغة القبط. عبد الله بن حذافة السهمي يعلم لغة الفرس. كان زايدا من ثابت
+      ترجمان رسول الله صلى الله عليه وسلم، وكاتب رسائله، وقارئ الرسائل الواردة
+      إلى النبي صلى الله عليه وسلم. وكل رسول من الرسل يعلم لغة القوم الذين س
+      يبلغهم رسالة رسول الله صلى الله عليه وسلم. كذلك كان لهم فصاحة اللسان، وحسن
+      البيان، وقوة الحجة، و. وفور العقل في جميع الرسل. فكانت لهم أيضا الهيئة
+      واللياقة في الصورة والمظهر. من رسل رسول الله صلى الله عليه وسلم؟ دحية بن
+      خليفة، الكلب الذي كان ذو هيئة ولياقة، تشابه هيئة لياقة الروم، كان جميل
+      الصورة، حسن المظهر، عالما بطبائع الروم. وكان بالكلب يسكنون أطراف الشام،
+      وكانت الشام تحت حكم الروم، يجيد دحية لغتهم، ويعرف عاداتهم وأعرافهم، وكان
+      عمرو بن أمية ضمريش بيه الهيئة بال أح باش، وكانت أمه حبشية ويجيد لغة
+      الأحباش. وربما كان على معرفة مباشرة بالن جا شي، الذي أمضى زمنا من حياته
+      عبدا لرجل من بني ضمرة، يرعى له الغنم. وكان عبد الله ابن آفة يجيد اللغة
+      الفارسية. ويتردد كثيرا على بلاد فارس وبلاد كسرى. مما جعله ذا بصيرة بأحوال
+      الفرس. وكان صليت بن عمر يختلف إلى اليمامة، ويعلم أمورها وأحوالها. ففي
+      مواصفات الرسل، فقد بعث الرسول صلى الله عليه وسلم رئيس رسائله إلى كسرى
+      وقيصر، و المقوقص و النجا شي، والحارث بن أبي شمر الغساني، وحوض بن علي
+      الحنفي، وهذه الرسائل تحمل نفس الهدف، ولكنها تختلف في الشكل. ففيها الدعوة
+      إلى أهل الكتاب و إلى أهل المجوس، وإلى المشركين العرب، و مما يلاحظ فيها
+      الاحترام الشديد يبديه رسول الله صلى الله عليه وسلم لمن يخاطبه في جله،
+      ويعظم احتراما. لي مكانته في قومه. فيقول إلى عظيم الروم إلى عظيم الفرص، إلى
+      عظيم القبط، هذه صفات رسائله صلى الله عليه وسلم. وكذلك وضوح النص، عدم وجود
+      لبس أو غموض فيه. والحرص على فتح الحوار مع المرسل إليه، وتشجيعه على
+      الإيمان. وفي رسائله، تحميل. المسؤولية؟ آه راعيته حمله مسؤولية رعيته.
+      واحترام مكانته في نفسه، وحرصه على ملكيته، فلا ينازع عليها إذا آمن بالله
+      وأسلم. تجرد رسول الله صلى الله عليه وسلم عن كل مظاهر الملك والعظم في راس
+      أإله، وتعريفه بنفسه أنه عبد الله ورسوله، وفي ذلك دلالة واضحة على أن
+      العبودية لله وحدة. كذلك انسجام نصوص الكتب والرسائل مع الهدف المطلوب
+      ووحدتها الموضوعية. فهي مجرد عن معالجة مشكلات شخصية أو خلافات سياسية. و
+      موضوعه الهادفه والوحدانية لله سبحانه وتعالى. واعتماد طريقة الملوك والأمراء
+      في خط من؟وحافظة لتثبيت صحة المصدر. وضمان سلامة الرسالة. وهكذا، فإن رسائل
+      النبي صلى الله عليه وسلم إلى أمراء العرب و الملوك المجاورين لبلاده،
+      تعتبرنقطة تحول في سياسة دولة الرسول الخارجية. فعظم شأنها، وأصبحت لها مكانة
+      دينية وسياسية بين الدول. وذلك قبل فتح مكة. كما أن هذه السياسة مهدت لتوحيد
+      الرسول صلى الله عليه وسلم لسائر أنحاء بلاد العرب في عام الوفود. إلى هنا،
+      نكون قد أنهينا. درسنا. دمتم في رعاية الله، السلام عليكم ورحمة الله تعالى
+      وبركاته.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

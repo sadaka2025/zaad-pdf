@@ -1,168 +1,342 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس التاسع</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/fiqh/ec9fiqhs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس التاسع</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/fiqh/ec9fiqhs1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent31">الدرس التاسع</h1>
-<p id="sent32">الحمد لله الذي خلق الإنسان وعلمه، ورفع قدر العلم وعظمه، ووفقا لا تفقه في دينه من اختاره، وفهمه، أحمده حمدا يعصم من نقمه، ويتكفل بدوام نعمه، والصلاة والسلام على سيدنا محمد خير الأنام، وعلى آله وأصحابه الكرام، اللهم يا رب لا علم لنا إلا ما علمتنا. و لا فهم لنا إلا ما فهمتنا. ف نسألك اللهم علما وإخلاصا في الدين، ووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد ك الحسنة يا كريم أمين. مرحبا بكم في حصة جديدة. آه نتكلم فيها وندخل الحديث في الكلام فيها على باب الصيام. وأول ما نستهل به الحديث في باب الصيام. يقول أبن عاشر رحمه الله صيام شهررمضان وجبا صيام شهررمضان وجب، أي وجب صيام شهر رمضان بالكتاب والسنة والإجماع. فمن جحد. ه فهو كافر. ومن أقر بوجوب الصيام؟ ولكنه. ومن أقرب جو بوجوبه؟ و أفطر فإنه يؤدب، إلا إن جاء مست فتيا. فلا. ف la يؤدب. لماذا؟ لأنه ربما جاء يسأل عن ااا. عن كونه أفطر، أقر بوجوبه، ولكنه أفطر. جا. جا يص. ختي يسأل عن حكم؟من يعتق؟ من يقول بفرضية الصيام، لكنه. لكنه أفطر فيه، فجاء يسأل عن حكم ذلك، هل يؤدبه؟ قيل لا يؤدب. ثم قال كتاب الصيام صيام شهر رمضان وجد. إذن فرض صيام رمضان في السنة الثانية من الهجرة لليلتين خلتا من شعبان لليلتين خلتا. من شعبان؟ إذا حكم مسألة أخرى، حكم من امتنع من صيام رمضان. ما حكمه؟إذن؟ فمن نجح ده فهو كافر، فمن قال إنه لا وجود للصيام، ولا لفرضية الصيام فإنه كافر، ومن أقر؟ أو من باب أ حرة، نقول يكفر. نعم، وإن كان كافرا. لكن نقول يكفر أي نسبه إلى الكفر نسبة. لماذا؟ حتى لا يستسهل وأن نلقي، وأن نخرج الناس من حضيرة المسلمين؟هكذا؟ نعم، وإن كان هو كافر نقول يكفر، أين؟ نسبه؟ إلى الكفر نسبة مع انه كافر؟ لأن كلمة كافر ليست بالأمر الهين، فليس بالأمر الهين أن تخرج إنسان من حظيرة المسلمين، قال فنجح ده فهو كافر، ومن أقرب وجوبه وامتنع من صوم. ه. فإنه يؤدب إن ظهر عليه، لا، إن جاء مستفت يا، فلا يؤدب إذن كما قلنا سابقا من أف ترا من أقرب وجوب صوم رمضان، ولكنه أفطر. فإن الحاكمة يؤدبه. ف التأديب هو من خصوصيات ولي الأمر. نعم. ولكن إن جاء مستفت يا قا أفطر، أقر بوجوب رمضان، ولكنه أفطر فيه، وجاء يستفتي عن فعل هذا، وعن هذا الحكم، حيث أنه أقرب وجوب صوم رمضان، ولكنه أفطر فيه. ما حكمه؟ هل أدب هنا؟ لا يؤدب؟ قال واختلف في كفر الممتنع يمن صومه، واختلفا في كفر الممتنع من من صوم؟ ه نعم، إذا المشهور أن نفرق بين من؟ إنت نعم نصوم. ه جحودا فهو كافر، ومن امتنع عن أداء وكسلا من غير جحود، فهو فاسق لا يكفر. اذن، من امتنع عن صوم رمضان إما أن يكون جحودا، وإما أن يكون كسلا. فمن يمتنع عن صوم رمضان جحودا. فهو كارفور، وأما من امتنع عن صوم رمضان كسلا. و ااا غن ادا من غير جحول، فهذا هو فاسق لا يكفر. قالت ما علم أن الذي يجب عليه صوم رمضان هو المكلف نعم، والمكلف هو المسلم البالغ العاقل، الذي بلغته دعوة النبي صلى الله عليه وسلم. ذكرا كان أو أنثى، حرا أو عبدا، القادر الحاضر، قادر على الصيام، حاضر غير مسافر. أو المسافر دون مسافة القصر، القصر، سفرا مباحا، إذا كان هو مسافر، ولكن سفر هذا دون مسافة القصر، فإنه يجب عليه الصيام إذا كان مسافر دون مسافة القصر كما كن كما ذكرنا في باه. سابقا، أن مسافة القصر هي ما تساوي 84 كم، إذا قالت نعلم أن الذي يجب عليه صوم رمضان هو المكلف ذكرا كان أو أنثى، حرا أو عبدا، القادر الحاضر، أو المسافر دون مسافة القصر سفرا مباحا. الآن سيعرف لنا الصوم لغة، قال و الصوم في اللغة، إذا هذا من كلام إبن المؤقت و الصوف اللغة مطلق الإمساك. نعم، مطلق الإمساك عن الشيء إني نذرت للرحمن صوما، أي أمسكت عن الكلام. السيدة مريم عليها السلام، قال وفي الشرع و تعريف الصوم في الشرع هو الإمساك عن شهوتي البطن والفرج، أو ما يقوم مقامهما يوما كاملا بنية التقرب، شهوة البطن هي الأكل والشرب، والفرج هو الجنا عوم، قال هو الإنسان. وعن شهوة البطن شهوتي البطن والفرج، أو ما يقوم مقامهما يوما كاملا بنية التقرب، أي بنية التقرب إلى الله تبارك وتعالى، قال والذي يقوم مقام الفم، الأنف و الأذن والعين، فإن الواصل من ذلك للجوف. أو الحلق، فهو مفطر لا محالة إذن، ويقوم مقام الفرج لنسلم وجب للفطر. إذا الآن سيذكر لنا إبن عاشر مسألة أخرى وهي اال الصيام المستحب بعد أن ذكر لنا الصوم الواجب. الآن سيذكر لنا الصيام المستحب، ثم قال في رجب شعبان صوم نجبة، كتسع حجة، و أحرار الآخر، كذا المحرم، وأخرى العاشر. في رجب شعبان، صوم الندبة qu'est-ce، حجة أو حجة، كلاهما يجوز حجة أو حجة منفتح. كلاهما يجوز كتصحح حجة أو حجة وأخرى الآخر كذا المحرم، وأخرى العاشر. قال في رجب فأما الصوم في رجب ا، وفي شعبنا صو من دبا، أين ذهب؟الصوم في رجب وفي شعبان؟ نعم، كما يندب صوم تسع 9 ذو الحجة. و أحرار الآخرون. أيوة، أحرى صوم اليوم الآخر من تسعة من 9 ذو الحجة، ألا و هو يوم عرفة. أي لا سيما قالك تسع حجة أو حجة و أ حرة؟ نعم، والآخر، أي لاسيما صوم اليوم الآخر، وهو التاسع منذ الحجة، وهو الذي ااا يناسب يوم عرفة، قال كذا المحرم أ حرة العاشر، أي كذا يندب. قوم أول يوم من المحرم. شهر الله المحرم قالو أحرار العاشر أي ولا سيما صوم اليوم العاشر منه، وهو يوم عاشوراء à لما ورد أنه يكفر السنة الماضية، إذا اليوم العاشر من من شهر الله المحرم، قيل أنه يكفر السنة الماضية. آه، و أما اليوم الآخر من. من. من 9 ذو الحجة، وهو الذي وافق يوم عرفة، وهو يكفر السنة التي قبله، والسنة التي بعده نعم، و يوم عرفة هو اكد الأيام في الصوم. من 90 لحدة، إذن قال في رجب شعبان صوم الندب كتصحح، je حجة، وأخرى الآخر كذا المحرم، وأخرى العاشر، و إذا قال. يستحب الصوم في شهري رجب وشعبان، كما يستحب صوم الأيام التسعة الأولى من شهر ذي الحجة. ويتأكد استحباب صوم الأخير الأخير منها و هو يوم عرفة وكذا يوم التروية وهو ثامن ذي الحجة. كما يستحب صيام المحرم كله، ويتأكد استحباب صوم اليوم صوم العاشر منهم، وهو عاشوراء. ا. نعم، كما يستحب في عاشوراء عند بعض العلماء التوسعة في الإنفاق على العيال، ولكن بشرط أن يكون ذاك بغير إسراف، إذن هنا نكون قد وصلنا إلى ختام حصتنا، شكر الله لكم حسن إصغاء كم و استماعكم، وجزاكم الله خيرا، والسلام عليكم ورحمة الله.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent31">الدرس التاسع</h1>
+    <p id="sent32">
+      الحمد لله الذي خلق الإنسان وعلمه، ورفع قدر العلم وعظمه، ووفقا لا تفقه في
+      دينه من اختاره، وفهمه، أحمده حمدا يعصم من نقمه، ويتكفل بدوام نعمه، والصلاة
+      والسلام على سيدنا محمد خير الأنام، وعلى آله وأصحابه الكرام، اللهم يا رب لا
+      علم لنا إلا ما علمتنا. و لا فهم لنا إلا ما فهمتنا. ف نسألك اللهم علما
+      وإخلاصا في الدين، ووفقنا اللهم توفيق الصالحين، وعد علينا بعوائد ك الحسنة
+      يا كريم أمين. مرحبا بكم في حصة جديدة. آه نتكلم فيها وندخل الحديث في الكلام
+      فيها على باب الصيام. وأول ما نستهل به الحديث في باب الصيام. يقول أبن عاشر
+      رحمه الله صيام شهررمضان وجبا صيام شهررمضان وجب، أي وجب صيام شهر رمضان
+      بالكتاب والسنة والإجماع. فمن جحد. ه فهو كافر. ومن أقر بوجوب الصيام؟ ولكنه.
+      ومن أقرب جو بوجوبه؟ و أفطر فإنه يؤدب، إلا إن جاء مست فتيا. فلا. ف la يؤدب.
+      لماذا؟ لأنه ربما جاء يسأل عن ااا. عن كونه أفطر، أقر بوجوبه، ولكنه أفطر.
+      جا. جا يص. ختي يسأل عن حكم؟من يعتق؟ من يقول بفرضية الصيام، لكنه. لكنه أفطر
+      فيه، فجاء يسأل عن حكم ذلك، هل يؤدبه؟ قيل لا يؤدب. ثم قال كتاب الصيام صيام
+      شهر رمضان وجد. إذن فرض صيام رمضان في السنة الثانية من الهجرة لليلتين خلتا
+      من شعبان لليلتين خلتا. من شعبان؟ إذا حكم مسألة أخرى، حكم من امتنع من صيام
+      رمضان. ما حكمه؟إذن؟ فمن نجح ده فهو كافر، فمن قال إنه لا وجود للصيام، ولا
+      لفرضية الصيام فإنه كافر، ومن أقر؟ أو من باب أ حرة، نقول يكفر. نعم، وإن كان
+      كافرا. لكن نقول يكفر أي نسبه إلى الكفر نسبة. لماذا؟ حتى لا يستسهل وأن
+      نلقي، وأن نخرج الناس من حضيرة المسلمين؟هكذا؟ نعم، وإن كان هو كافر نقول
+      يكفر، أين؟ نسبه؟ إلى الكفر نسبة مع انه كافر؟ لأن كلمة كافر ليست بالأمر
+      الهين، فليس بالأمر الهين أن تخرج إنسان من حظيرة المسلمين، قال فنجح ده فهو
+      كافر، ومن أقرب وجوبه وامتنع من صوم. ه. فإنه يؤدب إن ظهر عليه، لا، إن جاء
+      مستفت يا، فلا يؤدب إذن كما قلنا سابقا من أف ترا من أقرب وجوب صوم رمضان،
+      ولكنه أفطر. فإن الحاكمة يؤدبه. ف التأديب هو من خصوصيات ولي الأمر. نعم.
+      ولكن إن جاء مستفت يا قا أفطر، أقر بوجوب رمضان، ولكنه أفطر فيه، وجاء يستفتي
+      عن فعل هذا، وعن هذا الحكم، حيث أنه أقرب وجوب صوم رمضان، ولكنه أفطر فيه. ما
+      حكمه؟ هل أدب هنا؟ لا يؤدب؟ قال واختلف في كفر الممتنع يمن صومه، واختلفا في
+      كفر الممتنع من من صوم؟ ه نعم، إذا المشهور أن نفرق بين من؟ إنت نعم نصوم. ه
+      جحودا فهو كافر، ومن امتنع عن أداء وكسلا من غير جحود، فهو فاسق لا يكفر.
+      اذن، من امتنع عن صوم رمضان إما أن يكون جحودا، وإما أن يكون كسلا. فمن يمتنع
+      عن صوم رمضان جحودا. فهو كارفور، وأما من امتنع عن صوم رمضان كسلا. و ااا غن
+      ادا من غير جحول، فهذا هو فاسق لا يكفر. قالت ما علم أن الذي يجب عليه صوم
+      رمضان هو المكلف نعم، والمكلف هو المسلم البالغ العاقل، الذي بلغته دعوة
+      النبي صلى الله عليه وسلم. ذكرا كان أو أنثى، حرا أو عبدا، القادر الحاضر،
+      قادر على الصيام، حاضر غير مسافر. أو المسافر دون مسافة القصر، القصر، سفرا
+      مباحا، إذا كان هو مسافر، ولكن سفر هذا دون مسافة القصر، فإنه يجب عليه
+      الصيام إذا كان مسافر دون مسافة القصر كما كن كما ذكرنا في باه. سابقا، أن
+      مسافة القصر هي ما تساوي 84 كم، إذا قالت نعلم أن الذي يجب عليه صوم رمضان هو
+      المكلف ذكرا كان أو أنثى، حرا أو عبدا، القادر الحاضر، أو المسافر دون مسافة
+      القصر سفرا مباحا. الآن سيعرف لنا الصوم لغة، قال و الصوم في اللغة، إذا هذا
+      من كلام إبن المؤقت و الصوف اللغة مطلق الإمساك. نعم، مطلق الإمساك عن الشيء
+      إني نذرت للرحمن صوما، أي أمسكت عن الكلام. السيدة مريم عليها السلام، قال
+      وفي الشرع و تعريف الصوم في الشرع هو الإمساك عن شهوتي البطن والفرج، أو ما
+      يقوم مقامهما يوما كاملا بنية التقرب، شهوة البطن هي الأكل والشرب، والفرج هو
+      الجنا عوم، قال هو الإنسان. وعن شهوة البطن شهوتي البطن والفرج، أو ما يقوم
+      مقامهما يوما كاملا بنية التقرب، أي بنية التقرب إلى الله تبارك وتعالى، قال
+      والذي يقوم مقام الفم، الأنف و الأذن والعين، فإن الواصل من ذلك للجوف. أو
+      الحلق، فهو مفطر لا محالة إذن، ويقوم مقام الفرج لنسلم وجب للفطر. إذا الآن
+      سيذكر لنا إبن عاشر مسألة أخرى وهي اال الصيام المستحب بعد أن ذكر لنا الصوم
+      الواجب. الآن سيذكر لنا الصيام المستحب، ثم قال في رجب شعبان صوم نجبة، كتسع
+      حجة، و أحرار الآخر، كذا المحرم، وأخرى العاشر. في رجب شعبان، صوم الندبة
+      qu'est-ce، حجة أو حجة، كلاهما يجوز حجة أو حجة منفتح. كلاهما يجوز كتصحح حجة
+      أو حجة وأخرى الآخر كذا المحرم، وأخرى العاشر. قال في رجب فأما الصوم في رجب
+      ا، وفي شعبنا صو من دبا، أين ذهب؟الصوم في رجب وفي شعبان؟ نعم، كما يندب صوم
+      تسع 9 ذو الحجة. و أحرار الآخرون. أيوة، أحرى صوم اليوم الآخر من تسعة من 9
+      ذو الحجة، ألا و هو يوم عرفة. أي لا سيما قالك تسع حجة أو حجة و أ حرة؟ نعم،
+      والآخر، أي لاسيما صوم اليوم الآخر، وهو التاسع منذ الحجة، وهو الذي ااا
+      يناسب يوم عرفة، قال كذا المحرم أ حرة العاشر، أي كذا يندب. قوم أول يوم من
+      المحرم. شهر الله المحرم قالو أحرار العاشر أي ولا سيما صوم اليوم العاشر
+      منه، وهو يوم عاشوراء à لما ورد أنه يكفر السنة الماضية، إذا اليوم العاشر من
+      من شهر الله المحرم، قيل أنه يكفر السنة الماضية. آه، و أما اليوم الآخر من.
+      من. من 9 ذو الحجة، وهو الذي وافق يوم عرفة، وهو يكفر السنة التي قبله،
+      والسنة التي بعده نعم، و يوم عرفة هو اكد الأيام في الصوم. من 90 لحدة، إذن
+      قال في رجب شعبان صوم الندب كتصحح، je حجة، وأخرى الآخر كذا المحرم، وأخرى
+      العاشر، و إذا قال. يستحب الصوم في شهري رجب وشعبان، كما يستحب صوم الأيام
+      التسعة الأولى من شهر ذي الحجة. ويتأكد استحباب صوم الأخير الأخير منها و هو
+      يوم عرفة وكذا يوم التروية وهو ثامن ذي الحجة. كما يستحب صيام المحرم كله،
+      ويتأكد استحباب صوم اليوم صوم العاشر منهم، وهو عاشوراء. ا. نعم، كما يستحب
+      في عاشوراء عند بعض العلماء التوسعة في الإنفاق على العيال، ولكن بشرط أن
+      يكون ذاك بغير إسراف، إذن هنا نكون قد وصلنا إلى ختام حصتنا، شكر الله لكم
+      حسن إصغاء كم و استماعكم، وجزاكم الله خيرا، والسلام عليكم ورحمة الله.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

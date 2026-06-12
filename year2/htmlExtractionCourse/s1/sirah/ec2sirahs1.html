@@ -1,168 +1,383 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الثاني السيرة</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/sirah/ec2sirahs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الثاني السيرة</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/sirah/ec2sirahs1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent17">الدرس الثاني السيرة</h1>
-<p id="sent18">بسم الله الرحمن الرحيم، الحمد لله وكفى والصلاة والسلام على النبي الكريم المصطفى، أحبتي في الله حينما كنتم السلام عليكم ورحمة الله تعالى وبركاته. نجدد اللقي بكم ثانيا، وسيكون مستهل حديثنا حول بداية الأحداث والوقائع في السنة الخامسة للهجرة. مع أحداث السيرة النبوية، وفي شهر ربيع الأول سنة خمسة هجري الموافق لشهر أوت 26 و600 ميلادي حدثت غزوة دومة الجندل. تحركت القوات الإسلامية بقيادة رسول الله صلى الله عليه وسلم نحو قبيلة قضاة، وهي على حدود قبائل الغساسنة الموالين للدولة الرومية بيزنطة. والمشرفة على سوق دومة الجندل الشهير. تقع دوم على بعد 600 كم شمال المدينة النبوية. وإنما سميت بذلك نسبة إلى حصن بناه هدوما ابن إسماعيل، أما الجندل فهي الحجارة، ومفرده جندلة. وعلى هذا يكون معنى اسم المنطقة الحصن الذي بناه دوما في منطقة مليئة بالحجارة. وكان يضرب المثل بمناعة حصن دوما وشدته. وصلت الأنباء إلى المدينة النبوية المشرفة. بتجمع بعث قبائل المشركين عند دومة الجندل للإغارة على القوافل التي تمر بهم. والتعرض لمن في القافلة بالأذى والظلم، ثم الاعتداء على المدينة لاحقا، ومن الملاحظ أن دومة الجندل تعد بلادا نائية بالنسبة للمدينة النبوية لأنها تقع على الحدود بين الحجاز والشام. فحتى لو أن المسلمين أغفلوا أمرها، وسكتوا على وجود هذا التجمع فيها، ما لامهم أحد، ولا أذرم هذا التجمع في شيء على المدى القريب. ولكن النظرة السياسية البعيدة والعقلية العسكرية الفذة، أوجبت على المسلمين أن يتحركوا لفض هذا التجمع فورا، لما يلي أولا السكوت على هذا التجمع، وما شكله يؤدي بلا شك إلى تطوره واستفحاله. ثم يؤدي بعد ذلك إلى إضعاف قوة المسلمين أو إسقاط هيبتهم. وهو الأمر الذي يجاهدون من أجل استرداده. ثانيا وجود مثل هذا التجمع في الطريق إلى الشام قد يؤثر على الوضع الاقتصادي للمسلمين، فلو أن المسلمين سكتوا على هذا التجمع لتعرضت قوافلهم أو قوافل القبائل التي تحتمي بهم للسلب والنهب. مما يضعف الاقتصاد ويؤدي إلى حالة من التذمر والاضطراب. ثالثا فرض نفوذ المسلمين على هذه المنطقة كلها. وإشعار سكانها بأنهم في حمايتهم وتحت مسؤوليتهم، لذلك فهم يؤمنون لهم الطرق، ويحمون لهم تجارتهم، ويحاربون كل إرهاب من شأنه أن يزعجهم أو يعرضهم للخطر. راعبي عن حرمان قريش من أي حليف تجاري قد يمدها بما تحتاج من التجارة. وصرف أنظارهم عن هذه المنطقة التجارية المهمة، لأن دور الدولة الإسلامية بهذه القوة يؤثر على نفسية قريش العدو الأول للدولة الإسلامية. ويجعلها تخشى المسلمين على تجارتها. خامسا الحرص على إزالة الرهبة النفسية عند العرب الذين ما كانوا يحلمون بمواجهة الروم. والتأكيد عمليا للمسلمين بأن رسالتهم للعالم أجمع، وليست مقصورة على العرب. خرج رسول الله صلى الله عليه وسلم في ألف من أصحابه، وكان يسير الليل ويكمن النهار، حتى يخفي مسيرة، ولا تشيعوا أخباره، وتنقل أسراره. وتتعقبه عيون الأعداء، وسار حتى دنا من القوم عند إذا تفرقوا، ولم يلقى رسول الله منهم أحدا، فقد ولوا مدبرين وتركوا أنعامهم وماشيتهم غنيمة باردة للمسلمين، وأسرى المسلمين رجلا منهم، وأحضروه إلى رسول الله صلى الله عليه وسلم، فسأله عنهم. فقال هربوا، هربوا لما سمعوا بأنك أخذت. نعمهم، فعرض عليه يا رسول الله صلى الله عليه وسلم، فأسلم وأقام بساحتهم أياما، وبعث البؤوث، وبث السرايا، وفرق الجيوش، فلم يصب منهم أحد. وعاد المسلمون إلى المدينة، وفي أثناء عودتهم، وادعى الرسول عويين بن حسن الفزاري، واستأذن عيين رسول الله صلى الله عليه وسلم في أن ترعى إبله. وغنمه في أرض قريبة من المدينة على 36 ميلا منها، وهو في حد ذاته الدليل قاطع على مواصلة إليه قوة المسلمين، وعلى شعورهم بالمسؤولية الكاملة تجاه تأمين الحياة للناس في هذه المنطقة. وأن هذه المناطق النائية كانت ضمن الدولة الإسلامية. وإن الدولة أصبحت منيعة، ليس في مقدور أحد أن يعتدي عليها. ولو كان ذلك فاصتاعت أحد، لكان هو عيين بن حصن نفسه الذي كان يغضب لغضبه. 10,000 مقاتل. كانت غزوة دومة الجندل بمنزلة إعلان عن دعوة الإسلام بين سكان البوادي الشمالية وأطراف الشام الجنوبية. في هذه السنة أيضا، وهي السنة الخامسة على اختلاف وقعت غزوة بني المصطلح، وبنى المصطلق بطن من خزاع ده الخامسة هجري قزوة دومة الجندل وغزوة بن المصطلب. وغزوة، وبنو المصطلح، كما قلنا بطن من خزاعة، والمستلق هو جده، واسمه جذيمة، واختلفوا في خزاعة، فمنهم من قال إنها قبيلة عدنانية، ومنهم من ذهب إلى إنها قبيلة قحطانية يمنية، والراجح ما ذهب إليه أكثر العلماء من أنها قبيلة قحطانية يمنية. وكان من أهم الأسباب لهذه الغزوة تأييد هذه القابلة لقريش. واشتراكها معها في معركة أحد ضد المسلمين ضمن كتلة الأحابيش التي اشتركت في المعركة تأييدا لقريش. وكذلك سيطرة هذه القبيلة على الخط الرئيسي المؤدي إلى مكة. فكانت حاجزا منيعا من نفوذ المسلمين إلى مكة، ثم إن الرسول صلى الله عليه وسلم بلغه أن بني المصطلق يجمعون له، وكان قائدهم الحارث ابن أبي ذرار ينظم جموعهم، فلما سمع بيهم خرج إليهم حتى لقيهم علماء من مياههم، يقال له المريسيع في 700 مقاتل، و30 فارسا، فأغار عليهم، فقتل مقاتلهم، وسبى ذراريهم، وأصاب يومئذ جوير يا بنت الحارث بن أبي زرار. وقسم رسول الله صلى الله عليه وسلم سبايا بني المصطلق، وكان من بين الأسرى جويرية بنت الحارث، وكانت بركة على قومها، وقد وقعت في سهم لثابت ابن قيس بن شماس، أو لابن عم له، فكاتبته على نفسها، وكانت امرأة حلوة ملاحة، كما قالت عائشة لا يراها أحد إلا أخذت بنفسه، فاتت رسول الله صلى الله عليه وسلم لتستعينه في كتابتها، قالت فوالله ما هو؟ أنعلى باب حجرتي، فكرهتها، وعرفت أنه سيرى منها ما رأيت، فدخلت عليه، فقالت يا رسول الله، أنا جوير، يا بنت الحارث بن أبي ضرار، سيد قومه، وقد أصابني من البلاء ما لم يخفى عليك، فوقعت في السهم لثابت ابن قيس بن شماس، أو لابن عم له، فكتبت على نفسي، فجئتك أستعينك على كتابة. قال فهل لك في خير من ذلك؟ قالت وما هو يا رسول الله؟ قال أقضي عنك كتابك وأتزوجك، قالت نعم يا رسول الله قد فعلت. قالت وخرج الخبر إلى الناس أن رسول الله صلى الله عليه وسلم قد تزوج جويري بنت الحارث. فقال الناس أصهار رسول الله صلى الله عليه وسلم، فأرسلوا ما بأيديهم، قالت فلقد أعتق بزواجه إياها 100 أهل بيت من بني المصطلح، فما أعلم امرأة أعظم بركة على قومها منها. وحيلوا هذا العتق الجماعي، وإزاء هذه الأريحية الفذة، دخلت القبيلة كلها في دين الله، فكان لهذا الزواج عدة أبعاد تحققت بإسلام قومها، وبذلك كثر سواد المسلمين، فكانت أما للمؤمنين رضي الله عنها، عالم بما تسمع، وعاملة بما تعلم، فقيها عابد تقية، ورعة، نقية الفؤاد، مضيئة العقل، مشرقة الروح. تحب الله ورسوله، وتحب الخير للمسلمين، وكانت أم المؤمنين الجويرية بنت الحارث رضي الله عنها من الذاكرين الله كثيرا، والذاكرات القانتات الصابرات في مجال مناجات الله تعالى، وتحميده وتقديسه وتسبيحه. فهذي أم المؤمنين جويرية، تحدثنا عن ذلك، فتقول إن النبي صلى الله عليه وسلم خرج من عندها بكرة حين صلى الصبح، وهي في مسجدها، ثم رجع بعد أن أضحى، وهي جالسة، فقال ما زلت على الحالة التي فارقتك عليها؟ قالت نعم، قال النبي صلى الله عليه وسلم لقد قلت بعدك أربع كلمات، ثلاث مرات، لو وزنت بما قلت منذ اليوم. لوزنتهن. سبحان الله وبحمده، عدد خلقه، ورضا نفسه، وزينة عرشه، ومداد كلماته وعندما المريسية كشف المنافقون عن الحقد الذي يضمرونه للإسلام والمسلمين. فكلما كسب الإسلام نصرا جديدا، ازدادوا غيظا على غيظهم وقلوبهم، تتطلع إلى اليوم الذي يهزم فيه المسلمون. لتشفى من الغل، وقد وقعت حادثة بين غلامين، أحدهما من المهاجرين، والآخر من الأنصار تشاجر، فاستغل رأس المنافقين الموقف لإحداث صدع، وشرخ بين المسلمين، قال زيد بن أرقم وهو شاهد عيان يحكي خبر ذلك، قال كنت في غزاة، فسمعت عبد الله بن أبي يقول لا تنفقوا على من عند رسول الله حتى ينفضوا من حوله. ولئن رجعنا من عنده ليخرجن الأعز منها الأذل. فذكرت ذلك لعمي، فذكره للنبي صلى الله عليه وسلم، فدعاني، فحدثته، فأرسل رسول الله صلى الله عليه وسلم إلى عبد الله بن أبي وأصحابه، فحلفوا ما قالوا، فكذبني رسول الله صلى الله عليه وسلم وصدقه، فأصابني، هم لم يصبني مثله قط. فجلست في البيت، فقال لعمي ما هردت إلى أن كذبك رسول الله صلى الله عليه وسلم ومقتك، فأنزل الله تعالى إذا جاءك المنافقون قالوا نشهد إنك لرسول الله والله يعلم إنك لرسوله، والله يشهد إن المنافقين لكاذبون، وكان لابن أبي بن سلول ولد مؤمن مخلص، يسمى عبد الله بن عبد الله بن أبي بن سلول. فلما علم بالأحداث ونزول الصورة، أتى رسول الله صلى الله عليه وسلم، فقال له يا رسول الله، بلغني أنك تريد قتل أبي بن سلول فيما بلغك عنه، فإن كنت فاعلا فمرني به، فأنا أحمل إليك رأسا. وهو ابنه، فوالله لقد علمت الخزرج ما كان بها من رجل أبر بوالده مني، وإني لا أخشى أن تأمر بي غيري فيقتله، فلا تدعني نفسي أنظر إلى قاتل أبي يمشي بين الناس، فأقتله، فأقتل رجلا مؤمنا بكافر، فأدخل النار، فقال رسول الله صلى الله عليه وسلم بل نترفق به. ونحسن صحبته ما بقي معنا، ثم لما انتصر المسلمون في المريسية، سعى المنافقون إلى إثارة العصبية بين المهاجرين وأنصار، فلما أخفقت المحاولة سعوا إلى إيذاء الرسول صلى الله عليه وسلم في نفسه وأهل بيته، فشن حربا نفسية مريرة من خلال حادثة الإفك التي اختلقوها، وذلك بعد أن فشل كيدون في المحاولة الأولى، لأ لإثارة النعرة الجاهلية، وسيكون درسنا القادم حول هذه الحادثة التي ألمت بالمسلمين بإذن الله تعالى. إلى هنا، نكون قد أنهينا. درسنا. دمتم في رعاية الله، السلام عليكم ورحمة الله.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent17">الدرس الثاني السيرة</h1>
+    <p id="sent18">
+      بسم الله الرحمن الرحيم، الحمد لله وكفى والصلاة والسلام على النبي الكريم
+      المصطفى، أحبتي في الله حينما كنتم السلام عليكم ورحمة الله تعالى وبركاته.
+      نجدد اللقي بكم ثانيا، وسيكون مستهل حديثنا حول بداية الأحداث والوقائع في
+      السنة الخامسة للهجرة. مع أحداث السيرة النبوية، وفي شهر ربيع الأول سنة خمسة
+      هجري الموافق لشهر أوت 26 و600 ميلادي حدثت غزوة دومة الجندل. تحركت القوات
+      الإسلامية بقيادة رسول الله صلى الله عليه وسلم نحو قبيلة قضاة، وهي على حدود
+      قبائل الغساسنة الموالين للدولة الرومية بيزنطة. والمشرفة على سوق دومة
+      الجندل الشهير. تقع دوم على بعد 600 كم شمال المدينة النبوية. وإنما سميت
+      بذلك نسبة إلى حصن بناه هدوما ابن إسماعيل، أما الجندل فهي الحجارة، ومفرده
+      جندلة. وعلى هذا يكون معنى اسم المنطقة الحصن الذي بناه دوما في منطقة مليئة
+      بالحجارة. وكان يضرب المثل بمناعة حصن دوما وشدته. وصلت الأنباء إلى المدينة
+      النبوية المشرفة. بتجمع بعث قبائل المشركين عند دومة الجندل للإغارة على
+      القوافل التي تمر بهم. والتعرض لمن في القافلة بالأذى والظلم، ثم الاعتداء
+      على المدينة لاحقا، ومن الملاحظ أن دومة الجندل تعد بلادا نائية بالنسبة
+      للمدينة النبوية لأنها تقع على الحدود بين الحجاز والشام. فحتى لو أن
+      المسلمين أغفلوا أمرها، وسكتوا على وجود هذا التجمع فيها، ما لامهم أحد، ولا
+      أذرم هذا التجمع في شيء على المدى القريب. ولكن النظرة السياسية البعيدة
+      والعقلية العسكرية الفذة، أوجبت على المسلمين أن يتحركوا لفض هذا التجمع
+      فورا، لما يلي أولا السكوت على هذا التجمع، وما شكله يؤدي بلا شك إلى تطوره
+      واستفحاله. ثم يؤدي بعد ذلك إلى إضعاف قوة المسلمين أو إسقاط هيبتهم. وهو
+      الأمر الذي يجاهدون من أجل استرداده. ثانيا وجود مثل هذا التجمع في الطريق
+      إلى الشام قد يؤثر على الوضع الاقتصادي للمسلمين، فلو أن المسلمين سكتوا على
+      هذا التجمع لتعرضت قوافلهم أو قوافل القبائل التي تحتمي بهم للسلب والنهب.
+      مما يضعف الاقتصاد ويؤدي إلى حالة من التذمر والاضطراب. ثالثا فرض نفوذ
+      المسلمين على هذه المنطقة كلها. وإشعار سكانها بأنهم في حمايتهم وتحت
+      مسؤوليتهم، لذلك فهم يؤمنون لهم الطرق، ويحمون لهم تجارتهم، ويحاربون كل
+      إرهاب من شأنه أن يزعجهم أو يعرضهم للخطر. راعبي عن حرمان قريش من أي حليف
+      تجاري قد يمدها بما تحتاج من التجارة. وصرف أنظارهم عن هذه المنطقة التجارية
+      المهمة، لأن دور الدولة الإسلامية بهذه القوة يؤثر على نفسية قريش العدو
+      الأول للدولة الإسلامية. ويجعلها تخشى المسلمين على تجارتها. خامسا الحرص على
+      إزالة الرهبة النفسية عند العرب الذين ما كانوا يحلمون بمواجهة الروم.
+      والتأكيد عمليا للمسلمين بأن رسالتهم للعالم أجمع، وليست مقصورة على العرب.
+      خرج رسول الله صلى الله عليه وسلم في ألف من أصحابه، وكان يسير الليل ويكمن
+      النهار، حتى يخفي مسيرة، ولا تشيعوا أخباره، وتنقل أسراره. وتتعقبه عيون
+      الأعداء، وسار حتى دنا من القوم عند إذا تفرقوا، ولم يلقى رسول الله منهم
+      أحدا، فقد ولوا مدبرين وتركوا أنعامهم وماشيتهم غنيمة باردة للمسلمين، وأسرى
+      المسلمين رجلا منهم، وأحضروه إلى رسول الله صلى الله عليه وسلم، فسأله عنهم.
+      فقال هربوا، هربوا لما سمعوا بأنك أخذت. نعمهم، فعرض عليه يا رسول الله صلى
+      الله عليه وسلم، فأسلم وأقام بساحتهم أياما، وبعث البؤوث، وبث السرايا، وفرق
+      الجيوش، فلم يصب منهم أحد. وعاد المسلمون إلى المدينة، وفي أثناء عودتهم،
+      وادعى الرسول عويين بن حسن الفزاري، واستأذن عيين رسول الله صلى الله عليه
+      وسلم في أن ترعى إبله. وغنمه في أرض قريبة من المدينة على 36 ميلا منها، وهو
+      في حد ذاته الدليل قاطع على مواصلة إليه قوة المسلمين، وعلى شعورهم
+      بالمسؤولية الكاملة تجاه تأمين الحياة للناس في هذه المنطقة. وأن هذه المناطق
+      النائية كانت ضمن الدولة الإسلامية. وإن الدولة أصبحت منيعة، ليس في مقدور
+      أحد أن يعتدي عليها. ولو كان ذلك فاصتاعت أحد، لكان هو عيين بن حصن نفسه الذي
+      كان يغضب لغضبه. 10,000 مقاتل. كانت غزوة دومة الجندل بمنزلة إعلان عن دعوة
+      الإسلام بين سكان البوادي الشمالية وأطراف الشام الجنوبية. في هذه السنة
+      أيضا، وهي السنة الخامسة على اختلاف وقعت غزوة بني المصطلح، وبنى المصطلق بطن
+      من خزاع ده الخامسة هجري قزوة دومة الجندل وغزوة بن المصطلب. وغزوة، وبنو
+      المصطلح، كما قلنا بطن من خزاعة، والمستلق هو جده، واسمه جذيمة، واختلفوا في
+      خزاعة، فمنهم من قال إنها قبيلة عدنانية، ومنهم من ذهب إلى إنها قبيلة
+      قحطانية يمنية، والراجح ما ذهب إليه أكثر العلماء من أنها قبيلة قحطانية
+      يمنية. وكان من أهم الأسباب لهذه الغزوة تأييد هذه القابلة لقريش. واشتراكها
+      معها في معركة أحد ضد المسلمين ضمن كتلة الأحابيش التي اشتركت في المعركة
+      تأييدا لقريش. وكذلك سيطرة هذه القبيلة على الخط الرئيسي المؤدي إلى مكة.
+      فكانت حاجزا منيعا من نفوذ المسلمين إلى مكة، ثم إن الرسول صلى الله عليه
+      وسلم بلغه أن بني المصطلق يجمعون له، وكان قائدهم الحارث ابن أبي ذرار ينظم
+      جموعهم، فلما سمع بيهم خرج إليهم حتى لقيهم علماء من مياههم، يقال له
+      المريسيع في 700 مقاتل، و30 فارسا، فأغار عليهم، فقتل مقاتلهم، وسبى ذراريهم،
+      وأصاب يومئذ جوير يا بنت الحارث بن أبي زرار. وقسم رسول الله صلى الله عليه
+      وسلم سبايا بني المصطلق، وكان من بين الأسرى جويرية بنت الحارث، وكانت بركة
+      على قومها، وقد وقعت في سهم لثابت ابن قيس بن شماس، أو لابن عم له، فكاتبته
+      على نفسها، وكانت امرأة حلوة ملاحة، كما قالت عائشة لا يراها أحد إلا أخذت
+      بنفسه، فاتت رسول الله صلى الله عليه وسلم لتستعينه في كتابتها، قالت فوالله
+      ما هو؟ أنعلى باب حجرتي، فكرهتها، وعرفت أنه سيرى منها ما رأيت، فدخلت عليه،
+      فقالت يا رسول الله، أنا جوير، يا بنت الحارث بن أبي ضرار، سيد قومه، وقد
+      أصابني من البلاء ما لم يخفى عليك، فوقعت في السهم لثابت ابن قيس بن شماس، أو
+      لابن عم له، فكتبت على نفسي، فجئتك أستعينك على كتابة. قال فهل لك في خير من
+      ذلك؟ قالت وما هو يا رسول الله؟ قال أقضي عنك كتابك وأتزوجك، قالت نعم يا
+      رسول الله قد فعلت. قالت وخرج الخبر إلى الناس أن رسول الله صلى الله عليه
+      وسلم قد تزوج جويري بنت الحارث. فقال الناس أصهار رسول الله صلى الله عليه
+      وسلم، فأرسلوا ما بأيديهم، قالت فلقد أعتق بزواجه إياها 100 أهل بيت من بني
+      المصطلح، فما أعلم امرأة أعظم بركة على قومها منها. وحيلوا هذا العتق
+      الجماعي، وإزاء هذه الأريحية الفذة، دخلت القبيلة كلها في دين الله، فكان
+      لهذا الزواج عدة أبعاد تحققت بإسلام قومها، وبذلك كثر سواد المسلمين، فكانت
+      أما للمؤمنين رضي الله عنها، عالم بما تسمع، وعاملة بما تعلم، فقيها عابد
+      تقية، ورعة، نقية الفؤاد، مضيئة العقل، مشرقة الروح. تحب الله ورسوله، وتحب
+      الخير للمسلمين، وكانت أم المؤمنين الجويرية بنت الحارث رضي الله عنها من
+      الذاكرين الله كثيرا، والذاكرات القانتات الصابرات في مجال مناجات الله
+      تعالى، وتحميده وتقديسه وتسبيحه. فهذي أم المؤمنين جويرية، تحدثنا عن ذلك،
+      فتقول إن النبي صلى الله عليه وسلم خرج من عندها بكرة حين صلى الصبح، وهي في
+      مسجدها، ثم رجع بعد أن أضحى، وهي جالسة، فقال ما زلت على الحالة التي فارقتك
+      عليها؟ قالت نعم، قال النبي صلى الله عليه وسلم لقد قلت بعدك أربع كلمات،
+      ثلاث مرات، لو وزنت بما قلت منذ اليوم. لوزنتهن. سبحان الله وبحمده، عدد
+      خلقه، ورضا نفسه، وزينة عرشه، ومداد كلماته وعندما المريسية كشف المنافقون عن
+      الحقد الذي يضمرونه للإسلام والمسلمين. فكلما كسب الإسلام نصرا جديدا،
+      ازدادوا غيظا على غيظهم وقلوبهم، تتطلع إلى اليوم الذي يهزم فيه المسلمون.
+      لتشفى من الغل، وقد وقعت حادثة بين غلامين، أحدهما من المهاجرين، والآخر من
+      الأنصار تشاجر، فاستغل رأس المنافقين الموقف لإحداث صدع، وشرخ بين المسلمين،
+      قال زيد بن أرقم وهو شاهد عيان يحكي خبر ذلك، قال كنت في غزاة، فسمعت عبد
+      الله بن أبي يقول لا تنفقوا على من عند رسول الله حتى ينفضوا من حوله. ولئن
+      رجعنا من عنده ليخرجن الأعز منها الأذل. فذكرت ذلك لعمي، فذكره للنبي صلى
+      الله عليه وسلم، فدعاني، فحدثته، فأرسل رسول الله صلى الله عليه وسلم إلى عبد
+      الله بن أبي وأصحابه، فحلفوا ما قالوا، فكذبني رسول الله صلى الله عليه وسلم
+      وصدقه، فأصابني، هم لم يصبني مثله قط. فجلست في البيت، فقال لعمي ما هردت إلى
+      أن كذبك رسول الله صلى الله عليه وسلم ومقتك، فأنزل الله تعالى إذا جاءك
+      المنافقون قالوا نشهد إنك لرسول الله والله يعلم إنك لرسوله، والله يشهد إن
+      المنافقين لكاذبون، وكان لابن أبي بن سلول ولد مؤمن مخلص، يسمى عبد الله بن
+      عبد الله بن أبي بن سلول. فلما علم بالأحداث ونزول الصورة، أتى رسول الله صلى
+      الله عليه وسلم، فقال له يا رسول الله، بلغني أنك تريد قتل أبي بن سلول فيما
+      بلغك عنه، فإن كنت فاعلا فمرني به، فأنا أحمل إليك رأسا. وهو ابنه، فوالله
+      لقد علمت الخزرج ما كان بها من رجل أبر بوالده مني، وإني لا أخشى أن تأمر بي
+      غيري فيقتله، فلا تدعني نفسي أنظر إلى قاتل أبي يمشي بين الناس، فأقتله،
+      فأقتل رجلا مؤمنا بكافر، فأدخل النار، فقال رسول الله صلى الله عليه وسلم بل
+      نترفق به. ونحسن صحبته ما بقي معنا، ثم لما انتصر المسلمون في المريسية، سعى
+      المنافقون إلى إثارة العصبية بين المهاجرين وأنصار، فلما أخفقت المحاولة سعوا
+      إلى إيذاء الرسول صلى الله عليه وسلم في نفسه وأهل بيته، فشن حربا نفسية
+      مريرة من خلال حادثة الإفك التي اختلقوها، وذلك بعد أن فشل كيدون في المحاولة
+      الأولى، لأ لإثارة النعرة الجاهلية، وسيكون درسنا القادم حول هذه الحادثة
+      التي ألمت بالمسلمين بإذن الله تعالى. إلى هنا، نكون قد أنهينا. درسنا. دمتم
+      في رعاية الله، السلام عليكم ورحمة الله.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

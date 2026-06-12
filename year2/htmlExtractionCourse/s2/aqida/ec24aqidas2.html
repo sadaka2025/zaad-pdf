@@ -1,168 +1,388 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الرابع والعشرون  تنبيه تابع لشهادتي الإسلام والإيمان 3  العقيدة 24</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/aqida/ec24aqidas2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      الدرس الرابع والعشرون تنبيه تابع لشهادتي الإسلام والإيمان 3 العقيدة 24
+    </title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/aqida/ec24aqidas2.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent31">الدرس الرابع والعشرون  تنبيه تابع لشهادتي الإسلام والإيمان 3  العقيدة 24</h1>
-<p id="sent32">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، والصلاة والسلام الأتمان الأكمل، أن على سيدنا ومولانا محمد وعلى آله وصحبه أجمعين، اللهم لا علم لنا إلا ما علمتنا، و لا سهل إلا ما سهلت هو أن تجعل الحزن إذا شئت سهلا، فاجعل الحزن سهلا، اللهم علمنا ما ينفعنا، وانفعنا بما علمتنا وزدنا علما وفهما يا رب العالمين. ولا حول ولا قوة إلا بالله العلي العظيم، ولا حول ولا قوة إلا بالله العلي العظيم، ولا حول ولا قوة إلا بالله العلي العظيم، أما بعد، ف السلام عليكم و رحمة الله تعالى و بركاته، وبارك الله يوم يوم كم و أعمالي وأعمالكم، و نفعني الله وإياكم بهذا اللقاء بجاه الحبيب المصطفى صلى الله عليه وعلى آله وأصحابه الشرفاء. مع درس جديد من دروس علم العقيدة، ومع كتاب طالع البشرى على العقيدة الصغرى، وصلنا إلى التنبيه الثالث من التنبيهات التي تندرج تحت مبحث شهادتي الإسلام والإيمان. يقول مصنف رحمه الله تعالى ونفعنا بعلومه في الدارين، آمين، تنبيه الإيمان بسائر الأنبياء. إلى هنا. 16 عقيدة، منها التمانية المتعلقة بالرسل، التي قدمها أول المتن، وهي وجوب صدق الرسل، و وجوب الأمانة، و وجوب التبليغ لهم، وجواز الأعراض البشرية عليهم، وأفضل زاده الأربع، وأما وأما الثمانية الباقية، وهي الإيمان بسائر الأنبياء، و بالملائكة. و الكتب السماوية، و باليوم الآخر، و أف داده الأربع. فلم يذكرها الشيخ أول المتن، وإنما أدرجها في قولنا محمد رسول الله لزيادة الفائدة، أي تعرف أو نعرفها؟ نعم ااا من كونها لوازم ااا إيماننا بسيدنا محمد صلى الله عليه وسلم. فإذا ضمت ال15 عقيدة المأخوذة من قولنا محمد رسول الله إلى ال50 عقيدة المأخوذة من قولنا لا إله إلا الله كانت الجملة 66 عقيدة. 66 عقيدة نستخرجها بطريق المطابقة أو اللزوم من قولنا لا إله إلا الله محمد رسول الله، وقد نظم تضمن كل كلمتي الإسلام لتلك العقائد الست، وال60 شيخنا سيدي محمد المكي بن عزوز. رحمه الله وطيب ثراه، حيث قال را جزء في هذا المجال. إلهى في قولك لا إله من كلمة الإسلام، خذ معناها مستغنيا عن كل ما سواه، مفتقرا إليه ما عداه، فيشمل استغناؤه الوجود، وذات سلب ما عدت وحيد، والسمع، والبصر، والكلام، ومعنوية لها لزاما، والجائز أتفعل؟ كل ممكن. و نفي تأثير بقوة عني، ثم انتفاء غرض وعدها 14 وزيد ضدها، وتحت الافتقار، وحدانية، ثم المعاني أربع بقية وأربع من لازم المعاني و الجائزات هاهنا سنتان نفي لتأثير بطبع فداره، ثم حدوث عالم بأسره. فتلك 11 وضدها مع سابق 50 وا فعقدها، وفي محمد رسول الله إيماننا بكتب الإله و بالملائكة وهم عباده، واليوم لاخر الوفي سواده، والأنبياء ولا تفرق بينهم، وصدقهم أمانة تبليغهم. وجائز، وهي الأعراض التي ليست تؤدي لإنتقاص الرتبة تلك ثمان، ثم ضدها تضم لما مضى. 66 وتم فقد بان أن اتضح لك من التقرير السابق تضمن أي استلزام معنى كلمتي أي جملتي الشهادة، وهما جملة لا إله إلا الله. وجملة محمد رسول الله معقلة حروفها إذ هي 24 حرفا، باعتبار الرسم، و أفرد الضمير في حروفها، مع أنه عائد على كلمتي الشهادة، إشارة إلى أن الكلمتين إمتزج تا حتى صارتا كالكلمة الواحدة. باعتبار أن الإيمان لا يحصل إلا بمجموعه ما. قال. ولا يكتفى ب إحداهما عن الأخرى. فنحن لا نقول يمكن، يمكن أن نقول كلمتان الشهادة، و يمكن أن نقول كلمة الشهادة، رغم أنها جملت أني، لكنهما امتزج تا حتى صارت أ. ك الجملة الواحدة، حيث إنه لا يقبل إيمان أحد أو إسلام أحد. إلا إذا أقر ب لا إله إلا الله محمد رسول الله، وقول المصنف لجميع مت لجميع متعلق بتضمن طبعا جار ومجرور يتعلقان بقوله تضمن، وجميع مضاف إلى ما يجب على المكلف معرفته من عقائد الإيمان الواجبة، والجائزة والمستحيلة. في حقه تعالى، وفي حق رسله عليهم الصلاة والسلام، ولعلها اختصارها، أي قلة حروفها، مع اشتمالها، إجتمال معناها على ما ذكرناه من العقائد، جعلها الشرع، أي الشارع الحكيم، ترجمة، أي تفسيرا، أي دليلا على ما في القلب، وقوله من الإسلام. بيان لما؟ ال اختصارها كانت هذه الكلمة هي التي يدخل بها إلى الإسلام، لما تندرج تحتها من عقائد تشمل تقريبا جميع العقائد التي يجب على كل مكلف أن يؤمن بها، ومقتضى جعل المؤلف الإسلام في القلب. أنه ماشي على القول بأن الإسلام والإيمان مترادفان، أي معناهما واحد، وهو تصديق النبي صلى الله عليه وسلم في كل ما جاء به من ما علم من الدين بالضرورة، والراجح القول بأنهما متغاير أن معنى ف الإيمان هو التصديق المذكور. أي على ما مشى عليه مصنف أنه يقول بأن الإيمان والإسلام مترادفان، أي لهما نفس المعنى، أما الراجح،أن الإسلام والإيمان متغاير أن معنا مفهوم الإيمان، ليس هو مفهوم الإسلام، فالإيمان هو التصديق المذكور، التصديق بكل ما جاء به النبي صلى الله عليه وسلم ما علم من الدين بالضرورة مع الإذعان، قال وهو أمر باطني قائم بالقلب، الإيمان محله القلب دليله. علامته؟ نطق الشهادتين، النطق بالشهادتين، أما الإسلام والإسلام. لا، هو مفهوم آخر، هو الإذعان الظاهري، الانقياد والإذعان، الظاهر الإيمان تصديق وإذعان، قلبي، الإسلام إذعان وامتثال ظاهري بالنطق بالشهادتين، والأعمال الظاهرة، أي الامتثال للعمل بما جاء به النبي صلى الله عليه وسلم ما علم من الدين بالضرورة. كالصلاة والزكاة والصوم والحج، وعطف على قوله جعلها الشرع قوله ولم يقبل أي شرع من أحد الإيمان إلا بها، ظاهره أن النطق بالكلمة المشرفة شرط لصحة الإيمان، حسب ما ظاهر قول المصنف. ولم يقبل من أحد الإيمان إلا بها. ظاهر القول يفهم من ظاهر القول أنه لا يقبل إيمان أحد. إلا إذا نطق الشهادتين، فجعل النطق بالشهادتين شرط. أو جعل النطق بالشهادتين شرطا لصحة الإيمان، لكن هذا القول ضعيف. كالقول بأن النطق شطر، أي جزء من الإيمان، الإمام أبو حنيفة يرى أن النطق بالشهادتين داخل في حقيقة وماهية الإيمان، أي جزء من الإيمان، أما الراجح والراجح أن الإيمان مجرد التصديق القلبي، نتحدث طبعا دائما في. ااا عند الله سبحانه وتعالى، أما عندنا طبعا فنحن لا نعامل الناس إلا بما يظهر عليهم. فإن ظهر عليه ما يدل على إسلامه نحكم بإسلامه، وإن كان في الحقيقة منافقا. لكن نحن لا نحكم إلا بالظهر، و إن لم ينطق الشهادتين، ولم يظهر عليه علامة من علامات الإسلام، ف نحكم بكفره، وإن كان قد آمن بقلبه، ولم يصرح بذلك واضح، وأما النطق بالكلمة المشرفة فهو شرط لإجراء الأحكام الدنيوية. لا لصحة الإيمان. وعليه، فمن صدق بقلبه، ولم ينطق بلسانه، لا لعناد، بل اتفق له ذلك، فهو مؤمن ناج ناج، يعني أين يوم القيامة؟ حتى ولو كان مقصرا، وكان يستحق العذاب لتقصير وترك النطق بالشهادتين، وترك العمل، لكنه في الأخير لا يخلد في النار، لكن لا تجري عليه الأحكام الدنيوية، لأننا لا نعرف ما في قلبه، فنحن ظاهر، رأينا أنه لم ينطق الشهادتين، ولا توجد علامة من علامات الإسلام، ف نحكم بكفره في الدنيا. بمعنى قال لا تجري عليه الأحكام الدنيوية ك دفنه في مقابر المسلمين، والصلاة عليه، و محل الخلاف المذكور في الكافر الأصلي، و أما أولاد المؤمنين فليس نطقهم بالكلمة المشرفة شرط اول اش طرا اتفاقا، لأنه ولد في بيئة مسلمة، ولم يظهر عليه. و. لم يظهر عليه ناقض من نواقض الإيمان أو الإسلام، فيحكم على الأصل الأصل في أولاد المسلمين أنهم مسلمون بالفطرة، ويعيشون في بلاد الإسلام، و ااا بلاد يرفع فيه الآذان كل يوم، و الصلوات في المساجد، و أبوه مسلم ومسلمة. فلا نحكم عليه بال بالكفر حتى ينطق الشهادتين، ف نحكم عليه بالإسلام، فهو مسلم، إلى أن يأتي ما يخالف ذلك، إلا إن فعل فعلا يخرج عن الملة، فهذا كلام آخر. قال في حكم عليهم بالإيمان وإن لم ينطقو بها أصلا نعم، يجب عليهم عند إمامنا مالك رحمه الله أن نطق بها مرة واحدة في العمر ك الحمد، والصلاة والسلام على رسول على رسول الله صلى الله عليه وسلم، وظاهره أيضا أنه يشترط في الدخول في الإيمان. الإتيان بالنفي والإثبات عند الإمام مالك. اه هو واجب، ما معنى واجب؟ يعني أ ثم إن لم ينطق بالشهادتين ولو مرة في العمر هو آه أ ثم. خاصة إذا طلب من إذا طلب منه، وامتنع أي حكم، و بكفره من طلب منه، وامتنع بدون أي سبب. قلة نطق الشهادتين. يعني إحنا مثلا هكا شكين لا يصلي ولا يصوم، مش عارفين، و رغم إنه يعني عايش في بيئة مسلمة و أبوين مسلمين انطق الشهادتين قول لا لاء نطقها. طيب لماذا؟ هكذا؟ أنا لا أريد أن أنطق، فهذا ما ظننته عدم إيمانه. قال. وظاهر أيضا أنه يشترط في الدخول في الإيمان الإتيان بالنفي، والإثبات، لا إله إلا الله، وتقديم الهيللة على ما بعدها أن تقول لا إله إلا الله قبل قولك محمد رسول الله، وهو قول عند المالكية، وبه قال أكثر الشافعية، واشترت أصحاب هذا القول أيضا الإتيان بلفظ أشهد. لا بد أن تقول لا، مش. ليس. لا إله إلا الله عند دخولك إلى الإسلام، أو آه إلى ما شابه، ذلك أن تنطق بلفظ الشهادة، أشهد أن لا إله إلا الله، أخذ ظاهر قوله صلى الله عليه وسلم أمرت أن أقاتل الناس حتى يشهدوا أن لا إله إلا الله، والقول المعتمد عند المالكية. إنه قال هذا قول عند الملكي، أما القول معتمد عندنا كما لكية، أنه لا يشترط شيئا من ذلك، وبه قال بعض الشافعية، وهو مذهب الحنفية، وعليه، فإذا قال الكافر الله واحد، و محمد رسول الله يفيد، يعني نفس المعنى، أو قال محمد رسول الله، و الله واحد. كفاه ذلك، هذا دليل على أنه دخل إلى الإسلام، وإنما أتى الشيخ، بل عل التي للترجي، ولم يجزم بما ذكره لاحتمال أن تكون الحكمة في جعل الشرع لها ترجمة على ما في القلب من الإيمان، وفي عدم قبول الإيمان من أحد إلا بها غير ما ذكره. ثم فر على ما قدمه في شأن الكلمة المشرفة، ما سيذكره في الختام عقب هذا، و هو الفصل الختامي الذي سيتحدث فيه المصنف عن فضائل كلمة التوحيد، نكتفي بهذا القدر، وصلى الله وسلم وبارك على سيدنا محمد وعلى آله وصحبه أجمعين، والحمد لله رب العالمين.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent31">
+      الدرس الرابع والعشرون تنبيه تابع لشهادتي الإسلام والإيمان 3 العقيدة 24
+    </h1>
+    <p id="sent32">
+      بسم الله الرحمن الرحيم، الحمد لله رب العالمين، والصلاة والسلام الأتمان
+      الأكمل، أن على سيدنا ومولانا محمد وعلى آله وصحبه أجمعين، اللهم لا علم لنا
+      إلا ما علمتنا، و لا سهل إلا ما سهلت هو أن تجعل الحزن إذا شئت سهلا، فاجعل
+      الحزن سهلا، اللهم علمنا ما ينفعنا، وانفعنا بما علمتنا وزدنا علما وفهما يا
+      رب العالمين. ولا حول ولا قوة إلا بالله العلي العظيم، ولا حول ولا قوة إلا
+      بالله العلي العظيم، ولا حول ولا قوة إلا بالله العلي العظيم، أما بعد، ف
+      السلام عليكم و رحمة الله تعالى و بركاته، وبارك الله يوم يوم كم و أعمالي
+      وأعمالكم، و نفعني الله وإياكم بهذا اللقاء بجاه الحبيب المصطفى صلى الله
+      عليه وعلى آله وأصحابه الشرفاء. مع درس جديد من دروس علم العقيدة، ومع كتاب
+      طالع البشرى على العقيدة الصغرى، وصلنا إلى التنبيه الثالث من التنبيهات التي
+      تندرج تحت مبحث شهادتي الإسلام والإيمان. يقول مصنف رحمه الله تعالى ونفعنا
+      بعلومه في الدارين، آمين، تنبيه الإيمان بسائر الأنبياء. إلى هنا. 16 عقيدة،
+      منها التمانية المتعلقة بالرسل، التي قدمها أول المتن، وهي وجوب صدق الرسل، و
+      وجوب الأمانة، و وجوب التبليغ لهم، وجواز الأعراض البشرية عليهم، وأفضل زاده
+      الأربع، وأما وأما الثمانية الباقية، وهي الإيمان بسائر الأنبياء، و
+      بالملائكة. و الكتب السماوية، و باليوم الآخر، و أف داده الأربع. فلم يذكرها
+      الشيخ أول المتن، وإنما أدرجها في قولنا محمد رسول الله لزيادة الفائدة، أي
+      تعرف أو نعرفها؟ نعم ااا من كونها لوازم ااا إيماننا بسيدنا محمد صلى الله
+      عليه وسلم. فإذا ضمت ال15 عقيدة المأخوذة من قولنا محمد رسول الله إلى ال50
+      عقيدة المأخوذة من قولنا لا إله إلا الله كانت الجملة 66 عقيدة. 66 عقيدة
+      نستخرجها بطريق المطابقة أو اللزوم من قولنا لا إله إلا الله محمد رسول الله،
+      وقد نظم تضمن كل كلمتي الإسلام لتلك العقائد الست، وال60 شيخنا سيدي محمد
+      المكي بن عزوز. رحمه الله وطيب ثراه، حيث قال را جزء في هذا المجال. إلهى في
+      قولك لا إله من كلمة الإسلام، خذ معناها مستغنيا عن كل ما سواه، مفتقرا إليه
+      ما عداه، فيشمل استغناؤه الوجود، وذات سلب ما عدت وحيد، والسمع، والبصر،
+      والكلام، ومعنوية لها لزاما، والجائز أتفعل؟ كل ممكن. و نفي تأثير بقوة عني،
+      ثم انتفاء غرض وعدها 14 وزيد ضدها، وتحت الافتقار، وحدانية، ثم المعاني أربع
+      بقية وأربع من لازم المعاني و الجائزات هاهنا سنتان نفي لتأثير بطبع فداره،
+      ثم حدوث عالم بأسره. فتلك 11 وضدها مع سابق 50 وا فعقدها، وفي محمد رسول الله
+      إيماننا بكتب الإله و بالملائكة وهم عباده، واليوم لاخر الوفي سواده،
+      والأنبياء ولا تفرق بينهم، وصدقهم أمانة تبليغهم. وجائز، وهي الأعراض التي
+      ليست تؤدي لإنتقاص الرتبة تلك ثمان، ثم ضدها تضم لما مضى. 66 وتم فقد بان أن
+      اتضح لك من التقرير السابق تضمن أي استلزام معنى كلمتي أي جملتي الشهادة،
+      وهما جملة لا إله إلا الله. وجملة محمد رسول الله معقلة حروفها إذ هي 24
+      حرفا، باعتبار الرسم، و أفرد الضمير في حروفها، مع أنه عائد على كلمتي
+      الشهادة، إشارة إلى أن الكلمتين إمتزج تا حتى صارتا كالكلمة الواحدة. باعتبار
+      أن الإيمان لا يحصل إلا بمجموعه ما. قال. ولا يكتفى ب إحداهما عن الأخرى.
+      فنحن لا نقول يمكن، يمكن أن نقول كلمتان الشهادة، و يمكن أن نقول كلمة
+      الشهادة، رغم أنها جملت أني، لكنهما امتزج تا حتى صارت أ. ك الجملة الواحدة،
+      حيث إنه لا يقبل إيمان أحد أو إسلام أحد. إلا إذا أقر ب لا إله إلا الله محمد
+      رسول الله، وقول المصنف لجميع مت لجميع متعلق بتضمن طبعا جار ومجرور يتعلقان
+      بقوله تضمن، وجميع مضاف إلى ما يجب على المكلف معرفته من عقائد الإيمان
+      الواجبة، والجائزة والمستحيلة. في حقه تعالى، وفي حق رسله عليهم الصلاة
+      والسلام، ولعلها اختصارها، أي قلة حروفها، مع اشتمالها، إجتمال معناها على ما
+      ذكرناه من العقائد، جعلها الشرع، أي الشارع الحكيم، ترجمة، أي تفسيرا، أي
+      دليلا على ما في القلب، وقوله من الإسلام. بيان لما؟ ال اختصارها كانت هذه
+      الكلمة هي التي يدخل بها إلى الإسلام، لما تندرج تحتها من عقائد تشمل تقريبا
+      جميع العقائد التي يجب على كل مكلف أن يؤمن بها، ومقتضى جعل المؤلف الإسلام
+      في القلب. أنه ماشي على القول بأن الإسلام والإيمان مترادفان، أي معناهما
+      واحد، وهو تصديق النبي صلى الله عليه وسلم في كل ما جاء به من ما علم من
+      الدين بالضرورة، والراجح القول بأنهما متغاير أن معنى ف الإيمان هو التصديق
+      المذكور. أي على ما مشى عليه مصنف أنه يقول بأن الإيمان والإسلام مترادفان،
+      أي لهما نفس المعنى، أما الراجح،أن الإسلام والإيمان متغاير أن معنا مفهوم
+      الإيمان، ليس هو مفهوم الإسلام، فالإيمان هو التصديق المذكور، التصديق بكل ما
+      جاء به النبي صلى الله عليه وسلم ما علم من الدين بالضرورة مع الإذعان، قال
+      وهو أمر باطني قائم بالقلب، الإيمان محله القلب دليله. علامته؟ نطق
+      الشهادتين، النطق بالشهادتين، أما الإسلام والإسلام. لا، هو مفهوم آخر، هو
+      الإذعان الظاهري، الانقياد والإذعان، الظاهر الإيمان تصديق وإذعان، قلبي،
+      الإسلام إذعان وامتثال ظاهري بالنطق بالشهادتين، والأعمال الظاهرة، أي
+      الامتثال للعمل بما جاء به النبي صلى الله عليه وسلم ما علم من الدين
+      بالضرورة. كالصلاة والزكاة والصوم والحج، وعطف على قوله جعلها الشرع قوله ولم
+      يقبل أي شرع من أحد الإيمان إلا بها، ظاهره أن النطق بالكلمة المشرفة شرط
+      لصحة الإيمان، حسب ما ظاهر قول المصنف. ولم يقبل من أحد الإيمان إلا بها.
+      ظاهر القول يفهم من ظاهر القول أنه لا يقبل إيمان أحد. إلا إذا نطق
+      الشهادتين، فجعل النطق بالشهادتين شرط. أو جعل النطق بالشهادتين شرطا لصحة
+      الإيمان، لكن هذا القول ضعيف. كالقول بأن النطق شطر، أي جزء من الإيمان،
+      الإمام أبو حنيفة يرى أن النطق بالشهادتين داخل في حقيقة وماهية الإيمان، أي
+      جزء من الإيمان، أما الراجح والراجح أن الإيمان مجرد التصديق القلبي، نتحدث
+      طبعا دائما في. ااا عند الله سبحانه وتعالى، أما عندنا طبعا فنحن لا نعامل
+      الناس إلا بما يظهر عليهم. فإن ظهر عليه ما يدل على إسلامه نحكم بإسلامه، وإن
+      كان في الحقيقة منافقا. لكن نحن لا نحكم إلا بالظهر، و إن لم ينطق الشهادتين،
+      ولم يظهر عليه علامة من علامات الإسلام، ف نحكم بكفره، وإن كان قد آمن بقلبه،
+      ولم يصرح بذلك واضح، وأما النطق بالكلمة المشرفة فهو شرط لإجراء الأحكام
+      الدنيوية. لا لصحة الإيمان. وعليه، فمن صدق بقلبه، ولم ينطق بلسانه، لا
+      لعناد، بل اتفق له ذلك، فهو مؤمن ناج ناج، يعني أين يوم القيامة؟ حتى ولو كان
+      مقصرا، وكان يستحق العذاب لتقصير وترك النطق بالشهادتين، وترك العمل، لكنه في
+      الأخير لا يخلد في النار، لكن لا تجري عليه الأحكام الدنيوية، لأننا لا نعرف
+      ما في قلبه، فنحن ظاهر، رأينا أنه لم ينطق الشهادتين، ولا توجد علامة من
+      علامات الإسلام، ف نحكم بكفره في الدنيا. بمعنى قال لا تجري عليه الأحكام
+      الدنيوية ك دفنه في مقابر المسلمين، والصلاة عليه، و محل الخلاف المذكور في
+      الكافر الأصلي، و أما أولاد المؤمنين فليس نطقهم بالكلمة المشرفة شرط اول اش
+      طرا اتفاقا، لأنه ولد في بيئة مسلمة، ولم يظهر عليه. و. لم يظهر عليه ناقض من
+      نواقض الإيمان أو الإسلام، فيحكم على الأصل الأصل في أولاد المسلمين أنهم
+      مسلمون بالفطرة، ويعيشون في بلاد الإسلام، و ااا بلاد يرفع فيه الآذان كل
+      يوم، و الصلوات في المساجد، و أبوه مسلم ومسلمة. فلا نحكم عليه بال بالكفر
+      حتى ينطق الشهادتين، ف نحكم عليه بالإسلام، فهو مسلم، إلى أن يأتي ما يخالف
+      ذلك، إلا إن فعل فعلا يخرج عن الملة، فهذا كلام آخر. قال في حكم عليهم
+      بالإيمان وإن لم ينطقو بها أصلا نعم، يجب عليهم عند إمامنا مالك رحمه الله أن
+      نطق بها مرة واحدة في العمر ك الحمد، والصلاة والسلام على رسول على رسول الله
+      صلى الله عليه وسلم، وظاهره أيضا أنه يشترط في الدخول في الإيمان. الإتيان
+      بالنفي والإثبات عند الإمام مالك. اه هو واجب، ما معنى واجب؟ يعني أ ثم إن لم
+      ينطق بالشهادتين ولو مرة في العمر هو آه أ ثم. خاصة إذا طلب من إذا طلب منه،
+      وامتنع أي حكم، و بكفره من طلب منه، وامتنع بدون أي سبب. قلة نطق الشهادتين.
+      يعني إحنا مثلا هكا شكين لا يصلي ولا يصوم، مش عارفين، و رغم إنه يعني عايش
+      في بيئة مسلمة و أبوين مسلمين انطق الشهادتين قول لا لاء نطقها. طيب لماذا؟
+      هكذا؟ أنا لا أريد أن أنطق، فهذا ما ظننته عدم إيمانه. قال. وظاهر أيضا أنه
+      يشترط في الدخول في الإيمان الإتيان بالنفي، والإثبات، لا إله إلا الله،
+      وتقديم الهيللة على ما بعدها أن تقول لا إله إلا الله قبل قولك محمد رسول
+      الله، وهو قول عند المالكية، وبه قال أكثر الشافعية، واشترت أصحاب هذا القول
+      أيضا الإتيان بلفظ أشهد. لا بد أن تقول لا، مش. ليس. لا إله إلا الله عند
+      دخولك إلى الإسلام، أو آه إلى ما شابه، ذلك أن تنطق بلفظ الشهادة، أشهد أن لا
+      إله إلا الله، أخذ ظاهر قوله صلى الله عليه وسلم أمرت أن أقاتل الناس حتى
+      يشهدوا أن لا إله إلا الله، والقول المعتمد عند المالكية. إنه قال هذا قول
+      عند الملكي، أما القول معتمد عندنا كما لكية، أنه لا يشترط شيئا من ذلك، وبه
+      قال بعض الشافعية، وهو مذهب الحنفية، وعليه، فإذا قال الكافر الله واحد، و
+      محمد رسول الله يفيد، يعني نفس المعنى، أو قال محمد رسول الله، و الله واحد.
+      كفاه ذلك، هذا دليل على أنه دخل إلى الإسلام، وإنما أتى الشيخ، بل عل التي
+      للترجي، ولم يجزم بما ذكره لاحتمال أن تكون الحكمة في جعل الشرع لها ترجمة
+      على ما في القلب من الإيمان، وفي عدم قبول الإيمان من أحد إلا بها غير ما
+      ذكره. ثم فر على ما قدمه في شأن الكلمة المشرفة، ما سيذكره في الختام عقب
+      هذا، و هو الفصل الختامي الذي سيتحدث فيه المصنف عن فضائل كلمة التوحيد،
+      نكتفي بهذا القدر، وصلى الله وسلم وبارك على سيدنا محمد وعلى آله وصحبه
+      أجمعين، والحمد لله رب العالمين.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

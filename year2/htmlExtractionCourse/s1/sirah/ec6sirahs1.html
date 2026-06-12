@@ -1,168 +1,390 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس السادس مادة السيرة</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/sirah/ec6sirahs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس السادس مادة السيرة</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/sirah/ec6sirahs1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent25">الدرس السادس مادة السيرة</h1>
-<p id="sent26">بسم الله الرحمان الرحيم. الحمد لله وكفى، والصلاة والسلام على النبي الكريم المصطفى، أحبتي فلاح أينما كنتم، السلام عليكم ورحمة الله تعالى وبركاته. درسنا اليوم سيكون حول مجريات الأحداث التي حصلت في السنة السادسة للهجرة. في هذه السنة، وقعت الكثير من السرايا. التي قد تبلغ حوالي 16 سريا. في هذه السنة فقط من جملة 73 سرية بعثه النبي صلى الله عليه وسلم طيلة العهد المدني. ومن أهم ما في هذه السنة غزوة الحديبية. رأى رسول الله صلى الله عليه وسلم في منامه أنه أصحابه. يدخلون المسجد، يدخلون المسجد الحرام معتمرين. ورؤيا الأنبياء حق، فشرع في الاستعداد إلى العمرة، واستنفر من حوله من الأعراض، ليخرج معهما تمرين، كيتعلم قريش أنه لا يريد حربا. واستجاب له بعض الأعراض، في حين أبطأ عنه الكثير. وفي يوم الإثنين، مستهل للقادة من السنة السادسة من الهجرة، خرج الرسول صلى الله عليه وسلم في 1400 من أصحاب ه قاصدين مكة للعمرة. وقد حملو معهم سلاحا خفيفا تحسبا لوقوع شر من قريش. وعندما سمعت قريش بخروج النبي صلى الله عليه وسلم، قررت صد المسلمين عن البيت بأي شكل. وذهب خالد بن الوليد في 200 فارس ورابط بكراع غنيم في الطريق الرئيس لمكة. محاولا صد المسلمين عن محاولة سيرهم إلى مكة. ولكن رسول الله صلى الله عليه وسلم غير طريقة تجنبا للقتال مع جيش خالد. ولما اقترب الرسول صلى الله عليه وسلم من الحديبية، بركت ناقته القصوى بأمر من الله عز وجل. ثم شجرها، فوثبت به. فعاد لحتى نزل بأقصى الحديبية على ثم د. أي بئر، بئر، قليل ماء. فشكا الصحابة إلى رسول الله صلى الله عليه وسلم العطش. فانتزع سهما منكن، أنته كنانة التي التي توضع فيها السهام. ثم أمرهم أن يجعله فيه في البئر، فما زال يجيش بالريح لهم، حتى صدروا عنه، أي رجعو عن ذلك الماء راضين، وهي من كرامات النبي صلى الله عليه وسلم، وقد دخل الرسول صلى الله عليه وسلم في مفاوضات من خلال وسطاء محايدين، أو من خلال تبادل الرسل. فبعضها تقريش مكرزنين حفص، والعريس بنعلق مع، وعروة بن مسعود، وأرسل رسول الله صلى الله عليه وسلم حراش بن أمية الخزاعي. ثم أرسل بعد عثمان بن عفان، فحتى بستة قوريش حتى يبرم أمرهم، ويقررو ما سيفعلونه بشكل نهائي. فهم عازمون على صد النبي صلى الله عليه وسلم ومن معه عن البيت. والرسول يؤكد لهم أنه لم يأتي لقتال وتخش قريش أن تسوء سمعتها، ويعرف عنها بين العرب أنها تصد الناس عن البيت. وقد جاء معتمرين. وطال احتباس هم لعثمان حتى أشيع أنه قد قتل، وعندها دعا الرسول صلى الله عليه وسلم أصحابه إلى بيعته على الصبر وعدم الفرار حتى الموت، ف بايعوه جميعا سوى المنافق الجد بن قيس. وقت كانت البيعة تحت شجرة، سميت بعد ذلك بشجرة الرضوان. وسبب تسمية البيعة الرضوان أنه جاء في القرآن الكريم أن الله قد رضي عن الصحابة الذين حضروا هذه البيع. فقال الله تعالى في سورة فتح لقد رضي الله عن المؤمنين إذ يبايعونك تحت الشجرة فعلم ما في قلوبهم فأنزل السكينة عليهم وأثار بهم فتحا قريبا. لذلك يعتقد المسلمين، وخاصة أهل السنة والجماعة أن أهل ال بيعة الرضوان هم من أهل الجنة. كما وردت عدة أحاديث نبوية في ذات المعنى. منها، لا يدخل النار أحد ممن بايع تحت الشجرة. و عندما تأزم الموقف، سارعت قريش بإرسال سهيل بن عمر لعقد صلح. وأكدت له أن لا يكون يمضي في الصلح إلا أن يرجع الرسول صلى الله عليه وسلم في هذا العام. وبعد مفاوضات، اتفق على الصلح على قواعد. منها أن يرجع الرسول صلى الله عليه وسلم من عامه، على أن يأتي في العام القادم، فيدخل مكة ويقيم بها ثلاثا. ثانيا، وضع الحرب بين الطرفين عشر سنوات يعني مثل الهدنة، هدنة عشر سنوات. وثالثا، من أتى إلى الرسول صلى الله عليه وسلم من غير إذن، وليه من قريش رده عليهم. ومن جاء من المسلمين إلى قريش لم يرد عليه. رابعا محب من أحب أن يدخل في حلف مع أي من الفريقين دخل فيه. وتعتبر القبيلة التي تنضم لأي فريق جزء منه، وأي اعتداء عليه، يعتبر عدوانا على هذا الفريق. فتوى ثبت خزاعة، فقال نحن في عقد محمد وعهده. صلى الله عليه وسلم. و توا ثبت بنو بكر فقالوا نحن في عقد قريش وعهده، فكدب الصلح. ثم قام رسول الله صلى الله عليه وسلم فنحره ديه، ونحر الصحابة هديهم، وتحللو من العمرة، و حلقو شعورهم. ثم أبو إلى المدينة، راضين بما تم من صلح مع قريش. كانت في فوائد جمة. وما كان ظاهره غير ذلك، فقد ظهر بعدها أن فيه نفعا عظيما بتقدير الله عز وجل وتدبيره. وقد تبين لنا أن صلح الحديبية كان فتحا للمسلمين. دل على ذلك قوله تعالى إنا فتحنا لك فتحا مبينا معنا. بعض الصحابة لم يرضى بالصلح، وظنه تظنه تنازل عن حق المسلمين. فهذا عمر بن الخطاب رضي الله عنه يقول ل رسول الله صلى الله عليه وسلم يا رسول الله، ألست برسول الله؟ قال قال بلى، قال فعلا ما نعطي الدنية في ديننا. قال أنا عبد الله ورسوله لنا خالف أمره، ولن يضيع ني. وغضب عمر بن الخطاب ومن معه من المسلمين حول شروط الصلح. لأنهم راو أنها مجحفة بحق المسلمين، لسببين. أحدهما أن النبي صلى الله عليه وسلم كان قد أخبرهم أن سنأتي البيت، ف نطوف به. فما له يرجع، ولم يطف به؟ وثانيهما أنه رسول الله صلى الله عليه وسلم على الحق، والله وعد إظهار دينه. فما له قبل الضغط قريش، وأعطى الدنيا في الصلح، ثم نزلت إنا فتحنا لك فتحا مبينا. فأرسل رسول الله صلى الله عليه وسلم إلى عمر، ف أقرؤه إياه، فقال يا رسول الله، ها؟ وفتح؟ هو؟ قال نعم، ف طابت نفسه ورجع. ثم ندم عمر على فرط منه ندما شديدا. قال عمر فعملت لذلك أعمالا، مازلت أتصدق، وأصوم، وأصلي، وأ عتق، من الذي صنعت يوم إذ مخافة الكلام الذي تكلمت به، حتى رجوت أن يكون خيرا؟ وقد تمخض طعام هذه المعاهدة كذلك على عدة فوائد. منها اعتراف قريش بالمسلمين ككيان، فبمجرد الجنوح إلى الصلح هذا في حد ذاته، يعد اعترافا بالمسلمين، وهذا بحد ذاته نصر. ثانيا الموافقة بوضع الحرب عشر سنين هو نصرا للمسلمين. لأن المسلمين لم يكونوا بادئين بالحروب، وإنما بدأتها قريش، بدليل قوله تعالى وهم بدءوكم أول مرة. ف موافقة قريش على وضع الحرب دليل فشل و خوف وضعف لها. أيضا صد قريش للمسلمين من زيارة المسجد الحرام يعد فشلا لها. لأن الصد لم يكن مستمرا. بل كان لذلك العامل واحد فقط. أيضا شرط رد من جاء منهم، وعدم رد من ذهب إليهم، فقد علله النبي صلى الله عليه وسلم بقوله من ذهب منا إليهم فأبعده الله. ومن جاءنا منهم سيجعل الله له فرجا ومخرجا. ثم كان كما قال صلى الله عليه وسلم. ثم كذلك موافقته صلى الله عليه وسلم على ترك كتابة باسم الله الرحمان الرحيم، وكتابة باسمك اللهم بدلا عنها. لأن لا ما فسد في ذلك، والبسملة و باسمك اللهم ف معناهما واحد. أيضا موافقته صلى الله عليه وسلم على ترك كتابة محمد رسول الله، وكتابة محمد بن عبد الله بدلا عنها، فهدي أيضا لا مفسد فيه، ولم تقلل من شأنه، فهو في الحالتين يبقى رسول الله صلى الله عليه وسلم، فترك وصفه بالرسالة لا ضرر فيه، إنما الضرر كل الضرر فيما لو طلبوا أن يكتب ما لا يحل. من تعظيم آلياتهم، ونحو ذلك. والخلاصة أنه بهذا الصلح. أمكن في ش في شيء مهم جدا أنه أمكن التنقل واختلاط المسلمين بسائر قبائل العرب وغيرهم. فحصل أن دخل الناس في دين الله أفواجا. لأنو يوجد هدنة حتى إن عدد المسلمين صار عند فتح مكة 10,000 بعد أن خرج لصلح الحديبة مالا يزيد عن ال1400 مسلم. وفي هذا المعنى، نقل أهل السيرة كلاما يؤيد ذلك ونصه، فما فتح في الإسلام فتح قبله، كان أعظم منه، إنما كان القتال حيث التقى الناس، فإن مكانة الهدنة وضعت الحرب، وأمن الناس بعضهم بعضا، وال تقوا، ف تفاوضوا في الحديث. والمنازعة، فلم يكلم أحد بالإسلام يعقل شيئا إلا دخل فيه. ولقد دخل. طينك السنتين، مثلما مكان في الإسلام قبل ذلك، وأكثر في سنتين فقط، ولكن من يقرأ قراءة متأملة لصلح الحديبة يمكنه أن يستند. جاء عدد من الدروس والعبر. في صلح الحديبية، يجد الباحث درسا في الأخلاق النبوية، ونموذجا رفيعا في تحقيق المصالح العليا من أجل المسلمين. وفيصل في تحقيق وتطبيقات الولاء والبراء، أ، وهذا كله يعد من السياسة الشرعية النبوية الحكيمة على أساس تحقيق المصالح وجلبها، ودرء المفاسد ودفعها. ومن الدروس السياسية أيضا المستفادة مباغتته العدو في أرضه، وإرباكه، وإحباط محاولاته، وهذا ما فعله رسول الله صلى الله عليه وسلم، فقد باغت العدو أربك، وهذا من السياسة الشرعية العسكرية على أساس المصلحة. فبدل من أن تكون أرضنا هي ساحة المعركة، علينا أن ننقل المعركة إلى ساحة العدو. ثم تغيير طريق الجيش، وإن كان وعرا، لعدم مواجهته الجيش المشركين، وجعل المبادرة في تحديد وقت ومكان المعركة بأيدينا، يعد تكتيكا عسكريا. ثالثا قوله صلى الله عليه وسلم لا تدعوني قريش اليوم إلى خطة يسألوني فيها صلة الرحم، إلا عطيتهم إياها. دليل على أن رسول الله صلى الله عليه وسلم هو في حقيقته رسول السلام محبة، لا كما يحاول أعداء الإسلام تشويه سمعته. استعانته صلى الله عليه وسلم بقبيلة خزاعة مسلمه مو كافره، دليل على جواز الاستعانة ب المشرك المؤمون. وفي هذا؟المعنى يقول أبن القيم، وفي قصة الحديبية أن الاستعانة ب المشرك المؤمون في الجهاد جائزة عند الحاجة. لأن بشرا الخزاعي كان كافرا إذ ذاك، وفيه من المصلحة، إنه أقرب إلى اختلاطه بالعدو، أخذها أخبارهم. كذلك جواز الشتا للإستجابة لبعض مطالب الأعداء، وإن كان فيه تنازل، إلا أن الفقه في ذلك هو تحقيق أعلى المكاسب أدنى التنازلات، وهذا ما فعله رسول الله صلى الله عليه وسلم. فأقر كتابة باسمك اللهم وكتابة محمد بن عبد الله، وكذلك رده لأبي جندل، كل هذا في ظاهره تنازلات إلا أن فيه مصالح أعظم، وفي هذا المعنى يقول أبن القيم إن مصالحة المشركين ببعض ما فيه الضيم على المسلمين جائزة للمصلحة الراجحة. ودفع ما هو شر منه، ففيه دفع أعلى ال مفسدتين باحتمال أدناهم. أيضا جواز الإكثار من الإستشارة على وفق قوله تعالى وأمرهم شورى بينهم. فقد استشار النبي صلى الله عليه وسلم المسلمين أكثر من مرة. ولم تقف مشواره عند حدود الرجال بالإستشارة النساء، وأخذ برأي أم المؤمنين أم سلامة، وفي ذلك جواز مشاورة المرأة الفاضلة. وبالجملة، فإن الفوائد والعبر المستفادة من هذه الهدنة في صلح الحديبية هي أكبر، و أجل من أن يحيط بها إلا الله الذي أحكم أسبابها، فوقعت الغاية على الوجه الذي اقتضت حكمته وحدة. إلى هنا، نكون قد أنهينا. درسنا. دمتم في رعاية الله، السلام عليكم ورحمة الله.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent25">الدرس السادس مادة السيرة</h1>
+    <p id="sent26">
+      بسم الله الرحمان الرحيم. الحمد لله وكفى، والصلاة والسلام على النبي الكريم
+      المصطفى، أحبتي فلاح أينما كنتم، السلام عليكم ورحمة الله تعالى وبركاته.
+      درسنا اليوم سيكون حول مجريات الأحداث التي حصلت في السنة السادسة للهجرة. في
+      هذه السنة، وقعت الكثير من السرايا. التي قد تبلغ حوالي 16 سريا. في هذه
+      السنة فقط من جملة 73 سرية بعثه النبي صلى الله عليه وسلم طيلة العهد المدني.
+      ومن أهم ما في هذه السنة غزوة الحديبية. رأى رسول الله صلى الله عليه وسلم في
+      منامه أنه أصحابه. يدخلون المسجد، يدخلون المسجد الحرام معتمرين. ورؤيا
+      الأنبياء حق، فشرع في الاستعداد إلى العمرة، واستنفر من حوله من الأعراض،
+      ليخرج معهما تمرين، كيتعلم قريش أنه لا يريد حربا. واستجاب له بعض الأعراض،
+      في حين أبطأ عنه الكثير. وفي يوم الإثنين، مستهل للقادة من السنة السادسة من
+      الهجرة، خرج الرسول صلى الله عليه وسلم في 1400 من أصحاب ه قاصدين مكة
+      للعمرة. وقد حملو معهم سلاحا خفيفا تحسبا لوقوع شر من قريش. وعندما سمعت قريش
+      بخروج النبي صلى الله عليه وسلم، قررت صد المسلمين عن البيت بأي شكل. وذهب
+      خالد بن الوليد في 200 فارس ورابط بكراع غنيم في الطريق الرئيس لمكة. محاولا
+      صد المسلمين عن محاولة سيرهم إلى مكة. ولكن رسول الله صلى الله عليه وسلم غير
+      طريقة تجنبا للقتال مع جيش خالد. ولما اقترب الرسول صلى الله عليه وسلم من
+      الحديبية، بركت ناقته القصوى بأمر من الله عز وجل. ثم شجرها، فوثبت به. فعاد
+      لحتى نزل بأقصى الحديبية على ثم د. أي بئر، بئر، قليل ماء. فشكا الصحابة إلى
+      رسول الله صلى الله عليه وسلم العطش. فانتزع سهما منكن، أنته كنانة التي التي
+      توضع فيها السهام. ثم أمرهم أن يجعله فيه في البئر، فما زال يجيش بالريح لهم،
+      حتى صدروا عنه، أي رجعو عن ذلك الماء راضين، وهي من كرامات النبي صلى الله
+      عليه وسلم، وقد دخل الرسول صلى الله عليه وسلم في مفاوضات من خلال وسطاء
+      محايدين، أو من خلال تبادل الرسل. فبعضها تقريش مكرزنين حفص، والعريس بنعلق
+      مع، وعروة بن مسعود، وأرسل رسول الله صلى الله عليه وسلم حراش بن أمية
+      الخزاعي. ثم أرسل بعد عثمان بن عفان، فحتى بستة قوريش حتى يبرم أمرهم، ويقررو
+      ما سيفعلونه بشكل نهائي. فهم عازمون على صد النبي صلى الله عليه وسلم ومن معه
+      عن البيت. والرسول يؤكد لهم أنه لم يأتي لقتال وتخش قريش أن تسوء سمعتها،
+      ويعرف عنها بين العرب أنها تصد الناس عن البيت. وقد جاء معتمرين. وطال احتباس
+      هم لعثمان حتى أشيع أنه قد قتل، وعندها دعا الرسول صلى الله عليه وسلم أصحابه
+      إلى بيعته على الصبر وعدم الفرار حتى الموت، ف بايعوه جميعا سوى المنافق الجد
+      بن قيس. وقت كانت البيعة تحت شجرة، سميت بعد ذلك بشجرة الرضوان. وسبب تسمية
+      البيعة الرضوان أنه جاء في القرآن الكريم أن الله قد رضي عن الصحابة الذين
+      حضروا هذه البيع. فقال الله تعالى في سورة فتح لقد رضي الله عن المؤمنين إذ
+      يبايعونك تحت الشجرة فعلم ما في قلوبهم فأنزل السكينة عليهم وأثار بهم فتحا
+      قريبا. لذلك يعتقد المسلمين، وخاصة أهل السنة والجماعة أن أهل ال بيعة
+      الرضوان هم من أهل الجنة. كما وردت عدة أحاديث نبوية في ذات المعنى. منها، لا
+      يدخل النار أحد ممن بايع تحت الشجرة. و عندما تأزم الموقف، سارعت قريش بإرسال
+      سهيل بن عمر لعقد صلح. وأكدت له أن لا يكون يمضي في الصلح إلا أن يرجع الرسول
+      صلى الله عليه وسلم في هذا العام. وبعد مفاوضات، اتفق على الصلح على قواعد.
+      منها أن يرجع الرسول صلى الله عليه وسلم من عامه، على أن يأتي في العام
+      القادم، فيدخل مكة ويقيم بها ثلاثا. ثانيا، وضع الحرب بين الطرفين عشر سنوات
+      يعني مثل الهدنة، هدنة عشر سنوات. وثالثا، من أتى إلى الرسول صلى الله عليه
+      وسلم من غير إذن، وليه من قريش رده عليهم. ومن جاء من المسلمين إلى قريش لم
+      يرد عليه. رابعا محب من أحب أن يدخل في حلف مع أي من الفريقين دخل فيه.
+      وتعتبر القبيلة التي تنضم لأي فريق جزء منه، وأي اعتداء عليه، يعتبر عدوانا
+      على هذا الفريق. فتوى ثبت خزاعة، فقال نحن في عقد محمد وعهده. صلى الله عليه
+      وسلم. و توا ثبت بنو بكر فقالوا نحن في عقد قريش وعهده، فكدب الصلح. ثم قام
+      رسول الله صلى الله عليه وسلم فنحره ديه، ونحر الصحابة هديهم، وتحللو من
+      العمرة، و حلقو شعورهم. ثم أبو إلى المدينة، راضين بما تم من صلح مع قريش.
+      كانت في فوائد جمة. وما كان ظاهره غير ذلك، فقد ظهر بعدها أن فيه نفعا عظيما
+      بتقدير الله عز وجل وتدبيره. وقد تبين لنا أن صلح الحديبية كان فتحا
+      للمسلمين. دل على ذلك قوله تعالى إنا فتحنا لك فتحا مبينا معنا. بعض الصحابة
+      لم يرضى بالصلح، وظنه تظنه تنازل عن حق المسلمين. فهذا عمر بن الخطاب رضي
+      الله عنه يقول ل رسول الله صلى الله عليه وسلم يا رسول الله، ألست برسول
+      الله؟ قال قال بلى، قال فعلا ما نعطي الدنية في ديننا. قال أنا عبد الله
+      ورسوله لنا خالف أمره، ولن يضيع ني. وغضب عمر بن الخطاب ومن معه من المسلمين
+      حول شروط الصلح. لأنهم راو أنها مجحفة بحق المسلمين، لسببين. أحدهما أن النبي
+      صلى الله عليه وسلم كان قد أخبرهم أن سنأتي البيت، ف نطوف به. فما له يرجع،
+      ولم يطف به؟ وثانيهما أنه رسول الله صلى الله عليه وسلم على الحق، والله وعد
+      إظهار دينه. فما له قبل الضغط قريش، وأعطى الدنيا في الصلح، ثم نزلت إنا
+      فتحنا لك فتحا مبينا. فأرسل رسول الله صلى الله عليه وسلم إلى عمر، ف أقرؤه
+      إياه، فقال يا رسول الله، ها؟ وفتح؟ هو؟ قال نعم، ف طابت نفسه ورجع. ثم ندم
+      عمر على فرط منه ندما شديدا. قال عمر فعملت لذلك أعمالا، مازلت أتصدق، وأصوم،
+      وأصلي، وأ عتق، من الذي صنعت يوم إذ مخافة الكلام الذي تكلمت به، حتى رجوت أن
+      يكون خيرا؟ وقد تمخض طعام هذه المعاهدة كذلك على عدة فوائد. منها اعتراف قريش
+      بالمسلمين ككيان، فبمجرد الجنوح إلى الصلح هذا في حد ذاته، يعد اعترافا
+      بالمسلمين، وهذا بحد ذاته نصر. ثانيا الموافقة بوضع الحرب عشر سنين هو نصرا
+      للمسلمين. لأن المسلمين لم يكونوا بادئين بالحروب، وإنما بدأتها قريش، بدليل
+      قوله تعالى وهم بدءوكم أول مرة. ف موافقة قريش على وضع الحرب دليل فشل و خوف
+      وضعف لها. أيضا صد قريش للمسلمين من زيارة المسجد الحرام يعد فشلا لها. لأن
+      الصد لم يكن مستمرا. بل كان لذلك العامل واحد فقط. أيضا شرط رد من جاء منهم،
+      وعدم رد من ذهب إليهم، فقد علله النبي صلى الله عليه وسلم بقوله من ذهب منا
+      إليهم فأبعده الله. ومن جاءنا منهم سيجعل الله له فرجا ومخرجا. ثم كان كما
+      قال صلى الله عليه وسلم. ثم كذلك موافقته صلى الله عليه وسلم على ترك كتابة
+      باسم الله الرحمان الرحيم، وكتابة باسمك اللهم بدلا عنها. لأن لا ما فسد في
+      ذلك، والبسملة و باسمك اللهم ف معناهما واحد. أيضا موافقته صلى الله عليه
+      وسلم على ترك كتابة محمد رسول الله، وكتابة محمد بن عبد الله بدلا عنها، فهدي
+      أيضا لا مفسد فيه، ولم تقلل من شأنه، فهو في الحالتين يبقى رسول الله صلى
+      الله عليه وسلم، فترك وصفه بالرسالة لا ضرر فيه، إنما الضرر كل الضرر فيما لو
+      طلبوا أن يكتب ما لا يحل. من تعظيم آلياتهم، ونحو ذلك. والخلاصة أنه بهذا
+      الصلح. أمكن في ش في شيء مهم جدا أنه أمكن التنقل واختلاط المسلمين بسائر
+      قبائل العرب وغيرهم. فحصل أن دخل الناس في دين الله أفواجا. لأنو يوجد هدنة
+      حتى إن عدد المسلمين صار عند فتح مكة 10,000 بعد أن خرج لصلح الحديبة مالا
+      يزيد عن ال1400 مسلم. وفي هذا المعنى، نقل أهل السيرة كلاما يؤيد ذلك ونصه،
+      فما فتح في الإسلام فتح قبله، كان أعظم منه، إنما كان القتال حيث التقى
+      الناس، فإن مكانة الهدنة وضعت الحرب، وأمن الناس بعضهم بعضا، وال تقوا، ف
+      تفاوضوا في الحديث. والمنازعة، فلم يكلم أحد بالإسلام يعقل شيئا إلا دخل فيه.
+      ولقد دخل. طينك السنتين، مثلما مكان في الإسلام قبل ذلك، وأكثر في سنتين فقط،
+      ولكن من يقرأ قراءة متأملة لصلح الحديبة يمكنه أن يستند. جاء عدد من الدروس
+      والعبر. في صلح الحديبية، يجد الباحث درسا في الأخلاق النبوية، ونموذجا رفيعا
+      في تحقيق المصالح العليا من أجل المسلمين. وفيصل في تحقيق وتطبيقات الولاء
+      والبراء، أ، وهذا كله يعد من السياسة الشرعية النبوية الحكيمة على أساس تحقيق
+      المصالح وجلبها، ودرء المفاسد ودفعها. ومن الدروس السياسية أيضا المستفادة
+      مباغتته العدو في أرضه، وإرباكه، وإحباط محاولاته، وهذا ما فعله رسول الله
+      صلى الله عليه وسلم، فقد باغت العدو أربك، وهذا من السياسة الشرعية العسكرية
+      على أساس المصلحة. فبدل من أن تكون أرضنا هي ساحة المعركة، علينا أن ننقل
+      المعركة إلى ساحة العدو. ثم تغيير طريق الجيش، وإن كان وعرا، لعدم مواجهته
+      الجيش المشركين، وجعل المبادرة في تحديد وقت ومكان المعركة بأيدينا، يعد
+      تكتيكا عسكريا. ثالثا قوله صلى الله عليه وسلم لا تدعوني قريش اليوم إلى خطة
+      يسألوني فيها صلة الرحم، إلا عطيتهم إياها. دليل على أن رسول الله صلى الله
+      عليه وسلم هو في حقيقته رسول السلام محبة، لا كما يحاول أعداء الإسلام تشويه
+      سمعته. استعانته صلى الله عليه وسلم بقبيلة خزاعة مسلمه مو كافره، دليل على
+      جواز الاستعانة ب المشرك المؤمون. وفي هذا؟المعنى يقول أبن القيم، وفي قصة
+      الحديبية أن الاستعانة ب المشرك المؤمون في الجهاد جائزة عند الحاجة. لأن
+      بشرا الخزاعي كان كافرا إذ ذاك، وفيه من المصلحة، إنه أقرب إلى اختلاطه
+      بالعدو، أخذها أخبارهم. كذلك جواز الشتا للإستجابة لبعض مطالب الأعداء، وإن
+      كان فيه تنازل، إلا أن الفقه في ذلك هو تحقيق أعلى المكاسب أدنى التنازلات،
+      وهذا ما فعله رسول الله صلى الله عليه وسلم. فأقر كتابة باسمك اللهم وكتابة
+      محمد بن عبد الله، وكذلك رده لأبي جندل، كل هذا في ظاهره تنازلات إلا أن فيه
+      مصالح أعظم، وفي هذا المعنى يقول أبن القيم إن مصالحة المشركين ببعض ما فيه
+      الضيم على المسلمين جائزة للمصلحة الراجحة. ودفع ما هو شر منه، ففيه دفع أعلى
+      ال مفسدتين باحتمال أدناهم. أيضا جواز الإكثار من الإستشارة على وفق قوله
+      تعالى وأمرهم شورى بينهم. فقد استشار النبي صلى الله عليه وسلم المسلمين أكثر
+      من مرة. ولم تقف مشواره عند حدود الرجال بالإستشارة النساء، وأخذ برأي أم
+      المؤمنين أم سلامة، وفي ذلك جواز مشاورة المرأة الفاضلة. وبالجملة، فإن
+      الفوائد والعبر المستفادة من هذه الهدنة في صلح الحديبية هي أكبر، و أجل من
+      أن يحيط بها إلا الله الذي أحكم أسبابها، فوقعت الغاية على الوجه الذي اقتضت
+      حكمته وحدة. إلى هنا، نكون قد أنهينا. درسنا. دمتم في رعاية الله، السلام
+      عليكم ورحمة الله.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

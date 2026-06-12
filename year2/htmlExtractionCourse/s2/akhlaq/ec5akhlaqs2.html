@@ -1,168 +1,393 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الخامس  الحكمة الثامنة والسبعون من الكتاب</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/akhlaq/ec5akhlaqs2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الخامس الحكمة الثامنة والسبعون من الكتاب</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/akhlaq/ec5akhlaqs2.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent22">الدرس الخامس  الحكمة الثامنة والسبعون من الكتاب</h1>
-<p id="sent23">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأفضل الصلاة وأتم التسليم على سيدنا وحبيبنا ومولانا وقرة أعيننا سيدنا محمد الصادق الوعد الأمين، وحبيب رب العالمين، وعلى آله وأصحابه أجمعين، سبحانك لا علم لنا إلا ما علمتنا. فعلمنا مولانا ما ينفعنا. وانفعنا بما علمتنا وزدنا علما وعملا، وصدقا وإخلاصا في الدين. اللهم افتح علينا فتوح العارفين، اللهم وفقنا توفيق الصالحين. اللهم أعد علينا ب عوائدك الحسنى يا كريم. آمين. وصلي اللهم على سيدنا محمد وعلى آله وصحبه وسلم أجمعين. معشر السادة والسيدات الطلبة والطالبات مع الدرس الخامس في مادة الأخلاق. والحكمة الثامنة وال70. قول الإمام إبن عطاء الله السكندري رضي الله تعالى عنه في هذه الحكمة الجديدة. يقول الرجاء. ما قارنه؟عمل. وإلا، فهو. أمنية. رضي الله تعالى عنه وأرضاه. وهو يعطينا. العقيدة الإسلامية. سلوك. يعلمنا كيف نتعامل. مع الحق سبحانه وتعالى. وهذا كلام في غاية الأهمية وفي غاية الجمال. لو تتذكر؟ معشر الإخوة والأخوات. أنها تحدثنا في اللقاء السابق عن الحكمة السابقة، الحزن على فقدان الطاعة. مع عدم النهوض إليها من علامات الاغترار. أي أن هذا الإنسان مغرور. كذلك هنا. يريد أن يتحدث، وأن يفرق لنا. بين التي التمني. وبين الرجاء. القرآن الكريم. ماذا؟ ما الرجاء؟ وإنما ذم التمني. نعم، تلك أمانيهم في القرآن الكريم، تلك أمانيهم. أي أنهم نعم، تمنوا الأماني الواسعة، ولم يأخذوا بأسبابه، لم يأخذوا بأسباب العمل، ولم يتقربوا إلى الله عز وجل. الشيخ يريد أن يقول. الرجاء، حيث يكون نعم ظنك بالله سبحانه وتعالى صحيحا، وحتى يكون أملك في فضل الله وفي كرم الله عز وجل صادقا صحيحا. لا بد أن تأخذ في العمل. لا بد أن تمتثل الأوامر. وأن تجتنب النواهي. أن يجدك حيث أمرك. وأن يفتقدك حيث نهاك، فإذا أنت ترجو الله سبحانه وتعالى ترجو منه المغفرة، وترجو منه العفو، وترجو منه الجنة، وترجو منه التوفيق، وترجو منه سبحانه وتعالى المدد. طيب هذا رجاء، نعم. نرجو الله سبحانه وتعالى، لكن هل يكفي ذلك لادعاء مع عدم النهوض للطاعة؟ قال لا. لا لا. لا بد من النهوض إلى الطاعة، لأن الحق سبحانه وتعالى يقول في القرآن الكريم فمن كان يرجو لقاء ربه فليعمل وليس فليقل. فليعمل عملا صالحا، ولا يشرك بعبادة ربه أحدا، يعمل عملا صالحا فيما يظهر للناس، وأن تكون نيته خالصة صادقة لوجه الله سبحانه وتعالى، إذا كان الأمر كذلك، رجاء في رحمة الله، ثم أخذ في الأسباب والأعمال الصالحة. امتثال الأوامر، واجتناب النواهي. إذا يصبح في هذه الحالة الرجاء صحيحا، والرجاء في محله، ولذلك في حديث قدسي في هذا الباب، نعم جميل، يقول الحق سبحانه وتعالى ما أقل حياء من طمع بجنته بغير عمل. كيف أجود برحمتي على من بخل بطاعتي؟مع أقل حياة من طمع بجنته بغير عمل؟ كيف؟ أجود برحمتي على من بخلة؟ بطاعتي؟نعم، والقرآن الكريم يقول فذرهم يخوضوا ويلعبوا. ذرهم يخوضوا ويلعبوا حتى يلاقوا يومهم الذي يوعدون. دعهم في خوضهم، وفي لعبهم، وفي نعم أمنياتهم. ولذلك قلنا أن التمني هو أن تتمنى المنزلة أو الشيء دون أن تأخذ في أسبابه، ودون أن تأخذ. ماذا؟ في؟ آه. نعم، ما يوصلك إليه، لأنك كأنك في هذه الحالة تطلب ماذا؟ مستحيلا؟نعم، ألا ليت الشباب يعود يوما. فأخبره بما فعل المشيب، لأنه يطلب شيئا لا يستطيع الوصول إليه. لا يستطيع الوصول إليه، فكأنه يطلب ماذا؟ مستحيلا عادة؟فمن هنا أيها الإخوة والأخوات السادة والسيدات، علينا أن نفرق، بين الرجاء. وبين التمني. فالرجاء حين تطلب الخير والمدد والرحمة من الله سبحانه وتعالى. وأن تأخذ في أسباب الطاعة، وفي أسباب رضاء الله سبحانه وتعالى. لم؟ لأن ما عند الله عز وجل لا يدرك إلا بطاعته. كما ذكرنا في الأسبوع في الدرس السابق عن سيدنا الحسن البصري أنه قال وإن قوما خرجوا من الدنيا ولا حسنة لهم. وهم يقولون نحن نحسن الظن بالله، وكذبوا لو أحسنوا الظن لأحسن العمل. حسن ظنك بالله سبحانه وتعالى هو الذي يحملك على الطاعات، يحملك على التوبة، يحملك على الصدق، يحملك على فعل الخير، يحملك على قراءة القرآن، لماذا؟ لأنه عندك حسن ظن، ورجاء كبير في الله سبحانه وتعالى، أما ذاك المسكين الآخر. الذي نعم، يتمنى المنازل ويتمنى نعم، آه ال الأماكن والمقامات العالية عند الله عز وجل، وهو عاص لله، وهو تارك للأوامر، وتارك ماذا؟ آه لما أمره الله سبحانه وتعالى به كمثله. حاله هذا كمثل ولد أه في سن الثانوية العامة أو البكالوريا. قال له أبوه إذا نجحت يا ولدي، نعم في دراستك أو في البكالوريا، أو في أي سنة في دراستك، سوف أشتري لك سيارة. لتركبها، وتذهب بها إلى الجامعة. أو دراجة؟لتذهب ما بها؟ ماذا؟ إلى المعهد الثانوي؟ بعد أن يكبروا قريب، يكبروا قليلا. فذاك الولد، بدلا أن يكرس اهتمامه ودراسته، وفي دروسه، ويكرس اهتمامه في المراجعة، وفي الحفظ. حتى ينجح في نال تلك الجائزة؟ لا، لا، لا، لم يفعل ذلك، وإنما ذهب يتسكع في الطرقات، وينظر في محلات الدراجات،هذه تعجبني وهذه تعجبني وهذه لا تعجبني، وهذه أفضل وهو يتخير بين هذه الدراجات وترك الدراسة. لا شك أنه في نهاية العام سوف يفاجأ ويجد نفسه لا يتحصل على المعدل، ولا يحقق الشرط الذي تشترطه عليه أبوه، وبالتالي ضاعت منه، ماذا؟ الدراجة؟ لماذا؟ لأنه تمنى الدراجة ولم يأخذ نعم بأسبابها. ترجو النجاة، ولم تسلك مسالكها؟ إن السفينة لا تجري على اليابس؟ ترجو النجاة، ولم تسلك مسالكها. إن السفينة لا تجري على اليابس. رحم الله بن عطاء حين يقول هنا الرجاء ما قارنه عمل. أيما كانت حسن ظنك بالله والأمل في الله عز وجل، مقرونا بشاهد صدق. يشاهد الصدق، وهذا الشاهد الصدق هنا هو أن تعمل، أن تقبل على الله، أن تقبل على الطاعات، وأن تسأل من الله عز وجل بعد ذلك القبول، وأن تسأل من الله سبحانه وتعالى المنازل العالية، وتسأل من الله سبحانه وتعالى التوفيق، وتسأل من الله سبحانه وتعالى. صلاح الحال، وتطلب من الله عز وجل ما تريد، لأنك ماذا وقفت في باب الله، وقفت في ساحة الله، أطاعت الله عز وجل، جاء في الحديث القدسي إن روح القدس جبريل نفخ في روعي أن نفسا لن تموت حتى تستكمل رزقها. فاتقوا الله، وأجملوا في الطلب، ولا يحملن كم استبطاء الرزق، ف تأخذونه بمعصية الله. أوف تأخذوه بمعصية الله، فإن ما عند الله لا يدرك إلا بطاعته. ما عند الله سبحانه وتعالى لا يدرك إلا بطاعته، الرجاء ما قارنه عمل، وإلا فهو أمنية، وهذه الأمنية لا تجدي نفعا، ولا تسمن من جوع كما يقولون، لا تسمن من جوع، ولا تجدي نفعا. لا تنفع صاحبها، لا في جني. اه، ولا في آخرته، لأن الله سبحانه وتعالى أربط بين الأسباب ومسبباتها، وجعل بين الأسباب ومسبباتها تلازما عاديا، فقال لك يا عبدي، أطعني أجعلك من أهل الجنة، وجعلك من السعداء، وأقضي حاجتك. ويا عبدي. ابتعد عن المعصية، وعن المخالفة والنعم، وابتعد عن كل ما يغضبني، ففي هذه الحالة فإنك إن وقعت في المعصية وفي المخالفة كنت أبعد ما تكون عني، وعن معيتي، وعن نعم رضايا سبحانه وتعالى. فإذن الرجاء ما قارنه عمل، وإلا فهو أمنية. كم من الناس اليوم يكثرون من الأمان؟ كم من الناس اليوم يكثرون من التمني؟يقول لك أحدهم أنا لا أصلي، ولكن قلبي طيب. أنا لا أصلي، ولكني أفعل وأفعل من فعل الخير، أنا لا أصلي، ولكني أنا أحسن من فلان، مالك ولفلان، مالك أول زيد، ولعمرو لبكر، دع الناس عليك أن تصلح من شأنك، يقول أنا كويس لأن ناصح لا أصلي، أو صحيح، أنا مش عارف في المبتلى بالموضوع. فلاني؟ ولكن أنا قلبي طيب، ولكن أنا عندي جوانب أخرى طيبة. نحن لا نتكلم عن الجوانب الطيبة، نحن نسألك في هذه. كيف تكون ترك الصلاة؟ كيف يكون مبررا؟ نعم بالقلب الطيب. وكيف يكون ترك الصلاة مبررا؟ نعم بالإحسان إلى الناس. هذا كله لا يجزي جهة، ماذا؟ عن جهة؟ الكل مطلوب من الله سبحانه وتعالى، مطلوب منك أن تصلي لأنها فرض عيني، ومطلوب منك أن تحسن إلى الآخرين، إذا كنت تستطيع ذلك من أجل أن تؤمن لنفسك ماذا ثوابا؟عظيما عند الله سبحانه وتعالى. نأتي إلى الشيخ الشرنوبي رضي الله عنه، الشارح يقول يعني أن الرجاء الصادق الذي هو مقام شريف من مقامات اليقين، هو ما قارنه عمل. لأن الرجاء الحقيقي. ما كان باعثا على الاجتهاد في الأعمال. ما كان باعثا على الاجتهاد في الأعمال، الأعمال الصالحة؟ لأن من رجا شيئا طلبه. وإلا فهو أمنية. أي مجرد أمنية لا طائل تحتها، ولا فائدة منها. بل هي غرور وضياع. هي غرور وضياع. كما نرى بعض الشباب اليوم. يصبح مت صبحا إلى الصباح. إلى آخر النهار. ويريد أن يبحث عن عمل. البحث عن العمل، أو يريد أن حتى يجد شغلا مناسبا. حتى يجد شغلا عند الدولة. حتى يجد عملا فيه؟ نعم، مكافأة مغر، مجزية، أو فيه شهرية عالية، فما زال يعن، يحلم ويحلم، ويحلم، ويحلم. حتى يمر العمر. دون أن يتعلم منه مهنة. ودون أن يتعلم صنعة. فلا هو أقبل على القرآن، وعلى العلم الشرعي. ولا هو أقبل على عمل أو مهمة أو صنعة يستفيد منها رزقا طيبا واسعا. فلا هو في الدنيا في عمل الدنيا، ولا هو في عمل الآخرة، وهذا هو الضياع نفسه، الكثيرون أو الكثيرون من الشباب اليوم يضيع وقته، وتمر الأعمار والسنون، ويمر به العمر. دون أن نعم، يتعلم مهنة. وخاصة في الصيف، ثلاث شهور، أربعة أشهر من العطلة، تمر هكذا كمرور الريح، دون أن يستفيد منها شيئا. قال رضي الله عنهلأن من رجا شيئا طالبهم، وإلا فهو أمنية، أي مجرد أمنية، لا طائل تحتها. وفي الحديث الكيس. أي العاقل من دان نفسه، أي حاسبها وعمل لما بعد الموت، والعاجز من أتبع نفسه هواها، وتمنى على الله الأماني. أرأيتم أن الأماني مقرون بالفشل؟كل أمنية، أو كل ما يتمناه الإنسان، أو يرجوه دون أن يأخذ في أسبابه، إذا هو أمنية المذمومة، لأن البطالة، ولأن الكسالة كما ورد عن سيدنا عمر أنهم قال إن السماء لا تمطر ذهبا ولا فضة، وكذلك الإنسان إذا كان يرجو أن يصبح عالما. أن يصبح حافظا للقرآن، أن يصبح عالما بعلوم الشريعة، فعليه أن يجد، وعليه أن يجتهد، وعليه أن يسهر، وعليه أن يعطي من وقته، وخاصة ماذا؟ حين يصحب العلم؟ لأن العلم عزيز لن يعطيك بعضه حتى تعطيه كلك. وتمنى على الله الأماني، وقال الحسن البصري رضي الله عنه إن قوما ألهتهم أماني المغفرة، حتى خرجوا من الدنيا، وليس لهم حسنة، يقول أحدهم أحسن الظن بربي، وهو يكذب، لو أحسن الظن بربه لأحسن العمل، وتلا قوله تعالى وذلكم ظنكم الذي ظننتم بربكم أرداكم. فأصبحتم من الخاسرين، ورحم الله القائل يا من يريد منازل الأبدال من غير قصد منه للأعمال، لا تطمع ن فيها، فلست من أثمن أهلها، إن لم تزاحمهم على الأحوال. نقف هنا بارك الله فيكم، شكرا لحسن إصغائكم إلى لقاء آخر إن شاء الله تعالى، والسلام عليكم ورحمة الله تعالى وبركاته.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent22">الدرس الخامس الحكمة الثامنة والسبعون من الكتاب</h1>
+    <p id="sent23">
+      بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأفضل الصلاة وأتم التسليم
+      على سيدنا وحبيبنا ومولانا وقرة أعيننا سيدنا محمد الصادق الوعد الأمين،
+      وحبيب رب العالمين، وعلى آله وأصحابه أجمعين، سبحانك لا علم لنا إلا ما
+      علمتنا. فعلمنا مولانا ما ينفعنا. وانفعنا بما علمتنا وزدنا علما وعملا،
+      وصدقا وإخلاصا في الدين. اللهم افتح علينا فتوح العارفين، اللهم وفقنا توفيق
+      الصالحين. اللهم أعد علينا ب عوائدك الحسنى يا كريم. آمين. وصلي اللهم على
+      سيدنا محمد وعلى آله وصحبه وسلم أجمعين. معشر السادة والسيدات الطلبة
+      والطالبات مع الدرس الخامس في مادة الأخلاق. والحكمة الثامنة وال70. قول
+      الإمام إبن عطاء الله السكندري رضي الله تعالى عنه في هذه الحكمة الجديدة.
+      يقول الرجاء. ما قارنه؟عمل. وإلا، فهو. أمنية. رضي الله تعالى عنه وأرضاه.
+      وهو يعطينا. العقيدة الإسلامية. سلوك. يعلمنا كيف نتعامل. مع الحق سبحانه
+      وتعالى. وهذا كلام في غاية الأهمية وفي غاية الجمال. لو تتذكر؟ معشر الإخوة
+      والأخوات. أنها تحدثنا في اللقاء السابق عن الحكمة السابقة، الحزن على فقدان
+      الطاعة. مع عدم النهوض إليها من علامات الاغترار. أي أن هذا الإنسان مغرور.
+      كذلك هنا. يريد أن يتحدث، وأن يفرق لنا. بين التي التمني. وبين الرجاء.
+      القرآن الكريم. ماذا؟ ما الرجاء؟ وإنما ذم التمني. نعم، تلك أمانيهم في
+      القرآن الكريم، تلك أمانيهم. أي أنهم نعم، تمنوا الأماني الواسعة، ولم يأخذوا
+      بأسبابه، لم يأخذوا بأسباب العمل، ولم يتقربوا إلى الله عز وجل. الشيخ يريد
+      أن يقول. الرجاء، حيث يكون نعم ظنك بالله سبحانه وتعالى صحيحا، وحتى يكون
+      أملك في فضل الله وفي كرم الله عز وجل صادقا صحيحا. لا بد أن تأخذ في العمل.
+      لا بد أن تمتثل الأوامر. وأن تجتنب النواهي. أن يجدك حيث أمرك. وأن يفتقدك
+      حيث نهاك، فإذا أنت ترجو الله سبحانه وتعالى ترجو منه المغفرة، وترجو منه
+      العفو، وترجو منه الجنة، وترجو منه التوفيق، وترجو منه سبحانه وتعالى المدد.
+      طيب هذا رجاء، نعم. نرجو الله سبحانه وتعالى، لكن هل يكفي ذلك لادعاء مع عدم
+      النهوض للطاعة؟ قال لا. لا لا. لا بد من النهوض إلى الطاعة، لأن الحق سبحانه
+      وتعالى يقول في القرآن الكريم فمن كان يرجو لقاء ربه فليعمل وليس فليقل.
+      فليعمل عملا صالحا، ولا يشرك بعبادة ربه أحدا، يعمل عملا صالحا فيما يظهر
+      للناس، وأن تكون نيته خالصة صادقة لوجه الله سبحانه وتعالى، إذا كان الأمر
+      كذلك، رجاء في رحمة الله، ثم أخذ في الأسباب والأعمال الصالحة. امتثال
+      الأوامر، واجتناب النواهي. إذا يصبح في هذه الحالة الرجاء صحيحا، والرجاء في
+      محله، ولذلك في حديث قدسي في هذا الباب، نعم جميل، يقول الحق سبحانه وتعالى
+      ما أقل حياء من طمع بجنته بغير عمل. كيف أجود برحمتي على من بخل بطاعتي؟مع
+      أقل حياة من طمع بجنته بغير عمل؟ كيف؟ أجود برحمتي على من بخلة؟ بطاعتي؟نعم،
+      والقرآن الكريم يقول فذرهم يخوضوا ويلعبوا. ذرهم يخوضوا ويلعبوا حتى يلاقوا
+      يومهم الذي يوعدون. دعهم في خوضهم، وفي لعبهم، وفي نعم أمنياتهم. ولذلك قلنا
+      أن التمني هو أن تتمنى المنزلة أو الشيء دون أن تأخذ في أسبابه، ودون أن
+      تأخذ. ماذا؟ في؟ آه. نعم، ما يوصلك إليه، لأنك كأنك في هذه الحالة تطلب ماذا؟
+      مستحيلا؟نعم، ألا ليت الشباب يعود يوما. فأخبره بما فعل المشيب، لأنه يطلب
+      شيئا لا يستطيع الوصول إليه. لا يستطيع الوصول إليه، فكأنه يطلب ماذا؟
+      مستحيلا عادة؟فمن هنا أيها الإخوة والأخوات السادة والسيدات، علينا أن نفرق،
+      بين الرجاء. وبين التمني. فالرجاء حين تطلب الخير والمدد والرحمة من الله
+      سبحانه وتعالى. وأن تأخذ في أسباب الطاعة، وفي أسباب رضاء الله سبحانه
+      وتعالى. لم؟ لأن ما عند الله عز وجل لا يدرك إلا بطاعته. كما ذكرنا في
+      الأسبوع في الدرس السابق عن سيدنا الحسن البصري أنه قال وإن قوما خرجوا من
+      الدنيا ولا حسنة لهم. وهم يقولون نحن نحسن الظن بالله، وكذبوا لو أحسنوا الظن
+      لأحسن العمل. حسن ظنك بالله سبحانه وتعالى هو الذي يحملك على الطاعات، يحملك
+      على التوبة، يحملك على الصدق، يحملك على فعل الخير، يحملك على قراءة القرآن،
+      لماذا؟ لأنه عندك حسن ظن، ورجاء كبير في الله سبحانه وتعالى، أما ذاك المسكين
+      الآخر. الذي نعم، يتمنى المنازل ويتمنى نعم، آه ال الأماكن والمقامات العالية
+      عند الله عز وجل، وهو عاص لله، وهو تارك للأوامر، وتارك ماذا؟ آه لما أمره
+      الله سبحانه وتعالى به كمثله. حاله هذا كمثل ولد أه في سن الثانوية العامة أو
+      البكالوريا. قال له أبوه إذا نجحت يا ولدي، نعم في دراستك أو في البكالوريا،
+      أو في أي سنة في دراستك، سوف أشتري لك سيارة. لتركبها، وتذهب بها إلى
+      الجامعة. أو دراجة؟لتذهب ما بها؟ ماذا؟ إلى المعهد الثانوي؟ بعد أن يكبروا
+      قريب، يكبروا قليلا. فذاك الولد، بدلا أن يكرس اهتمامه ودراسته، وفي دروسه،
+      ويكرس اهتمامه في المراجعة، وفي الحفظ. حتى ينجح في نال تلك الجائزة؟ لا، لا،
+      لا، لم يفعل ذلك، وإنما ذهب يتسكع في الطرقات، وينظر في محلات الدراجات،هذه
+      تعجبني وهذه تعجبني وهذه لا تعجبني، وهذه أفضل وهو يتخير بين هذه الدراجات
+      وترك الدراسة. لا شك أنه في نهاية العام سوف يفاجأ ويجد نفسه لا يتحصل على
+      المعدل، ولا يحقق الشرط الذي تشترطه عليه أبوه، وبالتالي ضاعت منه، ماذا؟
+      الدراجة؟ لماذا؟ لأنه تمنى الدراجة ولم يأخذ نعم بأسبابها. ترجو النجاة، ولم
+      تسلك مسالكها؟ إن السفينة لا تجري على اليابس؟ ترجو النجاة، ولم تسلك
+      مسالكها. إن السفينة لا تجري على اليابس. رحم الله بن عطاء حين يقول هنا
+      الرجاء ما قارنه عمل. أيما كانت حسن ظنك بالله والأمل في الله عز وجل، مقرونا
+      بشاهد صدق. يشاهد الصدق، وهذا الشاهد الصدق هنا هو أن تعمل، أن تقبل على
+      الله، أن تقبل على الطاعات، وأن تسأل من الله عز وجل بعد ذلك القبول، وأن
+      تسأل من الله سبحانه وتعالى المنازل العالية، وتسأل من الله سبحانه وتعالى
+      التوفيق، وتسأل من الله سبحانه وتعالى. صلاح الحال، وتطلب من الله عز وجل ما
+      تريد، لأنك ماذا وقفت في باب الله، وقفت في ساحة الله، أطاعت الله عز وجل،
+      جاء في الحديث القدسي إن روح القدس جبريل نفخ في روعي أن نفسا لن تموت حتى
+      تستكمل رزقها. فاتقوا الله، وأجملوا في الطلب، ولا يحملن كم استبطاء الرزق، ف
+      تأخذونه بمعصية الله. أوف تأخذوه بمعصية الله، فإن ما عند الله لا يدرك إلا
+      بطاعته. ما عند الله سبحانه وتعالى لا يدرك إلا بطاعته، الرجاء ما قارنه عمل،
+      وإلا فهو أمنية، وهذه الأمنية لا تجدي نفعا، ولا تسمن من جوع كما يقولون، لا
+      تسمن من جوع، ولا تجدي نفعا. لا تنفع صاحبها، لا في جني. اه، ولا في آخرته،
+      لأن الله سبحانه وتعالى أربط بين الأسباب ومسبباتها، وجعل بين الأسباب
+      ومسبباتها تلازما عاديا، فقال لك يا عبدي، أطعني أجعلك من أهل الجنة، وجعلك
+      من السعداء، وأقضي حاجتك. ويا عبدي. ابتعد عن المعصية، وعن المخالفة والنعم،
+      وابتعد عن كل ما يغضبني، ففي هذه الحالة فإنك إن وقعت في المعصية وفي
+      المخالفة كنت أبعد ما تكون عني، وعن معيتي، وعن نعم رضايا سبحانه وتعالى.
+      فإذن الرجاء ما قارنه عمل، وإلا فهو أمنية. كم من الناس اليوم يكثرون من
+      الأمان؟ كم من الناس اليوم يكثرون من التمني؟يقول لك أحدهم أنا لا أصلي، ولكن
+      قلبي طيب. أنا لا أصلي، ولكني أفعل وأفعل من فعل الخير، أنا لا أصلي، ولكني
+      أنا أحسن من فلان، مالك ولفلان، مالك أول زيد، ولعمرو لبكر، دع الناس عليك أن
+      تصلح من شأنك، يقول أنا كويس لأن ناصح لا أصلي، أو صحيح، أنا مش عارف في
+      المبتلى بالموضوع. فلاني؟ ولكن أنا قلبي طيب، ولكن أنا عندي جوانب أخرى طيبة.
+      نحن لا نتكلم عن الجوانب الطيبة، نحن نسألك في هذه. كيف تكون ترك الصلاة؟ كيف
+      يكون مبررا؟ نعم بالقلب الطيب. وكيف يكون ترك الصلاة مبررا؟ نعم بالإحسان إلى
+      الناس. هذا كله لا يجزي جهة، ماذا؟ عن جهة؟ الكل مطلوب من الله سبحانه
+      وتعالى، مطلوب منك أن تصلي لأنها فرض عيني، ومطلوب منك أن تحسن إلى الآخرين،
+      إذا كنت تستطيع ذلك من أجل أن تؤمن لنفسك ماذا ثوابا؟عظيما عند الله سبحانه
+      وتعالى. نأتي إلى الشيخ الشرنوبي رضي الله عنه، الشارح يقول يعني أن الرجاء
+      الصادق الذي هو مقام شريف من مقامات اليقين، هو ما قارنه عمل. لأن الرجاء
+      الحقيقي. ما كان باعثا على الاجتهاد في الأعمال. ما كان باعثا على الاجتهاد
+      في الأعمال، الأعمال الصالحة؟ لأن من رجا شيئا طلبه. وإلا فهو أمنية. أي مجرد
+      أمنية لا طائل تحتها، ولا فائدة منها. بل هي غرور وضياع. هي غرور وضياع. كما
+      نرى بعض الشباب اليوم. يصبح مت صبحا إلى الصباح. إلى آخر النهار. ويريد أن
+      يبحث عن عمل. البحث عن العمل، أو يريد أن حتى يجد شغلا مناسبا. حتى يجد شغلا
+      عند الدولة. حتى يجد عملا فيه؟ نعم، مكافأة مغر، مجزية، أو فيه شهرية عالية،
+      فما زال يعن، يحلم ويحلم، ويحلم، ويحلم. حتى يمر العمر. دون أن يتعلم منه
+      مهنة. ودون أن يتعلم صنعة. فلا هو أقبل على القرآن، وعلى العلم الشرعي. ولا
+      هو أقبل على عمل أو مهمة أو صنعة يستفيد منها رزقا طيبا واسعا. فلا هو في
+      الدنيا في عمل الدنيا، ولا هو في عمل الآخرة، وهذا هو الضياع نفسه، الكثيرون
+      أو الكثيرون من الشباب اليوم يضيع وقته، وتمر الأعمار والسنون، ويمر به
+      العمر. دون أن نعم، يتعلم مهنة. وخاصة في الصيف، ثلاث شهور، أربعة أشهر من
+      العطلة، تمر هكذا كمرور الريح، دون أن يستفيد منها شيئا. قال رضي الله عنهلأن
+      من رجا شيئا طالبهم، وإلا فهو أمنية، أي مجرد أمنية، لا طائل تحتها. وفي
+      الحديث الكيس. أي العاقل من دان نفسه، أي حاسبها وعمل لما بعد الموت، والعاجز
+      من أتبع نفسه هواها، وتمنى على الله الأماني. أرأيتم أن الأماني مقرون
+      بالفشل؟كل أمنية، أو كل ما يتمناه الإنسان، أو يرجوه دون أن يأخذ في أسبابه،
+      إذا هو أمنية المذمومة، لأن البطالة، ولأن الكسالة كما ورد عن سيدنا عمر أنهم
+      قال إن السماء لا تمطر ذهبا ولا فضة، وكذلك الإنسان إذا كان يرجو أن يصبح
+      عالما. أن يصبح حافظا للقرآن، أن يصبح عالما بعلوم الشريعة، فعليه أن يجد،
+      وعليه أن يجتهد، وعليه أن يسهر، وعليه أن يعطي من وقته، وخاصة ماذا؟ حين يصحب
+      العلم؟ لأن العلم عزيز لن يعطيك بعضه حتى تعطيه كلك. وتمنى على الله الأماني،
+      وقال الحسن البصري رضي الله عنه إن قوما ألهتهم أماني المغفرة، حتى خرجوا من
+      الدنيا، وليس لهم حسنة، يقول أحدهم أحسن الظن بربي، وهو يكذب، لو أحسن الظن
+      بربه لأحسن العمل، وتلا قوله تعالى وذلكم ظنكم الذي ظننتم بربكم أرداكم.
+      فأصبحتم من الخاسرين، ورحم الله القائل يا من يريد منازل الأبدال من غير قصد
+      منه للأعمال، لا تطمع ن فيها، فلست من أثمن أهلها، إن لم تزاحمهم على
+      الأحوال. نقف هنا بارك الله فيكم، شكرا لحسن إصغائكم إلى لقاء آخر إن شاء
+      الله تعالى، والسلام عليكم ورحمة الله تعالى وبركاته.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

@@ -1,168 +1,396 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الحادي عشر</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/nahw/ec11nahws1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الحادي عشر</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/nahw/ec11nahws1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent3">الدرس الحادي عشر</h1>
-<p id="sent4">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، والصلاة والسلام على سيدنا ونبينا محمد وعلى آله وصحبه وسلم، الإخوة والأخوات، طلبة مشيخة، جامع الزيتونة، المعمور، نظام التعليم عن بعد، طلبة السنة الثانية. السلام عليكم ورحمة الله تعالى وبركاته، نلتقي مجددا من خلال كتابنا التحفة السنية لنواصل الحديث في علم النحو، وقد وصل بنا قطار نحونا، إلى ماذا؟ إلى مواضع الضمة؟ تحدثنا في الدرس الماضي عن أن الرفع حالة الرفع لها علامة له لها علامات تدل عليها، إذا ما رأيناها نعلم أن الكلمة في حالة رفع وقلت لكم في الدرس الماضي إنه عندنا علامة أصل وعلامات. فرع عن ذلك الأصل، رأينا في الدرس الماضي العلامه الأصل، وهي الضمة، وقلنا إنها توجد في أربعة، ماذا؟ أماكن نلحظها؟ في أربعة أماكن؟ شرحنا مكانين منها. من هذه الأربع، وقلنا في الإسم المفرد، وقلنا إن الإسم المفرد ما ليس مثلا ولا جمعا، ولا ملحقا بالمثنى، ولا بالجمع، ورأينا أمثلته تما رأينا أن الضمة توجد في الجمع، ولكن أي جمع مقصود جمع التكسير؟ وقلنا إن جمع التكسير مادل. على أكثر من إثنين أو إثنتان بتغير صيغة وأ صورة مفرده. واتفقنا مع بعض في الدرس الماضي على أن أنواع التغير ستة، إما بالشكل أو بالنقص، أو بالزيادة، أو بالشكل مع النقص أو بالشكل، ماذا؟ مع الزيادة، أو بالشكل مع النقص، والزيادة الآن وصل بنا قطارنا إلىالنوع الثالث من الكلمات التي توجد فيها الضمة تكون علامة أصلية ل ل تدلنا على أن الكلمة في حالة رفع. النوع الثالث هو الإسم المجموع جمع مؤنث سالم. الذي يقال عنه جمع المؤنث السالم، وهو كل اسم. كان في آخره ألف و داء مزيد تين، مادل على أكثر من إثنتين، بزيادة ألف وتاء في آخره، إذا هو دل على أكثر من إثنتان، به زيادة ألف وثائق في آخره، كثير من العلماء سنرى في المستقبل إن شاء الله يفضلون قول، جمع ألف و داء على جمع المؤنث السالم. لأنهم وجدوا أن بعض الكلمات هي في الأصل مفرد، مفردها يعني مذكر وتجمع على جمع ألف و تا مثل حمام، حمامات، و إسطبل وإسطبلات. وبعض الكلمات لا تسلم صيغة مفردها عندما تتحول إلى جمع مؤنث سالم، فقالو الأفضل أن نسميها جمع ألف و تاء، ولهذا سنرى إن شاء الله في المستقبل. إبن مالك يقول وما بتا؟ وألف قد جمع. لم يقدم عالم أسالم، وإنما قال وما بتا؟ وألف قد جمع. طيب، جمع المؤنث السالم. فعندما تقول هند هند آت. جاءت هند آت. هذه. هند آت. إذن، ماذا نفعل؟ هذه تكون مرفوعة، كلمة جمع الهند آت أو فاطمات أو مسلمات تكون مرفوعة، ويكون علامة رفعه الضمة الظاهرة في آخره، جاءت المسلمات فاعل مرفوع، علامة رفعه الضمة الظاهرة، ماذا؟ في آخره؟ ننتبه هنا؟ قلنا إنه ما دل على أكثر من إثنتان بزيادة ألف وتاء إن طيب لو كانت الألف موجودة في أصل الكلمة مثل قاض فإنها تجمع على قضاة، طبعا قضاة هي بالداء ماذا؟ l؟ مربوطة التي نقف عليها عند الوقف؟ ها أن. طيب، قضاة هذه عا عندما نرى نجد في آخرها ألف مع تاء مربوطة، هل نسميه جمع مؤنس الملأ؟ قاع هناك؟ لا يوجد زيادة في الألف ألف في أصل الكلمة في كلمة قاض فنسميه جمع تكسير. إذن يشترط أن تكون ألف زائدة واتا وأيضا زائدة، فلو كانت أحدهما إحداهما موجودة في الأصل مثل الألف في قاض فإنها تجمع على قضاة فنسميه جمع تكسير، ولا نسميه جمع مؤنث. سالم طيب لو كانت التاو موجودة في المفرد؟مثل؟ ميت تجمع على أموات. بيت، تجمعو على ماذا؟ أبيات فتا موجودة في المفرد، هذا نسميه جمع ماذا؟ جمع؟ تكسير ولا يسمى جمع مؤنث سالم إذا الشرط في جمع المؤنث السالم أن تكون ألف هم زيدة من أجل جمع وتا أم زيدة من أجل جمع، ولهذا هم يقولون في تعريفهما دل على أكثر من اثني تين من 2/2 بزيادة ماذا؟ 2000، و تا إن يجب أن تكون الألف، و تا أم زيد. إذن هذا النوع الثالث الذي تكون فيه الضمة علامة على الرفع. فكما رأينا في الأمثلة، جاءت المسلمات فاعل مرفوع، لم ترفعه. ماذا؟ الضمة الظاهرة في آخره؟ يبقى عندنا النوع الأخير الذي تكون فيه الضمة علامة أصلية على الرفع، وهو الفعل المضارع الذي لم يتصل بآخره شيء. طيب ما معنى الفعل المضارع الذي لم يتصل بآخره شيء؟ يجب أن نفهم شيء أن هذا الفعل لي هو فعل مضارع، يجب عندما نريد أن نحكم عليه على أنه ماذا مرفوع؟ يجب أن ننظر في آخره. ونظر في أوله أي ما قبله، ننظر إلى ما قبله، فإن لم نجد ما يؤدي إلى نصبه، ولم نجد ما يؤدي، إلى ماذا؟ إلى جزمه، فنقول إنه فعل مضارع مرفوع، لماذا؟ ل تجرده عن الناصب و الجازم؟ إذا نحن الآن لما نتحدث عن الضمة؟نتحدث عن ذلك الفعل المضارع الذي تجرد من ناصب وتجرد من جهاز م، فلم يبقى له إلا حالة الرفع، وستكون الضمة دليلا على ذلك الرفع، اتفقنا، هذا بالنسبة إلى ما قبل الفعل بالنسبة لآخر الفعل، قال يجب أن لا يتصل به شيء. والمقصود بهذا ثلاثة أشياء لم يقولوا الذي لم يتصل بآخره شيء، هم يقصدون ثلاثة أنواع من الأشياء التي يمكن أن تتصل بآخر الفعل المضارة، ما هي هذه الثلاثة؟ قسم قسم مجموع في، خلينا نقولو نحنا في إطار واحد يعني يجمعهم إطار واحد. وهي ألف الإثنين واو الجماعة أو ياء المخاطبة، فهذا الفعل المضارع إن اتصل بآخره ألف الإثنين. يكتبان، تكتبان، أو اتصل بآخره، ماذا؟ واو، الجماعة يكتبون وتكتبون، أو اتصل ب آخره ياء المخاطبة تكتبين. لأن الفعل آخره تت لل كاتب يكتب الباب، فلم اتصلت به ألف الإثنين، كما رأينا، أو الجماعة، كما رأينا، أو يا المخاطبة كما رأينا، فنقول إنه مرفوع، ولا تن أن ننتبه. إنتقلنا من العلامه الأصل إلى العلامه الفرع، وهي ثبوت النون التي سنراها في درسها الخاص بها. تمام، باهي، هذا واحد مما يتصل بالآخر، وقلنا يجب أن لا يتصل به هذا الشيء، باهي الثاني ما كان من الفعل المضارع الذي تتصل به نون التوكيد،وهنا ننتبه، سواء كانت نون التوكيد الثقيلة أو الخفيفة. فإنه وإن كان الفعل في حالة رفع، وفي حالة رفع، لأن مرفوع وظيفته أنه فعل مضارع مرفوع، ولكن بسبب ما اتصل به، فحد حوله إلى فعل مبني على الفتح. فسنرى في الإعراب كيف أن الإعراب يجمع لنا هاذين هاتين القاعدتين، ف قوله تعالى ليسجنن ولا يكون من الصاغرين في الآية الكريمة مثالان للفعل المضارع المتصلة به أولا نون التوكيد الثقيلة. فهو مبني على الفتح، و ل متصلة به، نون التوكيد الخفيفة، فهو مبني على الفتح، فنقول سجنان فعل مضارع، مبني فعل مضارع، مرفوع لتجربه عن الناصب على، و الجازم هو مرفوع، لماذا؟ لأن سبب رفعه ليس لا علاقة له بماذا؟ بآخره؟ له علاقة بما قبل. الفعلي، ونحن اتفقنا أ يفعل، ويكون مرفوعا إذا لم يتصدق، وما ينصبه أو لم يسبقه ما يلزمه، فبالتالي هذا في قوله تعالي سجنان لا يوجد ناصب، ولا يوجد ماذا؟ جاز، فهو مرفوع، لكن هل ستظهر الضمة التي هي أصل لرفع؟لا، لن تظهر، لأنه سيتحول من فعل معرب إلى فعل مبني، فنقول فعل مضارع مرفوع ل تجرده عن الناصب، و الجازم مبني على الفتح لإتصاله في المثال الأول لأي سجنان بنون التوكيد الثقيلة، وفي المثال الثاني لا يكون ن نفس الشيء بال اتصاله بنون التوكيد. ماذا؟ إلا إنه الخفيفة هنا، فإذا حتى تظهر الضمة في الفعل المضارع، يجب أن لا تتصل بآخره، لأننا لتوليد الثقيلة، ولأننا التوكيد الخفيفة، لأنه وقتها سيتحول إلى مبني على الفتح. الحاجة الثالثة، الشيء الثالث الذي ينبغي أن لا يكون متصلا به، وهو نون النسوة. لماذا؟ قال لي أن نون النسوة إن اتصلت ب الفعل المضارع، تحوله من حالة الإعراب إلى حالة البناء على السكن؟ فلو قلت مثلا النسوة يكتبن درس هن. الطالبات يكتبن درس، هن؟ في كتبنا، أصله يكتب طيب، الطالبات يكتبن، هل يوجد قبل يكتبن أداة الناصبة؟ لا يوجد، هل يوجد أداة جازمة؟ لا يوجد؟ طيب ماذا ينتج عنه؟ تخلي أي تخلص من الناصب؟ تخلص من الجازم، فتعين أن يكون فعلا مضارعا مرفوعا. فهي النسوة، لنقول يكتبنا، نقول، يكتبنا، فعل مضارع مرفوع ل تجرده عن الناصب والجاسم. و. لاكن ماذا نقول؟ بعد ذلك؟ مبني على السكون لإتصاله بنون النسوة. تمام، فيصبح عندنا أن مل ال هو الفعل المضارع الذي تظهر فيه الضمة ت علامة على أنها أن الفعل في حالة رفع، وهي علامة أصلية هو الفعل المضارع الذي لم يتصل بآخره ألف الإثنين أو أو الجماعة أو ياء المخاطبة. كمجموعة أولى، لم تتظلم، يتصل بآخره نون التوكيد الثقيلة، أو نون التوكيد الخفيفة كمجموعة ثانيه كنوع الثاني لم تتصل بآخره نون النسوة كنوع ثالث. إذن ملخص درسنا في حلقتنا هذه و الحلقة الماضية. و التالي؟ الضمة. علامة أصلية على كون الكلمة التي نحن بصددها في حالة رفع، فإذا ما رأيناها في آخر الكلمة التي نحن بصدد الحديث عنها أو البحث فيها، فهذا يعطينا إشارة إلى أن الكلمة، سواء كانت فعلا مضارعا. أو الكلمة، إذا كانت إسما، هي في وظيفة من وظائف الكلمات التي هي مرفوعة في حالة رفع. ينتج عن ذلك أن هذه الضمة تكون في أربعة مواضع في الإسم المفرد. الذي ليس مثلا، ولا جم، ولا ملحقا بهما في جمع التكسير، ورأينا ستة أنواع لتحويل صيغ، وهو مدلى على أكثر من إثنين أو إثنتين بتغيير صيغة المفرد، ورأينا مع بعض ست أنواع من التغير، ثم النوع الثالث جمع المؤنث السالم. وهو ما دل على أكثر من إثنتان بزيادة ألف وتاء أ، و قلت لكم إن كثر كثير من النحات يفضلو، نقول جمع ألف و تا، والنوع الأخير كما اتفقنا، وكما رأينا من خلال الأمثلة الفعل المضارع الذيلم يتصل به ما ينصبه، لم يتصل به ما يلزمه، فهو مرفوع، وفي أيضا لم يتصل بآخره، ماذا؟ شيء؟ لم تتصل؟ بآخره 1002، و لا واو الجماعة، ولا ياء المخاطبة، هذا قسم لم يتصل بآخره، نون التوكيد الثقيلة، ولا نون التوكيد الخفيفة، هذا قسم لم يتصل بآخره نون النسوة. مثل يكتب، فتقول في الإعراب، يكتب فعل مضارع مرفوع لتجربه عن الناصب. ماذا؟ و الجازم؟ وعلامة رفعه؟ الضمة الظاهرة على آخره، نفس الكلام الذي قلناه في السابق سنعيدها لأن من باب التنبيه أنو نحن نقول إن الأصل فيه أنه مرفوع بالضمة. سواء كانت هذه الضمة يمكن نطقها والتلفظ بها، مثل يكتب، أو كان، هناك تعذر ل نطقها أ واستثقال، فإذا ما قلنا يسعى زيد في الخير، يسعى لم يصب ناصب، ولا جاز، فنقول فعل مضارع مرفوع، لم ترفع الضمة المقدرة، على آخره، منع من ظهورها التعذر، لأنه فعل معتل الآخر بالألف. لاحظتو، إذن دم موجودة موجودة، ولكنها في ذهننا، لأنه يتعذر نطقها إذا ما قلت يسما لولد يسمو فعل مضارع مرفوع ل تجرده عن الناصب والجاسم و علامة ماذا؟ رفعه؟ الضمة المقدرة على آخره، منع من ظهورها. ماذا؟ الثقل؟إذا ما قلت. يرتقي المجتهد في الدرجات، يرتقي فعل المضارع المرفوع ل تجرده عن الناصب و الجازم وعلامة رفعه الضمة. ماذا؟ المقدرة؟ على آخره؟ منع من ظهورها الثقل. إذن فهو مرفوع، والأصل في رفع أن يكون بالضم، كما رأينا، سواء كانت ملفوظة مثل يكتب، أو مقدرة، مثل يسعى، يسمو، يرتقي، بهذه. بهذا أيها الإخوة الكرام، الإخوة و الأخوات الكريمات و الكرماء، نكون قد أنهينا ما يتعلق ببحث الضمة كعلامة أصلية لرفع. وحتى نلتقي في درس قادم، اسأل الله لنا ولكم التوفيق والسداد، والسلام عليكم ورحمة الله تعالى وبركاته.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent3">الدرس الحادي عشر</h1>
+    <p id="sent4">
+      بسم الله الرحمن الرحيم، الحمد لله رب العالمين، والصلاة والسلام على سيدنا
+      ونبينا محمد وعلى آله وصحبه وسلم، الإخوة والأخوات، طلبة مشيخة، جامع
+      الزيتونة، المعمور، نظام التعليم عن بعد، طلبة السنة الثانية. السلام عليكم
+      ورحمة الله تعالى وبركاته، نلتقي مجددا من خلال كتابنا التحفة السنية لنواصل
+      الحديث في علم النحو، وقد وصل بنا قطار نحونا، إلى ماذا؟ إلى مواضع الضمة؟
+      تحدثنا في الدرس الماضي عن أن الرفع حالة الرفع لها علامة له لها علامات تدل
+      عليها، إذا ما رأيناها نعلم أن الكلمة في حالة رفع وقلت لكم في الدرس الماضي
+      إنه عندنا علامة أصل وعلامات. فرع عن ذلك الأصل، رأينا في الدرس الماضي
+      العلامه الأصل، وهي الضمة، وقلنا إنها توجد في أربعة، ماذا؟ أماكن نلحظها؟ في
+      أربعة أماكن؟ شرحنا مكانين منها. من هذه الأربع، وقلنا في الإسم المفرد،
+      وقلنا إن الإسم المفرد ما ليس مثلا ولا جمعا، ولا ملحقا بالمثنى، ولا بالجمع،
+      ورأينا أمثلته تما رأينا أن الضمة توجد في الجمع، ولكن أي جمع مقصود جمع
+      التكسير؟ وقلنا إن جمع التكسير مادل. على أكثر من إثنين أو إثنتان بتغير صيغة
+      وأ صورة مفرده. واتفقنا مع بعض في الدرس الماضي على أن أنواع التغير ستة، إما
+      بالشكل أو بالنقص، أو بالزيادة، أو بالشكل مع النقص أو بالشكل، ماذا؟ مع
+      الزيادة، أو بالشكل مع النقص، والزيادة الآن وصل بنا قطارنا إلىالنوع الثالث
+      من الكلمات التي توجد فيها الضمة تكون علامة أصلية ل ل تدلنا على أن الكلمة
+      في حالة رفع. النوع الثالث هو الإسم المجموع جمع مؤنث سالم. الذي يقال عنه
+      جمع المؤنث السالم، وهو كل اسم. كان في آخره ألف و داء مزيد تين، مادل على
+      أكثر من إثنتين، بزيادة ألف وتاء في آخره، إذا هو دل على أكثر من إثنتان، به
+      زيادة ألف وثائق في آخره، كثير من العلماء سنرى في المستقبل إن شاء الله
+      يفضلون قول، جمع ألف و داء على جمع المؤنث السالم. لأنهم وجدوا أن بعض
+      الكلمات هي في الأصل مفرد، مفردها يعني مذكر وتجمع على جمع ألف و تا مثل
+      حمام، حمامات، و إسطبل وإسطبلات. وبعض الكلمات لا تسلم صيغة مفردها عندما
+      تتحول إلى جمع مؤنث سالم، فقالو الأفضل أن نسميها جمع ألف و تاء، ولهذا سنرى
+      إن شاء الله في المستقبل. إبن مالك يقول وما بتا؟ وألف قد جمع. لم يقدم عالم
+      أسالم، وإنما قال وما بتا؟ وألف قد جمع. طيب، جمع المؤنث السالم. فعندما تقول
+      هند هند آت. جاءت هند آت. هذه. هند آت. إذن، ماذا نفعل؟ هذه تكون مرفوعة،
+      كلمة جمع الهند آت أو فاطمات أو مسلمات تكون مرفوعة، ويكون علامة رفعه الضمة
+      الظاهرة في آخره، جاءت المسلمات فاعل مرفوع، علامة رفعه الضمة الظاهرة، ماذا؟
+      في آخره؟ ننتبه هنا؟ قلنا إنه ما دل على أكثر من إثنتان بزيادة ألف وتاء إن
+      طيب لو كانت الألف موجودة في أصل الكلمة مثل قاض فإنها تجمع على قضاة، طبعا
+      قضاة هي بالداء ماذا؟ l؟ مربوطة التي نقف عليها عند الوقف؟ ها أن. طيب، قضاة
+      هذه عا عندما نرى نجد في آخرها ألف مع تاء مربوطة، هل نسميه جمع مؤنس الملأ؟
+      قاع هناك؟ لا يوجد زيادة في الألف ألف في أصل الكلمة في كلمة قاض فنسميه جمع
+      تكسير. إذن يشترط أن تكون ألف زائدة واتا وأيضا زائدة، فلو كانت أحدهما
+      إحداهما موجودة في الأصل مثل الألف في قاض فإنها تجمع على قضاة فنسميه جمع
+      تكسير، ولا نسميه جمع مؤنث. سالم طيب لو كانت التاو موجودة في المفرد؟مثل؟
+      ميت تجمع على أموات. بيت، تجمعو على ماذا؟ أبيات فتا موجودة في المفرد، هذا
+      نسميه جمع ماذا؟ جمع؟ تكسير ولا يسمى جمع مؤنث سالم إذا الشرط في جمع المؤنث
+      السالم أن تكون ألف هم زيدة من أجل جمع وتا أم زيدة من أجل جمع، ولهذا هم
+      يقولون في تعريفهما دل على أكثر من اثني تين من 2/2 بزيادة ماذا؟ 2000، و تا
+      إن يجب أن تكون الألف، و تا أم زيد. إذن هذا النوع الثالث الذي تكون فيه
+      الضمة علامة على الرفع. فكما رأينا في الأمثلة، جاءت المسلمات فاعل مرفوع، لم
+      ترفعه. ماذا؟ الضمة الظاهرة في آخره؟ يبقى عندنا النوع الأخير الذي تكون فيه
+      الضمة علامة أصلية على الرفع، وهو الفعل المضارع الذي لم يتصل بآخره شيء. طيب
+      ما معنى الفعل المضارع الذي لم يتصل بآخره شيء؟ يجب أن نفهم شيء أن هذا الفعل
+      لي هو فعل مضارع، يجب عندما نريد أن نحكم عليه على أنه ماذا مرفوع؟ يجب أن
+      ننظر في آخره. ونظر في أوله أي ما قبله، ننظر إلى ما قبله، فإن لم نجد ما
+      يؤدي إلى نصبه، ولم نجد ما يؤدي، إلى ماذا؟ إلى جزمه، فنقول إنه فعل مضارع
+      مرفوع، لماذا؟ ل تجرده عن الناصب و الجازم؟ إذا نحن الآن لما نتحدث عن
+      الضمة؟نتحدث عن ذلك الفعل المضارع الذي تجرد من ناصب وتجرد من جهاز م، فلم
+      يبقى له إلا حالة الرفع، وستكون الضمة دليلا على ذلك الرفع، اتفقنا، هذا
+      بالنسبة إلى ما قبل الفعل بالنسبة لآخر الفعل، قال يجب أن لا يتصل به شيء.
+      والمقصود بهذا ثلاثة أشياء لم يقولوا الذي لم يتصل بآخره شيء، هم يقصدون
+      ثلاثة أنواع من الأشياء التي يمكن أن تتصل بآخر الفعل المضارة، ما هي هذه
+      الثلاثة؟ قسم قسم مجموع في، خلينا نقولو نحنا في إطار واحد يعني يجمعهم إطار
+      واحد. وهي ألف الإثنين واو الجماعة أو ياء المخاطبة، فهذا الفعل المضارع إن
+      اتصل بآخره ألف الإثنين. يكتبان، تكتبان، أو اتصل بآخره، ماذا؟ واو، الجماعة
+      يكتبون وتكتبون، أو اتصل ب آخره ياء المخاطبة تكتبين. لأن الفعل آخره تت لل
+      كاتب يكتب الباب، فلم اتصلت به ألف الإثنين، كما رأينا، أو الجماعة، كما
+      رأينا، أو يا المخاطبة كما رأينا، فنقول إنه مرفوع، ولا تن أن ننتبه. إنتقلنا
+      من العلامه الأصل إلى العلامه الفرع، وهي ثبوت النون التي سنراها في درسها
+      الخاص بها. تمام، باهي، هذا واحد مما يتصل بالآخر، وقلنا يجب أن لا يتصل به
+      هذا الشيء، باهي الثاني ما كان من الفعل المضارع الذي تتصل به نون
+      التوكيد،وهنا ننتبه، سواء كانت نون التوكيد الثقيلة أو الخفيفة. فإنه وإن كان
+      الفعل في حالة رفع، وفي حالة رفع، لأن مرفوع وظيفته أنه فعل مضارع مرفوع،
+      ولكن بسبب ما اتصل به، فحد حوله إلى فعل مبني على الفتح. فسنرى في الإعراب
+      كيف أن الإعراب يجمع لنا هاذين هاتين القاعدتين، ف قوله تعالى ليسجنن ولا
+      يكون من الصاغرين في الآية الكريمة مثالان للفعل المضارع المتصلة به أولا نون
+      التوكيد الثقيلة. فهو مبني على الفتح، و ل متصلة به، نون التوكيد الخفيفة،
+      فهو مبني على الفتح، فنقول سجنان فعل مضارع، مبني فعل مضارع، مرفوع لتجربه عن
+      الناصب على، و الجازم هو مرفوع، لماذا؟ لأن سبب رفعه ليس لا علاقة له بماذا؟
+      بآخره؟ له علاقة بما قبل. الفعلي، ونحن اتفقنا أ يفعل، ويكون مرفوعا إذا لم
+      يتصدق، وما ينصبه أو لم يسبقه ما يلزمه، فبالتالي هذا في قوله تعالي سجنان لا
+      يوجد ناصب، ولا يوجد ماذا؟ جاز، فهو مرفوع، لكن هل ستظهر الضمة التي هي أصل
+      لرفع؟لا، لن تظهر، لأنه سيتحول من فعل معرب إلى فعل مبني، فنقول فعل مضارع
+      مرفوع ل تجرده عن الناصب، و الجازم مبني على الفتح لإتصاله في المثال الأول
+      لأي سجنان بنون التوكيد الثقيلة، وفي المثال الثاني لا يكون ن نفس الشيء بال
+      اتصاله بنون التوكيد. ماذا؟ إلا إنه الخفيفة هنا، فإذا حتى تظهر الضمة في
+      الفعل المضارع، يجب أن لا تتصل بآخره، لأننا لتوليد الثقيلة، ولأننا التوكيد
+      الخفيفة، لأنه وقتها سيتحول إلى مبني على الفتح. الحاجة الثالثة، الشيء
+      الثالث الذي ينبغي أن لا يكون متصلا به، وهو نون النسوة. لماذا؟ قال لي أن
+      نون النسوة إن اتصلت ب الفعل المضارع، تحوله من حالة الإعراب إلى حالة البناء
+      على السكن؟ فلو قلت مثلا النسوة يكتبن درس هن. الطالبات يكتبن درس، هن؟ في
+      كتبنا، أصله يكتب طيب، الطالبات يكتبن، هل يوجد قبل يكتبن أداة الناصبة؟ لا
+      يوجد، هل يوجد أداة جازمة؟ لا يوجد؟ طيب ماذا ينتج عنه؟ تخلي أي تخلص من
+      الناصب؟ تخلص من الجازم، فتعين أن يكون فعلا مضارعا مرفوعا. فهي النسوة،
+      لنقول يكتبنا، نقول، يكتبنا، فعل مضارع مرفوع ل تجرده عن الناصب والجاسم. و.
+      لاكن ماذا نقول؟ بعد ذلك؟ مبني على السكون لإتصاله بنون النسوة. تمام، فيصبح
+      عندنا أن مل ال هو الفعل المضارع الذي تظهر فيه الضمة ت علامة على أنها أن
+      الفعل في حالة رفع، وهي علامة أصلية هو الفعل المضارع الذي لم يتصل بآخره ألف
+      الإثنين أو أو الجماعة أو ياء المخاطبة. كمجموعة أولى، لم تتظلم، يتصل بآخره
+      نون التوكيد الثقيلة، أو نون التوكيد الخفيفة كمجموعة ثانيه كنوع الثاني لم
+      تتصل بآخره نون النسوة كنوع ثالث. إذن ملخص درسنا في حلقتنا هذه و الحلقة
+      الماضية. و التالي؟ الضمة. علامة أصلية على كون الكلمة التي نحن بصددها في
+      حالة رفع، فإذا ما رأيناها في آخر الكلمة التي نحن بصدد الحديث عنها أو البحث
+      فيها، فهذا يعطينا إشارة إلى أن الكلمة، سواء كانت فعلا مضارعا. أو الكلمة،
+      إذا كانت إسما، هي في وظيفة من وظائف الكلمات التي هي مرفوعة في حالة رفع.
+      ينتج عن ذلك أن هذه الضمة تكون في أربعة مواضع في الإسم المفرد. الذي ليس
+      مثلا، ولا جم، ولا ملحقا بهما في جمع التكسير، ورأينا ستة أنواع لتحويل صيغ،
+      وهو مدلى على أكثر من إثنين أو إثنتين بتغيير صيغة المفرد، ورأينا مع بعض ست
+      أنواع من التغير، ثم النوع الثالث جمع المؤنث السالم. وهو ما دل على أكثر من
+      إثنتان بزيادة ألف وتاء أ، و قلت لكم إن كثر كثير من النحات يفضلو، نقول جمع
+      ألف و تا، والنوع الأخير كما اتفقنا، وكما رأينا من خلال الأمثلة الفعل
+      المضارع الذيلم يتصل به ما ينصبه، لم يتصل به ما يلزمه، فهو مرفوع، وفي أيضا
+      لم يتصل بآخره، ماذا؟ شيء؟ لم تتصل؟ بآخره 1002، و لا واو الجماعة، ولا ياء
+      المخاطبة، هذا قسم لم يتصل بآخره، نون التوكيد الثقيلة، ولا نون التوكيد
+      الخفيفة، هذا قسم لم يتصل بآخره نون النسوة. مثل يكتب، فتقول في الإعراب،
+      يكتب فعل مضارع مرفوع لتجربه عن الناصب. ماذا؟ و الجازم؟ وعلامة رفعه؟ الضمة
+      الظاهرة على آخره، نفس الكلام الذي قلناه في السابق سنعيدها لأن من باب
+      التنبيه أنو نحن نقول إن الأصل فيه أنه مرفوع بالضمة. سواء كانت هذه الضمة
+      يمكن نطقها والتلفظ بها، مثل يكتب، أو كان، هناك تعذر ل نطقها أ واستثقال،
+      فإذا ما قلنا يسعى زيد في الخير، يسعى لم يصب ناصب، ولا جاز، فنقول فعل مضارع
+      مرفوع، لم ترفع الضمة المقدرة، على آخره، منع من ظهورها التعذر، لأنه فعل
+      معتل الآخر بالألف. لاحظتو، إذن دم موجودة موجودة، ولكنها في ذهننا، لأنه
+      يتعذر نطقها إذا ما قلت يسما لولد يسمو فعل مضارع مرفوع ل تجرده عن الناصب
+      والجاسم و علامة ماذا؟ رفعه؟ الضمة المقدرة على آخره، منع من ظهورها. ماذا؟
+      الثقل؟إذا ما قلت. يرتقي المجتهد في الدرجات، يرتقي فعل المضارع المرفوع ل
+      تجرده عن الناصب و الجازم وعلامة رفعه الضمة. ماذا؟ المقدرة؟ على آخره؟ منع
+      من ظهورها الثقل. إذن فهو مرفوع، والأصل في رفع أن يكون بالضم، كما رأينا،
+      سواء كانت ملفوظة مثل يكتب، أو مقدرة، مثل يسعى، يسمو، يرتقي، بهذه. بهذا
+      أيها الإخوة الكرام، الإخوة و الأخوات الكريمات و الكرماء، نكون قد أنهينا ما
+      يتعلق ببحث الضمة كعلامة أصلية لرفع. وحتى نلتقي في درس قادم، اسأل الله لنا
+      ولكم التوفيق والسداد، والسلام عليكم ورحمة الله تعالى وبركاته.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

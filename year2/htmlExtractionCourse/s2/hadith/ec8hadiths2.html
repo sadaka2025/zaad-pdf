@@ -1,168 +1,385 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الثامن باب تحريم الظلم</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/hadith/ec8hadiths2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الثامن باب تحريم الظلم</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/hadith/ec8hadiths2.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent29">الدرس الثامن باب تحريم الظلم</h1>
-<p id="sent30">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأفضل الصلاة وأتم التسليم على حبيبنا محمد سيد الأولين والآخرين وعلى الي أصحابها أجمعين وعلى من تبعهم بإحسان إلى يوم الدين، نقول وبالله تستعين. وبعد، فهذا هو الدرس الثامن من سلسلة شرح دروس اليد الصالحين للإمام النووي رحمه الله تعالى. ونذكر عنوان هذا الباب، فيقول المصنف رحمه الله تعالى الإمام النووي بابو تحريم الظلم، والأمر برد المظالم. قال الله تعالى ما لظالمين من حميم ولا شفيع يطاع. الله عز وجل رؤفة بعباده. وتخويف الهم. لي عقوبات يوم القيامة. تذكرهم. لما، أو بما سيقع لهم يوم القيامة من مواقف في الحساب. فذكر أنه ليس للظالم يوم قيامة، من يصد عنه العقوبة، فهذا حامل على الإنسان، أو المسلم الخائف، المتقي، إذا سمع أنه يوم قيام ليس هناك. حميم، ولا شفعاء يشفعون لك إلا بإذن ربنا عز وجل، فذلك داع إلى ترك هذه الأوصاف القبيحة التي نهار بنا عنها، ومنها، وهي أعظم الأوصاف، الظلم والظلم، كفا، كما فسره العلماء، له تفسيرات عدة. كلها يصب بعضها في بعض منها، هي التصرف في، أو التصرف في ملك الغير. هي تصرف في ملك الغير، لذلك ربنا عز وجل وصف نفسه بصفة المبالغة، وما ربك بظلام للعبيد، فقد يقول لقاء القر أنا في العقيدة الله عز وجل حر، وله المشي المطلقة في ملك و يفعل ما يشاء. فقد يريد ربنا عز وجل إدخال الناس جميعا يوم القيامة إلى نار جهنم، فهل له ذلك؟ قالو عقديا نعم له ذلك، وعقل أيضا له ذلك، لأنه لم يتصرف في ملك الغير، بل تصرف في ملكه، ولكنه جل في علاه. جل من ذلك عز وجل، متصفا من العدل والرحمة والرأفة، فلا يدخل أحد بفضله وجوده النار. ولا يدخل الناس جميعا النار إلا بظلم ارتكبوه، إذا آية آية تقول وقال الله تعالى وما لظالمين من نصير. وهي بمعنى الآية الأولى إذا كما ذكرنا أن الظلم هو التصرف في ملك الغير، أو أن الظلم هو moi je مجاوزة الحد في كل شيء. مجاوزة الحد. في كل شيء، إذا أول الله عز وجل بالعدل، وجعل الأمور وسطا في كل شيء، إذا تجاوز الإنسان حد ذلك الشيء، يصل بذلك التجاوز إلى ظلم. ومن الظلم أيضا قال العلماء وضع الشيء في غير محله، وضع الشيء في غير محله. ذكر الإمام النووي بعض الأحاديث نذكر منها أما الحديث قال، وأما الأحاديث منها حديث أبي ذر رضي الله عنه المتقدم في آخر باب المجاهدة. ومنها الحديث الثاني عن جابر رضي الله عنه أن رسول الله صلى الله عليه وسلم قال اتقوا الظلم إذا يبتدئ النبي صلى الله عليه وسلم ببعض الألفاظ، تنبيها على أن على أنها هامة، فال بدأ بالشيء في الذكر دليل على الاختصاص، وهنا الاختصاص. بالتقوى، بمعنى لاجتناب يحترز، ومطيع تعد عن هذا الوصف خبيث المستحق صاحبه للعقوبة، وهو ظلم كما ذكرنا لكم، الظلم هو المجاوزة في كل شيء. ثم علل النبي صلى الله عليه وسلم لمن كان له في قلبه عبر أو يتعظ، فقال فإن الظلم ظلمات يوم القيامة، فإن الظلم يعني عاقبة الظلم ظلم، فالدنيا قطعا يوم القيامة سوف يرد لكل مظلوم حقه. وجاءت في الأحاديث مع ذكر الله عز وجل من الترهيب عن الظلم في الدنيا، وأن عقوبته في الآخرة عقوبة شديدة و زاجرة، ذكر النبي صلى الله عليه وسلم أن من العقوبات التي يعجل الله عز وجل. لصاحبها في الدنيا هي الظلم والبغي، والظلم والبغي، وهما مترادفان، وشيء الثانيه، وقطيعة الرحم، ومنه عقوق الوالدين، من ذلك قال في الحديث ما من ذنب تعجل له العقوبة في الدنيا من البغي والظلم، وقطيعة الرحم. إذا ها تاني الألذ، وهتان، أو هذان الفعل، أن القبح أنو هو ظلم، وقطيعة الرحم، على أن قطيعة الرحم تدخل تحت الظلم، و من ظلم ذوي الأرحام، لذلك ناسب أن نتحدث عن مراتب الظلم التي ذكرت في الأحاديث النبوية، قسم العلماء ظلم إلى ثلاثة أقسامظلم، لايغفره الله عز وجل، وهو الشرك بالله عز وجل، وعبادة غيره، قال الله تعالى إن الشرك لظلم عظيم، إذا أعظم ما يظلم المرء به نفسه ظلم المرء نفسه، هذا الظل منقسم إلى قسمين، ظلم المرء نفسه. قاسم قسمين، قسم الأول. أنه يشرك بالله، وهذا من الكفر الصراح الذي يستوجب به جهنم خالدا فيها، نسأل الله عز وجل السلامة من ذلك، والنوع الثاني من ظلم المرء نفسه، وب المعاصي إذا النوع الأول نوع لايغفره الله البتة، ونوع الثاني هو تحت المشيئة. وهو الظلم، المعاصي، ارتكاب المعاصي، قال الله تعالى فلا تظلم أنفسكم وظلم يكون بارتكاب الكبائر والصغائر التي لم يتب منها، وأصر على ذلك الإصرار على الصغيرة تكون بمرتبة الكبيرة، إصرار مع استهتار، لابد تقييد ذلك. إذا النوع الأول قلنا ظلم لايغفره الله. Bon الثاني ظلم لا يعبأ الله به، يعني هو تحت المشية، و الغالب فيه العفو، لذلك جاء في الحديث مع أحد أحب إليه العذر من الله عز وجل، فالله عز وجل إذا غلبت رحمته غضبه، أو سبقت رحمته، غضبه للأصل في المسلماني حسن الظن بالله عز وجل على أنمعاصيه الكبائر التي دون الشركية تحت المغفرة، لكن لا يحمله ذلك على الاستهتار، إذن كل هذه الأحاديث مقيدة في الكبائر بالاستهتار، فمن استخف استوجب العقوبة، ومن راجية المغفرة والتوبة، وعمل لذلك. كتب له إن شاء الله عز وجل انه من الناجين، النوع الثالث إذا قلنا دنب لايغفره الله عز وجل، أو ظلم لا يغفر الله عز وجل، وشركو الثاني ظل ملاي عبد الله به، ونوع الثالث. هو ظلم لا يترك الله منه شيئا، كما جاء في حديث عائشة رضي الله تعالى ظلم لا يترك الله منه شيئا، وهو أشد هاو، هو المقصود بهذا الباب، وهو ظلم المرء غيره، و هو ظلم مرئي غيره، إذا هذا الظلم للغير مسلما كان أو كافرا. يهوديا، نصرانيا أو ذنيا، كما جاءت الأحاديث بذلك، اتقوا دعوة المظلوم ولو كافرا في رواية ولو من كافر، الله عز وجل يعقد يعجل العقوبة للظالم ولو للكافر، وجاء في أحاديث أخر أن النبي صلى الله عليه وسلم قال من قتل ذميا. منذ خصمه يوم القيامة، وجاء في أحاديث آخر أنه منآه ظلم ذميا. كنت حاجي جه يوم القيامة. إذا الظلم معاهم للغيره والذي لا يترك الله منه شيئا، بمعنى أنو لا يغفر الله منه شيئا حتى ترد المظالم إلى أصحابها، فإن مات ولم يستحل منهم فإما تولم يستحل منهم يوم القيامة، لا يدخل الجنة حتى يستوفي المظلوم حقه من الظالمين. إلا أن يغضي الله، إلا أن يرضي الله المظلوم بحب وة يحبوه بها. يترك بذلك بها حقه من الظالم. يعني يومك يام يؤتى بالظالم والمظلوم، فيؤخذ كما جاء في الحديث الصحيح الذي رواه مسلم. أتدرون من مفلس يوم القيامة؟ قال مفرس من ملا درهم له ولا متاع، قال بل المفلس من يأتي يوم القيامة بحسنات مثل الجبال. ولكن، هيا، تيقظ، لم هذا؟ وقذف هذا؟ وشتم هذا؟ وأخذ مال هذا؟ قال فيؤخذ من سيئاتهم، وتجعل على ظهره وعلى عاتقه، ثم يكب بها في نار جهنم، إذا قال واتقوا الشحة، فإن الشح أهلك من كان قبلكم، إذن بعد أن ذكرنا مرات بالظلم الثلاثة و هو ظلم آه لايغفره الله البتة. والنوع الثاني الظلم لأي عبء به الله عز وجل إذ هو. تحت المشي يعني المغفرة أو العقوبة، لكننا في الدنيا أمرنا بإحسان الظن، وترجيح الرجاء على الخوف، ونحسن الظن بالله عز وجل أنه سيكفر لنا، ونوع الثاني الذي لا يترك الله منه شيئا، بمعنى العقوبة، تستحق لظلم العبد غيره. طيب. بي أنا بعدا نبينا مراتب الظلم الثلاث، يحسن بنا أن نقول ااا، الظلم هو جبلة نفسية، أو هو خلق بشري. مضع الله عز وجل في الإنسان، فالإنسان وضع الله فيه التقوى، والفجور والطاعة والمعاصرة، وبذلك مع ذلك يختار، إن فألهمها. فجورها وتقواها، وهو مأمور بأن يزكي نفسه قد أفلح من زكاها، وقد خاب من دساها. إذن هذه الجبلة لا يمكن المرء أن يتخلى عنها كما قال المتنبي وظلم منشية من نفوس إذا قال وظلم من شيء من نفوس، وإن تجد ضعفة. فمن على أوف لي على لايظلم، إذا الأصل كنا في النفوس أن تكون فيها نوع من ال حيث والظلم، وتقديم النفس من لم ينظم الناس، هذا لا بد لي على شرعية او على جبلية، وتلك العلل كما اجمعها، أو جمعها الإمام الماوردي. قال عقل ساجر بعض الناس ربما لم يتربى التربية الإيمانية، لكن له من العقل مؤهله، الله عز وجل إمتناعا لظلم الناس، أودين مانع الدين، الدين هو الذي الخلق الذي جعله الله عز وجل في الإنسان، يمتنع بذلك عن ارتكاب الظلم للناس. والشيء الثالث النوع الثالث الذي يمنع الناس من الظلم، هو سلطان رادع، وشيء الرابع شيء الرابع، وهو عجز صاد، إذا هذه أنواع الأربع التي تجعل الإنسان يمتنع، من الظلم إذا إخوتي الكرام مس الله عز وجل أن يعافينا من هذه الصفات الخبيثة التي نهانا الله عز وجل. ومنها، وهي أعظم صفات التي ذكرت الآيات القرآنية، وهي كثيرة جدا في الزجري عن صفة الظالمين، نسأل الله عز وجل أن نكون منهم، فالذي يمنع الإنسان من الظلم كما ذكر العلماء، قالوا إن يكون له من الدين ما يؤهله، ويمنعه من ارتكاب ظلم الغير والتعدي. ولا الظلم أصناف كثيرة قد يغفل المرء عنها، فيظن الإنسان أن وظن فقط هو أخذ ما للغير، أو التعدي المادي على الغير بسببه، أو شتمه من الظلم هو أمر داخلي في الأنفس، قد لا يأبه المرء له، و واحتقار الناس و إساءة الظن بهم. لذلك جاء في الحديث من قال هلك الناس فهو أهلك، هم بالرفع، وجاء في رواية أخرى فهو أهلك، هم بالإخبار بفعل الماضي، إذا الذي يرى أن هو أفضل أنه أفضل من الناس، فدائما يراهم باحتقار، فلا يسلم على البعض، أو يقوم الناس على حسب لباسهم، ولا حسب. ااا نسابهم على حسب جهتهم، فهو من الظلم أيضا الذي يحاسب الله عز وجل عليه الإنسان يوم القيامة، لذلك أمرنا بتحسين الظن بالناس جميعا، لذلك جاء في بعض الحكم لبعض الصالحين أنهم رؤيتى، فالخضرا أعتقد أي كل شخص تراه ضمه أنه خير منك. بهذا المقام، وهو تواضع للعز لله عز وجل، يمنعك الله عز وجل من سوء الخاتمة، فما من ذنب تعجل فيه العقوبة من ظلم الناس، ولو بالتفكير، لذلك يحرص الناس دائرة حرص الإنسان دائما على حسن الظن بالناس، وأن لا يحتقرهم. آه، أظن أن قد استوفينا الحديث عن هذا الباب، نكتفي بهذا القدر إن شاء الله، ننتقل للحديث الذي يليه في درس لاحق، وجزاكم الله تعالى كل خير، والسلام عليكم ورحمة الله وبركاته.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent29">الدرس الثامن باب تحريم الظلم</h1>
+    <p id="sent30">
+      بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأفضل الصلاة وأتم التسليم
+      على حبيبنا محمد سيد الأولين والآخرين وعلى الي أصحابها أجمعين وعلى من تبعهم
+      بإحسان إلى يوم الدين، نقول وبالله تستعين. وبعد، فهذا هو الدرس الثامن من
+      سلسلة شرح دروس اليد الصالحين للإمام النووي رحمه الله تعالى. ونذكر عنوان
+      هذا الباب، فيقول المصنف رحمه الله تعالى الإمام النووي بابو تحريم الظلم،
+      والأمر برد المظالم. قال الله تعالى ما لظالمين من حميم ولا شفيع يطاع. الله
+      عز وجل رؤفة بعباده. وتخويف الهم. لي عقوبات يوم القيامة. تذكرهم. لما، أو
+      بما سيقع لهم يوم القيامة من مواقف في الحساب. فذكر أنه ليس للظالم يوم
+      قيامة، من يصد عنه العقوبة، فهذا حامل على الإنسان، أو المسلم الخائف،
+      المتقي، إذا سمع أنه يوم قيام ليس هناك. حميم، ولا شفعاء يشفعون لك إلا بإذن
+      ربنا عز وجل، فذلك داع إلى ترك هذه الأوصاف القبيحة التي نهار بنا عنها،
+      ومنها، وهي أعظم الأوصاف، الظلم والظلم، كفا، كما فسره العلماء، له تفسيرات
+      عدة. كلها يصب بعضها في بعض منها، هي التصرف في، أو التصرف في ملك الغير. هي
+      تصرف في ملك الغير، لذلك ربنا عز وجل وصف نفسه بصفة المبالغة، وما ربك بظلام
+      للعبيد، فقد يقول لقاء القر أنا في العقيدة الله عز وجل حر، وله المشي
+      المطلقة في ملك و يفعل ما يشاء. فقد يريد ربنا عز وجل إدخال الناس جميعا يوم
+      القيامة إلى نار جهنم، فهل له ذلك؟ قالو عقديا نعم له ذلك، وعقل أيضا له ذلك،
+      لأنه لم يتصرف في ملك الغير، بل تصرف في ملكه، ولكنه جل في علاه. جل من ذلك
+      عز وجل، متصفا من العدل والرحمة والرأفة، فلا يدخل أحد بفضله وجوده النار.
+      ولا يدخل الناس جميعا النار إلا بظلم ارتكبوه، إذا آية آية تقول وقال الله
+      تعالى وما لظالمين من نصير. وهي بمعنى الآية الأولى إذا كما ذكرنا أن الظلم
+      هو التصرف في ملك الغير، أو أن الظلم هو moi je مجاوزة الحد في كل شيء.
+      مجاوزة الحد. في كل شيء، إذا أول الله عز وجل بالعدل، وجعل الأمور وسطا في كل
+      شيء، إذا تجاوز الإنسان حد ذلك الشيء، يصل بذلك التجاوز إلى ظلم. ومن الظلم
+      أيضا قال العلماء وضع الشيء في غير محله، وضع الشيء في غير محله. ذكر الإمام
+      النووي بعض الأحاديث نذكر منها أما الحديث قال، وأما الأحاديث منها حديث أبي
+      ذر رضي الله عنه المتقدم في آخر باب المجاهدة. ومنها الحديث الثاني عن جابر
+      رضي الله عنه أن رسول الله صلى الله عليه وسلم قال اتقوا الظلم إذا يبتدئ
+      النبي صلى الله عليه وسلم ببعض الألفاظ، تنبيها على أن على أنها هامة، فال
+      بدأ بالشيء في الذكر دليل على الاختصاص، وهنا الاختصاص. بالتقوى، بمعنى
+      لاجتناب يحترز، ومطيع تعد عن هذا الوصف خبيث المستحق صاحبه للعقوبة، وهو ظلم
+      كما ذكرنا لكم، الظلم هو المجاوزة في كل شيء. ثم علل النبي صلى الله عليه
+      وسلم لمن كان له في قلبه عبر أو يتعظ، فقال فإن الظلم ظلمات يوم القيامة، فإن
+      الظلم يعني عاقبة الظلم ظلم، فالدنيا قطعا يوم القيامة سوف يرد لكل مظلوم
+      حقه. وجاءت في الأحاديث مع ذكر الله عز وجل من الترهيب عن الظلم في الدنيا،
+      وأن عقوبته في الآخرة عقوبة شديدة و زاجرة، ذكر النبي صلى الله عليه وسلم أن
+      من العقوبات التي يعجل الله عز وجل. لصاحبها في الدنيا هي الظلم والبغي،
+      والظلم والبغي، وهما مترادفان، وشيء الثانيه، وقطيعة الرحم، ومنه عقوق
+      الوالدين، من ذلك قال في الحديث ما من ذنب تعجل له العقوبة في الدنيا من
+      البغي والظلم، وقطيعة الرحم. إذا ها تاني الألذ، وهتان، أو هذان الفعل، أن
+      القبح أنو هو ظلم، وقطيعة الرحم، على أن قطيعة الرحم تدخل تحت الظلم، و من
+      ظلم ذوي الأرحام، لذلك ناسب أن نتحدث عن مراتب الظلم التي ذكرت في الأحاديث
+      النبوية، قسم العلماء ظلم إلى ثلاثة أقسامظلم، لايغفره الله عز وجل، وهو
+      الشرك بالله عز وجل، وعبادة غيره، قال الله تعالى إن الشرك لظلم عظيم، إذا
+      أعظم ما يظلم المرء به نفسه ظلم المرء نفسه، هذا الظل منقسم إلى قسمين، ظلم
+      المرء نفسه. قاسم قسمين، قسم الأول. أنه يشرك بالله، وهذا من الكفر الصراح
+      الذي يستوجب به جهنم خالدا فيها، نسأل الله عز وجل السلامة من ذلك، والنوع
+      الثاني من ظلم المرء نفسه، وب المعاصي إذا النوع الأول نوع لايغفره الله
+      البتة، ونوع الثاني هو تحت المشيئة. وهو الظلم، المعاصي، ارتكاب المعاصي، قال
+      الله تعالى فلا تظلم أنفسكم وظلم يكون بارتكاب الكبائر والصغائر التي لم يتب
+      منها، وأصر على ذلك الإصرار على الصغيرة تكون بمرتبة الكبيرة، إصرار مع
+      استهتار، لابد تقييد ذلك. إذا النوع الأول قلنا ظلم لايغفره الله. Bon الثاني
+      ظلم لا يعبأ الله به، يعني هو تحت المشية، و الغالب فيه العفو، لذلك جاء في
+      الحديث مع أحد أحب إليه العذر من الله عز وجل، فالله عز وجل إذا غلبت رحمته
+      غضبه، أو سبقت رحمته، غضبه للأصل في المسلماني حسن الظن بالله عز وجل على
+      أنمعاصيه الكبائر التي دون الشركية تحت المغفرة، لكن لا يحمله ذلك على
+      الاستهتار، إذن كل هذه الأحاديث مقيدة في الكبائر بالاستهتار، فمن استخف
+      استوجب العقوبة، ومن راجية المغفرة والتوبة، وعمل لذلك. كتب له إن شاء الله
+      عز وجل انه من الناجين، النوع الثالث إذا قلنا دنب لايغفره الله عز وجل، أو
+      ظلم لا يغفر الله عز وجل، وشركو الثاني ظل ملاي عبد الله به، ونوع الثالث. هو
+      ظلم لا يترك الله منه شيئا، كما جاء في حديث عائشة رضي الله تعالى ظلم لا
+      يترك الله منه شيئا، وهو أشد هاو، هو المقصود بهذا الباب، وهو ظلم المرء
+      غيره، و هو ظلم مرئي غيره، إذا هذا الظلم للغير مسلما كان أو كافرا. يهوديا،
+      نصرانيا أو ذنيا، كما جاءت الأحاديث بذلك، اتقوا دعوة المظلوم ولو كافرا في
+      رواية ولو من كافر، الله عز وجل يعقد يعجل العقوبة للظالم ولو للكافر، وجاء
+      في أحاديث أخر أن النبي صلى الله عليه وسلم قال من قتل ذميا. منذ خصمه يوم
+      القيامة، وجاء في أحاديث آخر أنه منآه ظلم ذميا. كنت حاجي جه يوم القيامة.
+      إذا الظلم معاهم للغيره والذي لا يترك الله منه شيئا، بمعنى أنو لا يغفر الله
+      منه شيئا حتى ترد المظالم إلى أصحابها، فإن مات ولم يستحل منهم فإما تولم
+      يستحل منهم يوم القيامة، لا يدخل الجنة حتى يستوفي المظلوم حقه من الظالمين.
+      إلا أن يغضي الله، إلا أن يرضي الله المظلوم بحب وة يحبوه بها. يترك بذلك بها
+      حقه من الظالم. يعني يومك يام يؤتى بالظالم والمظلوم، فيؤخذ كما جاء في
+      الحديث الصحيح الذي رواه مسلم. أتدرون من مفلس يوم القيامة؟ قال مفرس من ملا
+      درهم له ولا متاع، قال بل المفلس من يأتي يوم القيامة بحسنات مثل الجبال.
+      ولكن، هيا، تيقظ، لم هذا؟ وقذف هذا؟ وشتم هذا؟ وأخذ مال هذا؟ قال فيؤخذ من
+      سيئاتهم، وتجعل على ظهره وعلى عاتقه، ثم يكب بها في نار جهنم، إذا قال واتقوا
+      الشحة، فإن الشح أهلك من كان قبلكم، إذن بعد أن ذكرنا مرات بالظلم الثلاثة و
+      هو ظلم آه لايغفره الله البتة. والنوع الثاني الظلم لأي عبء به الله عز وجل
+      إذ هو. تحت المشي يعني المغفرة أو العقوبة، لكننا في الدنيا أمرنا بإحسان
+      الظن، وترجيح الرجاء على الخوف، ونحسن الظن بالله عز وجل أنه سيكفر لنا، ونوع
+      الثاني الذي لا يترك الله منه شيئا، بمعنى العقوبة، تستحق لظلم العبد غيره.
+      طيب. بي أنا بعدا نبينا مراتب الظلم الثلاث، يحسن بنا أن نقول ااا، الظلم هو
+      جبلة نفسية، أو هو خلق بشري. مضع الله عز وجل في الإنسان، فالإنسان وضع الله
+      فيه التقوى، والفجور والطاعة والمعاصرة، وبذلك مع ذلك يختار، إن فألهمها.
+      فجورها وتقواها، وهو مأمور بأن يزكي نفسه قد أفلح من زكاها، وقد خاب من
+      دساها. إذن هذه الجبلة لا يمكن المرء أن يتخلى عنها كما قال المتنبي وظلم
+      منشية من نفوس إذا قال وظلم من شيء من نفوس، وإن تجد ضعفة. فمن على أوف لي
+      على لايظلم، إذا الأصل كنا في النفوس أن تكون فيها نوع من ال حيث والظلم،
+      وتقديم النفس من لم ينظم الناس، هذا لا بد لي على شرعية او على جبلية، وتلك
+      العلل كما اجمعها، أو جمعها الإمام الماوردي. قال عقل ساجر بعض الناس ربما لم
+      يتربى التربية الإيمانية، لكن له من العقل مؤهله، الله عز وجل إمتناعا لظلم
+      الناس، أودين مانع الدين، الدين هو الذي الخلق الذي جعله الله عز وجل في
+      الإنسان، يمتنع بذلك عن ارتكاب الظلم للناس. والشيء الثالث النوع الثالث الذي
+      يمنع الناس من الظلم، هو سلطان رادع، وشيء الرابع شيء الرابع، وهو عجز صاد،
+      إذا هذه أنواع الأربع التي تجعل الإنسان يمتنع، من الظلم إذا إخوتي الكرام مس
+      الله عز وجل أن يعافينا من هذه الصفات الخبيثة التي نهانا الله عز وجل.
+      ومنها، وهي أعظم صفات التي ذكرت الآيات القرآنية، وهي كثيرة جدا في الزجري عن
+      صفة الظالمين، نسأل الله عز وجل أن نكون منهم، فالذي يمنع الإنسان من الظلم
+      كما ذكر العلماء، قالوا إن يكون له من الدين ما يؤهله، ويمنعه من ارتكاب ظلم
+      الغير والتعدي. ولا الظلم أصناف كثيرة قد يغفل المرء عنها، فيظن الإنسان أن
+      وظن فقط هو أخذ ما للغير، أو التعدي المادي على الغير بسببه، أو شتمه من
+      الظلم هو أمر داخلي في الأنفس، قد لا يأبه المرء له، و واحتقار الناس و إساءة
+      الظن بهم. لذلك جاء في الحديث من قال هلك الناس فهو أهلك، هم بالرفع، وجاء في
+      رواية أخرى فهو أهلك، هم بالإخبار بفعل الماضي، إذا الذي يرى أن هو أفضل أنه
+      أفضل من الناس، فدائما يراهم باحتقار، فلا يسلم على البعض، أو يقوم الناس على
+      حسب لباسهم، ولا حسب. ااا نسابهم على حسب جهتهم، فهو من الظلم أيضا الذي
+      يحاسب الله عز وجل عليه الإنسان يوم القيامة، لذلك أمرنا بتحسين الظن بالناس
+      جميعا، لذلك جاء في بعض الحكم لبعض الصالحين أنهم رؤيتى، فالخضرا أعتقد أي كل
+      شخص تراه ضمه أنه خير منك. بهذا المقام، وهو تواضع للعز لله عز وجل، يمنعك
+      الله عز وجل من سوء الخاتمة، فما من ذنب تعجل فيه العقوبة من ظلم الناس، ولو
+      بالتفكير، لذلك يحرص الناس دائرة حرص الإنسان دائما على حسن الظن بالناس، وأن
+      لا يحتقرهم. آه، أظن أن قد استوفينا الحديث عن هذا الباب، نكتفي بهذا القدر
+      إن شاء الله، ننتقل للحديث الذي يليه في درس لاحق، وجزاكم الله تعالى كل خير،
+      والسلام عليكم ورحمة الله وبركاته.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

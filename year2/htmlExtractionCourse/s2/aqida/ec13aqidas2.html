@@ -1,168 +1,366 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الثالث عشر برهان المخالفة للحوادث والقيام بالنفس</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/aqida/ec13aqidas2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الثالث عشر برهان المخالفة للحوادث والقيام بالنفس</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/aqida/ec13aqidas2.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent7">الدرس الثالث عشر برهان المخالفة للحوادث والقيام بالنفس</h1>
-<p id="sent8">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، والصلاة والسلام الأتمان الأكملان على سيدنا ومولانا محمد وعلى آله وصحبه أجمعين، اللهم لا علم لنا إلا ما علمتنا، ولا سهل إلا ما سهلته، وأنت تجعل الحزن إذا شئت سهل، فجعل الحزن سهلا، اللهم علمنا ما ينفعنا. ينفعنا بما علمتنا وزدنا علما وفهما يا رب العالمين، ولا حول ولا قوة إلا بالله العلي العظيم، ولا حول ولا قوة إلا بالله العلي العظيم، ولا حول ولا قوة إلا بالله العلي العظيم، أما بعد، فسلام عليكم ورحمة الله تعالى وبركاته، وبارك الله يوم يومكم آمال وأعمالكم، ونفعني الله وإياكم بهذا اللقاء. تجاه الحبيب المصطفى صلى الله عليه وعلى آله وأصحابه الشرفاء، مع درس جديد من دروس العقيدة، ومع كتاب طالع البشرى على العقيدة الصغرى، ووصل بنا الحديث إلى برهان صفة المخالفة للحوادث، يقول المصنف رحمه الله تعالى ونفعنا بعلومه في الدارين، آمين. وأما برهان وجوب مخالفته تعالى للحوادث، فلأنه لو ماثل شيئا منها كالعادة. الدليل يكون ب آ آ الفرض. القضية المقابلة. نحن نؤمن أن الله مخالف للحوادث، وغيرنا يؤمن أن الله يماثل الحوادث، أو يمكن أن يشبه الحوادث. فنأخذ تلك القضية ونحللها، سنرى القضية المقابلة، وهي فرضية أن الله يشبه أو يماثل حوادث، أين ستؤدي بنا؟ ما هي نتيجتها؟ قال فلأنه لو ماثل شيئا منها بأن كان سبحانه جرما أو عرضا. لأن غير الله سبحانه وتعالى، وهو العالم. إما أن يكون جرما أو عرضا، كل ما سوى الله، الذي هو العالم. إما أن يكون جرما، أي جسما. قائما بنفسه ذات أو عرضا، أي صفة. بأن كان سبحانه جرما أو عرضا، أو في جهة للجرم، الجهات الست. جهة ال ااا الفوق والتحت، واليمين، واليسار، والأمام، والخلف. أو في جهة للجرم، أو متقيدا بمكان أو زمان، أو نحو ذلك، مما يمكن أن تتصف به الأجرام الأجسام، لكان حديثا مثلها،لأننا ما ماثل شيئا اشترك معه في الحكم. أنا وأنت. إيه إنسان، أنا إنسان وأنت إنسان، فا ما يمكن أن يجري علي، يجوز أن يجري عليك، لماذا؟ لأننا نشترك في الإنسانية. أنا إنسان وأنت إنسان تمام، فإذا كان الله سبحانه وتعالى يما فل بقية الأجرام أو بقية الأعراض. لا اشترك في الحكم، لأنه ما من ماثل شيئا اشترك معه في الحكم. قال ل كان حادثا مثلها، حيث إن جميع ما ثبت لأحد المثلين يثبت للأهل يثبت للآخر قاعدة ما ثبت لأحد المثلين، يثبت للآخر أنا مثلك وأنت مثلي، فما ثبتلي يمكن أن يثبت لك، ولو لم يقع. المهم يجوز. من يصير عليك؟ لماذا؟ لأننا ن ماثل بعضنا؟ وذلك أي كونه حادثا. محال، إذا هذا محال، فرضية أن الله يماثل العالم بأجر امه وأعراضهم. حال. لماذا؟ لما عرفت قبل من وجوب قدمه؟تعالى وبقائه؟ كيف يماثل الله العالم؟ وقد أثبتنا أن الله قديم والعالم حادث، فلو ماثل الله العالم لكان حادثا مثل العالم أول. كان العالم قديما مثل الله وهذا باطل. نحن أثبتنا حدوث العالم بالدليل، وسبق أن أثبتنا قيد ما، الخالق سبحانه وتعالى، إذا لا يجوز أن يحصل وأن تكون هناك مماثلة بينهما، لأنه لو ماثل الله العالم ولو في شيء من الأشياء لكان حادثا. وقد أثبتنا أنه قديم. وأيضا لو ماثل تعالى شيئا من الحوادث، لو جبله القدم ل ألوهيته، كما قلنا، إما أن يكون العالم قديم مثل الله، أو يكون الله حادثا مثل العالم، وكيلهما باطل، والحدوث لفرض مماثل ته للحوادث. أيوه أيضا لو ماثل تعالى شيئا من الحوادث، لو جبله القدم ل ألوهيته والحدوث لفرض مماثل ته للحوادث، لو كان الله مثل العالم لكان قديما وحادثا قديما، لماذا؟ لأنه إله وحادث، لماذا؟ لأنه يماثل العالم، وهذا جمع بين نقيضين، يكون الإله قديما وحادثا في نفس الوقت. وذلك جمع بين مت. نافيين ضرورة، وهذا، كما تعلمون، مستحيل عقلي، فبطل نرجع إلى الفرضية الأولى الذي التي انطلقنا منها ثبط لكونه مماثل للحوادث، ووجب ضد هذا نقيض مماثل ته للحوادث، وهو ماذا؟ واجب مخالفته؟على للحوادث سبحانه. وأما برهان وجوب قيامه الآن، سنتحدث إلى أو على برهان الصفة الموالية، وهي صفة القيام بالنفس، إن الله لا يفتقر إلى شيء من الأشياء، ما هو الدليل على ذلك؟ وأما برهان وجوب قيامه تعالى بنفسه. فلأنه تعالى لو احتاج إلى محل، لو تذكرون، لما درسنا في الصفات السلبية صفة القيم بالنفس، قلنا صفة القيام بالنفس، أن الله لا يفتقر إلى شيء من الأشياء، و لخصناها في م آ كلمتين أن الله لا يفتقر إلى محل، أي ذات يقوم بها، ولا يفتقر إلى مخصص، أي لا يفتقر إلى موجد. لا يفتقر إلى موجد، فكونه لا يفتقر إلى محل، أي لا يمكن لله أن يكون صفة من الصفات، لأنه قائم بنفسه، ولا يفتقر إلى مخصص، أي لا يفتقر إلى موجد، لأن الله قديم، الآن، سنحلل هذه الصفة بالبرهان. فلأنه تعالى لو احتاج إلى محل أي فذات يقوم بها محل قيام، أي ذات يقوم بها، لكن صفة لو كان الله محتاج إلى محل دائما نبدأ بها فرضية القضية المقابلة، فلنفرض جدلا أن الله يحتاج إلى محل، من الذي يحتاج إلى محل. الصفا إذن يكون ربنا صفة، إذ لا يحتاج إلى محل يقوم به إلا الصفة، والصفة لا تتصف بصفات المعاني، ولا المعنوية. لو كان الله صفة. لست حالة اتصافه بالصفات، المعنى، المعاني اللي هي القدرة والإرادة والعلم والحياة والسمع والبصر والكلام التي تحدثنا عنها. لماذا؟ لأن الصفة لا تتصف بصفات المعاني، هي أصلا الصفة لا تقوم بنفسها. فهل يمكن للصفة التي لا تقوم بصب نفسها أن تقوم بها صفات، مع ان هي أصلا يعني بلغتنا يعني يجعلها تقوم بنفسها حتى تستطيع أن تقوم بها غيرها؟ لو كان الله صفة لبطل الاتصاف بصفات المعاني، لأن الصفات المعاني تقوم بالذات. يقوم بمحل، وإذا لم يكن ربنا متصف بصفات المعاني، بطل كونه قديرا، وبطل كونه مريدا، وبطل كونه علي ما، وإذا كان بطلا، وإذا كان الله سبحانه وتعالى ليس متصف بالقدرة والإرادة والعلم، بطل وجود هذا العالم. وهذا العالم يستحيل أن يكون معدوما، لماذا؟ لأننا نراه بالمشاهدة، لأننا جزء من العالم، فبطلت. للانطلاق، بطل بطلة الفرضية الأولى أن الله يكون صفة. قال. والصفة لا تتصف بصفات المعاني، ولا المعنوية لما هو مبسوط في المطولات، كما بينت الآن هذه القضية ب ااا لغة ي يسيرة. ومولانا جل وعز يجب اتصافه بهما بالمعاني والمعنوية. لماذا؟ لقيام البراهين على ذلك؟ كما قلنا؟ لو لم يكن قديرا لما وجد هذا العالم، لكن هذا العالم موجود، فواجب اتصافه بالقدرة، وإذا وجبت توجب اتصافه سبحانه وتعالى بالقدرة، وجب أن يكون ذاتا. حتى تقوم صفة القدرة به، وإلا لو كان صفة لما ااا اتصف بصفة القدرة. وغيرها من صفات المعاني، ف مولانا ليس بصفة، وإنما هو ذات متصفة بالصفات اللائقة بها، وقوله لا تتصف بصفات المعاني، ولا المعنوية، احترز به عن الصفة النفسية كالوجود. السلبية كالقدم والبقاء، وهما من الصفات السلبية، لأن صفة الوجود والصفات السلبية ليس لها وجود خارج الذهن، لا تقوم بالذات الصفات التي تقوم بالذات، ولها وجود خارج الذهن، وهي صح أن ترى هي صفات المعاني. وصفت المعنوية موجودة، أو يعني لها ثبوت خارج الذهن، ولا يصح أن ترى، وكلاهما قاصفات قائمة بالذات، لكن صفة الوجود ليست قائمة بالذات، يعتبرها الذهن وصفة السلبية ليست قائمة، بالذات، لأنها صفات عدمية يعتبرها الذهن فقط. ولما فسر في الصفات الواجبة لله، قيامه تعالى بنفسه بأمرين. سلب افتقاره إلى محل، وتحدثنا عنه، وسلب افتقاره إلى مخصص برهنة هنا على الأمر الأول، بما تقدم آنفا. الآن كنا نفسر برهان أن يكون سبحانه وتعالى لا يفتقر إلى محل، وعلى الأمل الثاني بقوله ولو احتاج إلى مخصص أي فاعل يخصصه ببعض الأمور المتقابلة كالوجود، بدلا عن العدم، لو كان الله. يحتاج إلى مخصص، يعني موجود آخر يخصص، يعين له إما أن يكون موجودا أو حادثا أو أن يكون في مكان أو زمان أو إلى غير ذلك لكان حادثا. طبعا، لأن المخصص. يحتاج إلى مخصص، فيجب أن يكون حادثا، فلو افترضنا أن الله مخصص أي وقع عليه التخصيص سيقع عليه التخصيص ممن؟ من موجود سابق، إذا الله سبحانه وتعالى سيكون حادثا، وهذا باطل، كيف يصح أن يكون حادثا، وقد قام البرهان على وجوب قدمه؟تعالى وبقائه؟ تحدثنا في برهان القدم والبقاء، فتنبه، واعتبر لتزداد إيمانا، ومعرفة بال مقتدر، نكتفي بهذا القدر، وصلى الله وسلم وبارك على سيدنا محمد وعلى آله وصحبه أجمعين، والحمد لله رب العالمين.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent7">الدرس الثالث عشر برهان المخالفة للحوادث والقيام بالنفس</h1>
+    <p id="sent8">
+      بسم الله الرحمن الرحيم، الحمد لله رب العالمين، والصلاة والسلام الأتمان
+      الأكملان على سيدنا ومولانا محمد وعلى آله وصحبه أجمعين، اللهم لا علم لنا
+      إلا ما علمتنا، ولا سهل إلا ما سهلته، وأنت تجعل الحزن إذا شئت سهل، فجعل
+      الحزن سهلا، اللهم علمنا ما ينفعنا. ينفعنا بما علمتنا وزدنا علما وفهما يا
+      رب العالمين، ولا حول ولا قوة إلا بالله العلي العظيم، ولا حول ولا قوة إلا
+      بالله العلي العظيم، ولا حول ولا قوة إلا بالله العلي العظيم، أما بعد، فسلام
+      عليكم ورحمة الله تعالى وبركاته، وبارك الله يوم يومكم آمال وأعمالكم، ونفعني
+      الله وإياكم بهذا اللقاء. تجاه الحبيب المصطفى صلى الله عليه وعلى آله
+      وأصحابه الشرفاء، مع درس جديد من دروس العقيدة، ومع كتاب طالع البشرى على
+      العقيدة الصغرى، ووصل بنا الحديث إلى برهان صفة المخالفة للحوادث، يقول
+      المصنف رحمه الله تعالى ونفعنا بعلومه في الدارين، آمين. وأما برهان وجوب
+      مخالفته تعالى للحوادث، فلأنه لو ماثل شيئا منها كالعادة. الدليل يكون ب آ آ
+      الفرض. القضية المقابلة. نحن نؤمن أن الله مخالف للحوادث، وغيرنا يؤمن أن
+      الله يماثل الحوادث، أو يمكن أن يشبه الحوادث. فنأخذ تلك القضية ونحللها،
+      سنرى القضية المقابلة، وهي فرضية أن الله يشبه أو يماثل حوادث، أين ستؤدي
+      بنا؟ ما هي نتيجتها؟ قال فلأنه لو ماثل شيئا منها بأن كان سبحانه جرما أو
+      عرضا. لأن غير الله سبحانه وتعالى، وهو العالم. إما أن يكون جرما أو عرضا، كل
+      ما سوى الله، الذي هو العالم. إما أن يكون جرما، أي جسما. قائما بنفسه ذات أو
+      عرضا، أي صفة. بأن كان سبحانه جرما أو عرضا، أو في جهة للجرم، الجهات الست.
+      جهة ال ااا الفوق والتحت، واليمين، واليسار، والأمام، والخلف. أو في جهة
+      للجرم، أو متقيدا بمكان أو زمان، أو نحو ذلك، مما يمكن أن تتصف به الأجرام
+      الأجسام، لكان حديثا مثلها،لأننا ما ماثل شيئا اشترك معه في الحكم. أنا وأنت.
+      إيه إنسان، أنا إنسان وأنت إنسان، فا ما يمكن أن يجري علي، يجوز أن يجري
+      عليك، لماذا؟ لأننا نشترك في الإنسانية. أنا إنسان وأنت إنسان تمام، فإذا كان
+      الله سبحانه وتعالى يما فل بقية الأجرام أو بقية الأعراض. لا اشترك في الحكم،
+      لأنه ما من ماثل شيئا اشترك معه في الحكم. قال ل كان حادثا مثلها، حيث إن
+      جميع ما ثبت لأحد المثلين يثبت للأهل يثبت للآخر قاعدة ما ثبت لأحد المثلين،
+      يثبت للآخر أنا مثلك وأنت مثلي، فما ثبتلي يمكن أن يثبت لك، ولو لم يقع.
+      المهم يجوز. من يصير عليك؟ لماذا؟ لأننا ن ماثل بعضنا؟ وذلك أي كونه حادثا.
+      محال، إذا هذا محال، فرضية أن الله يماثل العالم بأجر امه وأعراضهم. حال.
+      لماذا؟ لما عرفت قبل من وجوب قدمه؟تعالى وبقائه؟ كيف يماثل الله العالم؟ وقد
+      أثبتنا أن الله قديم والعالم حادث، فلو ماثل الله العالم لكان حادثا مثل
+      العالم أول. كان العالم قديما مثل الله وهذا باطل. نحن أثبتنا حدوث العالم
+      بالدليل، وسبق أن أثبتنا قيد ما، الخالق سبحانه وتعالى، إذا لا يجوز أن يحصل
+      وأن تكون هناك مماثلة بينهما، لأنه لو ماثل الله العالم ولو في شيء من
+      الأشياء لكان حادثا. وقد أثبتنا أنه قديم. وأيضا لو ماثل تعالى شيئا من
+      الحوادث، لو جبله القدم ل ألوهيته، كما قلنا، إما أن يكون العالم قديم مثل
+      الله، أو يكون الله حادثا مثل العالم، وكيلهما باطل، والحدوث لفرض مماثل ته
+      للحوادث. أيوه أيضا لو ماثل تعالى شيئا من الحوادث، لو جبله القدم ل ألوهيته
+      والحدوث لفرض مماثل ته للحوادث، لو كان الله مثل العالم لكان قديما وحادثا
+      قديما، لماذا؟ لأنه إله وحادث، لماذا؟ لأنه يماثل العالم، وهذا جمع بين
+      نقيضين، يكون الإله قديما وحادثا في نفس الوقت. وذلك جمع بين مت. نافيين
+      ضرورة، وهذا، كما تعلمون، مستحيل عقلي، فبطل نرجع إلى الفرضية الأولى الذي
+      التي انطلقنا منها ثبط لكونه مماثل للحوادث، ووجب ضد هذا نقيض مماثل ته
+      للحوادث، وهو ماذا؟ واجب مخالفته؟على للحوادث سبحانه. وأما برهان وجوب قيامه
+      الآن، سنتحدث إلى أو على برهان الصفة الموالية، وهي صفة القيام بالنفس، إن
+      الله لا يفتقر إلى شيء من الأشياء، ما هو الدليل على ذلك؟ وأما برهان وجوب
+      قيامه تعالى بنفسه. فلأنه تعالى لو احتاج إلى محل، لو تذكرون، لما درسنا في
+      الصفات السلبية صفة القيم بالنفس، قلنا صفة القيام بالنفس، أن الله لا يفتقر
+      إلى شيء من الأشياء، و لخصناها في م آ كلمتين أن الله لا يفتقر إلى محل، أي
+      ذات يقوم بها، ولا يفتقر إلى مخصص، أي لا يفتقر إلى موجد. لا يفتقر إلى موجد،
+      فكونه لا يفتقر إلى محل، أي لا يمكن لله أن يكون صفة من الصفات، لأنه قائم
+      بنفسه، ولا يفتقر إلى مخصص، أي لا يفتقر إلى موجد، لأن الله قديم، الآن،
+      سنحلل هذه الصفة بالبرهان. فلأنه تعالى لو احتاج إلى محل أي فذات يقوم بها
+      محل قيام، أي ذات يقوم بها، لكن صفة لو كان الله محتاج إلى محل دائما نبدأ
+      بها فرضية القضية المقابلة، فلنفرض جدلا أن الله يحتاج إلى محل، من الذي
+      يحتاج إلى محل. الصفا إذن يكون ربنا صفة، إذ لا يحتاج إلى محل يقوم به إلا
+      الصفة، والصفة لا تتصف بصفات المعاني، ولا المعنوية. لو كان الله صفة. لست
+      حالة اتصافه بالصفات، المعنى، المعاني اللي هي القدرة والإرادة والعلم
+      والحياة والسمع والبصر والكلام التي تحدثنا عنها. لماذا؟ لأن الصفة لا تتصف
+      بصفات المعاني، هي أصلا الصفة لا تقوم بنفسها. فهل يمكن للصفة التي لا تقوم
+      بصب نفسها أن تقوم بها صفات، مع ان هي أصلا يعني بلغتنا يعني يجعلها تقوم
+      بنفسها حتى تستطيع أن تقوم بها غيرها؟ لو كان الله صفة لبطل الاتصاف بصفات
+      المعاني، لأن الصفات المعاني تقوم بالذات. يقوم بمحل، وإذا لم يكن ربنا متصف
+      بصفات المعاني، بطل كونه قديرا، وبطل كونه مريدا، وبطل كونه علي ما، وإذا كان
+      بطلا، وإذا كان الله سبحانه وتعالى ليس متصف بالقدرة والإرادة والعلم، بطل
+      وجود هذا العالم. وهذا العالم يستحيل أن يكون معدوما، لماذا؟ لأننا نراه
+      بالمشاهدة، لأننا جزء من العالم، فبطلت. للانطلاق، بطل بطلة الفرضية الأولى
+      أن الله يكون صفة. قال. والصفة لا تتصف بصفات المعاني، ولا المعنوية لما هو
+      مبسوط في المطولات، كما بينت الآن هذه القضية ب ااا لغة ي يسيرة. ومولانا جل
+      وعز يجب اتصافه بهما بالمعاني والمعنوية. لماذا؟ لقيام البراهين على ذلك؟ كما
+      قلنا؟ لو لم يكن قديرا لما وجد هذا العالم، لكن هذا العالم موجود، فواجب
+      اتصافه بالقدرة، وإذا وجبت توجب اتصافه سبحانه وتعالى بالقدرة، وجب أن يكون
+      ذاتا. حتى تقوم صفة القدرة به، وإلا لو كان صفة لما ااا اتصف بصفة القدرة.
+      وغيرها من صفات المعاني، ف مولانا ليس بصفة، وإنما هو ذات متصفة بالصفات
+      اللائقة بها، وقوله لا تتصف بصفات المعاني، ولا المعنوية، احترز به عن الصفة
+      النفسية كالوجود. السلبية كالقدم والبقاء، وهما من الصفات السلبية، لأن صفة
+      الوجود والصفات السلبية ليس لها وجود خارج الذهن، لا تقوم بالذات الصفات التي
+      تقوم بالذات، ولها وجود خارج الذهن، وهي صح أن ترى هي صفات المعاني. وصفت
+      المعنوية موجودة، أو يعني لها ثبوت خارج الذهن، ولا يصح أن ترى، وكلاهما
+      قاصفات قائمة بالذات، لكن صفة الوجود ليست قائمة بالذات، يعتبرها الذهن وصفة
+      السلبية ليست قائمة، بالذات، لأنها صفات عدمية يعتبرها الذهن فقط. ولما فسر
+      في الصفات الواجبة لله، قيامه تعالى بنفسه بأمرين. سلب افتقاره إلى محل،
+      وتحدثنا عنه، وسلب افتقاره إلى مخصص برهنة هنا على الأمر الأول، بما تقدم
+      آنفا. الآن كنا نفسر برهان أن يكون سبحانه وتعالى لا يفتقر إلى محل، وعلى
+      الأمل الثاني بقوله ولو احتاج إلى مخصص أي فاعل يخصصه ببعض الأمور المتقابلة
+      كالوجود، بدلا عن العدم، لو كان الله. يحتاج إلى مخصص، يعني موجود آخر يخصص،
+      يعين له إما أن يكون موجودا أو حادثا أو أن يكون في مكان أو زمان أو إلى غير
+      ذلك لكان حادثا. طبعا، لأن المخصص. يحتاج إلى مخصص، فيجب أن يكون حادثا، فلو
+      افترضنا أن الله مخصص أي وقع عليه التخصيص سيقع عليه التخصيص ممن؟ من موجود
+      سابق، إذا الله سبحانه وتعالى سيكون حادثا، وهذا باطل، كيف يصح أن يكون
+      حادثا، وقد قام البرهان على وجوب قدمه؟تعالى وبقائه؟ تحدثنا في برهان القدم
+      والبقاء، فتنبه، واعتبر لتزداد إيمانا، ومعرفة بال مقتدر، نكتفي بهذا القدر،
+      وصلى الله وسلم وبارك على سيدنا محمد وعلى آله وصحبه أجمعين، والحمد لله رب
+      العالمين.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

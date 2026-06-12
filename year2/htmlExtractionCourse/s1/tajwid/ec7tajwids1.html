@@ -1,168 +1,380 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس السابع</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/tajwid/ec7tajwids1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس السابع</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/tajwid/ec7tajwids1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent27">الدرس السابع</h1>
-<p id="sent28">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأفضل الصلاة وأتم التسليم على سيدنا محمد وعلى آله وصحبه أجمعين، اللهم علمنا ما ينفعنا ونفعنا بما علمتنا وزدنا من لدنك علما، ولا حول ولا قوة إلا بالله العلي العظيم. أما بعد، أيها الإخوة الأكارم، ف نواصل حديثنا عن مخارج الحروف، حيث تحدثنا في الدرس السابق على المخرج الأول الرئيسي، ألا وهو مخرج الجوف، و الجوف هو الخلاء الممتد بين الحلق وبين الفم وحروف. حل وحروف الجوفي ثلاثة، وهي حروف المد قال أبن الجزري رحمه الله تعالى فألف والمد و أختها، وهي حروف مد للهواء تنتهي، وهي الألف الساكنة المفتوح ماقبلها، والواو الساكنة المضموم ماقبلها، واليا أ الساكنة. المكسور ما قبلها مجموعة في قولنا نوحيها أو تينا، هذه هي الحروف المادية أو الحروف الجوفية. ننطلق، ننتقل الآن إلى المخرج الثاني الرئيسي ألا وهو مخرج الحلق و مخرج الحلق. له ثلاثة مخارج تفصيلية. وهذه هي الصورة التوضيحية لمخرج الحلق، فالحلق. له ثلاثة مخارج تفصيلية، عندنا أقصى. الحلق. و. وسطو الحلق، و أدنى الحلق. أقصى الحلق يخرج منه الهمزة والهاء أ الهمزة، والهاء أ. أعوذ بالله من الشيطان. من الرجيم. الحمد الله رب العالمين. إيمانا أو تو هذا بالنسبة إلى الهمزة وا لها الله لا إله إلا هو الحي القيوم. وم، ولله ملك السماوات والأرض. عندنا آلهة. ايهدينا الصراط المستقيم. Mais مم؟ إن الله و ملا ئكة يصلون على النبي، إذا عندنا أقصى الحلق تخرج منه الهمزة والهاء، أ وسط الحلق، العين و الحاء. ياك؟ نعم عبد وإياك نستعين. إن عنا العين. تاع ملون، و الحاء كذلك. الحمد لله رب العالمين. امم. ثم بعدها أدنى الحلق، ويخرج منه الغين والخاء. غير المغضوب عليهم. م reseaux غي، وعندنا الخا أ. يختص مون. امم خو خو خي اخ. أخ يخ، وذكرنا القاعدة في الس. في الدرس السابق، أننا إذا أردنا أن نعرف مخرج الحرف بالدقة، لا بد لنا أن نسكن الحرف وندخل عليه همزة وصل مضمومة، أو مفتوحة أو مكسورة، هذا بالنسبة لي ما خرج. الحلق و يشتمل على ثلاثة مخارج تفصيلية لستة حروف الهمزة، والهاء، والعين، والحاء، والغين، والخاء أ. وفي هذا يقول الإمام أبن الجزري رحمه الله تعالى، ثم لأقصى الحلق همز هاء، ثم لوسطه. عين حاء أدناه، غين خاء، ها. قال الشارح رحمه الله تعالى ونفعنا الله بعلمه، ولما فرغ من مخرج الجوف وحروفه، شرع في بيان مخارج الحلق وحروفه، فقال ثم لأقصى الحلق همز هاء، ثم لوسطه بإسكان السين، ثم لوصيف فعين حاء. أدناه غير خا أها، الحلق فيه ثلاثة مخارج لستة أحرف فل أقسام طبعا أقصى الحلق من جهة مادة الصوت. أما إذا أردنا أن. أن نبين الحلق من جهة الفم، أي من جهة اللسان والأسنان، فا ينعكس ال بالنسبة إلى المخارج، لذلك هناك من عبر على الحروف مثلا ال ال ال هاء، والهمزة. قال هي يعني رتبها بعد الغين والخاء أ ورا. و أتى ب العين والحاء بعد الغين والخاء أ. و أتى بالهمزة و بالخاء بعد العين و الحاء فعكس الصورة. أما نحن ف نضبط مخارج الحروف باعتبار المادة الخارجة. من ال الجوف، ثم بعدها إلى الحلق، إلى اللسان، و الأسنان. إلى آخره. قال ولي وسطه، قال فلي أقصاه أي أبعده مما يلي الصدر. أبعد مما يلي صدر الهمزة والهاء عن الهمزة، والهى نعم، قال و لوصفه العين، والحاء المهملة، أن هذا هو مخرج العين، ومخرج. الحا. نعم، عبد. عليم الحمد. اح. اع اح حا عندنا مثلا عا ع و تعيد حا حو حي، ثم قالولي أدناه أي أقربهم ما يلي اللسان، وهو أوله الغين والخاء. وقدم العين على الحاء، لأن العين أبعد من الحاء، خلافا ل شريح في تقديمه الحاء، وكذلك قدم الغين على الخاء أ، لأن الخا أقرب إلى اللسان من الغين، كما قلت، يعني هذا الخلاف في ااا من أين نبدأ؟ توصيف مخارج الحروف؟ من شرع في ذكر مخارج الحروف، باعتبار المادة؟ فا جعل ااا الإعتبار من الحلق أقصى وسط و أدنى. ومن جعل مخارج الحروف باعتباره الفم؟عكس الصورة، قال خلافا لم كي في تقديمه الخا أ. نعم، هناك خلاف كما قلنا، وأظن لفظي، والله تعالي أعلم شرايح الإمام شرايح بن محمد الرعيني، وهو من أئمة التجويد و القراءات ااا، ولما مك إبن أبي طالب. القيرواني كذلك من أئمة التفسير و القراءات والتجويد، آه قدم الخام على الحاء. قال. وتسمى الحروف الستة الحلقية لخروجها من الحلق. إذن، هذه الحلقية، لأنها ألقاب للحروف؟ثم بعد ذلك انتقل للحديث على حروف اللسان و حروف اللسان. أكثر الحروف ااا حروفا ومخرجا، ولذلك سنفصل فيها إن شاء الله تعالى حروف اللسان. أولا سنعرف ال بالنسبة إلى أعضاء. اللسان بشكل عام يعني هو عضو واحد صحيح، لكن فيه أطراف وفيه رأس اللسان وفيه حا فتان وفيه وسط وفيه أقصى. أقصى اللسان، إذا اللسان هاذي ال. نعرفه جميعا. عندنا، باعتبار مادة الصوت عندنا ال. أقصى اللسان. ويشمل. حرفيا. وعندنا وسط اللسان. وعندنا حاف يمنى. وحافة يسرى. ثم عندنا طرف حافة اللسان، من هنا. إلى رأسه، إلى طرفه، طرف الحافة، أو ما يسمى ب أدنى الحافة. إلى طرف اللسان. اليمنى أو اليسرى، وعندنا رأس اللسان. أو طرف اللسان، و أقصى اللسان. من جهتي، ال لها من هنا يخرج حرف القاف. مع ما يليه من الحنك، اللحم، أق أ، أ او بري، وبعد القاف. بقليل. تخرج أو يخرج حرف الكاف من جهة الحك، الحنك، العظم. Y. اك. كا. كو كي؟ ننظر للفرق، نسمع الفرق بين القاف وبين الكاف قا. كا؟ختي؟ pour. قي. كي أق. اك. هناك فرق بينهما دقيق، لابد أن نتدرب عليه، ونرود لسنتنا عليه، كما قال أبن الجزري رحمه الله تعالى، وليس بينه وبين تركه إلا رياضة امرئ بفكه، والآن سنذكر إن شاء الله التفصيل في هذا اللقاء، إذا عندنا حافة اللسان اليمنى أو اليسرى. حافة اللسان اليمنى، مع ما يليها من الأضراس العليا إما اليسرى أو اليمنى أو مع بعضهما. يخرج حرف الضاد. وعندنا أدنى الحافة إلى منتهاها، يخرج منه حرف اللام، وهو من أوسع المخارج، انظروا ال. الله لا إله إلا هو اللام. وعندنا هنا. هل أن ون ون ون من طرفه تحت جعل؟أن مع ما يليها من اللسة العليا؟ثم حرف الرا. أرى وراء أن عندنا يخرج كذلك من الطرف. مع ما يليه من اللثة، ال. العليا الداخلية، طبعا أرض أرض، ثم بعد ذلك عندنا را الوسط، وسط اللسان. ويخرج منه الجيم والشين واليا أ غير المادية. هل يا غير المادية اد جا؟ الش؟ يا إياك إياك نعبد وإياك نستعين. نعم. ثم بعد رأس اللسان. يخرج منه تسعة أ حرف الطاء، والدال، والتاء، والصاد، والزاي، والسين، والطاء، والدال، والضوء، والذال، والثاء. وهذا سنعرف تفصيلها إن شاء الله تعالى من خلال الشرح، قال الشارح رحمه الله تعالى ونفعنا الله بعلمه. حروف اللسان، ثم أخذ يبين مخارج اللسان وحروفه، فقال والقاف أقصى اللسان فوق، ثم الكاف أسفل، والوصف جيم، فجيل الشيم ف. جيم، والشين يا، والضاد من حافته، إذ واليا لدراسة من أيسر أو يمناها، والأم أدناه ال منتهاها. ون ون من طرفه تحت جعل والرأي يدانيه لظهر، أدخل، والطاء والدال وتا منه، ومن عليا الثنايا والصفير مستكن منه. ومن فوق الثنايا السفلى والظاء والذال، وث أأ لل عليا من طرفيه. ما هذه بالنسبة لحروفي؟اللسان؟ قال الناظم رحمه الله تعالى والقاف أقصى اللسان فوق، ثم الكاف أسفل، سنتحدث عن حرف القاف مخرج القاف، ثم مخرج الكاف إن شاء الله تعالى، قال شريح رحمه الله تعالى أعلم أن في اللسان عشرة مخارج ل18 حرفا. وله أربعة مواضع، أربعة مواضع، عندنا إحدى حافتي اللسان، هذا هو اللسان، حاف، يمنع حافة يسرى، وعندنا أقصى وسط وطرف. قال أقصاه ووسطه و حافته وطرفه، ففي الأقصى مخرجان مخرج للقاف، ومخرج للكاف. أولا، مخرج القاف إذن بعد حرف حروف الحلق سيأتي معنا مباشرة، أقصى اللسان يخرج منه القاف. قال ف. القاف تخرج من أقصى اللسان أيآخره مما يلي الحلق، آخر اللسان مما يلي الحلق وما فوقه من الحنك الأعلى. الحنك هذا الأعلى له حنك ااا يعني متصل باللحم، ولو حنك متصلب العظم. فا حرف القاف تخرج من أقصى اللسان. نعم، مع مالها من الحنك ال لحمي. قال وإليه أشار بقوله، والقاف أقصى اللسان فوق. ثم قال و الكاف والكاف مخرجها أقصى اللسان بعد مخرج القاف قليلا مما يلي الفم، وما يحاذي ه من الحنك الأسفل. اك. اك. كو كي. وإليه أشار بقوله، ثم الكاف أسفل. هذا ما اتفق عليه اعع، مو يعني جمهور اللغويين، وكذلك القراء و المجودين، هناك خلاف سيذكر ال الشارع، نحن نهتم بقول الجمهور وما ارتضاه الشارح رحمه الله تعالى، وكذلك الإمام أبن الجزري. في نظمه، قال وقال جماعة منهم إبن الناظم الكاف، تخرج من أقصى اللسان، وما يحاذي ه من الحنك الأعلى، ويؤسس هل من مخرج القاف. ي قليلا. طبعا هذا ما ذكره الشيخ إبن ناظم. ابن الناظم يعني أبن آه الإمام أبن الجزري رحمه الله تعالى، وهذا في الحقيقة يعني راه كثير من القراء كذلك أن الكاف تخرج من أقصى اللسان مع ما يليه من الحنك الأعلى ليس الأسفل ك. Oui qui est ec que، وهي أسفل من مخرج القاف قليلا، قال بعضهم يوجد كل من الأمرين بحسب اختلاف الأشخاص، فعبر كل على حسب وجدانه، ولذلك القاعدة التي نمتثل لها فيعلم التجويد، وفي كثير من العلوم هناك اختلافات لفظية. يعني تؤول إلى وفاق، فكل ينظر من زاوية. وا آه لو نظر كل من الزوايا المختلفة لا أصاب الهدف، ولكن نقول كلهم إن شاء الله وتعالى يعني على يعني صحة و نظر كل بحسب زاويته. قال ويسمى الحرفان لا هاويين، لأن هذه يالها. هذي هي ال ها. فيكون القاف والكاف مقابل لها. قال ويسمى الحرفان له ويين؟ لأنهما يخرجان من آخر اللسان عندا لها، وهي اللحمة المشرفة على الحلق، أو ما بين الفم والحلق. ثم قال مخارج الوسط نقف هنا. والله تعالي أعلم. وصلي اللهم وبارك على سيدنا محمد وآله وسلم تسليما كثيرا، والحمد لله رب العالمين.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent27">الدرس السابع</h1>
+    <p id="sent28">
+      بسم الله الرحمن الرحيم، الحمد لله رب العالمين، وأفضل الصلاة وأتم التسليم
+      على سيدنا محمد وعلى آله وصحبه أجمعين، اللهم علمنا ما ينفعنا ونفعنا بما
+      علمتنا وزدنا من لدنك علما، ولا حول ولا قوة إلا بالله العلي العظيم. أما
+      بعد، أيها الإخوة الأكارم، ف نواصل حديثنا عن مخارج الحروف، حيث تحدثنا في
+      الدرس السابق على المخرج الأول الرئيسي، ألا وهو مخرج الجوف، و الجوف هو
+      الخلاء الممتد بين الحلق وبين الفم وحروف. حل وحروف الجوفي ثلاثة، وهي حروف
+      المد قال أبن الجزري رحمه الله تعالى فألف والمد و أختها، وهي حروف مد للهواء
+      تنتهي، وهي الألف الساكنة المفتوح ماقبلها، والواو الساكنة المضموم ماقبلها،
+      واليا أ الساكنة. المكسور ما قبلها مجموعة في قولنا نوحيها أو تينا، هذه هي
+      الحروف المادية أو الحروف الجوفية. ننطلق، ننتقل الآن إلى المخرج الثاني
+      الرئيسي ألا وهو مخرج الحلق و مخرج الحلق. له ثلاثة مخارج تفصيلية. وهذه هي
+      الصورة التوضيحية لمخرج الحلق، فالحلق. له ثلاثة مخارج تفصيلية، عندنا أقصى.
+      الحلق. و. وسطو الحلق، و أدنى الحلق. أقصى الحلق يخرج منه الهمزة والهاء أ
+      الهمزة، والهاء أ. أعوذ بالله من الشيطان. من الرجيم. الحمد الله رب
+      العالمين. إيمانا أو تو هذا بالنسبة إلى الهمزة وا لها الله لا إله إلا هو
+      الحي القيوم. وم، ولله ملك السماوات والأرض. عندنا آلهة. ايهدينا الصراط
+      المستقيم. Mais مم؟ إن الله و ملا ئكة يصلون على النبي، إذا عندنا أقصى الحلق
+      تخرج منه الهمزة والهاء، أ وسط الحلق، العين و الحاء. ياك؟ نعم عبد وإياك
+      نستعين. إن عنا العين. تاع ملون، و الحاء كذلك. الحمد لله رب العالمين. امم.
+      ثم بعدها أدنى الحلق، ويخرج منه الغين والخاء. غير المغضوب عليهم. م reseaux
+      غي، وعندنا الخا أ. يختص مون. امم خو خو خي اخ. أخ يخ، وذكرنا القاعدة في
+      الس. في الدرس السابق، أننا إذا أردنا أن نعرف مخرج الحرف بالدقة، لا بد لنا
+      أن نسكن الحرف وندخل عليه همزة وصل مضمومة، أو مفتوحة أو مكسورة، هذا بالنسبة
+      لي ما خرج. الحلق و يشتمل على ثلاثة مخارج تفصيلية لستة حروف الهمزة، والهاء،
+      والعين، والحاء، والغين، والخاء أ. وفي هذا يقول الإمام أبن الجزري رحمه الله
+      تعالى، ثم لأقصى الحلق همز هاء، ثم لوسطه. عين حاء أدناه، غين خاء، ها. قال
+      الشارح رحمه الله تعالى ونفعنا الله بعلمه، ولما فرغ من مخرج الجوف وحروفه،
+      شرع في بيان مخارج الحلق وحروفه، فقال ثم لأقصى الحلق همز هاء، ثم لوسطه
+      بإسكان السين، ثم لوصيف فعين حاء. أدناه غير خا أها، الحلق فيه ثلاثة مخارج
+      لستة أحرف فل أقسام طبعا أقصى الحلق من جهة مادة الصوت. أما إذا أردنا أن. أن
+      نبين الحلق من جهة الفم، أي من جهة اللسان والأسنان، فا ينعكس ال بالنسبة إلى
+      المخارج، لذلك هناك من عبر على الحروف مثلا ال ال ال هاء، والهمزة. قال هي
+      يعني رتبها بعد الغين والخاء أ ورا. و أتى ب العين والحاء بعد الغين والخاء
+      أ. و أتى بالهمزة و بالخاء بعد العين و الحاء فعكس الصورة. أما نحن ف نضبط
+      مخارج الحروف باعتبار المادة الخارجة. من ال الجوف، ثم بعدها إلى الحلق، إلى
+      اللسان، و الأسنان. إلى آخره. قال ولي وسطه، قال فلي أقصاه أي أبعده مما يلي
+      الصدر. أبعد مما يلي صدر الهمزة والهاء عن الهمزة، والهى نعم، قال و لوصفه
+      العين، والحاء المهملة، أن هذا هو مخرج العين، ومخرج. الحا. نعم، عبد. عليم
+      الحمد. اح. اع اح حا عندنا مثلا عا ع و تعيد حا حو حي، ثم قالولي أدناه أي
+      أقربهم ما يلي اللسان، وهو أوله الغين والخاء. وقدم العين على الحاء، لأن
+      العين أبعد من الحاء، خلافا ل شريح في تقديمه الحاء، وكذلك قدم الغين على
+      الخاء أ، لأن الخا أقرب إلى اللسان من الغين، كما قلت، يعني هذا الخلاف في
+      ااا من أين نبدأ؟ توصيف مخارج الحروف؟ من شرع في ذكر مخارج الحروف، باعتبار
+      المادة؟ فا جعل ااا الإعتبار من الحلق أقصى وسط و أدنى. ومن جعل مخارج الحروف
+      باعتباره الفم؟عكس الصورة، قال خلافا لم كي في تقديمه الخا أ. نعم، هناك خلاف
+      كما قلنا، وأظن لفظي، والله تعالي أعلم شرايح الإمام شرايح بن محمد الرعيني،
+      وهو من أئمة التجويد و القراءات ااا، ولما مك إبن أبي طالب. القيرواني كذلك
+      من أئمة التفسير و القراءات والتجويد، آه قدم الخام على الحاء. قال. وتسمى
+      الحروف الستة الحلقية لخروجها من الحلق. إذن، هذه الحلقية، لأنها ألقاب
+      للحروف؟ثم بعد ذلك انتقل للحديث على حروف اللسان و حروف اللسان. أكثر الحروف
+      ااا حروفا ومخرجا، ولذلك سنفصل فيها إن شاء الله تعالى حروف اللسان. أولا
+      سنعرف ال بالنسبة إلى أعضاء. اللسان بشكل عام يعني هو عضو واحد صحيح، لكن فيه
+      أطراف وفيه رأس اللسان وفيه حا فتان وفيه وسط وفيه أقصى. أقصى اللسان، إذا
+      اللسان هاذي ال. نعرفه جميعا. عندنا، باعتبار مادة الصوت عندنا ال. أقصى
+      اللسان. ويشمل. حرفيا. وعندنا وسط اللسان. وعندنا حاف يمنى. وحافة يسرى. ثم
+      عندنا طرف حافة اللسان، من هنا. إلى رأسه، إلى طرفه، طرف الحافة، أو ما يسمى
+      ب أدنى الحافة. إلى طرف اللسان. اليمنى أو اليسرى، وعندنا رأس اللسان. أو طرف
+      اللسان، و أقصى اللسان. من جهتي، ال لها من هنا يخرج حرف القاف. مع ما يليه
+      من الحنك، اللحم، أق أ، أ او بري، وبعد القاف. بقليل. تخرج أو يخرج حرف الكاف
+      من جهة الحك، الحنك، العظم. Y. اك. كا. كو كي؟ ننظر للفرق، نسمع الفرق بين
+      القاف وبين الكاف قا. كا؟ختي؟ pour. قي. كي أق. اك. هناك فرق بينهما دقيق،
+      لابد أن نتدرب عليه، ونرود لسنتنا عليه، كما قال أبن الجزري رحمه الله تعالى،
+      وليس بينه وبين تركه إلا رياضة امرئ بفكه، والآن سنذكر إن شاء الله التفصيل
+      في هذا اللقاء، إذا عندنا حافة اللسان اليمنى أو اليسرى. حافة اللسان اليمنى،
+      مع ما يليها من الأضراس العليا إما اليسرى أو اليمنى أو مع بعضهما. يخرج حرف
+      الضاد. وعندنا أدنى الحافة إلى منتهاها، يخرج منه حرف اللام، وهو من أوسع
+      المخارج، انظروا ال. الله لا إله إلا هو اللام. وعندنا هنا. هل أن ون ون ون
+      من طرفه تحت جعل؟أن مع ما يليها من اللسة العليا؟ثم حرف الرا. أرى وراء أن
+      عندنا يخرج كذلك من الطرف. مع ما يليه من اللثة، ال. العليا الداخلية، طبعا
+      أرض أرض، ثم بعد ذلك عندنا را الوسط، وسط اللسان. ويخرج منه الجيم والشين
+      واليا أ غير المادية. هل يا غير المادية اد جا؟ الش؟ يا إياك إياك نعبد وإياك
+      نستعين. نعم. ثم بعد رأس اللسان. يخرج منه تسعة أ حرف الطاء، والدال، والتاء،
+      والصاد، والزاي، والسين، والطاء، والدال، والضوء، والذال، والثاء. وهذا سنعرف
+      تفصيلها إن شاء الله تعالى من خلال الشرح، قال الشارح رحمه الله تعالى ونفعنا
+      الله بعلمه. حروف اللسان، ثم أخذ يبين مخارج اللسان وحروفه، فقال والقاف أقصى
+      اللسان فوق، ثم الكاف أسفل، والوصف جيم، فجيل الشيم ف. جيم، والشين يا،
+      والضاد من حافته، إذ واليا لدراسة من أيسر أو يمناها، والأم أدناه ال
+      منتهاها. ون ون من طرفه تحت جعل والرأي يدانيه لظهر، أدخل، والطاء والدال وتا
+      منه، ومن عليا الثنايا والصفير مستكن منه. ومن فوق الثنايا السفلى والظاء
+      والذال، وث أأ لل عليا من طرفيه. ما هذه بالنسبة لحروفي؟اللسان؟ قال الناظم
+      رحمه الله تعالى والقاف أقصى اللسان فوق، ثم الكاف أسفل، سنتحدث عن حرف القاف
+      مخرج القاف، ثم مخرج الكاف إن شاء الله تعالى، قال شريح رحمه الله تعالى أعلم
+      أن في اللسان عشرة مخارج ل18 حرفا. وله أربعة مواضع، أربعة مواضع، عندنا إحدى
+      حافتي اللسان، هذا هو اللسان، حاف، يمنع حافة يسرى، وعندنا أقصى وسط وطرف.
+      قال أقصاه ووسطه و حافته وطرفه، ففي الأقصى مخرجان مخرج للقاف، ومخرج للكاف.
+      أولا، مخرج القاف إذن بعد حرف حروف الحلق سيأتي معنا مباشرة، أقصى اللسان
+      يخرج منه القاف. قال ف. القاف تخرج من أقصى اللسان أيآخره مما يلي الحلق، آخر
+      اللسان مما يلي الحلق وما فوقه من الحنك الأعلى. الحنك هذا الأعلى له حنك ااا
+      يعني متصل باللحم، ولو حنك متصلب العظم. فا حرف القاف تخرج من أقصى اللسان.
+      نعم، مع مالها من الحنك ال لحمي. قال وإليه أشار بقوله، والقاف أقصى اللسان
+      فوق. ثم قال و الكاف والكاف مخرجها أقصى اللسان بعد مخرج القاف قليلا مما يلي
+      الفم، وما يحاذي ه من الحنك الأسفل. اك. اك. كو كي. وإليه أشار بقوله، ثم
+      الكاف أسفل. هذا ما اتفق عليه اعع، مو يعني جمهور اللغويين، وكذلك القراء و
+      المجودين، هناك خلاف سيذكر ال الشارع، نحن نهتم بقول الجمهور وما ارتضاه
+      الشارح رحمه الله تعالى، وكذلك الإمام أبن الجزري. في نظمه، قال وقال جماعة
+      منهم إبن الناظم الكاف، تخرج من أقصى اللسان، وما يحاذي ه من الحنك الأعلى،
+      ويؤسس هل من مخرج القاف. ي قليلا. طبعا هذا ما ذكره الشيخ إبن ناظم. ابن
+      الناظم يعني أبن آه الإمام أبن الجزري رحمه الله تعالى، وهذا في الحقيقة يعني
+      راه كثير من القراء كذلك أن الكاف تخرج من أقصى اللسان مع ما يليه من الحنك
+      الأعلى ليس الأسفل ك. Oui qui est ec que، وهي أسفل من مخرج القاف قليلا، قال
+      بعضهم يوجد كل من الأمرين بحسب اختلاف الأشخاص، فعبر كل على حسب وجدانه،
+      ولذلك القاعدة التي نمتثل لها فيعلم التجويد، وفي كثير من العلوم هناك
+      اختلافات لفظية. يعني تؤول إلى وفاق، فكل ينظر من زاوية. وا آه لو نظر كل من
+      الزوايا المختلفة لا أصاب الهدف، ولكن نقول كلهم إن شاء الله وتعالى يعني على
+      يعني صحة و نظر كل بحسب زاويته. قال ويسمى الحرفان لا هاويين، لأن هذه يالها.
+      هذي هي ال ها. فيكون القاف والكاف مقابل لها. قال ويسمى الحرفان له ويين؟
+      لأنهما يخرجان من آخر اللسان عندا لها، وهي اللحمة المشرفة على الحلق، أو ما
+      بين الفم والحلق. ثم قال مخارج الوسط نقف هنا. والله تعالي أعلم. وصلي اللهم
+      وبارك على سيدنا محمد وآله وسلم تسليما كثيرا، والحمد لله رب العالمين.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

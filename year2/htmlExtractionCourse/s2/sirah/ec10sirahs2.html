@@ -1,168 +1,391 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس العاشر  السنة العاشرة 2</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/sirah/ec10sirahs2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس العاشر السنة العاشرة 2</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/sirah/ec10sirahs2.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent1">الدرس العاشر  السنة العاشرة 2</h1>
-<p id="sent2">بسم الله الرحمان الرحيم. الحمد لله وكفى والصلاة والسلام على النبي الكريم المصطفى أحبتي في الله لما كنتم السلام عليكم ورحمة الله تعالى وبركاته. مستكبرين عرض أحداث السنة العاشرة وما تبعه من توافد القبائل للمدينة المنورة ملتقي نب النبي صلى الله عليه وسلم والوفود التي سردها أهل المغازي يزيد عددها على 70 وفدا، ولا يمكن لنا استقصاء ها، وفي هذه الفترة توافد كذلك وفد خولان قدم على رسول الله صلى الله عليه وسلم في شهر شعبان. سنة عشر، وفد خولان. وهم عشرة، فقال يا رسول الله، نحن على من ورا؟ أنا من قومنا، ونحن مؤمنون بالله عز وجل، و مصدقون برسوله، وقد ضربنا إليك ابا طال إبن ولك بن هزونا الأرض، وسهولها، والمنة لله ولرسوله علينا، وقدمنا زائرين لك. فقال رسول الله صلى الله عليه وسلم أما ما ذكرته من مسيركم إلي، فإن لكم بكل خطوة خطاها بعير أحدكم حسنة، وأما قولكم زائرين لك فإنه من زارني بالمدينة، كان في جوار يوم القيامة. قال يا رسول الله، هذا السفر الذي لا توا عليه. ثم قال رسول الله صلى عليه وسلمما فعل عم أنس. وفي رواية عمي أنس وهو صنم خولان الذي كانوا يعبدونه، قالو أبشر بدلنا الله به ما جئت به. وقد بقيت منا بقايا من شيخ كبير، و عجوز كبيرة، متمسكون به. ولو قدمنا عليه لهد من آه إن شاء الله. فقد كنا منه في غرور وفتنة، فقال لهم رسول الله صلى عليه وسلم وما أعظم ما رأيتم من فتنته. قالوا لقد رؤيتنا à سنتنا حتى أكلنا الذمة. أيس أصابت هم سنة مجدبة حتى أكلنا الرمة، وهي العظم. الباري فج. ما عنا، ما قدرنا عليه، وا بتعنا به 100 ثورة، ونحرم أهمل عم أنس قربانا في غداة واحدة، وتركناها تردها السباع. ونحن أحوج إليها من السبعة، فجاءنا الغيث من ساعتنا، ولقد رأينا العشب يواري الرجال و يقول قائل لنا أنعم علينا عم أنس. وذكر ول رسول الله صلى الله عليه وسلم كانو يقسمون للصلام، هذا من أن عامهم، وحرث هم، وأنهم كانوا يجعلون من ذلك جزء له، وجزء لله بزعمهم. قالو كنا نزرع الزرع، فلنجعله وسطه، فنسميه له ونسمي زرعا آخر حجرة لله، فإذا مالت الريح فالذي سمين الله جعلناه لعمي أنس، وإذا مالت الريح فالذي جعلناه لعم أنس لنجعله لله. فذكر لهم رسول الله صلى الله عليه وسلم أن الله أنزل علي في ذلك وجعلو اللهم ماضرا من الحرف والأنعام. نصيبا فقالوا هذا لله بزعمهم، وهذا لشركائنا، فما كان لشركائهم، فلا يصل إلى الله، وما كان لله فهو يصل إلى شركائهم، ساء ما يحكمون. قال وكنا نتحاكم إليه في تكلم، فقال رسول الله صلى الله عليه وسلم تلك الشياطين تكلم كم، وسأله عن فرائض الدين، فأخبرهم، وأمرهم بالوفاء بالعهد، وأداء الأمانة، وحسن الجوار لمن جاو روا، وأن لا يظلم أحدا. قال فإن الظلم ظلمات يوم القيامة، ثم ودعوه بعد أيام، وجازهم فرجه إلى قومهم. فلم يحل عقدة حتى هدم عملات فم قدم على رسول الله صلى الله عليه وسلم عام حجة الوداع، وفد بني محارب، وهم كانوا غلاظ العرب، وأفضل هم على رسول الله صلى الله عليه وسلم في تلك المواسم، أيام عرض نفسه على القبائل، يدعوهم إلى الله، فجاء رسول الله صلى الله عليه وسلم منهم عشرة نائبين عما وراءهم من قومهم. فا سلمو، وكان بلال يأتيهم ب غداء أو عشاء، إلى أن جلسو مع رسول الله صلى الله عليه وسلم يوما من الظهر إلى العصر. فعرف رجل منهم femme ده النظر. فلما رأى المحارب يديم النظر إليه، قال كأنك يا رسول الله توه مني؟ قال لقد رأيتك. قال المحاربين أي والله، لقد رأيتني و كلمتني، وكلمتك بأقبح الكلام، وردتك باق بأحر دب عكاظ، وأنت تطوف على الناس. فقال رسول الله صلى الله عليه وسلم نعم. ثم قال المحارب يا رسول الله، ما كان في أصحاب أشد، وعليك يوم، إذ ولا أبعد عن الإسلام مني، فاحمد الله الذي أبقاني حتى صدقت بك، ولقد مات أولئك النفر الذين كانوا معي على دينهم، فقال رسول الله صلى الله عليه وسلمإن هذه القلوب بيد الله عز وجل. فقال المحاربين يا رسول الله، استغفر لي من مراجعتي ياك؟ فقال رسول الله صلى الله عليه وسلم إن الإسلام يجب ما كان قبله من الكفر. ثم انصرفوا إلى أهلهم. وهكذا توالت على النبي صلى الله عليه وسلم الوفود طائع له ولرسالته ثمان دراسة الوفود التي وفدت على النبي صلى الله عليه وسلم. يمكن أن يثري فقه التعامل مع البشر ب أنماط هم المختلفة، وأحوالهم المتعددة، ومشاربهم المتباينة. وفي دراسة لذلك بيان لعظمة وروعة التعامل النبي الكريم مع الناس، وكيف تستوعبهم النبي صلى الله عليه وسلم مع هذا الاختلاف الكبير في طبائعهم ومشاربهم. وفيه دروس للقادة في كيفية التعامل مع الناس، مع اختلاف أخلاقهم وطبائعهم، وفيه دروس لعلماء التربية في كيفية تربية الناس، كبيرهم وصغيرهم، وإلزامهم الخير والصلاح، وفيه دروس لعلماء النفس في كيفية التعامل مع النفس البشرية بعد بعد غورها، وتعدد روافدها. وفيها أكبر زاد للمعلمين والمدرسين في سياسته مع طلابهم، وهذا مما يدلك على السيرة النبوية نعمة من أعظم النعم بعد، لأن فيها من الدروس والعبر مالو عكف. على دراسته المسلمون، واستوعب، وهل عادوا إليه؟ فإن دعوة إحياء نهضتهم وقيادتهم للأمة القائمة الآن، لا بد أن تشتمل على أحياء دراسة السيرة النبوية، والسعي للعمل بها، وجعلها حية بين الناس، فإنها مصدر ثر للنهوض، ومعرفة الطريق الصحيح، ومن أجل ذلك ذكرنا هذه الوفود. نلفت الأنظار إلى هذه الثروة الهائلة في التعامل مع الناس من قبله صلى الله عليه وسلم، فيكون ذلك زادا عظيما لجميع المسلمين، على اختلاف طبقاتهم ومشاربهم. لقد تركت لنا تلك الأخبار والقصص منهجا نبويا كريما في تعامله صلى الله عليه وسلم على وفود، يمكننا الاستفادة من هذه صلى الله عليه وسلم في تعامله مع النفسية البشرية، وتربيته ودقته وتنظيمه، ففيها ثروة هائلة من الفقه الذي يدخل في دوائر التعليم والتربية والتثقيف، وبعد النظر، وجمع القلوب على الغاية. إلى غير ذلك من مظاهر العظمة للعاملين في كل الحقول نفسيا واجتماعيا، واقتصاديا وإداريا وسياسيا، وعسكريا، ولاحظنا عنده قدوم هذه الوفود، قد استعدت الدولة الإسلامية لاستقبالهم وتهيئة المناخ التربوي لهم، وقد تمثل هذا الاستقبال بتهيئة مكان إقامة لهم، وكانت هناك دار للضيافة. ينزل فيها الوافدون، وهناك مسجد رسول الله صلى الله عليه وسلم الذي كان ساحل لاستقبال، ثم كان هناك تطوع أو تكليف رسول الله صلى الله عليه وسلم لأحد أصحابه، باستضافة بعض القادمين. وتم صلى الله عليه وسلم بتلك الوفود، وحرص على تعليمها وتربيتها، وقد كانت تلك الوفود حريصة على فهم الإسلام، وتعلم شرائعه وأحكامه وآدابه، ونظمه في الحياة، وتطبيقه ما علموه تطبيقا عمليا جعلهم نماذج حية. للشرع القويم. وقد كان لكثير منهم سؤالات عن أشياء كانت شائعة بينهم ابتغاء معرفة حلالها وحرامها، وكان النبي صلى الله عليه وسلم حريصا أشد الحرص على تفقيه في الدين، وبيان ما سألوه عنه، وكان صلى الله عليه وسلم يدني منهم من يعلم منه زيادة حرص على القرآن العظيم. وحفظ آياته ت فقها فيه، و يقولو أصحابه فقه وإخوانكم، وكان عليه الصلاة والسلام يسأل عن من يعرف من شرفاء هم، فإذا رغب في الراحل بلادهم أوصاهم ب لزوم الحق، وحثهم على الاعتصام بالصبر. ثم يجزيهم بالجوائز الحسان، ويسوي بينهم، فإذا رجعو إلى قوامهم رجعو هداة دعاة مشرقة، قلوبهم بنور الإيمان،يعلمونهم ما علمو ويحدثون هم بما سمعوا، ويذكرون لهم مكارم النبي صلى الله عليه وسلم بره وبشره، وسين أرى وجهه سرورا بمقدمه معليه. و يذكرون أنهم شاهدو من حالة صحابي فيت أخيه، موت حابهم، ومواساة بعضهم بعضا، ليثير في أنفسهم الشوق إلى لقاء رسول الله صلى الله عليه وسلم، ولقاء أصحابه، ويحبب إليهم التأسي بهم في سلوك هم ومكارم أخلاقهم، واختارت بعض الوفود البقاء على نصراني ت هاك وفود نصارى نجران. ووافقت على دفع الجزير، وهكذا لم يكن في إلتزام من النبي صلى عليه وسلم لمن رام البقاء على دينه. وفي هذه السنة؟توفي إبراهيم إبن النبي صلى الله عليه وسلم من ماريا القبطية. وهو الولد الوحيد الذي له من غير خديجة بنت خويلد رضي الله عنها، وقد ولد في المدينة المنورة سنة تمانية هجري، وتوفي فيها سنة عشر هجري عن عمر ال18 شهرا. وكانت ولادته في أحد أحياء المدينة المنورة، يقال له العالية، وكانت قابلته سلمى مولات النبي امرأة ب رافع، فبشر أبو رافع النبي صل الله عليه وسلم fois بأنه عبدا يوم سابعه وسماه، وتصدق بزينة شعره فضة على المساكين. ودفن، وشعره في الأرض. قال النبي صل الله عليه وسلم ولد لي الليلة غلام سميته باسم أبي إبراهيم، وتنافست الأنصار في من يرضع إبراهيم، فأعطاه لأ، مبردة بنت المنذر، أبن زيد الأنصاري، زوجة البراء بن أوس، فكانت ترضعه بلبن ابنها في بني مازن إبن النجار. وترجع بيه إلى أمه، ثم أعطاه إلى أم سيف امرأة حداد في المدينة المنورة، يقال له أبو سيف، وبقي عندها إلى أن مات، قالو يا أنس بن مالك؟ فيقول ما رأيت أحدا، ارحم بالعيان من رسول الله صلى الله عليه وسلم، كان إبراهيم سترضي عن في عوالي المدينة، فكان ينطلق ونحن معه. فيدخل البيت، وكان ذره قينا، أي زوج المرضعة، كان حدادا، قال فيؤخذ فيقبله، ثم يرجع، ولما توفي إبراهيم قامتا مبردة بتفصيله وحمل من بيتها على سرير صغير، وصلى عليه النبي صلى الله عليه وسلم بالبقية، وقيل أن الفضل العباس غسل إبراهيم، ونزل في قبره مع أسامة بن زيد. ورش قبره، وأعلم فيه ب علامة، واتفق أن كسفت الشمس في اليوم الذي توفي فيه إبراهيم، فتحدث الناس أن الشمس كتبت لموت إبراهيم، فقال النبي صلى الله عليه وسلم إن الشمس والقمر من آيات الله، وإنه ملاين خفان لموت أحد، ولا لحياته، فإذا رأيتم ou هما ف كبرو، وأدعو الله وصلو. وتصدقو. وقال عن إبراهيم عند وفاته إن لهم رضي عن في الجنة. ويروي عبد الرحمان بن عوف قصة وفاته، فيذكر أخذ النبي صلى الله عليه وسلم بيديه، فانطلقت معه إلى إبراهيم منه، وهو يجود بنفسه، فأخذه النبي صلى الله عليه وسلم في حجره حتى خرجت نفسه، قال فوضعه وبكى، قال فقلت تبكي يا رسول الله، وأنت تنهى عن البكاء؟ قال إني لم أنه عن البكاء. ولكني نهيت عن صوتين أحمقين، فا جرين صوت عند نعمة لهو ولعب، ومزامير الشيطان، وصوت عند مصيبة تلطم وجوها، وشق جيوب، وهذه رحمة و منلايرحملايرحم. ولولا انه وعد صادق وقول حق. وأن يلحق أول بآخر الحزن. اعليك حزن أشد من هذا. وإن بك يا إبراهيم لمحزونون. تبكي العين، ويحزن القلب، ولا نقول ما يسخط الرب. إلى هنا، نكون قد أنهينا درسنا. دمتم في رعاية الله. أستودعكم الله. السلام عليكم ورحمة الله تعالى وبركاته.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent1">الدرس العاشر السنة العاشرة 2</h1>
+    <p id="sent2">
+      بسم الله الرحمان الرحيم. الحمد لله وكفى والصلاة والسلام على النبي الكريم
+      المصطفى أحبتي في الله لما كنتم السلام عليكم ورحمة الله تعالى وبركاته.
+      مستكبرين عرض أحداث السنة العاشرة وما تبعه من توافد القبائل للمدينة المنورة
+      ملتقي نب النبي صلى الله عليه وسلم والوفود التي سردها أهل المغازي يزيد
+      عددها على 70 وفدا، ولا يمكن لنا استقصاء ها، وفي هذه الفترة توافد كذلك وفد
+      خولان قدم على رسول الله صلى الله عليه وسلم في شهر شعبان. سنة عشر، وفد
+      خولان. وهم عشرة، فقال يا رسول الله، نحن على من ورا؟ أنا من قومنا، ونحن
+      مؤمنون بالله عز وجل، و مصدقون برسوله، وقد ضربنا إليك ابا طال إبن ولك بن
+      هزونا الأرض، وسهولها، والمنة لله ولرسوله علينا، وقدمنا زائرين لك. فقال
+      رسول الله صلى الله عليه وسلم أما ما ذكرته من مسيركم إلي، فإن لكم بكل خطوة
+      خطاها بعير أحدكم حسنة، وأما قولكم زائرين لك فإنه من زارني بالمدينة، كان في
+      جوار يوم القيامة. قال يا رسول الله، هذا السفر الذي لا توا عليه. ثم قال
+      رسول الله صلى عليه وسلمما فعل عم أنس. وفي رواية عمي أنس وهو صنم خولان الذي
+      كانوا يعبدونه، قالو أبشر بدلنا الله به ما جئت به. وقد بقيت منا بقايا من
+      شيخ كبير، و عجوز كبيرة، متمسكون به. ولو قدمنا عليه لهد من آه إن شاء الله.
+      فقد كنا منه في غرور وفتنة، فقال لهم رسول الله صلى عليه وسلم وما أعظم ما
+      رأيتم من فتنته. قالوا لقد رؤيتنا à سنتنا حتى أكلنا الذمة. أيس أصابت هم سنة
+      مجدبة حتى أكلنا الرمة، وهي العظم. الباري فج. ما عنا، ما قدرنا عليه، وا
+      بتعنا به 100 ثورة، ونحرم أهمل عم أنس قربانا في غداة واحدة، وتركناها تردها
+      السباع. ونحن أحوج إليها من السبعة، فجاءنا الغيث من ساعتنا، ولقد رأينا
+      العشب يواري الرجال و يقول قائل لنا أنعم علينا عم أنس. وذكر ول رسول الله
+      صلى الله عليه وسلم كانو يقسمون للصلام، هذا من أن عامهم، وحرث هم، وأنهم
+      كانوا يجعلون من ذلك جزء له، وجزء لله بزعمهم. قالو كنا نزرع الزرع، فلنجعله
+      وسطه، فنسميه له ونسمي زرعا آخر حجرة لله، فإذا مالت الريح فالذي سمين الله
+      جعلناه لعمي أنس، وإذا مالت الريح فالذي جعلناه لعم أنس لنجعله لله. فذكر لهم
+      رسول الله صلى الله عليه وسلم أن الله أنزل علي في ذلك وجعلو اللهم ماضرا من
+      الحرف والأنعام. نصيبا فقالوا هذا لله بزعمهم، وهذا لشركائنا، فما كان
+      لشركائهم، فلا يصل إلى الله، وما كان لله فهو يصل إلى شركائهم، ساء ما
+      يحكمون. قال وكنا نتحاكم إليه في تكلم، فقال رسول الله صلى الله عليه وسلم
+      تلك الشياطين تكلم كم، وسأله عن فرائض الدين، فأخبرهم، وأمرهم بالوفاء
+      بالعهد، وأداء الأمانة، وحسن الجوار لمن جاو روا، وأن لا يظلم أحدا. قال فإن
+      الظلم ظلمات يوم القيامة، ثم ودعوه بعد أيام، وجازهم فرجه إلى قومهم. فلم يحل
+      عقدة حتى هدم عملات فم قدم على رسول الله صلى الله عليه وسلم عام حجة الوداع،
+      وفد بني محارب، وهم كانوا غلاظ العرب، وأفضل هم على رسول الله صلى الله عليه
+      وسلم في تلك المواسم، أيام عرض نفسه على القبائل، يدعوهم إلى الله، فجاء رسول
+      الله صلى الله عليه وسلم منهم عشرة نائبين عما وراءهم من قومهم. فا سلمو،
+      وكان بلال يأتيهم ب غداء أو عشاء، إلى أن جلسو مع رسول الله صلى الله عليه
+      وسلم يوما من الظهر إلى العصر. فعرف رجل منهم femme ده النظر. فلما رأى
+      المحارب يديم النظر إليه، قال كأنك يا رسول الله توه مني؟ قال لقد رأيتك. قال
+      المحاربين أي والله، لقد رأيتني و كلمتني، وكلمتك بأقبح الكلام، وردتك باق
+      بأحر دب عكاظ، وأنت تطوف على الناس. فقال رسول الله صلى الله عليه وسلم نعم.
+      ثم قال المحارب يا رسول الله، ما كان في أصحاب أشد، وعليك يوم، إذ ولا أبعد
+      عن الإسلام مني، فاحمد الله الذي أبقاني حتى صدقت بك، ولقد مات أولئك النفر
+      الذين كانوا معي على دينهم، فقال رسول الله صلى الله عليه وسلمإن هذه القلوب
+      بيد الله عز وجل. فقال المحاربين يا رسول الله، استغفر لي من مراجعتي ياك؟
+      فقال رسول الله صلى الله عليه وسلم إن الإسلام يجب ما كان قبله من الكفر. ثم
+      انصرفوا إلى أهلهم. وهكذا توالت على النبي صلى الله عليه وسلم الوفود طائع له
+      ولرسالته ثمان دراسة الوفود التي وفدت على النبي صلى الله عليه وسلم. يمكن أن
+      يثري فقه التعامل مع البشر ب أنماط هم المختلفة، وأحوالهم المتعددة، ومشاربهم
+      المتباينة. وفي دراسة لذلك بيان لعظمة وروعة التعامل النبي الكريم مع الناس،
+      وكيف تستوعبهم النبي صلى الله عليه وسلم مع هذا الاختلاف الكبير في طبائعهم
+      ومشاربهم. وفيه دروس للقادة في كيفية التعامل مع الناس، مع اختلاف أخلاقهم
+      وطبائعهم، وفيه دروس لعلماء التربية في كيفية تربية الناس، كبيرهم وصغيرهم،
+      وإلزامهم الخير والصلاح، وفيه دروس لعلماء النفس في كيفية التعامل مع النفس
+      البشرية بعد بعد غورها، وتعدد روافدها. وفيها أكبر زاد للمعلمين والمدرسين في
+      سياسته مع طلابهم، وهذا مما يدلك على السيرة النبوية نعمة من أعظم النعم بعد،
+      لأن فيها من الدروس والعبر مالو عكف. على دراسته المسلمون، واستوعب، وهل
+      عادوا إليه؟ فإن دعوة إحياء نهضتهم وقيادتهم للأمة القائمة الآن، لا بد أن
+      تشتمل على أحياء دراسة السيرة النبوية، والسعي للعمل بها، وجعلها حية بين
+      الناس، فإنها مصدر ثر للنهوض، ومعرفة الطريق الصحيح، ومن أجل ذلك ذكرنا هذه
+      الوفود. نلفت الأنظار إلى هذه الثروة الهائلة في التعامل مع الناس من قبله
+      صلى الله عليه وسلم، فيكون ذلك زادا عظيما لجميع المسلمين، على اختلاف
+      طبقاتهم ومشاربهم. لقد تركت لنا تلك الأخبار والقصص منهجا نبويا كريما في
+      تعامله صلى الله عليه وسلم على وفود، يمكننا الاستفادة من هذه صلى الله عليه
+      وسلم في تعامله مع النفسية البشرية، وتربيته ودقته وتنظيمه، ففيها ثروة هائلة
+      من الفقه الذي يدخل في دوائر التعليم والتربية والتثقيف، وبعد النظر، وجمع
+      القلوب على الغاية. إلى غير ذلك من مظاهر العظمة للعاملين في كل الحقول نفسيا
+      واجتماعيا، واقتصاديا وإداريا وسياسيا، وعسكريا، ولاحظنا عنده قدوم هذه
+      الوفود، قد استعدت الدولة الإسلامية لاستقبالهم وتهيئة المناخ التربوي لهم،
+      وقد تمثل هذا الاستقبال بتهيئة مكان إقامة لهم، وكانت هناك دار للضيافة. ينزل
+      فيها الوافدون، وهناك مسجد رسول الله صلى الله عليه وسلم الذي كان ساحل
+      لاستقبال، ثم كان هناك تطوع أو تكليف رسول الله صلى الله عليه وسلم لأحد
+      أصحابه، باستضافة بعض القادمين. وتم صلى الله عليه وسلم بتلك الوفود، وحرص
+      على تعليمها وتربيتها، وقد كانت تلك الوفود حريصة على فهم الإسلام، وتعلم
+      شرائعه وأحكامه وآدابه، ونظمه في الحياة، وتطبيقه ما علموه تطبيقا عمليا
+      جعلهم نماذج حية. للشرع القويم. وقد كان لكثير منهم سؤالات عن أشياء كانت
+      شائعة بينهم ابتغاء معرفة حلالها وحرامها، وكان النبي صلى الله عليه وسلم
+      حريصا أشد الحرص على تفقيه في الدين، وبيان ما سألوه عنه، وكان صلى الله عليه
+      وسلم يدني منهم من يعلم منه زيادة حرص على القرآن العظيم. وحفظ آياته ت فقها
+      فيه، و يقولو أصحابه فقه وإخوانكم، وكان عليه الصلاة والسلام يسأل عن من يعرف
+      من شرفاء هم، فإذا رغب في الراحل بلادهم أوصاهم ب لزوم الحق، وحثهم على
+      الاعتصام بالصبر. ثم يجزيهم بالجوائز الحسان، ويسوي بينهم، فإذا رجعو إلى
+      قوامهم رجعو هداة دعاة مشرقة، قلوبهم بنور الإيمان،يعلمونهم ما علمو ويحدثون
+      هم بما سمعوا، ويذكرون لهم مكارم النبي صلى الله عليه وسلم بره وبشره، وسين
+      أرى وجهه سرورا بمقدمه معليه. و يذكرون أنهم شاهدو من حالة صحابي فيت أخيه،
+      موت حابهم، ومواساة بعضهم بعضا، ليثير في أنفسهم الشوق إلى لقاء رسول الله
+      صلى الله عليه وسلم، ولقاء أصحابه، ويحبب إليهم التأسي بهم في سلوك هم ومكارم
+      أخلاقهم، واختارت بعض الوفود البقاء على نصراني ت هاك وفود نصارى نجران.
+      ووافقت على دفع الجزير، وهكذا لم يكن في إلتزام من النبي صلى عليه وسلم لمن
+      رام البقاء على دينه. وفي هذه السنة؟توفي إبراهيم إبن النبي صلى الله عليه
+      وسلم من ماريا القبطية. وهو الولد الوحيد الذي له من غير خديجة بنت خويلد رضي
+      الله عنها، وقد ولد في المدينة المنورة سنة تمانية هجري، وتوفي فيها سنة عشر
+      هجري عن عمر ال18 شهرا. وكانت ولادته في أحد أحياء المدينة المنورة، يقال له
+      العالية، وكانت قابلته سلمى مولات النبي امرأة ب رافع، فبشر أبو رافع النبي
+      صل الله عليه وسلم fois بأنه عبدا يوم سابعه وسماه، وتصدق بزينة شعره فضة على
+      المساكين. ودفن، وشعره في الأرض. قال النبي صل الله عليه وسلم ولد لي الليلة
+      غلام سميته باسم أبي إبراهيم، وتنافست الأنصار في من يرضع إبراهيم، فأعطاه
+      لأ، مبردة بنت المنذر، أبن زيد الأنصاري، زوجة البراء بن أوس، فكانت ترضعه
+      بلبن ابنها في بني مازن إبن النجار. وترجع بيه إلى أمه، ثم أعطاه إلى أم سيف
+      امرأة حداد في المدينة المنورة، يقال له أبو سيف، وبقي عندها إلى أن مات،
+      قالو يا أنس بن مالك؟ فيقول ما رأيت أحدا، ارحم بالعيان من رسول الله صلى
+      الله عليه وسلم، كان إبراهيم سترضي عن في عوالي المدينة، فكان ينطلق ونحن
+      معه. فيدخل البيت، وكان ذره قينا، أي زوج المرضعة، كان حدادا، قال فيؤخذ
+      فيقبله، ثم يرجع، ولما توفي إبراهيم قامتا مبردة بتفصيله وحمل من بيتها على
+      سرير صغير، وصلى عليه النبي صلى الله عليه وسلم بالبقية، وقيل أن الفضل
+      العباس غسل إبراهيم، ونزل في قبره مع أسامة بن زيد. ورش قبره، وأعلم فيه ب
+      علامة، واتفق أن كسفت الشمس في اليوم الذي توفي فيه إبراهيم، فتحدث الناس أن
+      الشمس كتبت لموت إبراهيم، فقال النبي صلى الله عليه وسلم إن الشمس والقمر من
+      آيات الله، وإنه ملاين خفان لموت أحد، ولا لحياته، فإذا رأيتم ou هما ف كبرو،
+      وأدعو الله وصلو. وتصدقو. وقال عن إبراهيم عند وفاته إن لهم رضي عن في الجنة.
+      ويروي عبد الرحمان بن عوف قصة وفاته، فيذكر أخذ النبي صلى الله عليه وسلم
+      بيديه، فانطلقت معه إلى إبراهيم منه، وهو يجود بنفسه، فأخذه النبي صلى الله
+      عليه وسلم في حجره حتى خرجت نفسه، قال فوضعه وبكى، قال فقلت تبكي يا رسول
+      الله، وأنت تنهى عن البكاء؟ قال إني لم أنه عن البكاء. ولكني نهيت عن صوتين
+      أحمقين، فا جرين صوت عند نعمة لهو ولعب، ومزامير الشيطان، وصوت عند مصيبة
+      تلطم وجوها، وشق جيوب، وهذه رحمة و منلايرحملايرحم. ولولا انه وعد صادق وقول
+      حق. وأن يلحق أول بآخر الحزن. اعليك حزن أشد من هذا. وإن بك يا إبراهيم
+      لمحزونون. تبكي العين، ويحزن القلب، ولا نقول ما يسخط الرب. إلى هنا، نكون قد
+      أنهينا درسنا. دمتم في رعاية الله. أستودعكم الله. السلام عليكم ورحمة الله
+      تعالى وبركاته.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

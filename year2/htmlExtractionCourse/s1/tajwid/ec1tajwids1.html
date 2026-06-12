@@ -1,168 +1,389 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>مادة التجويد الدرس الاول</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/tajwid/ec1tajwids1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>مادة التجويد الدرس الاول</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/tajwid/ec1tajwids1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent15">مادة التجويد الدرس الاول</h1>
-<p id="sent16">بسم الله الرحمن الرحيم. الحمد لله الذي نزل الفرقان على عبده ليكون للعالم العالمين نذيرا، الحمد لله الذي أنزل الكتاب على عبده، ولم يجعل له عوجا. الحمد لله الذي هدانا بالقرآن، وجعلنا من أتباع خير الأنام، نبينا محمد عليه أفضل الصلاة والسلام. اللهم صل وسلم وبارك على سيدنا محمد وعلى اله وصحبه وسلم تسليما كثيرا. أما بعد، أيها الإخوة الأكارم،فهذه دروس مفيدة نافعة، نشرح فيها بإذن الله تعالى كتاب الفوائد المفهمة في شرح المقدمة للإمام العلامه سيدي محمد بن علي بن يلوشة الزيتون التونسي رحمه الله تعالى، وهي شرح للمنظومة الجزرية للإمام محمد بن محمد بن محمد بن يوسف. الجزري الشافعي رحمه الله تعالى. وسنخصص هذا الدرس في الحديث على التعريف بالمنظومة الجزرية، ونتحدث أيضا في ترجمة. الشارح والناظم رحمهم الله تعالى. ونبدأ أولا بالتعريف بالمنظومة الجزرية، ما هي المنظومة الجزرية؟المنظومة الجزرية هي آ أبيات صاغها الإمام ابن الجزري رحمه الله تعالى على بحر الرجس. تعلمون جيدا أن ال الشعر لا بد أن يكون على بحر من البحور، ف أسهل بحر في المنظومات هو بحر الرجل، وهذه المنظومة مكونة من 107 أبيات، أو في بعض النسخ من 9/109 أبيات. و، آ، لم يصغ لها عنوانا، وإنما جاءت كما هي المقدمة فيما على قارئ القرآن أن يعلمه. مر ابن الجزري رحمه الله تعالى من خلالها على المواضيع الأساسية في علم التجويد، وقد رتبهاعلى ترتيب منطقي. وجاءت أقسامها آ على ثلاثة أقسام تقريبا، حيث أنه ذكر خطبة الكتاب الحمد لله، يقول راجع عفو رب سامعي إلى آ قوله وما الذي رسم بالمصاحف؟ تقريبا ثمانية أبيات وضح من خلال هذه الخطبة مذهبه واسمه و آ ذكر الصلاة على النبي صلى الله وسلم ووضع لها. ال آ ال المعاني العامة لهذه المنظومة، حيث ذكر مخارج الحروف والصفات، وكذلك الموضوع الثاني، وهو فيما يتعلق بي ال آ الوقف والابتداء، وما الذي رسم رسم في المصاحف، و آ المبحث الثاني فصل في ال آ قواعد التجويد التي تتعلق بالتجويد، أما القسم الثالث فهو الخاتمة التي ختم بها هذه المنظومة. آ المنظومة الجزرية في الحقيقة من أهم كتب التجويد، حيث انتشرت واهتم بها العلماء و شرحوها وحفظوها ودرسوها، وكانت كالفاتحة آ في الصلاة، فهي كالفاتحة في علم التجويد تحفظ حفظا متينا. ولذلك شرحها العلماء رحمهم الله تعالى شروحا كثيرة من آ أهم ال الشروح التي وقعت، أو التي. آ شر. شرحت في زمن المؤلف. آ الشرح. آ ابن الناظم رحمه الله تعالى و سماها بي الحواشي المظلمة في شرح المقدمة، وكذلك شرح عبد الدايم الأزهري سماه الطرازات المعل المعلمة في شرح الفاضي المقدمة، ومن شروح. المقدمة المعتمدة شرح شيخ الإسلام زكريا الأنصاري رحمه الله تعالى، حيث شرح هذا الكتاب شرحا دقيقا سماه بالدقائق المحكمة في شرح المقدمة، وهذا الكتاب م كان معتمدا في جامع الزيتونة، وكان أيضا معتمدا والي إلى الآن في الأزهر الشريف. ومن الشروح المهمة على هذه المقدمة الشرح الذي سندرسه إن شاء الله تعالى لسيدي محمد بن يلوشة، وسماه الفوائد المفهمة في شرح المقدمة، و إن شاء الله تعالى سنشرح هذا الكتاب آ شرحا آ سهلا بإذن الله تعالى، ولن تجدوا فيه صعوبة في فهمه بإذن الله السميع العليم. نسأل الله تعالى التوفيق لذلك، بعد أن تحدثنا على ش آ على المنظومة الجزرية، وعلى التعريف بها وعلى منهجها، نمر الآن إلى التعريف بالإمام ابن الجزري رحمه الله تعالى، ومحمد بن محمد بن محمد بن يوسف بن الجزري رحمة الله تعالى عليه، و آ عليه من الله تعالى. شباب الرحمة. والرضوان الإمام ابن الجزر رحمه الله تعالى، نذكر آ اسمه ومولده، و آ نبذة عن حياته، وعن كتبه وتلاميذه ومشايخه، هو شيخ القراء. العلامه الثقة، الإمام العالم الزاهد أبو الخير محمد بن محمد بن محمد بن علي بن يوسف الجزري الشهير بن الجزري، والجزري نسبة إلى جزيرة بن عمر. وتسمى جزيرة بوطان حاليا، وتقع في منطقة منطقة شرق جن آ جنوب الأناضول بتركيا، قرب الح الحدود بين تركيا و سوريا، ولد رحمه الله تعالى في آ سنة 700 وإحدى و50 الموافق ل30-11-1350م، وفي آ مولده، وقصة مولده قصة. سبحان الله. كان والده عقيما لا يولد له، فذهب إلى الحج، وأثناء حجه شرب من ماء زمزم، ودعا الله تعالى أن يرزقه ولدا صالحا عالما، ثم لما رجع إلى الشام بعدها بسنة، ولد له هذا الابن، وسماه محمد، ورزقه الله تعالى هذا المولود، حيث أنه بدأ في حفظ القرآن الكريم. وأتم حفظه ولم آ يتم عمره 13 ، سنةثم قرأ القرآن الكريم في التراويح وهو ابن عشر آ 14 سنة، ثم بعد ذلك جمع القراءات وهو عمره لم يتجاوز 16 سنة، ثم بعد ذلك شرع في طلب العلم وأخذ وتلقي العلوم الشرعية من مشايخ دمشق. وأفتى له مشايخ دمشق منهم الإمام آ أبو الك، أبو الفداء، إسماعيل بن كثير رحمه الله تعالى بالعلم وبالتمكن، وسافر وهاجر و أنفق ماله في طلب العلم، وفي تعليمه، وأنشأ دورا للقرآن الكريم حيثما حل رحمه الله تعالى، حيث أنشأ دار للقرآن الكريم في دمشق. وفي آ الفي، تركيا، لما ذهب إلى آ بورصة وذهب إلى شيراز، وأنشأ دار للقرآن الكريم، و آ احتك بالعلماء الذين أخذ عنهم العلم شيوخه كثر في الحقيقة. ومنهم ااا المشايخ الذين اخذ منهم القراءات والتجويد، فمن علماء دمشق الذين اخذ منهم العلم العلامه أبو محمد عبد الوهاب بنس ابن السلال رحمه الله تعالى، ومنهم الشيخ أبو المعالي محمد بن اللبان ومنهم الشيخ أحمد بن رجب وكذلك ت دخ درس وأخذ العلم عن القاضي أبي يوسف أحمد بن الحسين. ال الحنفي رحمة الله تعالى عليه، ومن علماء النصر الشيخ أبو بكر عبد الله الجندي، والعلامة أبو محمد ابن الصائغ، والإمام عبد الرحمن بن البغدادي وعبد الوهاب القروي ومن علماء المدينة المنورة الإمام محمد بن صالح الخطيب. وشيوخه في الحديث والفقه والأصول واللغة. لا يحصون، حيث تلقى العلم عن الكثير من المشايخ المتمكنين المتقنين منهم الشيخ ضياء الدين سعد الله القزويني رحمه الله تعالى، ومنهم الشيخ صلاح الدين محمد بن إبراهيم بن عبد الله المقدسي الحنبلي ومنهم شيخ الإسلام سراج الدين البلقين. و من. آ، هؤلاء الشيوخ الذين تلقى منهم العلم، صاحب التفسير المشهور تفسير ابن كثير، الإمام أبو الفداء إسماعيل بن كثير رحمه الله تعالى. وهو اول من اجازه بالافتاء والتدريس سنة 774 للهجرة، والإمام ابن الجزري اجتمع عليه كثير من طلبة العلم، منهم ابنه محمد أحمد بن محمد بن الجزري، ومنهم الإمام البقاعي رحمه الله، ومنهم الإمام محمد بن الحسين بن سليمان الشيرازي، ومنهم الإمام عبد الدائم. الأزهري رحمه الله تعالى، ومنهم الإمام نجيب الدين عبد الله بن قطب الحسن بن الحسن البيهقي رحمة الله تعالى. عليه، و ااا ك كثير من طلبة العلم الذين تلقوا عن الإمام ابن الجزر العلم، واستفادوا منه، وانتفعوا به، وانتفعوا بعلمه، و أذاعوه في آ أوساط طلبة العلم الإمام ابن الجزر رحمه الله تعالى كان غزير الإنتاج، حيث دون وألف كثيرا من الكتب في العلوم الإسلامية. وليس فقط في علم القراءات والتزويد، وإن كان هذا العلم قد اشتهر به، وإن ما ألف في الحديث، وفي الفقه، وفي المصطلح، وفي التاريخ، وفي اللغة. وفي أصول الفقه، وغير ذلك من الكتب، وتجاوزت مؤلفاته ال90. نذكر من أهم هذه المؤلفات منظومة المقدمة فيما يجب على قارئ القرآن أن يعلمه، وهذا الكتاب أو هذه النظم هو المعروف بالمقدمة الجزرية، كما ألف رحمه الله تعالى كتاب تحبير التيسير في القراءات، وألف رحمه الله تعالى غاية النهاية في طبقات القراء، وألف كتاب التمهيد في علم التجويد، ومنجئ المقرئين، ومرشد الطالبين. وألف منظومة الدرة المضي في القراءات الثلاث المتممة للعشر المرضية، ومنظومة طيبة النشر في القراءات العشر، و ألف إتحاف المهرة. في ااا القراء العشرة، وغيرها من الكتب التي استفاد منها العلماء رحمة الله تعالى عليه، توفي الإمام ابن الجزري رحمه الله تعالى سنة 833 ، للهجرةبي شيراز في إيران الآن، ودفن بقدار القرآن الكريم التي أسسها وعمره، ثم 82 سنة، فرحمه الله تعالى. و أجزل مثوبته، وجزاه الله تعالى عنا وعن الإسلام خيرا. نمر الآن إلى ترجمة الإمام محمد بن يلوشخ رحمه الله تعالى هو محمد بن علي بن يوسف المعروف بن يلوشة الشريف التونسي من علماء القراءات ومدرسيها بجامع الزيتونة المعمور، ينحد، ينحدر من أصل أندلسي، وقد وفد أسلافه إلى تونس في زمن الجلاء الأخير في عهد يوسف داي رحمه الله تعالى. سنة 1015 للهجرة، وأقام آباؤه على شريعة ال على شعيرة الآذان بجمع الزيتونة المعمور، وكانوا مشتغلين بصناعة الشاشية بعد أن حفظ القرآن الكريم التحق بجمع الزيتونة المعمور وأخذ عن أعلامه كالإمام العالم عمر بن الشيخ ومحمد النيفر و العربي المازوني والعلامة مصطفى بن خليل. والعلامة محمد المكي بن عزوز، وأخذ التجويد والقراءات على الشيخ محمد البشير التواتي، ثم أحرز على شهادة التطويع في سنة 1004 و884. وتولى تدريس القراءات بجامع الزيتونة المعمور، ودرس الحديث والعربية والتوحيد والفرائض، و اشتهر رحمه الله تعالى بالقراءات، ومن تلاميذ صهره الشيخ إبراهيم المرغني رحمة الله عليه، و منهم الشيخ المختار المؤدب، والشيخ أحمد البناني وغيرهم. تولى التدريس في الرتبة الأولى سنة 1892. وله مؤلفات كثيرة منها كتاب تحرير الكلام في وقف حمزة وهشام، وهذا طبع في تونس بإشراف المؤلف. و كذلك من آ الكتب التي آ دونها وألفها اختصار وتعليق باب هائل كناية وحاصره في جدول محكم لطيف، وهذا أيضا مطبوع بهامش كتاب النجوم الطوالع وطبع في حياة مؤلفه. كذلك. منها أيضا شرح على قسم الفرائض من الدرة البيضاء. ومنها كتاب الفوائد المفهمة في شرح المقدمة و طبع في تونس عدة مرات. آ، وهذا الكتاب هو الذي سنشرحه إن شاء الله تعالى. وسنستفيد منه باذن الله السميع العليم. هذا ايها الاخوه. باختصار فيما يتعلق بهذه المحاضره. بالنسبه الى التعريف بالمنظومه الجزريه و ترجمة الامام ابن الجزري وترجمة الامام محمد بن يالوشا. شارح الجزريه على طريقه علمائنا حيث نشرح ونتعرف على آ المنظومة. الكتاب الذي ندرسه، والشرح الذي نقرأه، وعلى مؤلف هذه الكتب، لأن معرفة الشيء فرع عن تصوره، ولا يجوز أخذ العلم عن الكتب المجهولة، فلا بد أن نثق بي آ المناهج التي ندرسها، وأن آ نعرفها معرفة جيدة، وأن نعرف مؤلفيها لي، تتم الفائدة بإذن الله تعالى. هذا والله تعالى أعلم. وصلي اللهم وبارك على سيدنا محمد وآله وسلم تسليما كثيرا، والحمد لله رب العالمين.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent15">مادة التجويد الدرس الاول</h1>
+    <p id="sent16">
+      بسم الله الرحمن الرحيم. الحمد لله الذي نزل الفرقان على عبده ليكون للعالم
+      العالمين نذيرا، الحمد لله الذي أنزل الكتاب على عبده، ولم يجعل له عوجا.
+      الحمد لله الذي هدانا بالقرآن، وجعلنا من أتباع خير الأنام، نبينا محمد عليه
+      أفضل الصلاة والسلام. اللهم صل وسلم وبارك على سيدنا محمد وعلى اله وصحبه
+      وسلم تسليما كثيرا. أما بعد، أيها الإخوة الأكارم،فهذه دروس مفيدة نافعة،
+      نشرح فيها بإذن الله تعالى كتاب الفوائد المفهمة في شرح المقدمة للإمام
+      العلامه سيدي محمد بن علي بن يلوشة الزيتون التونسي رحمه الله تعالى، وهي شرح
+      للمنظومة الجزرية للإمام محمد بن محمد بن محمد بن يوسف. الجزري الشافعي رحمه
+      الله تعالى. وسنخصص هذا الدرس في الحديث على التعريف بالمنظومة الجزرية،
+      ونتحدث أيضا في ترجمة. الشارح والناظم رحمهم الله تعالى. ونبدأ أولا بالتعريف
+      بالمنظومة الجزرية، ما هي المنظومة الجزرية؟المنظومة الجزرية هي آ أبيات
+      صاغها الإمام ابن الجزري رحمه الله تعالى على بحر الرجس. تعلمون جيدا أن ال
+      الشعر لا بد أن يكون على بحر من البحور، ف أسهل بحر في المنظومات هو بحر
+      الرجل، وهذه المنظومة مكونة من 107 أبيات، أو في بعض النسخ من 9/109 أبيات.
+      و، آ، لم يصغ لها عنوانا، وإنما جاءت كما هي المقدمة فيما على قارئ القرآن أن
+      يعلمه. مر ابن الجزري رحمه الله تعالى من خلالها على المواضيع الأساسية في
+      علم التجويد، وقد رتبهاعلى ترتيب منطقي. وجاءت أقسامها آ على ثلاثة أقسام
+      تقريبا، حيث أنه ذكر خطبة الكتاب الحمد لله، يقول راجع عفو رب سامعي إلى آ
+      قوله وما الذي رسم بالمصاحف؟ تقريبا ثمانية أبيات وضح من خلال هذه الخطبة
+      مذهبه واسمه و آ ذكر الصلاة على النبي صلى الله وسلم ووضع لها. ال آ ال
+      المعاني العامة لهذه المنظومة، حيث ذكر مخارج الحروف والصفات، وكذلك الموضوع
+      الثاني، وهو فيما يتعلق بي ال آ الوقف والابتداء، وما الذي رسم رسم في
+      المصاحف، و آ المبحث الثاني فصل في ال آ قواعد التجويد التي تتعلق بالتجويد،
+      أما القسم الثالث فهو الخاتمة التي ختم بها هذه المنظومة. آ المنظومة الجزرية
+      في الحقيقة من أهم كتب التجويد، حيث انتشرت واهتم بها العلماء و شرحوها
+      وحفظوها ودرسوها، وكانت كالفاتحة آ في الصلاة، فهي كالفاتحة في علم التجويد
+      تحفظ حفظا متينا. ولذلك شرحها العلماء رحمهم الله تعالى شروحا كثيرة من آ أهم
+      ال الشروح التي وقعت، أو التي. آ شر. شرحت في زمن المؤلف. آ الشرح. آ ابن
+      الناظم رحمه الله تعالى و سماها بي الحواشي المظلمة في شرح المقدمة، وكذلك
+      شرح عبد الدايم الأزهري سماه الطرازات المعل المعلمة في شرح الفاضي المقدمة،
+      ومن شروح. المقدمة المعتمدة شرح شيخ الإسلام زكريا الأنصاري رحمه الله تعالى،
+      حيث شرح هذا الكتاب شرحا دقيقا سماه بالدقائق المحكمة في شرح المقدمة، وهذا
+      الكتاب م كان معتمدا في جامع الزيتونة، وكان أيضا معتمدا والي إلى الآن في
+      الأزهر الشريف. ومن الشروح المهمة على هذه المقدمة الشرح الذي سندرسه إن شاء
+      الله تعالى لسيدي محمد بن يلوشة، وسماه الفوائد المفهمة في شرح المقدمة، و إن
+      شاء الله تعالى سنشرح هذا الكتاب آ شرحا آ سهلا بإذن الله تعالى، ولن تجدوا
+      فيه صعوبة في فهمه بإذن الله السميع العليم. نسأل الله تعالى التوفيق لذلك،
+      بعد أن تحدثنا على ش آ على المنظومة الجزرية، وعلى التعريف بها وعلى منهجها،
+      نمر الآن إلى التعريف بالإمام ابن الجزري رحمه الله تعالى، ومحمد بن محمد بن
+      محمد بن يوسف بن الجزري رحمة الله تعالى عليه، و آ عليه من الله تعالى. شباب
+      الرحمة. والرضوان الإمام ابن الجزر رحمه الله تعالى، نذكر آ اسمه ومولده، و آ
+      نبذة عن حياته، وعن كتبه وتلاميذه ومشايخه، هو شيخ القراء. العلامه الثقة،
+      الإمام العالم الزاهد أبو الخير محمد بن محمد بن محمد بن علي بن يوسف الجزري
+      الشهير بن الجزري، والجزري نسبة إلى جزيرة بن عمر. وتسمى جزيرة بوطان حاليا،
+      وتقع في منطقة منطقة شرق جن آ جنوب الأناضول بتركيا، قرب الح الحدود بين
+      تركيا و سوريا، ولد رحمه الله تعالى في آ سنة 700 وإحدى و50 الموافق
+      ل30-11-1350م، وفي آ مولده، وقصة مولده قصة. سبحان الله. كان والده عقيما لا
+      يولد له، فذهب إلى الحج، وأثناء حجه شرب من ماء زمزم، ودعا الله تعالى أن
+      يرزقه ولدا صالحا عالما، ثم لما رجع إلى الشام بعدها بسنة، ولد له هذا الابن،
+      وسماه محمد، ورزقه الله تعالى هذا المولود، حيث أنه بدأ في حفظ القرآن
+      الكريم. وأتم حفظه ولم آ يتم عمره 13 ، سنةثم قرأ القرآن الكريم في التراويح
+      وهو ابن عشر آ 14 سنة، ثم بعد ذلك جمع القراءات وهو عمره لم يتجاوز 16 سنة،
+      ثم بعد ذلك شرع في طلب العلم وأخذ وتلقي العلوم الشرعية من مشايخ دمشق. وأفتى
+      له مشايخ دمشق منهم الإمام آ أبو الك، أبو الفداء، إسماعيل بن كثير رحمه الله
+      تعالى بالعلم وبالتمكن، وسافر وهاجر و أنفق ماله في طلب العلم، وفي تعليمه،
+      وأنشأ دورا للقرآن الكريم حيثما حل رحمه الله تعالى، حيث أنشأ دار للقرآن
+      الكريم في دمشق. وفي آ الفي، تركيا، لما ذهب إلى آ بورصة وذهب إلى شيراز،
+      وأنشأ دار للقرآن الكريم، و آ احتك بالعلماء الذين أخذ عنهم العلم شيوخه كثر
+      في الحقيقة. ومنهم ااا المشايخ الذين اخذ منهم القراءات والتجويد، فمن علماء
+      دمشق الذين اخذ منهم العلم العلامه أبو محمد عبد الوهاب بنس ابن السلال رحمه
+      الله تعالى، ومنهم الشيخ أبو المعالي محمد بن اللبان ومنهم الشيخ أحمد بن رجب
+      وكذلك ت دخ درس وأخذ العلم عن القاضي أبي يوسف أحمد بن الحسين. ال الحنفي
+      رحمة الله تعالى عليه، ومن علماء النصر الشيخ أبو بكر عبد الله الجندي،
+      والعلامة أبو محمد ابن الصائغ، والإمام عبد الرحمن بن البغدادي وعبد الوهاب
+      القروي ومن علماء المدينة المنورة الإمام محمد بن صالح الخطيب. وشيوخه في
+      الحديث والفقه والأصول واللغة. لا يحصون، حيث تلقى العلم عن الكثير من
+      المشايخ المتمكنين المتقنين منهم الشيخ ضياء الدين سعد الله القزويني رحمه
+      الله تعالى، ومنهم الشيخ صلاح الدين محمد بن إبراهيم بن عبد الله المقدسي
+      الحنبلي ومنهم شيخ الإسلام سراج الدين البلقين. و من. آ، هؤلاء الشيوخ الذين
+      تلقى منهم العلم، صاحب التفسير المشهور تفسير ابن كثير، الإمام أبو الفداء
+      إسماعيل بن كثير رحمه الله تعالى. وهو اول من اجازه بالافتاء والتدريس سنة
+      774 للهجرة، والإمام ابن الجزري اجتمع عليه كثير من طلبة العلم، منهم ابنه
+      محمد أحمد بن محمد بن الجزري، ومنهم الإمام البقاعي رحمه الله، ومنهم الإمام
+      محمد بن الحسين بن سليمان الشيرازي، ومنهم الإمام عبد الدائم. الأزهري رحمه
+      الله تعالى، ومنهم الإمام نجيب الدين عبد الله بن قطب الحسن بن الحسن البيهقي
+      رحمة الله تعالى. عليه، و ااا ك كثير من طلبة العلم الذين تلقوا عن الإمام
+      ابن الجزر العلم، واستفادوا منه، وانتفعوا به، وانتفعوا بعلمه، و أذاعوه في آ
+      أوساط طلبة العلم الإمام ابن الجزر رحمه الله تعالى كان غزير الإنتاج، حيث
+      دون وألف كثيرا من الكتب في العلوم الإسلامية. وليس فقط في علم القراءات
+      والتزويد، وإن كان هذا العلم قد اشتهر به، وإن ما ألف في الحديث، وفي الفقه،
+      وفي المصطلح، وفي التاريخ، وفي اللغة. وفي أصول الفقه، وغير ذلك من الكتب،
+      وتجاوزت مؤلفاته ال90. نذكر من أهم هذه المؤلفات منظومة المقدمة فيما يجب على
+      قارئ القرآن أن يعلمه، وهذا الكتاب أو هذه النظم هو المعروف بالمقدمة
+      الجزرية، كما ألف رحمه الله تعالى كتاب تحبير التيسير في القراءات، وألف رحمه
+      الله تعالى غاية النهاية في طبقات القراء، وألف كتاب التمهيد في علم التجويد،
+      ومنجئ المقرئين، ومرشد الطالبين. وألف منظومة الدرة المضي في القراءات الثلاث
+      المتممة للعشر المرضية، ومنظومة طيبة النشر في القراءات العشر، و ألف إتحاف
+      المهرة. في ااا القراء العشرة، وغيرها من الكتب التي استفاد منها العلماء
+      رحمة الله تعالى عليه، توفي الإمام ابن الجزري رحمه الله تعالى سنة 833 ،
+      للهجرةبي شيراز في إيران الآن، ودفن بقدار القرآن الكريم التي أسسها وعمره،
+      ثم 82 سنة، فرحمه الله تعالى. و أجزل مثوبته، وجزاه الله تعالى عنا وعن
+      الإسلام خيرا. نمر الآن إلى ترجمة الإمام محمد بن يلوشخ رحمه الله تعالى هو
+      محمد بن علي بن يوسف المعروف بن يلوشة الشريف التونسي من علماء القراءات
+      ومدرسيها بجامع الزيتونة المعمور، ينحد، ينحدر من أصل أندلسي، وقد وفد أسلافه
+      إلى تونس في زمن الجلاء الأخير في عهد يوسف داي رحمه الله تعالى. سنة 1015
+      للهجرة، وأقام آباؤه على شريعة ال على شعيرة الآذان بجمع الزيتونة المعمور،
+      وكانوا مشتغلين بصناعة الشاشية بعد أن حفظ القرآن الكريم التحق بجمع الزيتونة
+      المعمور وأخذ عن أعلامه كالإمام العالم عمر بن الشيخ ومحمد النيفر و العربي
+      المازوني والعلامة مصطفى بن خليل. والعلامة محمد المكي بن عزوز، وأخذ التجويد
+      والقراءات على الشيخ محمد البشير التواتي، ثم أحرز على شهادة التطويع في سنة
+      1004 و884. وتولى تدريس القراءات بجامع الزيتونة المعمور، ودرس الحديث
+      والعربية والتوحيد والفرائض، و اشتهر رحمه الله تعالى بالقراءات، ومن تلاميذ
+      صهره الشيخ إبراهيم المرغني رحمة الله عليه، و منهم الشيخ المختار المؤدب،
+      والشيخ أحمد البناني وغيرهم. تولى التدريس في الرتبة الأولى سنة 1892. وله
+      مؤلفات كثيرة منها كتاب تحرير الكلام في وقف حمزة وهشام، وهذا طبع في تونس
+      بإشراف المؤلف. و كذلك من آ الكتب التي آ دونها وألفها اختصار وتعليق باب
+      هائل كناية وحاصره في جدول محكم لطيف، وهذا أيضا مطبوع بهامش كتاب النجوم
+      الطوالع وطبع في حياة مؤلفه. كذلك. منها أيضا شرح على قسم الفرائض من الدرة
+      البيضاء. ومنها كتاب الفوائد المفهمة في شرح المقدمة و طبع في تونس عدة مرات.
+      آ، وهذا الكتاب هو الذي سنشرحه إن شاء الله تعالى. وسنستفيد منه باذن الله
+      السميع العليم. هذا ايها الاخوه. باختصار فيما يتعلق بهذه المحاضره. بالنسبه
+      الى التعريف بالمنظومه الجزريه و ترجمة الامام ابن الجزري وترجمة الامام محمد
+      بن يالوشا. شارح الجزريه على طريقه علمائنا حيث نشرح ونتعرف على آ المنظومة.
+      الكتاب الذي ندرسه، والشرح الذي نقرأه، وعلى مؤلف هذه الكتب، لأن معرفة الشيء
+      فرع عن تصوره، ولا يجوز أخذ العلم عن الكتب المجهولة، فلا بد أن نثق بي آ
+      المناهج التي ندرسها، وأن آ نعرفها معرفة جيدة، وأن نعرف مؤلفيها لي، تتم
+      الفائدة بإذن الله تعالى. هذا والله تعالى أعلم. وصلي اللهم وبارك على سيدنا
+      محمد وآله وسلم تسليما كثيرا، والحمد لله رب العالمين.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

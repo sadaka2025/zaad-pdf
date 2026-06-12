@@ -1,168 +1,396 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الخامس</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/akhlaq/ec5akhlaqs1.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الخامس</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s1/akhlaq/ec5akhlaqs1.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent23">الدرس الخامس</h1>
-<p id="sent24">بسم الله الرحمان الرحيم. الحمد لله رب العالمين. وصلى الله وسلم وبارك على سيدنا و حبيبنا و مولانا سيدنا محمد الصادق الوعد الأمين وحبيبي رب العالمين، وعلى آله وأصحابه أجمعين، سبحانك لا علم لنا إلا ما علمتنا، فعلمنا يا مولانا. ما ينفعون ونفعنا بما علمتنا وزدنا علما وعملا، وصدقا وإخلاصا في الدين، إفتح علينا فتح العارفين، وفقنا توفيق الصالحين، عد علينا بعوائد ك الحسنة ياكريم، وصلي اللهم على سيدنا محمد وعلى آله وصحبه وسلم أجمعين. أو بعدو. أيها السادة والسيدات، مع شراء الطلبة والطيبات، مرحبا بكم جميعا في هذا اللقاء الإيماني المتجدد مع الإمام بن عطاء الله السكندري في حكمه الحكم العطاء، ونحن اليوم مع الحكمة الحادية عشر الحكمة. الحادية عشر، ومع الدرس الرابع، والحكمة الحادية عشر، وكما ذكرنا سابقا أننا قمنا ب انتقاء البعض الحكم ااا من حيث و وضوح معانيه، و من حيث حاجتنا إليها. و من حيث نعم، ااا سرعة فهمها وسرعة حفظها، إذا هناك حقيقة عوامل كثيرة لعت ننتقي هذه الحكم، ومن أراد أن يعود إلى شروح الكثيرة، أو أن يقرأ الشر كتاب كاملا في يمكن له ذلك، نسأل الله التوفيق. نأتي يقول رضي الله تعالى عنه وأرضاه. ادفن وجودك. في أرض الخمول. فم عنابة من ما لم يدفن، لا يتم نتاجه، ادفن وجودك في أرض الخمول. فما نبت مما لم يدفن. لا يتم نتاجه. يعني هذه اليوم هذه الحكمة الحقيقة تناسب حالنا كثيرا. من حيث حب الظهور في هذا الزمن. وهذا مما يحذرنا منه الإمام أبن عطاء الله. يعني إياك والظهور. إياك وأن تبرز عملك للناس. ه ياك و أنت. حاول أن تكتسب الشهرة بين الناس. قبل أن تنضج النضج الذي يخولك للظهور. فقد قالو الظهور يقسم الظهور. يعني كثيرا ما نرى اليوم. آه، طالبة علمي، ونحن درسنا لطلبة العلم الزيتون. وهذا أمر في غاية الأهمية، يقرأ كتابا في النحو. ثم يظهر على صفحات التواصل الإجتماعي، يدرس النح، هذا خطأ. قرأ كتابا في الفقه. في عبادات أو متنا من المتون، ثم فتح صفحة، ويدرس الناس، قرأ شيئا من القرآن الكريم والتجويد، ثم انتصب، يدرس الناس القرآن الكريم والتجويد، هذا حطا. لم يكونوا كذلك. حكالي أحد كبار الشيوخ. في الأزهر الشريف في درسه في جامعة الأزهر. قال لي كانوا يجلسون في طلب العلم لمدة 30 عاما. في الجامع الأزهر. ولا يرا، أحدهم نفسه أنه أصبح أهلا لأن يفتح صفحة جديدة حلقة للتعليم. 30 عاما. وكذلك كان العلماء وطلبة العلم مع شيوخهم. لا يتقدم أحد منهم، أو ينفرد بمجلس علم أو بي مقرؤة، أو بمجلس، إلا، بل أعلى أن يؤدى له شيخه. إلا بعد أن يأذن له. وإلا، بعد أن ي تظلع من العلم. أما أن يفتح حلقة علم بحضور شيخه وتحت رعايته، فهذا أمر لا مانع منه، أما أن يتصدر هو قبل أن و. أ يعني، وقبل أن ينهي العلم، فهذا في غاية الخطورة، لماذا؟ لأنه ربما أصابها لعجب. والرضا عن نفسه ف حرمه علما غزيرا، فيصبح في هذه الحالة لا يستطيع أن ينصح أحد، ولا يقبل النصيحة من أحد، ويقول في نفسه أنا أصبحت صاحب حلقة، أنا عندي لدي معجبون كثيرون، أنا صفحتي عليها فيها 1,000,002، 1,000,000، فكيف يأتي فلان ويصحح ره؟و يغتر الناس به ويصبح لا يستطيع أن يقول أدري، والعلماء قالوا قديما نعم من أستحي أن يقول لا أدري، أو لا أعلم، فقد أصيبت مقاتله على كل حال الشيخ بن عطاء الله سواء يريد من في هذه الحكمة العموم، ادفن وجودك في أرض الخمول. الخمول، أي بعيدا عن الشهرة و الأضواء، فما نأبى عطا حكما مما لم يدفن، لا يتم نتاجهم، يعني مثل الزرع اذا لم تغرسها في الأرض وتقوى جذورها في أعماق الأرض، سوف ااا تقتلعها أي. ريح تعترضها، وسوف تقترع ها، وتيبس ماذا وتموت؟ وكذلك رياح الحياة كثيرة على طالب العلم، أو على السالك، في الطريق إلى الله سبحانه وتعالى. لا ينبغي أن يرى لنفسه أنو أنا فلان، وإلا أن يقربك الله عز وجل، وأن يقدمك الله سبحانه وتعالى، كما كان الإمام أبن عطاء الله، وقد حدثني أحد الشيوخ في دمشق إسمه الشيخ علي ااا الشيخ حسين، دلول رحمة الله عليه، هذا الشيخ و أدركته. آه في سنه فوق ال80 ودرست عليه شرح الأجرومية لخارج الأزهر بحاشية أبن جاء بحاشية أبن نجا موجودة و مطبوعة هذه الحاشية قرأتها على هذا الشيخ الجليل، فا الشيخ كان يقول لي نعم. ااا ااا كانو لا يسلكون الطالب ولا يعطونه أوراد الذكر الأوراد الخاصة، ليس الأوراد العامة، الأوراد الخاصة إلا بعد 15 عاما من طلب العلم. بعد 15 عاما من طلب العلم، من أجل ماذا؟ أن يدفن وجودهم في العلم، وفي المعرفة، وفي التحقيق، وفي التلخيص، ثم بعد ذلك لا مانع من ظهورهم، لأنه قد أصبح م عنده أدوات العلم، و أصبح مهيئا من ظهور، وفي هذه الحالة الظهور. لا يضره، لماذا؟ لأنه أصبح يغرف من المعين، رأيتم إلى الشيخ الشعراوي رحمه الله، عاش حياته يفسر ويعطي، وظالم مستمرا في العطاء وفي النفع وفي التأثير، ولم ينضب له، زاد في يوم من الأيام، وكل شريط وكل. نعم درس تسمعه منه. تستفيد منه، لماذا؟ لأنه خرج بعد أن اكتملت أدواته. أسأل الله أن يعلمنا إذا ادفن وجودك في أرض الخمول. فما نبت مما لم يدفن. لا يتم نتاجه، يقول الإمام الشيخ شرنوبي رحمه الله تعالى أي ادفن أيها المريد، ودائما قلت أنه يخاطب العامة. الغلال الطالب العلمي هنا، ولا يخاطب عامة الناس، ولذلك يقول المريد أيها المريد، يعني م نسألك أيها السالك، يعني أي من يطلبو يريد الوصول إلى الله سبحانه وتعالى والترقي في فهمه وفي عباداته لله عز وجل؟ هذا هو المريض، أي السالك. إدفن، أيها المريد نفسك، أي شهرتها في الخمور الذي هو ك الأرض للميت في التغطية التامة. في الخمول الذي هو كالأرض. للميت في التغطية التامة، كما أن الميت يدفن في الأرض نعم، ويغطى تماما، ولا يرى كذلك، أنت اجعل نفسك شبيها بالميت، بحيث أن لا يراك أحد. ولا يعتبرك أحد. ولا يلتفت إليك أحد. وقد قال هذا سيدنا رسول الله صلى الله عليه وسلم إن الله يحب من عباده العبد التقي النقي. الذين إذا حضروا لم يقدموا، وإن غاب ou، لم يفتقد ou. هؤلاء الأرق ياء، ال أنقياء. الذين إذا حضر ولم يقدموا، وإن غاب ou نعم لم يفتقد، لكن سبحان الله هناك أناس أقام هم الله في الظهور وهي أهم له، وهناك أناس أقام هم الله تعالى في الخمول وهي أهم لهم، وهذا ينفع بظهور ليقتدي للناس به. وهذا ينفع في خمور ه لي كثر. ماذا من دعائه للمسلمين في ليله وفي. وفي نهاره. يا سلام، قال بأن لا تتعاطى أسباب الشهرة، فإن الخمول مما يعين على الإخلاص، بخلاف حب الظهور. فإنه من جملة القواطع القاصمة للظهور. فما نبت من الحب مما لم يدفن في الأرض، لا يتم نتاجه، بل يخرج مصفرا، وكذلك أنت أيها المريد. إذا تعاطيت أسباب الشهرة في بدايتك، قل أن تفلح في نهايتك، باش تجي معانا حكمة. إبن عطاء الله سوف يقولها من لم تكن له بداية محرقة. لم تكن له نهاية مشرقة. من لم تكن له بداية محرقة، أي أن تقبل على الله بكل يأتك. لا تلتفت إلى الفيس بوك. ولا تلتفت أن تجعل نفسك صفحة. ولات دون أن تحفظ القرآن. أش تعمل إنت، ماذا تفعل؟لا هي بفيسبوك وتوتال كحفظ القرآن؟لا هي بالفيس بوك، وعندك دروسك في. في طلب العلم. لا، هي في الفيسبوك متعرفش تعرف أبيات؟لا تفرق بين الفاعل والمفعول. وبين الفاعل ونائب الفاعل. له بالفيس بوك و بالصفحة والشهرة نعم، و بمظهرك الديني. نعم، وعانت ترك دروس العلم. بدل أن تحقق. وبدل أن ااا، تتبع العلماء. وأن تذهب إليهم في بيوتهم. نعم أيها السادة، رحم الله أيام. ه. كنا ندرس في المعهد الديني في دمشق. ونذهب إلى شيوخنا في بيوتهم في المساء. نطرق عليهم الأبواب، و نستأذن منهم. و نقراو عنهم الكتاب الفلاني والكتاب الفلاني مما هو ليس مقررا في في المعهد. فنزداد علما. ونزداد معرفة كنا كنا نلتهم العلم التهاما. كنا يأن لها العلم نهلا. وكان أحد يلبس ما حضر ويأكل ما حضر. وركب ما حضر. لم يكن عندنا عائلات وأبناء و أسر ومسؤوليات، وإنما كان ممكنا متفرغين. والله شيخنا قالي يا ابني ما كنا يوم الأيام لن وي، أنا سنصبح أساتذة. En france. بح. مشا هش. Encense، صبح مدرسين. نجلس أمامكم مكانه، ذهنيتنا أبدا. يعني كان محققين بقول يقول الغزالي طلبنا العلم بغير غير الله، فأبى إني أن يكون إلا لله. أبا أن والنووي يقول نعم، ااا، أخذنا من حيث لا نشعر. وخذنا، من حيث وجدنا أنفسنا في الشهرة من حيث لا نشعر. قال وكذلك أنت أيها المريد، إذا تعاطيت أسباب الشهرة في بدايتك، قل أن تفلح في نهايتك. ومن ثم قال رجل لبشر بن الحارث أوصني، فقال أخمن ذكرك؟ وأ طب مطعمك. وقال بعضهم لا تصلح طريقتنا هذه الأيام. إل الأقوام، كنيست بأرواحهم المزابل. يعني بمعنى أنهم لا يريدون شهرة ولا يريدون نعم ظهورا، وإنما يريدون وجه الله سبحانه وتعالى؟ هي ريت أيها السادة، لماذا اليوم؟ نحن يعني قلما تجد طالبة علم. درس العلوم وتمكن في العلوم، قبل أن يظهر. قابلة أن يظهر. لماذا أصبحنا نرى طر الى علم، لكن لا نرى من عنده علم؟ يعني إذا سمعته لا يلحن، وإذا سمعته يقول كلاما موزونا؟لماذا؟ هذا؟ كلهم؟ لأنه سرعة يعني الآن كثيرون من طلبة العلم يريدون العلم تكويه؟يريدون العلم في عجالة. كل شيء يمكن أن يكون تكويه، كل شيء يمكن أن تحصله بالسرعة، إلا العلم الشرعي. لن يعطيك بعضه حتى تعطيه كلك. وقال إبراهيم بن أدهم ما صدق الله من أحب الشهرة. ما صدق الله من أحب الشهرة، ولله در القائل عشقا من الذكر بين الناس، وأرضى به، فذاك أسلم في الدنيا، وفي الدين، من عاشر ناس لم تسلم ديانته، ولم يزل بين تحريك وتسكين. نعم، هي مراحل الحياة. لا بد أن يمر بها الإنسان، يعني في مرحلة كما قال ااه شيخنا الشيخ ااا اال الحسيني الشيخ على والد رئيس جامعة الأزهر. وكان رجلا زيت أزهر، يا معمما. فقال العلم يحتاج أولا إلى فهم. ثانيا، يحتاج إلى حفظ. ثالثا، يحتاج إلى هضم. بعد ذلك، يأتي العمل. إذن، الفهم أولا. نعم، الحفظ ثانيا. الهضم. يا سلام في حاجة إسمها هضم العلم؟ أي نعم، قال أهضم العلم. ثم بعد ذلك، يأتي العمل. إذا، أول؟اسما العلم أن نفهم العلم، ثم بعد ذلك أن نحفظه، ثم ثالث مرة أن هضمه. يعني كان من خفايا في الأدلة الشرعية من الكتاب والسنة، كانت غامضة بعض الزوايا عنك، فيحتاج إلى هضم، ثم يحتاج بعد ذلك ماذا إلى عمل؟ حتى قال لنا مرة كان الشيخ فلان ي يحفظ التحرير للكمال، إبن الهمام، التحرير في أصول الفقه. وكانوا يحفظون كتب العلم كتبا ومنظومات عالية. لماذا؟ لأنهم أعطوا للعلم حقهم، فهموهم، ثم بعد ذلك جاء بالدرر حتى قالنا مرتا، قال كان الشيخ العناني من أئمة المالكية في كلية الشريعة الأزهر الشريف، قال لنا الشيخ الحسيني كان عيه ورا في العلم. فلما ذهبت في كتب المعاجم، ابحث عن العي هور، فوجدته الغول، أي كانغ، ولا في العلم، وإنما أصبح غولا في العلم، لأنه دفن نفسه في أرض الخمول إبتداءا حتى نجح. ماذا في النهايات؟ بارك الله فيكم؟ أسأل الله أن يجعلنا جميعا. من الذين يستمعون القول فيتبعون أحسنه، والحمد لله رب العالمين، وإلى لقاء آخر إن شاء الله تعالى. والسلام عليكم ورحمة الله وبركاته.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent23">الدرس الخامس</h1>
+    <p id="sent24">
+      بسم الله الرحمان الرحيم. الحمد لله رب العالمين. وصلى الله وسلم وبارك على
+      سيدنا و حبيبنا و مولانا سيدنا محمد الصادق الوعد الأمين وحبيبي رب العالمين،
+      وعلى آله وأصحابه أجمعين، سبحانك لا علم لنا إلا ما علمتنا، فعلمنا يا
+      مولانا. ما ينفعون ونفعنا بما علمتنا وزدنا علما وعملا، وصدقا وإخلاصا في
+      الدين، إفتح علينا فتح العارفين، وفقنا توفيق الصالحين، عد علينا بعوائد ك
+      الحسنة ياكريم، وصلي اللهم على سيدنا محمد وعلى آله وصحبه وسلم أجمعين. أو
+      بعدو. أيها السادة والسيدات، مع شراء الطلبة والطيبات، مرحبا بكم جميعا في
+      هذا اللقاء الإيماني المتجدد مع الإمام بن عطاء الله السكندري في حكمه الحكم
+      العطاء، ونحن اليوم مع الحكمة الحادية عشر الحكمة. الحادية عشر، ومع الدرس
+      الرابع، والحكمة الحادية عشر، وكما ذكرنا سابقا أننا قمنا ب انتقاء البعض
+      الحكم ااا من حيث و وضوح معانيه، و من حيث حاجتنا إليها. و من حيث نعم، ااا
+      سرعة فهمها وسرعة حفظها، إذا هناك حقيقة عوامل كثيرة لعت ننتقي هذه الحكم،
+      ومن أراد أن يعود إلى شروح الكثيرة، أو أن يقرأ الشر كتاب كاملا في يمكن له
+      ذلك، نسأل الله التوفيق. نأتي يقول رضي الله تعالى عنه وأرضاه. ادفن وجودك.
+      في أرض الخمول. فم عنابة من ما لم يدفن، لا يتم نتاجه، ادفن وجودك في أرض
+      الخمول. فما نبت مما لم يدفن. لا يتم نتاجه. يعني هذه اليوم هذه الحكمة
+      الحقيقة تناسب حالنا كثيرا. من حيث حب الظهور في هذا الزمن. وهذا مما يحذرنا
+      منه الإمام أبن عطاء الله. يعني إياك والظهور. إياك وأن تبرز عملك للناس. ه
+      ياك و أنت. حاول أن تكتسب الشهرة بين الناس. قبل أن تنضج النضج الذي يخولك
+      للظهور. فقد قالو الظهور يقسم الظهور. يعني كثيرا ما نرى اليوم. آه، طالبة
+      علمي، ونحن درسنا لطلبة العلم الزيتون. وهذا أمر في غاية الأهمية، يقرأ كتابا
+      في النحو. ثم يظهر على صفحات التواصل الإجتماعي، يدرس النح، هذا خطأ. قرأ
+      كتابا في الفقه. في عبادات أو متنا من المتون، ثم فتح صفحة، ويدرس الناس، قرأ
+      شيئا من القرآن الكريم والتجويد، ثم انتصب، يدرس الناس القرآن الكريم
+      والتجويد، هذا حطا. لم يكونوا كذلك. حكالي أحد كبار الشيوخ. في الأزهر الشريف
+      في درسه في جامعة الأزهر. قال لي كانوا يجلسون في طلب العلم لمدة 30 عاما. في
+      الجامع الأزهر. ولا يرا، أحدهم نفسه أنه أصبح أهلا لأن يفتح صفحة جديدة حلقة
+      للتعليم. 30 عاما. وكذلك كان العلماء وطلبة العلم مع شيوخهم. لا يتقدم أحد
+      منهم، أو ينفرد بمجلس علم أو بي مقرؤة، أو بمجلس، إلا، بل أعلى أن يؤدى له
+      شيخه. إلا بعد أن يأذن له. وإلا، بعد أن ي تظلع من العلم. أما أن يفتح حلقة
+      علم بحضور شيخه وتحت رعايته، فهذا أمر لا مانع منه، أما أن يتصدر هو قبل أن
+      و. أ يعني، وقبل أن ينهي العلم، فهذا في غاية الخطورة، لماذا؟ لأنه ربما
+      أصابها لعجب. والرضا عن نفسه ف حرمه علما غزيرا، فيصبح في هذه الحالة لا
+      يستطيع أن ينصح أحد، ولا يقبل النصيحة من أحد، ويقول في نفسه أنا أصبحت صاحب
+      حلقة، أنا عندي لدي معجبون كثيرون، أنا صفحتي عليها فيها 1,000,002،
+      1,000,000، فكيف يأتي فلان ويصحح ره؟و يغتر الناس به ويصبح لا يستطيع أن يقول
+      أدري، والعلماء قالوا قديما نعم من أستحي أن يقول لا أدري، أو لا أعلم، فقد
+      أصيبت مقاتله على كل حال الشيخ بن عطاء الله سواء يريد من في هذه الحكمة
+      العموم، ادفن وجودك في أرض الخمول. الخمول، أي بعيدا عن الشهرة و الأضواء،
+      فما نأبى عطا حكما مما لم يدفن، لا يتم نتاجهم، يعني مثل الزرع اذا لم تغرسها
+      في الأرض وتقوى جذورها في أعماق الأرض، سوف ااا تقتلعها أي. ريح تعترضها،
+      وسوف تقترع ها، وتيبس ماذا وتموت؟ وكذلك رياح الحياة كثيرة على طالب العلم،
+      أو على السالك، في الطريق إلى الله سبحانه وتعالى. لا ينبغي أن يرى لنفسه أنو
+      أنا فلان، وإلا أن يقربك الله عز وجل، وأن يقدمك الله سبحانه وتعالى، كما كان
+      الإمام أبن عطاء الله، وقد حدثني أحد الشيوخ في دمشق إسمه الشيخ علي ااا
+      الشيخ حسين، دلول رحمة الله عليه، هذا الشيخ و أدركته. آه في سنه فوق ال80
+      ودرست عليه شرح الأجرومية لخارج الأزهر بحاشية أبن جاء بحاشية أبن نجا موجودة
+      و مطبوعة هذه الحاشية قرأتها على هذا الشيخ الجليل، فا الشيخ كان يقول لي
+      نعم. ااا ااا كانو لا يسلكون الطالب ولا يعطونه أوراد الذكر الأوراد الخاصة،
+      ليس الأوراد العامة، الأوراد الخاصة إلا بعد 15 عاما من طلب العلم. بعد 15
+      عاما من طلب العلم، من أجل ماذا؟ أن يدفن وجودهم في العلم، وفي المعرفة، وفي
+      التحقيق، وفي التلخيص، ثم بعد ذلك لا مانع من ظهورهم، لأنه قد أصبح م عنده
+      أدوات العلم، و أصبح مهيئا من ظهور، وفي هذه الحالة الظهور. لا يضره، لماذا؟
+      لأنه أصبح يغرف من المعين، رأيتم إلى الشيخ الشعراوي رحمه الله، عاش حياته
+      يفسر ويعطي، وظالم مستمرا في العطاء وفي النفع وفي التأثير، ولم ينضب له، زاد
+      في يوم من الأيام، وكل شريط وكل. نعم درس تسمعه منه. تستفيد منه، لماذا؟ لأنه
+      خرج بعد أن اكتملت أدواته. أسأل الله أن يعلمنا إذا ادفن وجودك في أرض
+      الخمول. فما نبت مما لم يدفن. لا يتم نتاجه، يقول الإمام الشيخ شرنوبي رحمه
+      الله تعالى أي ادفن أيها المريد، ودائما قلت أنه يخاطب العامة. الغلال الطالب
+      العلمي هنا، ولا يخاطب عامة الناس، ولذلك يقول المريد أيها المريد، يعني م
+      نسألك أيها السالك، يعني أي من يطلبو يريد الوصول إلى الله سبحانه وتعالى
+      والترقي في فهمه وفي عباداته لله عز وجل؟ هذا هو المريض، أي السالك. إدفن،
+      أيها المريد نفسك، أي شهرتها في الخمور الذي هو ك الأرض للميت في التغطية
+      التامة. في الخمول الذي هو كالأرض. للميت في التغطية التامة، كما أن الميت
+      يدفن في الأرض نعم، ويغطى تماما، ولا يرى كذلك، أنت اجعل نفسك شبيها بالميت،
+      بحيث أن لا يراك أحد. ولا يعتبرك أحد. ولا يلتفت إليك أحد. وقد قال هذا سيدنا
+      رسول الله صلى الله عليه وسلم إن الله يحب من عباده العبد التقي النقي. الذين
+      إذا حضروا لم يقدموا، وإن غاب ou، لم يفتقد ou. هؤلاء الأرق ياء، ال أنقياء.
+      الذين إذا حضر ولم يقدموا، وإن غاب ou نعم لم يفتقد، لكن سبحان الله هناك
+      أناس أقام هم الله في الظهور وهي أهم له، وهناك أناس أقام هم الله تعالى في
+      الخمول وهي أهم لهم، وهذا ينفع بظهور ليقتدي للناس به. وهذا ينفع في خمور ه
+      لي كثر. ماذا من دعائه للمسلمين في ليله وفي. وفي نهاره. يا سلام، قال بأن لا
+      تتعاطى أسباب الشهرة، فإن الخمول مما يعين على الإخلاص، بخلاف حب الظهور.
+      فإنه من جملة القواطع القاصمة للظهور. فما نبت من الحب مما لم يدفن في الأرض،
+      لا يتم نتاجه، بل يخرج مصفرا، وكذلك أنت أيها المريد. إذا تعاطيت أسباب
+      الشهرة في بدايتك، قل أن تفلح في نهايتك، باش تجي معانا حكمة. إبن عطاء الله
+      سوف يقولها من لم تكن له بداية محرقة. لم تكن له نهاية مشرقة. من لم تكن له
+      بداية محرقة، أي أن تقبل على الله بكل يأتك. لا تلتفت إلى الفيس بوك. ولا
+      تلتفت أن تجعل نفسك صفحة. ولات دون أن تحفظ القرآن. أش تعمل إنت، ماذا
+      تفعل؟لا هي بفيسبوك وتوتال كحفظ القرآن؟لا هي بالفيس بوك، وعندك دروسك في. في
+      طلب العلم. لا، هي في الفيسبوك متعرفش تعرف أبيات؟لا تفرق بين الفاعل
+      والمفعول. وبين الفاعل ونائب الفاعل. له بالفيس بوك و بالصفحة والشهرة نعم، و
+      بمظهرك الديني. نعم، وعانت ترك دروس العلم. بدل أن تحقق. وبدل أن ااا، تتبع
+      العلماء. وأن تذهب إليهم في بيوتهم. نعم أيها السادة، رحم الله أيام. ه. كنا
+      ندرس في المعهد الديني في دمشق. ونذهب إلى شيوخنا في بيوتهم في المساء. نطرق
+      عليهم الأبواب، و نستأذن منهم. و نقراو عنهم الكتاب الفلاني والكتاب الفلاني
+      مما هو ليس مقررا في في المعهد. فنزداد علما. ونزداد معرفة كنا كنا نلتهم
+      العلم التهاما. كنا يأن لها العلم نهلا. وكان أحد يلبس ما حضر ويأكل ما حضر.
+      وركب ما حضر. لم يكن عندنا عائلات وأبناء و أسر ومسؤوليات، وإنما كان ممكنا
+      متفرغين. والله شيخنا قالي يا ابني ما كنا يوم الأيام لن وي، أنا سنصبح
+      أساتذة. En france. بح. مشا هش. Encense، صبح مدرسين. نجلس أمامكم مكانه،
+      ذهنيتنا أبدا. يعني كان محققين بقول يقول الغزالي طلبنا العلم بغير غير الله،
+      فأبى إني أن يكون إلا لله. أبا أن والنووي يقول نعم، ااا، أخذنا من حيث لا
+      نشعر. وخذنا، من حيث وجدنا أنفسنا في الشهرة من حيث لا نشعر. قال وكذلك أنت
+      أيها المريد، إذا تعاطيت أسباب الشهرة في بدايتك، قل أن تفلح في نهايتك. ومن
+      ثم قال رجل لبشر بن الحارث أوصني، فقال أخمن ذكرك؟ وأ طب مطعمك. وقال بعضهم
+      لا تصلح طريقتنا هذه الأيام. إل الأقوام، كنيست بأرواحهم المزابل. يعني بمعنى
+      أنهم لا يريدون شهرة ولا يريدون نعم ظهورا، وإنما يريدون وجه الله سبحانه
+      وتعالى؟ هي ريت أيها السادة، لماذا اليوم؟ نحن يعني قلما تجد طالبة علم. درس
+      العلوم وتمكن في العلوم، قبل أن يظهر. قابلة أن يظهر. لماذا أصبحنا نرى طر
+      الى علم، لكن لا نرى من عنده علم؟ يعني إذا سمعته لا يلحن، وإذا سمعته يقول
+      كلاما موزونا؟لماذا؟ هذا؟ كلهم؟ لأنه سرعة يعني الآن كثيرون من طلبة العلم
+      يريدون العلم تكويه؟يريدون العلم في عجالة. كل شيء يمكن أن يكون تكويه، كل
+      شيء يمكن أن تحصله بالسرعة، إلا العلم الشرعي. لن يعطيك بعضه حتى تعطيه كلك.
+      وقال إبراهيم بن أدهم ما صدق الله من أحب الشهرة. ما صدق الله من أحب الشهرة،
+      ولله در القائل عشقا من الذكر بين الناس، وأرضى به، فذاك أسلم في الدنيا، وفي
+      الدين، من عاشر ناس لم تسلم ديانته، ولم يزل بين تحريك وتسكين. نعم، هي مراحل
+      الحياة. لا بد أن يمر بها الإنسان، يعني في مرحلة كما قال ااه شيخنا الشيخ
+      ااا اال الحسيني الشيخ على والد رئيس جامعة الأزهر. وكان رجلا زيت أزهر، يا
+      معمما. فقال العلم يحتاج أولا إلى فهم. ثانيا، يحتاج إلى حفظ. ثالثا، يحتاج
+      إلى هضم. بعد ذلك، يأتي العمل. إذن، الفهم أولا. نعم، الحفظ ثانيا. الهضم. يا
+      سلام في حاجة إسمها هضم العلم؟ أي نعم، قال أهضم العلم. ثم بعد ذلك، يأتي
+      العمل. إذا، أول؟اسما العلم أن نفهم العلم، ثم بعد ذلك أن نحفظه، ثم ثالث مرة
+      أن هضمه. يعني كان من خفايا في الأدلة الشرعية من الكتاب والسنة، كانت غامضة
+      بعض الزوايا عنك، فيحتاج إلى هضم، ثم يحتاج بعد ذلك ماذا إلى عمل؟ حتى قال
+      لنا مرة كان الشيخ فلان ي يحفظ التحرير للكمال، إبن الهمام، التحرير في أصول
+      الفقه. وكانوا يحفظون كتب العلم كتبا ومنظومات عالية. لماذا؟ لأنهم أعطوا
+      للعلم حقهم، فهموهم، ثم بعد ذلك جاء بالدرر حتى قالنا مرتا، قال كان الشيخ
+      العناني من أئمة المالكية في كلية الشريعة الأزهر الشريف، قال لنا الشيخ
+      الحسيني كان عيه ورا في العلم. فلما ذهبت في كتب المعاجم، ابحث عن العي هور،
+      فوجدته الغول، أي كانغ، ولا في العلم، وإنما أصبح غولا في العلم، لأنه دفن
+      نفسه في أرض الخمول إبتداءا حتى نجح. ماذا في النهايات؟ بارك الله فيكم؟ أسأل
+      الله أن يجعلنا جميعا. من الذين يستمعون القول فيتبعون أحسنه، والحمد لله رب
+      العالمين، وإلى لقاء آخر إن شاء الله تعالى. والسلام عليكم ورحمة الله
+      وبركاته.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

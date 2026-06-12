@@ -1,168 +1,384 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس الثاني عشر برهان القدم والبقاء</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/aqida/ec12aqidas2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس الثاني عشر برهان القدم والبقاء</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/aqida/ec12aqidas2.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent5">الدرس الثاني عشر برهان القدم والبقاء</h1>
-<p id="sent6">بسم الله الرحمن الرحيم، الحمد لله رب العالمين، والصلاة والسلام الأتمان الأكمل، أن على سيدنا ومولانا محمد وعلى آله وصحبه أجمعين، اللهم لا علم لنا إلا ما علمتنا، و لا سهل إلا ما سهلت. ه، وأنت تجعل الحزن إذا شئت سهلا، فجعل الحزن سهلا، اللهم علمنا ما ينفعنا. وانفعنا بما علمتنا وزدنا علما وفهما يا رب العالمين، ولا حول ولا قوة إلا بالله العلي العظيم، ولا حول ولا قوة إلا بالله العلي العظيم، ولا حول ولا قوة إلا بالله العلي العظيم، أما بعد، ف السلام عليكم و رحمة الله تعالى و بركاته، وبارك الله يوم و يوم كم و أعمالي وأعمالكم. ونفعنا الله وإياكم بهذا اللقاء بجاه الحبيب المصطفى صلى الله عليه وعلى آله وأصحابه الشرفاء مع درس جديد من دروس العقيدة، ومع كتاب طالع البشرة على العقيدة الصغرى، وصل بنا الحديث إلى براهين الصفات السلبية غير الوحدانية، لأن الوحدانية سيخصص لها مبحثا. آه، خاصة بها لما فيها من تفصيل، يقول المصنف رحمه الله تعالى ونفعنا بعلومه في الدارين آمين، وأما برهان وجوب القدم له تعالى، فلأنه لو لم يكن قديما لكان حادثا، إذ لا واسطة بينهما. الموجود. قسم إما أن يكون قديما، و إما أن يكون حادثا، ولا يوجد أو لا توجد واسطة بين القديم والحادث، لأن الموجود إما أن يكون موجودا بلا بداية، أو يكون لوجوده بداية، وهذه قسمة عقلية لا تقبل الزيادة والنقصان. ف يفتقر سبحانه وتعالى إلى محدث. ويفتقر محدثه إلى محدث آخر، يعني، إذا لم يكن ربنا قديما، وهذه دائما نقول في طريقة الاستدلال. الاستدلال الفرضي عن طريق القياس نوع من أنواع القياس المنطقي كيف يكون القياس الاستثنائي هذا استدلال بالافتراض؟ طيب أنا أقول أنا. أنا أقول أن الله قديم. و خصمي يقول أن الله حادث، هذا بعد أن أثبتنا وجوده في الصفة الماضية برهان الوجود، الآن، خلاص، نحن متفقون على أن الإله موجود، لكننا اختلفنا بعد وجود الإله، هل وجوده قديم بلا بداية؟ أم وجوده حادث؟ له بداية؟ فأنا أقول فلنفترض جدلا. أن الله سبحانه وتعالى حادث له. بداية. ماذا سيترتب؟ وماذا سيلزم عن ذلك؟ يفتقر سبحانه وتعالى محدث. لأن كل حادث لا بد له من محدث، ف يفتقر سبحانه وتعالى إلى محدث، ويفتقر محدثه إلى محدث آخر، لانعقاد المماثلة بينهما. إذا قلنا أن الله، أو أن الإله عموما يعني أن الإله الذي هو نعتقد بأنه الله أن الإله حادث. هذا الحادث يحتاج إلى محدث. طيب هذا المحدث. حادث سيحتاج إلى محدث. وذلك المحدث حادث يحتاج إلى محدث، وهكذا، لماذا؟ الانعقاد المماثلة بينهما؟ لا يوجد فرق بين هذا المحدث وهذا المحدث، إذا كل محدث يحتاج إلى ااا محدث آخر لأنهما، أو لأن كل ااا ها. كل هؤلاء المحدث المحدثين. كل هؤلاء المحدثين؟مشتركون في صفة الحدوث، إذا كل منهم أو كل محدث منهم يحتاج إلى محدث. قال فيلزم الدور إن تناهت المحدثون. ما معنى آه يلزم الدور؟ يلزم الدور أي الدائرة المغلقة؟إن كانت س آه سلسلة، إن كانت سلسلة المحدثين. منتهية. بحيث إنها لما نقول منتهية، بحيث أنها ترجع إلى النقطة الأولى، نقطة البداية كقولنا أ خلق، باء، وباء، خلق جيم وجيم خلق أ. إيه خلق با با خلق جيم وجيم خلق هذه الدائرة المغلقة هذه، فيحكم العقل مستحيل. لا توجد في الخارج، في المنطق شيء إسمه دائرة مغلقة. أي يعني ااا وجودوا متوقف على وجود با و وجود با متوقف على وجود ج وجود جي متوقف على وجود أ. لماذا؟ لأن فيه جمعا بين النقيضين، تارة أخ خالق، وتارة أ مخلوق، قال فيلزم على الفرض بأن الإله حادث،إما أن يلزم الدور إذا كانت سلسلة ترجع إلى نقطة البداية فيلزم الدور إن تناهت المحدثون. أو التسلسل، إن لم تتناهى؟ ما معنى تسلسل سلسلة لا نهاية لها؟ ا خلقه باء؟ وباء خلقه؟ جيم وجيم خلقه؟ دال ودال خلقه راء وراء خلقه زايد و هاكذا؟وصلنا أن العالم حادث. وكل حادث يحتاج إلى محدث منهوم حدث. هذا العالم آل إله، وهذا الإله حادث يحتاج إلى محدث، وذاك المحدث حادث يحتاج إلى محدث، وذلك المحدث حادث يحتاج إلى محدث، إلى ما لا نهاية. هذا يسمى تسلسل. أي تعاقب الأزمنة من ناحية الماضي بلان نهاية، قال، وهذا طبعا باطل، وجود سلسلة لا نهاية لها باطل، كأنني قلت ك أنني قلت لك بنيت. بنيت آه عمارة لها طابق أول، وليس لها نهاية، هذا مستحيل. أو قلت لك اجذب هذا الحبل، اجذبه. فأنت تجذب هذا الحبل وتقول له أين نهايته؟ يعني؟ أين نقطة البداية؟ فأقول لك هذا الحبل لا نهاية له، هذا لا يقبله العقل. لأن ما كانت له نهاية، لا بد وجوبا أن تكون له بداية، إذا لقيت نقطة النهاية، فلا بد لنقطة النهاية أن تكون لها نقطة بداية وجوبا وجوبا، ماذا؟ وجوبا عقليا؟ العقل يحتم ذلك، قال والدور والتسلسل محال أن فالعقل لما سيأتي قريبا، فما أدى إليه ما يكون محالا، ما أدى إلى المحال فهو محال، و ما أدى إلى الباطل فهو باطل. وحقيقة الدور. الآن، سيعرف الدور، توقف كل من الشيئين على الآخر، أ خلقه باء، وبا خلقه أ. كما لو فرض أن زيدا أحدث عمرا خلق عمرا، وأن عمرا أحدث زيدا، فقد توقف كل من الشيئين، وهما زيد وعمر على الآخر لكون كل منهما أحدث الآخر، ويتصور أيضا في أكثر من شيئين، يعني إما تقول زيد أحدث عمرو،وعمر أحدث زيت هذوما ثنين شيئان، ويمكن أن تطول السلسلة، ولكن مهما طالت ترجع إلى نقطة البداية، وإنما كان الدور محالا لأنه يلزم عليه تقدم كل من المحدثين على الآخر وتأخره عنه. و ذالك جمع بين ألمتنا في يين، أي بين المتناقضين. بل و يلزم عليه أيضا تقدم كل واحد منهما على نفسه وتأخره عنها، وذلك لا يعقل يعني أ خلق باء، وفي نفس الوقت باء خلق. إ. ا يتقدم و يتأخر على نفسه. يعني من جهة يكون خالقا لبا أ، ومن جهة يكون مخلوقا من باء يعني تقدم وتؤخر على نفسه، وهذا طبعا جمع بين النقيضين وهو مستحيل. الآن، أراد أن يبين لك المصنف بالدليل العقلي كيف تكون فرضية حدوث الخالق، أن يكون الخالق له بداية مستحيل من المستحيلات العقلية، وحقيقة التسلسل. هذا تعريف التسلسل، تتابع الأشياء واحدا بعد واحد إلى ما لا نهاية له في الزمان الماضي. في الزمان الماضي، كما لو فرض أن زيدا أحدث عمر، وأن عمرا أحدث خالد، وأن خالدا أحدثه بكر، وهكذا إلى ما لا نهاية له، فقد تتابعت المحدثون واحدا بعد واحد إلى ما لا نهاية له في زمان. أو في الزمان الماضي، و إنما كان تسلسل محالا لأنه يلزم عليه وجود حوادث لا أول لها. ماو تعرف الحادث حوادث جمع حادث، ما هو تعريف الحادث؟ ما كان لوجوده بداية. أنت إذا جعلت التسلسل، جعلت وجود حوادث لا بداية لها، وهذا جمع بين النقيضين، كيف تقول لي أن الحادث تعريفه له بداية، ثم تفرض لي فرضية تجعل وجود حوادث لا بداية لها، هذا جمع بين النقيضين؟وهو باطل لأن كل حادث لوجوده أول كما دلت على ذلك البراهين، البراهين العقلية طبعا. هذا دليل أن الخالق متصف بالبقاء، لماذا؟ لأن فرضية حدوث. الخالق تؤدي إلى مستحيل ين عقليين، إما إلى الدور، وإما إلى التسلسل، وما أدى إلى محال، فهو محال، فباطل، كون الخالق حادثا، وثبت كونه قديما، إذا الآن أثبتنا وجود الخالق و وجود كونه قديما سننتقل. إلى إثبات كون كون الخالق باقيا. وهو قول المصنف رحمه الله تعالى ونفعنا بعلومه في الدارين، وأما برهان وجوب البقاء لله تعالى. فلأنه لو أمكن أن يلحقها، لعدم ل نتفا عنه القدم. قال. لو فرضنا دائما الاستدلال بفرضية القضية المقابلة، أنا أقول أن الله باقي وخصم يقول يمكن أن يلحقه العدم. فلنفرض جدلا أن الخالق موجود قديم، لكن يمكن أن يلحقها لعدم، فلأنه لو أمكن أن يلحقها لعدم لنتف عنه القدم. لو فرضنا أن الله. أن الخالق. سوف يلحقها لعدم بطل كونه قديما، وقد أثبتنا قبل قليل وجوب اتصاف الخالق بالقدم، لأنه لو لم يكن قديما لكان حادثا، ولو كان حادثا لازم، وترتب على ذلك دور أو تسلسل، والدور والتسلسل مستحيل أن في العقل، إذن يجب أن يكون قديما. فإذا أو جبنا صفة القدم في حق الله سبحانه وتعالى، يا يجب آليا بعبارة يعني تفهمون، يجب آليا ضمنيا أن يكون متصفا بالبقاء، لماذا؟ لأن هناك قاعدة عقلية عظيمة تقول ما وجب قيد أمه استحال عدمه. أي شيء ما وجب قدمه، ما كان قديما وجوبا، يجب أن يكون باقيا ما وجب قدمه استحال عدمه، وإذا استحال عدمه وجب، ماذا؟ بقائه؟ طبعا إذا كان العدم عليه مستحيل، إذا يجب أن يكون باقيا. إلى الأبد، هذه قاعدة، لأنه لا يعقل. من كان له بداية؟ أم لم تكن له بداية، أن تكون له نهاية؟ حتى في الرياضيات؟ لما نشوفو مثلا فال moins infinix. ا اللانهاية في جانب الماضي السالب. هل لها نهاية في المستقبل؟ لا. Plus l'infini يعني لا نهاية في جانب المستقبل الإيجابي، هذي أصلا قاعدة رياضية في الرياضيات والرياضيات منشأها، ماذا؟ المنطق، العقل، فهذه قاعدة لا يختلف فيها عاقلان، ما وجب قدمه استحال عدمه، فأنا إذا أردت أن أثبت صفة البقاء علي أن أثبت صفة القدم قبل ذلك. دليل يمكن أن نقول دليل صفة البقاء، ووجوب صفة القدم، لأنه ما وجب قدمه استحال عدم، فوجب بقائه، قال فلأنه لو أمكن أن يلحقها لعدم ل انتفى عنه القدم، لكون وجوده حينئذ، أي حينئذ. أمكن أن يلحقها لعدم يصير جائزا، لا واجبا. إذا كان وجود الشيء يمكن أن يلحقها لعدم، هل يمكن أن يكون وجوده واجبا، لا، لأن الوجود الواجب ما لا يقبل النفي بحال، ولا يقبل العدم بحال، لكنني فرضت أن وجوده جائز، يمكن أن يلحقها لعدم، فبطل كون وجوده. ااا واجبا، وقد سبق أن أثبتنا أن وجود الله وجود واجب لايقبلن فيه، فإذا كان وجوده غير واجب سيكون وجودا جائزا، وهذا طبعا مستحيل، والجائز لا يكون وجوده إلا حادثا، بما أن وجوده جاء، بما أن وجوده جائز إذا كان. إذن، لن يكون وجوده وجوده قديما، كيف سيكون حادث؟ وبطل كون وجوده؟ آه حادثا، لأننا أثبتنا صفة القدم. قال كيف يصح انتفاء القدم عن الله؟ وقد سبق قريبا بالبرهان بالدليل وجوب قدمه تعالى؟فيجب بقائه، لأن كل ما ثبت قدمه استحال عدمه، نكتفي بهذا القدر، وصلى الله وسلم وبارك على سيدنا محمد وعلى آله وصحبه أجمعين، والحمد لله رب العالمين.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent5">الدرس الثاني عشر برهان القدم والبقاء</h1>
+    <p id="sent6">
+      بسم الله الرحمن الرحيم، الحمد لله رب العالمين، والصلاة والسلام الأتمان
+      الأكمل، أن على سيدنا ومولانا محمد وعلى آله وصحبه أجمعين، اللهم لا علم لنا
+      إلا ما علمتنا، و لا سهل إلا ما سهلت. ه، وأنت تجعل الحزن إذا شئت سهلا، فجعل
+      الحزن سهلا، اللهم علمنا ما ينفعنا. وانفعنا بما علمتنا وزدنا علما وفهما يا
+      رب العالمين، ولا حول ولا قوة إلا بالله العلي العظيم، ولا حول ولا قوة إلا
+      بالله العلي العظيم، ولا حول ولا قوة إلا بالله العلي العظيم، أما بعد، ف
+      السلام عليكم و رحمة الله تعالى و بركاته، وبارك الله يوم و يوم كم و أعمالي
+      وأعمالكم. ونفعنا الله وإياكم بهذا اللقاء بجاه الحبيب المصطفى صلى الله عليه
+      وعلى آله وأصحابه الشرفاء مع درس جديد من دروس العقيدة، ومع كتاب طالع البشرة
+      على العقيدة الصغرى، وصل بنا الحديث إلى براهين الصفات السلبية غير
+      الوحدانية، لأن الوحدانية سيخصص لها مبحثا. آه، خاصة بها لما فيها من تفصيل،
+      يقول المصنف رحمه الله تعالى ونفعنا بعلومه في الدارين آمين، وأما برهان وجوب
+      القدم له تعالى، فلأنه لو لم يكن قديما لكان حادثا، إذ لا واسطة بينهما.
+      الموجود. قسم إما أن يكون قديما، و إما أن يكون حادثا، ولا يوجد أو لا توجد
+      واسطة بين القديم والحادث، لأن الموجود إما أن يكون موجودا بلا بداية، أو
+      يكون لوجوده بداية، وهذه قسمة عقلية لا تقبل الزيادة والنقصان. ف يفتقر
+      سبحانه وتعالى إلى محدث. ويفتقر محدثه إلى محدث آخر، يعني، إذا لم يكن ربنا
+      قديما، وهذه دائما نقول في طريقة الاستدلال. الاستدلال الفرضي عن طريق القياس
+      نوع من أنواع القياس المنطقي كيف يكون القياس الاستثنائي هذا استدلال
+      بالافتراض؟ طيب أنا أقول أنا. أنا أقول أن الله قديم. و خصمي يقول أن الله
+      حادث، هذا بعد أن أثبتنا وجوده في الصفة الماضية برهان الوجود، الآن، خلاص،
+      نحن متفقون على أن الإله موجود، لكننا اختلفنا بعد وجود الإله، هل وجوده قديم
+      بلا بداية؟ أم وجوده حادث؟ له بداية؟ فأنا أقول فلنفترض جدلا. أن الله سبحانه
+      وتعالى حادث له. بداية. ماذا سيترتب؟ وماذا سيلزم عن ذلك؟ يفتقر سبحانه
+      وتعالى محدث. لأن كل حادث لا بد له من محدث، ف يفتقر سبحانه وتعالى إلى محدث،
+      ويفتقر محدثه إلى محدث آخر، لانعقاد المماثلة بينهما. إذا قلنا أن الله، أو
+      أن الإله عموما يعني أن الإله الذي هو نعتقد بأنه الله أن الإله حادث. هذا
+      الحادث يحتاج إلى محدث. طيب هذا المحدث. حادث سيحتاج إلى محدث. وذلك المحدث
+      حادث يحتاج إلى محدث، وهكذا، لماذا؟ الانعقاد المماثلة بينهما؟ لا يوجد فرق
+      بين هذا المحدث وهذا المحدث، إذا كل محدث يحتاج إلى ااا محدث آخر لأنهما، أو
+      لأن كل ااا ها. كل هؤلاء المحدث المحدثين. كل هؤلاء المحدثين؟مشتركون في صفة
+      الحدوث، إذا كل منهم أو كل محدث منهم يحتاج إلى محدث. قال فيلزم الدور إن
+      تناهت المحدثون. ما معنى آه يلزم الدور؟ يلزم الدور أي الدائرة المغلقة؟إن
+      كانت س آه سلسلة، إن كانت سلسلة المحدثين. منتهية. بحيث إنها لما نقول
+      منتهية، بحيث أنها ترجع إلى النقطة الأولى، نقطة البداية كقولنا أ خلق، باء،
+      وباء، خلق جيم وجيم خلق أ. إيه خلق با با خلق جيم وجيم خلق هذه الدائرة
+      المغلقة هذه، فيحكم العقل مستحيل. لا توجد في الخارج، في المنطق شيء إسمه
+      دائرة مغلقة. أي يعني ااا وجودوا متوقف على وجود با و وجود با متوقف على وجود
+      ج وجود جي متوقف على وجود أ. لماذا؟ لأن فيه جمعا بين النقيضين، تارة أخ
+      خالق، وتارة أ مخلوق، قال فيلزم على الفرض بأن الإله حادث،إما أن يلزم الدور
+      إذا كانت سلسلة ترجع إلى نقطة البداية فيلزم الدور إن تناهت المحدثون. أو
+      التسلسل، إن لم تتناهى؟ ما معنى تسلسل سلسلة لا نهاية لها؟ ا خلقه باء؟ وباء
+      خلقه؟ جيم وجيم خلقه؟ دال ودال خلقه راء وراء خلقه زايد و هاكذا؟وصلنا أن
+      العالم حادث. وكل حادث يحتاج إلى محدث منهوم حدث. هذا العالم آل إله، وهذا
+      الإله حادث يحتاج إلى محدث، وذاك المحدث حادث يحتاج إلى محدث، وذلك المحدث
+      حادث يحتاج إلى محدث، إلى ما لا نهاية. هذا يسمى تسلسل. أي تعاقب الأزمنة من
+      ناحية الماضي بلان نهاية، قال، وهذا طبعا باطل، وجود سلسلة لا نهاية لها
+      باطل، كأنني قلت ك أنني قلت لك بنيت. بنيت آه عمارة لها طابق أول، وليس لها
+      نهاية، هذا مستحيل. أو قلت لك اجذب هذا الحبل، اجذبه. فأنت تجذب هذا الحبل
+      وتقول له أين نهايته؟ يعني؟ أين نقطة البداية؟ فأقول لك هذا الحبل لا نهاية
+      له، هذا لا يقبله العقل. لأن ما كانت له نهاية، لا بد وجوبا أن تكون له
+      بداية، إذا لقيت نقطة النهاية، فلا بد لنقطة النهاية أن تكون لها نقطة بداية
+      وجوبا وجوبا، ماذا؟ وجوبا عقليا؟ العقل يحتم ذلك، قال والدور والتسلسل محال
+      أن فالعقل لما سيأتي قريبا، فما أدى إليه ما يكون محالا، ما أدى إلى المحال
+      فهو محال، و ما أدى إلى الباطل فهو باطل. وحقيقة الدور. الآن، سيعرف الدور،
+      توقف كل من الشيئين على الآخر، أ خلقه باء، وبا خلقه أ. كما لو فرض أن زيدا
+      أحدث عمرا خلق عمرا، وأن عمرا أحدث زيدا، فقد توقف كل من الشيئين، وهما زيد
+      وعمر على الآخر لكون كل منهما أحدث الآخر، ويتصور أيضا في أكثر من شيئين،
+      يعني إما تقول زيد أحدث عمرو،وعمر أحدث زيت هذوما ثنين شيئان، ويمكن أن تطول
+      السلسلة، ولكن مهما طالت ترجع إلى نقطة البداية، وإنما كان الدور محالا لأنه
+      يلزم عليه تقدم كل من المحدثين على الآخر وتأخره عنه. و ذالك جمع بين ألمتنا
+      في يين، أي بين المتناقضين. بل و يلزم عليه أيضا تقدم كل واحد منهما على نفسه
+      وتأخره عنها، وذلك لا يعقل يعني أ خلق باء، وفي نفس الوقت باء خلق. إ. ا
+      يتقدم و يتأخر على نفسه. يعني من جهة يكون خالقا لبا أ، ومن جهة يكون مخلوقا
+      من باء يعني تقدم وتؤخر على نفسه، وهذا طبعا جمع بين النقيضين وهو مستحيل.
+      الآن، أراد أن يبين لك المصنف بالدليل العقلي كيف تكون فرضية حدوث الخالق، أن
+      يكون الخالق له بداية مستحيل من المستحيلات العقلية، وحقيقة التسلسل. هذا
+      تعريف التسلسل، تتابع الأشياء واحدا بعد واحد إلى ما لا نهاية له في الزمان
+      الماضي. في الزمان الماضي، كما لو فرض أن زيدا أحدث عمر، وأن عمرا أحدث خالد،
+      وأن خالدا أحدثه بكر، وهكذا إلى ما لا نهاية له، فقد تتابعت المحدثون واحدا
+      بعد واحد إلى ما لا نهاية له في زمان. أو في الزمان الماضي، و إنما كان تسلسل
+      محالا لأنه يلزم عليه وجود حوادث لا أول لها. ماو تعرف الحادث حوادث جمع
+      حادث، ما هو تعريف الحادث؟ ما كان لوجوده بداية. أنت إذا جعلت التسلسل، جعلت
+      وجود حوادث لا بداية لها، وهذا جمع بين النقيضين، كيف تقول لي أن الحادث
+      تعريفه له بداية، ثم تفرض لي فرضية تجعل وجود حوادث لا بداية لها، هذا جمع
+      بين النقيضين؟وهو باطل لأن كل حادث لوجوده أول كما دلت على ذلك البراهين،
+      البراهين العقلية طبعا. هذا دليل أن الخالق متصف بالبقاء، لماذا؟ لأن فرضية
+      حدوث. الخالق تؤدي إلى مستحيل ين عقليين، إما إلى الدور، وإما إلى التسلسل،
+      وما أدى إلى محال، فهو محال، فباطل، كون الخالق حادثا، وثبت كونه قديما، إذا
+      الآن أثبتنا وجود الخالق و وجود كونه قديما سننتقل. إلى إثبات كون كون الخالق
+      باقيا. وهو قول المصنف رحمه الله تعالى ونفعنا بعلومه في الدارين، وأما برهان
+      وجوب البقاء لله تعالى. فلأنه لو أمكن أن يلحقها، لعدم ل نتفا عنه القدم.
+      قال. لو فرضنا دائما الاستدلال بفرضية القضية المقابلة، أنا أقول أن الله
+      باقي وخصم يقول يمكن أن يلحقه العدم. فلنفرض جدلا أن الخالق موجود قديم، لكن
+      يمكن أن يلحقها لعدم، فلأنه لو أمكن أن يلحقها لعدم لنتف عنه القدم. لو فرضنا
+      أن الله. أن الخالق. سوف يلحقها لعدم بطل كونه قديما، وقد أثبتنا قبل قليل
+      وجوب اتصاف الخالق بالقدم، لأنه لو لم يكن قديما لكان حادثا، ولو كان حادثا
+      لازم، وترتب على ذلك دور أو تسلسل، والدور والتسلسل مستحيل أن في العقل، إذن
+      يجب أن يكون قديما. فإذا أو جبنا صفة القدم في حق الله سبحانه وتعالى، يا يجب
+      آليا بعبارة يعني تفهمون، يجب آليا ضمنيا أن يكون متصفا بالبقاء، لماذا؟ لأن
+      هناك قاعدة عقلية عظيمة تقول ما وجب قيد أمه استحال عدمه. أي شيء ما وجب
+      قدمه، ما كان قديما وجوبا، يجب أن يكون باقيا ما وجب قدمه استحال عدمه، وإذا
+      استحال عدمه وجب، ماذا؟ بقائه؟ طبعا إذا كان العدم عليه مستحيل، إذا يجب أن
+      يكون باقيا. إلى الأبد، هذه قاعدة، لأنه لا يعقل. من كان له بداية؟ أم لم تكن
+      له بداية، أن تكون له نهاية؟ حتى في الرياضيات؟ لما نشوفو مثلا فال moins
+      infinix. ا اللانهاية في جانب الماضي السالب. هل لها نهاية في المستقبل؟ لا.
+      Plus l'infini يعني لا نهاية في جانب المستقبل الإيجابي، هذي أصلا قاعدة
+      رياضية في الرياضيات والرياضيات منشأها، ماذا؟ المنطق، العقل، فهذه قاعدة لا
+      يختلف فيها عاقلان، ما وجب قدمه استحال عدمه، فأنا إذا أردت أن أثبت صفة
+      البقاء علي أن أثبت صفة القدم قبل ذلك. دليل يمكن أن نقول دليل صفة البقاء،
+      ووجوب صفة القدم، لأنه ما وجب قدمه استحال عدم، فوجب بقائه، قال فلأنه لو
+      أمكن أن يلحقها لعدم ل انتفى عنه القدم، لكون وجوده حينئذ، أي حينئذ. أمكن أن
+      يلحقها لعدم يصير جائزا، لا واجبا. إذا كان وجود الشيء يمكن أن يلحقها لعدم،
+      هل يمكن أن يكون وجوده واجبا، لا، لأن الوجود الواجب ما لا يقبل النفي بحال،
+      ولا يقبل العدم بحال، لكنني فرضت أن وجوده جائز، يمكن أن يلحقها لعدم، فبطل
+      كون وجوده. ااا واجبا، وقد سبق أن أثبتنا أن وجود الله وجود واجب لايقبلن
+      فيه، فإذا كان وجوده غير واجب سيكون وجودا جائزا، وهذا طبعا مستحيل، والجائز
+      لا يكون وجوده إلا حادثا، بما أن وجوده جاء، بما أن وجوده جائز إذا كان. إذن،
+      لن يكون وجوده وجوده قديما، كيف سيكون حادث؟ وبطل كون وجوده؟ آه حادثا، لأننا
+      أثبتنا صفة القدم. قال كيف يصح انتفاء القدم عن الله؟ وقد سبق قريبا بالبرهان
+      بالدليل وجوب قدمه تعالى؟فيجب بقائه، لأن كل ما ثبت قدمه استحال عدمه، نكتفي
+      بهذا القدر، وصلى الله وسلم وبارك على سيدنا محمد وعلى آله وصحبه أجمعين،
+      والحمد لله رب العالمين.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>

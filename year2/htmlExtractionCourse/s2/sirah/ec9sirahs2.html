@@ -1,168 +1,367 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="ar" dir="rtl">
-<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>الدرس التاسع   السنة العاشرة 1</title>
-<style>
-  body {
-    font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
-    font-size: 22px;
-    line-height: 1.6;
-    direction: rtl;
-    text-align: justify;
-    margin: auto;
-    max-width: 900px;
-    padding: 2rem;
-    background: linear-gradient(120deg, #f8fff5, #e8ffe0);
-    color: #111;
-  }
-  h1 {
-    text-align: center;
-    font-size: 30px;
-    color: #145a00;
-    text-shadow: 0 0 8px #a8ff8a;
-  }
-  p { margin: 1rem 0; text-align: justify; }
-  .container { text-align: center; margin-bottom: 1.5rem; }
-  .button {
-    border: none;
-    cursor: pointer;
-    color: white;
-    background: #145a00;
-    padding: 10px 30px;
-    border-radius: 6px;
-    font-weight: bold;
-    font-size: 16px;
-    margin: 5px;
-    transition: all 0.3s ease;
-  }
-  .button:hover { background: #4bd61e; transform: scale(1.05); }
-  .button:disabled {
-    background: #ccc !important;
-    cursor: not-allowed !important;
-    opacity: 0.8;
-  }
-  .share-buttons {
-    display: flex; justify-content: center; flex-wrap: wrap;
-    gap: 10px; margin-top: 10px;
-  }
-  .share-buttons button {
-    background: #e6f8e6; border: none; border-radius: 6px;
-    padding: 8px 16px; cursor: pointer; font-size: 15px;
-    transition: background-color 0.3s ease;
-  }
-  .share-buttons button:hover { background: #c8f5c8; }
-  #clockDate {
-    text-align: center; margin: 1rem 0; color: #333; font-weight: bold;
-  }
-  .search-container { text-align: center; margin: 1rem 0 2rem; }
-  #searchBox {
-    padding: 10px; font-size: 16px; width: 70%; max-width: 500px;
-    border: 2px solid #4bd61e; border-radius: 6px; text-align: right;
-  }
-  #clearSearch {
-    padding: 10px 20px; margin-left: 10px; font-size: 16px;
-    background-color: #ff4d4d; color: white; border-radius: 6px;
-    border: none; cursor: pointer;
-  }
-  #clearSearch:hover { background-color: #ff0000; }
-  #searchResults {
-    margin-top: 1rem; background: #f7fff5; border: 1px solid #aaf5aa;
-    border-radius: 6px; padding: 10px; display: none; max-height: 250px;
-    overflow-y: auto;
-  }
-  .result-item { cursor: pointer; padding: 5px; border-bottom: 1px solid #c8f5c8; }
-  .result-item:hover { background-color: #e0ffe0; }
-  mark { background-color: yellow; }
-</style>
-</head>
-<body>
-  <div id="clockDate"></div>
-  <div class="container"><a href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/sirah/ec9sirahs2.pdf" target="_blank" rel="noopener noreferrer"><button class="button">📄 Télécharger le PDF</button></a>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الدرس التاسع السنة العاشرة 1</title>
+    <style>
+      body {
+        font-family: 'Arabic Typesetting', 'Noto Naskh Arabic', serif;
+        font-size: 22px;
+        line-height: 1.6;
+        direction: rtl;
+        text-align: justify;
+        margin: auto;
+        max-width: 900px;
+        padding: 2rem;
+        background: linear-gradient(120deg, #f8fff5, #e8ffe0);
+        color: #111;
+      }
+      h1 {
+        text-align: center;
+        font-size: 30px;
+        color: #145a00;
+        text-shadow: 0 0 8px #a8ff8a;
+      }
+      p {
+        margin: 1rem 0;
+        text-align: justify;
+      }
+      .container {
+        text-align: center;
+        margin-bottom: 1.5rem;
+      }
+      .button {
+        border: none;
+        cursor: pointer;
+        color: white;
+        background: #145a00;
+        padding: 10px 30px;
+        border-radius: 6px;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 5px;
+        transition: all 0.3s ease;
+      }
+      .button:hover {
+        background: #4bd61e;
+        transform: scale(1.05);
+      }
+      .button:disabled {
+        background: #ccc !important;
+        cursor: not-allowed !important;
+        opacity: 0.8;
+      }
+      .share-buttons {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin-top: 10px;
+      }
+      .share-buttons button {
+        background: #e6f8e6;
+        border: none;
+        border-radius: 6px;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 15px;
+        transition: background-color 0.3s ease;
+      }
+      .share-buttons button:hover {
+        background: #c8f5c8;
+      }
+      #clockDate {
+        text-align: center;
+        margin: 1rem 0;
+        color: #333;
+        font-weight: bold;
+      }
+      .search-container {
+        text-align: center;
+        margin: 1rem 0 2rem;
+      }
+      #searchBox {
+        padding: 10px;
+        font-size: 16px;
+        width: 70%;
+        max-width: 500px;
+        border: 2px solid #4bd61e;
+        border-radius: 6px;
+        text-align: right;
+      }
+      #clearSearch {
+        padding: 10px 20px;
+        margin-left: 10px;
+        font-size: 16px;
+        background-color: #ff4d4d;
+        color: white;
+        border-radius: 6px;
+        border: none;
+        cursor: pointer;
+      }
+      #clearSearch:hover {
+        background-color: #ff0000;
+      }
+      #searchResults {
+        margin-top: 1rem;
+        background: #f7fff5;
+        border: 1px solid #aaf5aa;
+        border-radius: 6px;
+        padding: 10px;
+        display: none;
+        max-height: 250px;
+        overflow-y: auto;
+      }
+      .result-item {
+        cursor: pointer;
+        padding: 5px;
+        border-bottom: 1px solid #c8f5c8;
+      }
+      .result-item:hover {
+        background-color: #e0ffe0;
+      }
+      mark {
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="clockDate"></div>
+    <div class="container">
+      <a
+        href="https://cdn.jsdelivr.net/gh/sadaka2025/zaad-pdf@main/year2/htmlExtractionCourse/s2/sirah/ec9sirahs2.pdf"
+        target="_blank"
+        rel="noopener noreferrer"
+        ><button class="button">📄 Télécharger le PDF</button></a
+      >
       <div class="share-buttons">
         <button onclick="window.print()">🖨️ Imprimer</button>
-        <button onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">📨 Telegram</button>
-        <button onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))">📘 Facebook</button>
-        <button onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))">🐦 Twitter</button>
-        <button onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))">💬 WhatsApp</button>
-        <button onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))">📧 Email</button>
-      </div></div>
-  
-      <div class="search-container">
-        <input id="searchBox" type="text" placeholder="🔍 بحث في النص الكامل...">
-        <button id="clearSearch" class="button">مسح</button>
-        <div id="searchResults"></div>
-      </div><h1 id="sent30">الدرس التاسع   السنة العاشرة 1</h1>
-<p id="sent31">الحمد لله وكفى، والصلاة والسلام على النبي الكريم المصطفى، أحبت الفلاح أينما كنتم، السلام عليكم و رحمة الله تعالى و بركاته، ما زلنا مستمرين في عرض أحداث السنة العاشرة وما تبعه من توا، ف للوفود القادمة للنبي صلى الله عليه وسلم طوعا، كانا واستسلاما بعد غزوة تبوك في عام الوفود، قدم المدينة طائفة. من رؤساء قبيلة همدان فجاو إلى رسول الله صلى الله عليه وسلم فقط بما لك من النمط، فقال يا رسول الله نصية من همدان من كل حاضر، و بادن، أتوك على قلص؟ الن واجن أي على nous، قم سرعات متصلة بحبائل الإسلام، لا تاخدهم في الله لومة لائم، فكتب لهم رسول الله صلى الله عليه وسلمكتابا على أن لهم أرضهم، ما أقاموا الصلاة، وآتوا الزكاة لهم بذلك عهد الله، و ديما م رسوله، و شاهدهم الموج هاجر و ن و الأنصار، فقال في ذلك مالك بنمط أبيات جاء فيها حلفت برب الراقصات إلى منى، صوا درب الركبان فيه، بقرد دي بأن رسول الله فينا مصدق. رسول أتى من عند ل عاش مهتدي الراقصات، الإبن المسرعة، وهربو قردي، أي منبسط من الأرض، وارتفع، وذكر الطبري في تاريخه أن الإسلام قد انتشر في اليمن على يد علي بن أبي طالب رضي الله عنه، فقد كتب يقول عن البراء بن عازب قال. بعث رسول الله صلى الله عليه وسلم خالد بن الوليد إلى أهل اليمن يدعوهم إلى الإسلام، فكنت فيمن صار معه، فأقام عليه ستة أشهر، لا يجيبونه إلى شيء. فبعث النبي صلى الله عليه و سلم علي بن أبي طالب، و أمره أن يقفل أي يرجع خالدا ومن معه، فإن أراد أحد ممن كان مع خالد بن الوليد أن يعقب معه تركه، قال البراء فكنت فيمن عقب معه، فلما انتهينا إلى وائل اليمن بلغ القوم الخبر، فجمعوا له. فصل بنا علي الفجر، فلما فرغ صفنا صفا واحدا، ثم تقدم بين أيدينا، فحمد الله ثناء عليه، ثم قرأ عليهم كتاب رسول الله صلى الله عليه وسلم، فأسلمت همدان كلها في يوم واحد، وكتب بذلك إلى رسول الله صلى الله عليه وسلم، فلم أقرأ كتابه، خر ساجدا، ثم جلس فقالالسلام علي همدان السلام على همدان، ثم تتابع أهل اليمن على الإسلام. وتعتبر قبائل همدان أكبر و أقدم تجمع قبلي في اليمن، و شبه الجزيرة العربية كاملة، ومن هذه الوفود بنو تجيب بطن من قبيلة كندا تفرع منهم السلالات. حكمت سرقسطة و لاغون والمريء بالأندلس ما بين 888 و1039 ميلادي واستمر نفوذهم بشكل منقطع. إلى أن انتهى تماما عام 91 وألف. و هذه القبيلة تنتسب ل أمهم تجيب بنت ثوبان، وقد أسلم بنو تجيب وفد على نبي الإسلام في السنة التاسعة للهجرة قبل وفود باقي كندة بقيادة الأشعة بن قيس. وفي السنة العاشرة للهجرة وفدو في 13 راكب أمنع ليتهم. وأكرمهم النبي صلى الله عليه وسلم، وجازهم أكثر ما جاز غيرهم، وكان منهم غلا ما قاله رسول الله صلى الله عليه وسلم ما حاجتك؟ فقال يا رسول الله، أدعو الله أن يغفر لي، ويرحمني، ويجعل غنائي في قلبي، فقال اللهم اغفر له وارحمه، واجعل غناه في قلبه، فكان بعد ذلك من أز هد الناس. ساقو عند قدوم هم صداقات أموالهم التي فرض الله عليهم وقالو يا رسول الله إن سقنا إليك حق الله في أموالنا، فقال النبي صلى الله عليه وسلم ردوها ف قسموها على فقراء، كم قالوا يا رسول الله ما قدمنا عليك إلا بما فضل عن فقرائنا؟ فقال أبو بكر يا رسول الله، ما قدم علينا وفدا من العرب مثل هذا الوفد. فقال النبي صلى الله عليه وسلم إن الهدى بيد الله عز وجل، ومن أراد الله به خيرا، اشرح صدره للدين. وقد جاء في بعض التفاسير القرآن، وكتب الحديث أنهم هم الذين نزل فيهم قوله تعالى فسوف يأتي الله بقوم يحبهم ويحبونه عن جابر بن عبد الله قال سأل رسول الله صلى الله عليه وسلم عن قوله فسوف يأتي الله بقوم يحبهم ويحبونه؟ قال هؤلاء قوم من أهل اليمن، ثم من كندة، ثم من السكون. ثم من تجيب، وقد شارك بأن تجيب في فتح مصر، و ولى عمر بن العاص مهمة تخطيط الفوسفاط إلى معاوية بن حديجة تجيبي وتولى القضاء إمان خلافة معاوية بن أبي سفيان، سليمة بن عمر تجيبي الذي بقي قاضيا طوال خلافة معاوية، وكان سليم أول قاض النظر في الجراح وحكم فيها. وكان أول قاض بمصر سجل سجلا بقضائه، و عبد الرحمان بن معاوية تجيبي ولي القضاء من قبل والي مصر عبد العزيز بن مروان، وكان أول قاض النظر في أموال اليتامى. وضمن عريف كل قوم أم واليتامى تلك القبيلة وأشهر من تولى الشرط عبد الله بن عبد الرحمان. جاي. بي. وفي سنة 152 هجري؟ ولا أبو جعفر المنصور؟ عبد الله بن عبد الرحمان بن معاوية تجيبي ولاية مصر وتوفي وهو ليها سنة 55 و100 ثم وليها أخوه محمد بن عبد الرحمان ب استخلاف أخيه له ف أقره أبو جعفر وكان لبني تجيب دورهم في فتوح مصر وإدارتها. لكن كان لهم دور أوضح في الأندلس، فقد شاركو في فتح الاندلس، واستقروا في أراغون عند الفتح، وبرز عدة رجال منهم في عهد الإمارة والخلافة الأموية وملوك الطواف، وتفرعت هذه الأسرة إلى فرعين هما بنهاشم ومقره مسن قصة وبنس مادح و مقرهم البرية. وقدم على رسول الله صلى الله عليه وسلم بنو سعد هذي م من قضاة في سنة تسعة، ذكر الواقع بأن أبن عمان قال قدمت على رسول الله صلى الله عليه وسلم وافدا في نفر من قومي، وقد أوصى رسول الله صلى الله عليه وسلم البلاد غلب، وداخل عرب و الناس و صنفان، إما داخل في الإسلام. La raison فيه، وإما خائف من السيف، فنزلنا ناحية من المدينة، ثم خرجنا أم المسجد حتى انتهينا إلى بابه، فنجد رسول الله صلى الله عليه وسلم يصلي على جنازة في المسجد، فقمنا خلفه ناحية، ولم ندخل مع الناس في صلاتهم، وقلنا حتى نلقى رسول الله صلى الله عليه وسلم ونبيعه، ثم انصرف رسول الله صلى الله عليه وسلم فنظر إلينا، فدعا بنا، فقال من أنتم؟فقلنا منبر يسعد هديم، فقال أ مسلمون؟ أنتم؟ قلنا نعم، قال فهل أصلي؟ تم على أخيكم؟ قلنا يا رسول الله، ظنا أن ذلك لا يجوز لنا حتى ن بايعك، فقال رسول الله صلى الله عليه وسلم أينما أسلمتم مسلمون. قال ف أسلمنا و بايعنا رسول الله صلى الله عليه وسلم بأيدينا على الإسلام، ثم انصرفنا إلى رحالنا، وقد كنا خلفنا عليه، صغرنا، فبعث رسول الله صلى الله عليه وسلم في طلبنا foteil بنا إليه، فتقدم صاحبنا ف. بايعه على الإسلام، فقلنا يا رسول الله، إنه أصغر نا. وإنه خادمه، فقال أصغر القوم خادمهم. بارك الله عليه، قال فكان والله خيرنا، وأقرأ القرآن ل دعاء رسول الله صلى الله عليه وسلم له، ثم أمره رسول الله صلى الله عليه وسلم علينا، فكان يؤمنا، ولما أردنا الإنصراف أمر بلا، فأجاز nabots، وأقم فضة لكل رجل منه، فرجعنا إلى قومنا، فرزقهم الله الإسلام. ثم قدم وفد بني أسد، وهم عشرة تراث، فيهم عباس بن معبد، وتريح بن خويلد، ورسول الله صلى الله عليه وسلم، جالس مع أصحابه في المسجد. فتكلم فقالم تكلمهم يا رسول الله؟إن شهدنا أن الله وحدة لا شريك له، وأنك عبده ورسوله، وجئناك يا رسول الله، ولم تبعث إلينا بعثا، ونحن لمن وراءنا، وكأنما سالو رسول الله صلى الله عليه وسلم عنه يوم إذ العياف والكهان، وضرب الحصة، فنهاهم رسول الله صلى الله عليه وسلم عن ذلك كله. فقال يا رسول الله أن هذه أمور كنا نفعلها في الجاهلية، رأيت خصلة بقيت، قال وما هي؟ قالوا الخط. قال علمه نبي من الأنبياء، فمن صادف مثل علمه عالما، وكانت هذه السنة سنة جذب بلادهم فأسلم، وكانوا يقولون للنبي صلى الله عليه وسلم أتتك العرب بأنفسها على ظهور رواح لها، و جئناك بالأثقال والعيال و الذراري، ولمن قاتلك، كما قاتلك محارب خاصة، وهو asa وطفا. يفيدون على رسول الله صلى الله عليه وسلم، ويروحون بهذه المقالة، ويمنون عليه، ويريدون أن يصرف إليهم الصدقات. فأنزل الله فيهم يمنون عليك أن أسلمو قلات من علي إسلامكم، بل الله يمن عليكم أن هداكم للإيمان إن كنتم صادقين. وأقاموا أياما يتعلمون الفرائض، ثم جاء رسول الله صلى الله عليه وسلم فو دعوه، وأمرهم بجواز، ثم انصرفوا إلى أهلهم، وكان في الوفد طايحا بن خويلد الأسدي، كان من أشجع العرب، قدم على النبي صلى الله عليه وسلم، و بعد رجوعه ارتدت لايح في حياة النبي صلى عليه وسلم. وادعى النبوة، فأرسل إليه أبو بكر جيشا بقيادة خالد، وهزم وجيش توضيح الذي فر مع زوجته إلى الشام، ثم أسلم بعد ذلك، وحسن إسلامه، وبأي عمر بن الخطاب، ثم لحق بجيش المسلمين، وأدلة في الجهاد بلاء حسن. حتى ستجد بن هون سنة 21 هجرية. وكان، إلى جانب ما ذكرنا، جملة من الوفود. سنذكر بعضها في اللقاء القادم إلى هنا، نكون قد أنهينا. درسنا. دمتم في رعاية الله، السلام عليكم ورحمة الله تعالى وبركاته.</p>
+        <button
+          onclick="window.open('https://t.me/share/url?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          📨 Telegram
+        </button>
+        <button
+          onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href))"
+        >
+          📘 Facebook
+        </button>
+        <button
+          onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title))"
+        >
+          🐦 Twitter
+        </button>
+        <button
+          onclick="window.open('https://api.whatsapp.com/send?text='+encodeURIComponent(document.title+' '+window.location.href))"
+        >
+          💬 WhatsApp
+        </button>
+        <button
+          onclick="window.open('mailto:?subject='+encodeURIComponent(document.title)+'&body='+encodeURIComponent(window.location.href))"
+        >
+          📧 Email
+        </button>
+      </div>
+    </div>
 
-<script>
-// === Horloge en haut de page ===
-const clockDate = document.getElementById('clockDate');
-function updateClock() {
-  const now = new Date();
-  clockDate.textContent = now.toLocaleTimeString() + " | " + now.toLocaleDateString();
-}
-setInterval(updateClock, 1000); updateClock();
+    <div class="search-container">
+      <input
+        id="searchBox"
+        type="text"
+        placeholder="🔍 بحث في النص الكامل..."
+      />
+      <button id="clearSearch" class="button">مسح</button>
+      <div id="searchResults"></div>
+    </div>
+    <h1 id="sent30">الدرس التاسع السنة العاشرة 1</h1>
+    <p id="sent31">
+      الحمد لله وكفى، والصلاة والسلام على النبي الكريم المصطفى، أحبت الفلاح
+      أينما كنتم، السلام عليكم و رحمة الله تعالى و بركاته، ما زلنا مستمرين في
+      عرض أحداث السنة العاشرة وما تبعه من توا، ف للوفود القادمة للنبي صلى الله
+      عليه وسلم طوعا، كانا واستسلاما بعد غزوة تبوك في عام الوفود، قدم المدينة
+      طائفة. من رؤساء قبيلة همدان فجاو إلى رسول الله صلى الله عليه وسلم فقط بما
+      لك من النمط، فقال يا رسول الله نصية من همدان من كل حاضر، و بادن، أتوك على
+      قلص؟ الن واجن أي على nous، قم سرعات متصلة بحبائل الإسلام، لا تاخدهم في
+      الله لومة لائم، فكتب لهم رسول الله صلى الله عليه وسلمكتابا على أن لهم
+      أرضهم، ما أقاموا الصلاة، وآتوا الزكاة لهم بذلك عهد الله، و ديما م رسوله، و
+      شاهدهم الموج هاجر و ن و الأنصار، فقال في ذلك مالك بنمط أبيات جاء فيها حلفت
+      برب الراقصات إلى منى، صوا درب الركبان فيه، بقرد دي بأن رسول الله فينا
+      مصدق. رسول أتى من عند ل عاش مهتدي الراقصات، الإبن المسرعة، وهربو قردي، أي
+      منبسط من الأرض، وارتفع، وذكر الطبري في تاريخه أن الإسلام قد انتشر في اليمن
+      على يد علي بن أبي طالب رضي الله عنه، فقد كتب يقول عن البراء بن عازب قال.
+      بعث رسول الله صلى الله عليه وسلم خالد بن الوليد إلى أهل اليمن يدعوهم إلى
+      الإسلام، فكنت فيمن صار معه، فأقام عليه ستة أشهر، لا يجيبونه إلى شيء. فبعث
+      النبي صلى الله عليه و سلم علي بن أبي طالب، و أمره أن يقفل أي يرجع خالدا
+      ومن معه، فإن أراد أحد ممن كان مع خالد بن الوليد أن يعقب معه تركه، قال
+      البراء فكنت فيمن عقب معه، فلما انتهينا إلى وائل اليمن بلغ القوم الخبر،
+      فجمعوا له. فصل بنا علي الفجر، فلما فرغ صفنا صفا واحدا، ثم تقدم بين أيدينا،
+      فحمد الله ثناء عليه، ثم قرأ عليهم كتاب رسول الله صلى الله عليه وسلم،
+      فأسلمت همدان كلها في يوم واحد، وكتب بذلك إلى رسول الله صلى الله عليه وسلم،
+      فلم أقرأ كتابه، خر ساجدا، ثم جلس فقالالسلام علي همدان السلام على همدان، ثم
+      تتابع أهل اليمن على الإسلام. وتعتبر قبائل همدان أكبر و أقدم تجمع قبلي في
+      اليمن، و شبه الجزيرة العربية كاملة، ومن هذه الوفود بنو تجيب بطن من قبيلة
+      كندا تفرع منهم السلالات. حكمت سرقسطة و لاغون والمريء بالأندلس ما بين 888
+      و1039 ميلادي واستمر نفوذهم بشكل منقطع. إلى أن انتهى تماما عام 91 وألف. و
+      هذه القبيلة تنتسب ل أمهم تجيب بنت ثوبان، وقد أسلم بنو تجيب وفد على نبي
+      الإسلام في السنة التاسعة للهجرة قبل وفود باقي كندة بقيادة الأشعة بن قيس.
+      وفي السنة العاشرة للهجرة وفدو في 13 راكب أمنع ليتهم. وأكرمهم النبي صلى
+      الله عليه وسلم، وجازهم أكثر ما جاز غيرهم، وكان منهم غلا ما قاله رسول الله
+      صلى الله عليه وسلم ما حاجتك؟ فقال يا رسول الله، أدعو الله أن يغفر لي،
+      ويرحمني، ويجعل غنائي في قلبي، فقال اللهم اغفر له وارحمه، واجعل غناه في
+      قلبه، فكان بعد ذلك من أز هد الناس. ساقو عند قدوم هم صداقات أموالهم التي
+      فرض الله عليهم وقالو يا رسول الله إن سقنا إليك حق الله في أموالنا، فقال
+      النبي صلى الله عليه وسلم ردوها ف قسموها على فقراء، كم قالوا يا رسول الله
+      ما قدمنا عليك إلا بما فضل عن فقرائنا؟ فقال أبو بكر يا رسول الله، ما قدم
+      علينا وفدا من العرب مثل هذا الوفد. فقال النبي صلى الله عليه وسلم إن الهدى
+      بيد الله عز وجل، ومن أراد الله به خيرا، اشرح صدره للدين. وقد جاء في بعض
+      التفاسير القرآن، وكتب الحديث أنهم هم الذين نزل فيهم قوله تعالى فسوف يأتي
+      الله بقوم يحبهم ويحبونه عن جابر بن عبد الله قال سأل رسول الله صلى الله
+      عليه وسلم عن قوله فسوف يأتي الله بقوم يحبهم ويحبونه؟ قال هؤلاء قوم من أهل
+      اليمن، ثم من كندة، ثم من السكون. ثم من تجيب، وقد شارك بأن تجيب في فتح مصر،
+      و ولى عمر بن العاص مهمة تخطيط الفوسفاط إلى معاوية بن حديجة تجيبي وتولى
+      القضاء إمان خلافة معاوية بن أبي سفيان، سليمة بن عمر تجيبي الذي بقي قاضيا
+      طوال خلافة معاوية، وكان سليم أول قاض النظر في الجراح وحكم فيها. وكان أول
+      قاض بمصر سجل سجلا بقضائه، و عبد الرحمان بن معاوية تجيبي ولي القضاء من قبل
+      والي مصر عبد العزيز بن مروان، وكان أول قاض النظر في أموال اليتامى. وضمن
+      عريف كل قوم أم واليتامى تلك القبيلة وأشهر من تولى الشرط عبد الله بن عبد
+      الرحمان. جاي. بي. وفي سنة 152 هجري؟ ولا أبو جعفر المنصور؟ عبد الله بن عبد
+      الرحمان بن معاوية تجيبي ولاية مصر وتوفي وهو ليها سنة 55 و100 ثم وليها أخوه
+      محمد بن عبد الرحمان ب استخلاف أخيه له ف أقره أبو جعفر وكان لبني تجيب دورهم
+      في فتوح مصر وإدارتها. لكن كان لهم دور أوضح في الأندلس، فقد شاركو في فتح
+      الاندلس، واستقروا في أراغون عند الفتح، وبرز عدة رجال منهم في عهد الإمارة
+      والخلافة الأموية وملوك الطواف، وتفرعت هذه الأسرة إلى فرعين هما بنهاشم
+      ومقره مسن قصة وبنس مادح و مقرهم البرية. وقدم على رسول الله صلى الله عليه
+      وسلم بنو سعد هذي م من قضاة في سنة تسعة، ذكر الواقع بأن أبن عمان قال قدمت
+      على رسول الله صلى الله عليه وسلم وافدا في نفر من قومي، وقد أوصى رسول الله
+      صلى الله عليه وسلم البلاد غلب، وداخل عرب و الناس و صنفان، إما داخل في
+      الإسلام. La raison فيه، وإما خائف من السيف، فنزلنا ناحية من المدينة، ثم
+      خرجنا أم المسجد حتى انتهينا إلى بابه، فنجد رسول الله صلى الله عليه وسلم
+      يصلي على جنازة في المسجد، فقمنا خلفه ناحية، ولم ندخل مع الناس في صلاتهم،
+      وقلنا حتى نلقى رسول الله صلى الله عليه وسلم ونبيعه، ثم انصرف رسول الله صلى
+      الله عليه وسلم فنظر إلينا، فدعا بنا، فقال من أنتم؟فقلنا منبر يسعد هديم،
+      فقال أ مسلمون؟ أنتم؟ قلنا نعم، قال فهل أصلي؟ تم على أخيكم؟ قلنا يا رسول
+      الله، ظنا أن ذلك لا يجوز لنا حتى ن بايعك، فقال رسول الله صلى الله عليه
+      وسلم أينما أسلمتم مسلمون. قال ف أسلمنا و بايعنا رسول الله صلى الله عليه
+      وسلم بأيدينا على الإسلام، ثم انصرفنا إلى رحالنا، وقد كنا خلفنا عليه،
+      صغرنا، فبعث رسول الله صلى الله عليه وسلم في طلبنا foteil بنا إليه، فتقدم
+      صاحبنا ف. بايعه على الإسلام، فقلنا يا رسول الله، إنه أصغر نا. وإنه خادمه،
+      فقال أصغر القوم خادمهم. بارك الله عليه، قال فكان والله خيرنا، وأقرأ القرآن
+      ل دعاء رسول الله صلى الله عليه وسلم له، ثم أمره رسول الله صلى الله عليه
+      وسلم علينا، فكان يؤمنا، ولما أردنا الإنصراف أمر بلا، فأجاز nabots، وأقم
+      فضة لكل رجل منه، فرجعنا إلى قومنا، فرزقهم الله الإسلام. ثم قدم وفد بني
+      أسد، وهم عشرة تراث، فيهم عباس بن معبد، وتريح بن خويلد، ورسول الله صلى الله
+      عليه وسلم، جالس مع أصحابه في المسجد. فتكلم فقالم تكلمهم يا رسول الله؟إن
+      شهدنا أن الله وحدة لا شريك له، وأنك عبده ورسوله، وجئناك يا رسول الله، ولم
+      تبعث إلينا بعثا، ونحن لمن وراءنا، وكأنما سالو رسول الله صلى الله عليه وسلم
+      عنه يوم إذ العياف والكهان، وضرب الحصة، فنهاهم رسول الله صلى الله عليه وسلم
+      عن ذلك كله. فقال يا رسول الله أن هذه أمور كنا نفعلها في الجاهلية، رأيت
+      خصلة بقيت، قال وما هي؟ قالوا الخط. قال علمه نبي من الأنبياء، فمن صادف مثل
+      علمه عالما، وكانت هذه السنة سنة جذب بلادهم فأسلم، وكانوا يقولون للنبي صلى
+      الله عليه وسلم أتتك العرب بأنفسها على ظهور رواح لها، و جئناك بالأثقال
+      والعيال و الذراري، ولمن قاتلك، كما قاتلك محارب خاصة، وهو asa وطفا. يفيدون
+      على رسول الله صلى الله عليه وسلم، ويروحون بهذه المقالة، ويمنون عليه،
+      ويريدون أن يصرف إليهم الصدقات. فأنزل الله فيهم يمنون عليك أن أسلمو قلات من
+      علي إسلامكم، بل الله يمن عليكم أن هداكم للإيمان إن كنتم صادقين. وأقاموا
+      أياما يتعلمون الفرائض، ثم جاء رسول الله صلى الله عليه وسلم فو دعوه، وأمرهم
+      بجواز، ثم انصرفوا إلى أهلهم، وكان في الوفد طايحا بن خويلد الأسدي، كان من
+      أشجع العرب، قدم على النبي صلى الله عليه وسلم، و بعد رجوعه ارتدت لايح في
+      حياة النبي صلى عليه وسلم. وادعى النبوة، فأرسل إليه أبو بكر جيشا بقيادة
+      خالد، وهزم وجيش توضيح الذي فر مع زوجته إلى الشام، ثم أسلم بعد ذلك، وحسن
+      إسلامه، وبأي عمر بن الخطاب، ثم لحق بجيش المسلمين، وأدلة في الجهاد بلاء
+      حسن. حتى ستجد بن هون سنة 21 هجرية. وكان، إلى جانب ما ذكرنا، جملة من
+      الوفود. سنذكر بعضها في اللقاء القادم إلى هنا، نكون قد أنهينا. درسنا. دمتم
+      في رعاية الله، السلام عليكم ورحمة الله تعالى وبركاته.
+    </p>
 
-// === Recherche dynamique ===
-const searchBox = document.getElementById('searchBox');
-const searchResults = document.getElementById('searchResults');
-const clearButton = document.getElementById('clearSearch');
-const paragraphs = Array.from(document.querySelectorAll('p'));
-
-let globalId = 1;
-
-// Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
-paragraphs.forEach(p => {
-  const sentences = p.textContent.split(/([.!؟?!])\s+/);
-  if (sentences.length > 1) {
-    p.innerHTML = '';
-    for (let i = 0; i < sentences.length; i += 2) {
-      const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
-      if (sentence) {
-        const span = document.createElement('span');
-        span.textContent = sentence;
-        span.id = 'sent' + globalId++;
-        p.appendChild(span);
-        p.appendChild(document.createTextNode(' '));
+    <script>
+      // === Horloge en haut de page ===
+      const clockDate = document.getElementById('clockDate');
+      function updateClock() {
+        const now = new Date();
+        clockDate.textContent =
+          now.toLocaleTimeString() + ' | ' + now.toLocaleDateString();
       }
-    }
-  } else {
-    if (!p.id) p.id = 'sent' + globalId++;
-  }
-});
+      setInterval(updateClock, 1000);
+      updateClock();
 
-// Fonction de recherche
-function updateSearch() {
-  const query = searchBox.value.trim();
-  if (query === '') {
-    searchResults.style.display = 'none';
-    paragraphs.forEach(p => Array.from(p.children).forEach(span => span.innerHTML = span.textContent));
-    return;
-  }
+      // === Recherche dynamique ===
+      const searchBox = document.getElementById('searchBox');
+      const searchResults = document.getElementById('searchResults');
+      const clearButton = document.getElementById('clearSearch');
+      const paragraphs = Array.from(document.querySelectorAll('p'));
 
-  let matches = 0;
-  let resultsHTML = '';
-  paragraphs.forEach(p => {
-    Array.from(p.children).forEach(span => {
-      const text = span.textContent;
-      const regex = new RegExp(query, 'gi');
-      if (text.match(regex)) {
-        span.innerHTML = text.replace(regex, m => '<mark>' + m + '</mark>');
-        matches++;
-        resultsHTML += '<div class="result-item" onclick="const el=document.getElementById(\'' + span.id + '\'); el.scrollIntoView({behavior: \'smooth\', block: \'center\'}); el.style.backgroundColor=\'#ffff99\'; setTimeout(()=>{el.style.backgroundColor=\'transparent\';},1500);">' + text + '</div>';
-      } else {
-        span.innerHTML = text;
+      let globalId = 1;
+
+      // Découpage des paragraphes en phrases (évite de surligner tout le paragraphe)
+      paragraphs.forEach((p) => {
+        const sentences = p.textContent.split(/([.!؟?!])\s+/);
+        if (sentences.length > 1) {
+          p.innerHTML = '';
+          for (let i = 0; i < sentences.length; i += 2) {
+            const sentence = (sentences[i] + (sentences[i + 1] || '')).trim();
+            if (sentence) {
+              const span = document.createElement('span');
+              span.textContent = sentence;
+              span.id = 'sent' + globalId++;
+              p.appendChild(span);
+              p.appendChild(document.createTextNode(' '));
+            }
+          }
+        } else {
+          if (!p.id) p.id = 'sent' + globalId++;
+        }
+      });
+
+      // Fonction de recherche
+      function updateSearch() {
+        const query = searchBox.value.trim();
+        if (query === '') {
+          searchResults.style.display = 'none';
+          paragraphs.forEach((p) =>
+            Array.from(p.children).forEach(
+              (span) => (span.innerHTML = span.textContent)
+            )
+          );
+          return;
+        }
+
+        let matches = 0;
+        let resultsHTML = '';
+        paragraphs.forEach((p) => {
+          Array.from(p.children).forEach((span) => {
+            const text = span.textContent;
+            const regex = new RegExp(query, 'gi');
+            if (text.match(regex)) {
+              span.innerHTML = text.replace(
+                regex,
+                (m) => '<mark>' + m + '</mark>'
+              );
+              matches++;
+              resultsHTML +=
+                '<div class="result-item" onclick="const el=document.getElementById(\'' +
+                span.id +
+                "'); el.scrollIntoView({behavior: 'smooth', block: 'center'}); el.style.backgroundColor='#ffff99'; setTimeout(()=>{el.style.backgroundColor='transparent';},1500);\">" +
+                text +
+                '</div>';
+            } else {
+              span.innerHTML = text;
+            }
+          });
+        });
+
+        searchResults.innerHTML =
+          matches > 0
+            ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
+            : '❌ لا توجد نتائج مطابقة.';
+        searchResults.style.display = 'block';
       }
-    });
-  });
 
-  searchResults.innerHTML = matches > 0
-    ? '🔍 عدد النتائج: ' + matches + '<br>' + resultsHTML
-    : '❌ لا توجد نتائج مطابقة.';
-  searchResults.style.display = 'block';
-}
-
-searchBox.addEventListener('input', updateSearch);
-clearButton.addEventListener('click', () => { searchBox.value = ''; updateSearch(); });
-</script>
-
-</body></html>
+      searchBox.addEventListener('input', updateSearch);
+      clearButton.addEventListener('click', () => {
+        searchBox.value = '';
+        updateSearch();
+      });
+    </script>
+  </body>
+</html>
